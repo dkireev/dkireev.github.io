@@ -1,12 +1,14 @@
 @font-face {
   font-family: 'lg_smartbold';
   src: url('../fonts/lg_smart_bold-webfont.eot');
+  src: url('../fonts/lg_smart_bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/lg_smart_bold-webfont.woff2') format('woff2'), url('../fonts/lg_smart_bold-webfont.woff') format('woff'), url('../fonts/lg_smart_bold-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'lg_smartlight';
   src: url('../fonts/lg_smart_light-webfont.eot');
+  src: url('../fonts/lg_smart_light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/lg_smart_light-webfont.woff2') format('woff2'), url('../fonts/lg_smart_light-webfont.woff') format('woff'), url('../fonts/lg_smart_light-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
