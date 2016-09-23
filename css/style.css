@@ -1,733 +1,302 @@
 body {
     width: 100%;
-    max-width: 1920px;
-    margin: auto;
+    font-family: Isidora;
+    color: #1D1D1B;
     padding: 0;
+    margin: 0;
 }
 
 p {
-    padding: 0;
     margin: 0;
 }
 
-/* HEADER START*/
-
-.header {
-    width: 100%;
-    height: 102px;
-}
-
-.menuGrey {
-    height: 64px;
-    width: 100%;
-    background-color: #333333;
-}
-
-.menuGreyMain {
-    width: 1180px;
-    height: 64px;
-    margin: auto;
-    font-family: 'lg_smartlight';
-    font-size: 19px;
-    color: #fff;
-}
-
-.menuRed {
-    padding: 0;
-    margin: 0;
-    height: 38px;
-    width: 100%;
-    background-color: #ae183f;
-}
-
-.menuRedMain {
-    width: 1180px;
-    margin: auto;
-    height: 38px;
-    font-family: 'lg_smartlight';
-    font-size: 16px;
-    color: #fff;
-}
-
-.menuRedLeft {
-    width: auto;
-    float: left;
-    text-align: left;
-    height: 38px;
-    margin-top: -5px;
-}
-
-.menuRedRight {
-    width: auto;
-    float: right;
-    text-align: right;
-    height: 38px;
-    margin-top: -5px;
+.main {
+    width: 800px;
+    height: 795px;
+    position: relative;
+    margin-left: 0;
+    margin-top: 0;
+    opacity: 0;
 }
 
 .logo {
-    float: left;
-    width: 96px;
+    margin-left: 44px;
+    width: 400px;
+    height: 120px;
+    background-image: url('../img/logo.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
-.topMenu {
-    float: right;
-    width: auto;
-    text-align: right;
+.branding {
+    padding-top: 56px;
+    padding-left: 44px;
+    font-size: 24px;
 }
 
-.topMenuNav {
-    padding: 0px;
-    height: 64px;
-    float: left;
+.leftBar {
+    position: absolute;
+    left: 0;
+    bottom: 54px;
+    width: 11px;
 }
 
-.topMenuSearch {
-    float: right;
+.leftBar1 {
+    height: 122px;
+    background-color: #48BAC0;
 }
 
-ul {
-    margin-top: 18px;
+.leftBar2 {
+    height: 122px;
+    background-color: #844693;
 }
 
-li {
+.leftBar3 {
+    height: 122px;
+    background-color: #EB6524;
+}
+
+.leftBar4 {
+    height: 122px;
+    background-color: #FCCD04;
+}
+
+.verticalText {
+    position: absolute;
+    top: 480px;
+    left: -33px;
+    transform: rotate(-90deg);
+    font-size: 12px;
+    color: #000;
+}
+
+.verticalTextRecent {
+    position: absolute;
+    top: 500px;
+    left: -60px;
+    transform: rotate(-90deg);
+    font-size: 12px;
+    color: #000;
+}
+
+.sections {
+    width: 230px;
+    margin-top: 50px;
+    margin-left: 249px;
+    font-size: 15px;
+    color: #000;
+}
+
+.contactFrom {
+    width: 176px;
+    height: 446px;
+    top: 250px;
+    left: 249px;
+    font-size: 24px;
+    color: #000;
+    border: 1px solid #1D1D1B;
+    padding: 21px 27px;
+    position: absolute;
+    opacity: 0;
+}
+
+input {
+    width: 100%;
+    font-size: 12px;
+    color: #1D1D1B;
+    border: 1px solid #1D1D1B;
+    padding: 4px 8px;
+    margin-top: 12px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    background-color: #F2F2F2;
+}
+
+input[type=checkbox] {
+    margin-top: 12px;
+    margin-left: -81px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #1D1D1B;
+    width: 16px;
+    height: 16px;
+    display: none;
+}
+
+label {
     display: inline-block;
-    padding: 0px 10px;
-    vertical-align: middle;
-}
-
-.red {
-    margin-top: 0px;
-    padding: 10px 5px 0 0;
-}
-
-.redRight {
-    margin-top: 0px;
-    height: 38px;
-}
-
-.red_li {
-    padding: 0px 2px;
-}
-
-/* HEADER END*/
-
-/* SECTION 1. CAROUSEL START*/
-
-.section1_cam {
-    width: 100%;
-    background-image: url('../images/section1_cam.jpg');
-    background-size: cover;
-    background-position: center;
     position: relative;
+    padding: 12px 0 0 25px;
+    font-size: 12px;
+    cursor: pointer;
 }
 
-.section1_view {
-    width: 100%;
-    background-image: url('../images/section1_view.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.section1_power {
-    width: 100%;
-    background-image: url('../images/section1_power.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.section1_style {
-    width: 100%;
-    background-image: url('../images/section1_style.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.section1_camImg {
+label:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 10px;
     left: 0;
-    right: 0;
-    margin: auto;
-    background-image: url('../images/cam.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    max-height: 714px;
+    bottom: 1px;
+    background-color: #fff;
+    border: 1px solid #1D1D1B;
 }
 
-.section1_viewImg {
+input[type=checkbox]:checked + label:before {
+    background-image: url('../img/check.png');
+    : background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+select {
+    font-size: 12px;
+    color: grey;
+    cursor: pointer;
+    width: 100%;
+    padding-left: 4px;
+    margin-top: 12px;
+    box-sizing: border-box;
+    border: 1px solid #1D1D1B;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('../img/dropDown.png');
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select:focus {
+    background: #F2F2F2;
+}
+
+option {
+    font-size: 12px;
+    padding: 4px 4px 4px 8px;
+    color: grey;
+    background: #F2F2F2;
+}
+
+textarea {
+    height: 64px;
+    font-size: 12px;
+    color: grey;
+    padding: 8px;
+    width: 100%;
+    margin-top: 12px;
+    border: 1px solid #1D1D1B;
+    resize: none;
+    box-sizing: border-box;
+}
+
+textarea:focus {
+    background-color: #F2F2F2;
+}
+
+input[type=submit] {
+    width: 80%;
+    margin-top: 5px;
+    padding: 10px;
+    color: #1D1D1B;
+    background-color: #fff;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #F2F2F2;
+}
+
+input[type=submit]:active {
+    background-color: lightgrey;
+}
+
+.gesign img {
+    height: 27px;
+    width: auto;
+}
+
+.campaign img {
+    margin-left: 5px;
+    height: 35px;
+    width: auto;
+}
+
+.photo img {
+    height: 35px;
+    width: auto;
+}
+
+.video img {
+    height: 35px;
+    width: auto;
+}
+
+.description {
+    font-size: 12px;
+    color: #1D1D1B;
+}
+
+.campaign {
+    padding-top: 42px;
+}
+
+.photo {
+    padding-top: 42px;
+}
+
+.video {
+    padding-top: 42px;
+}
+
+.buttonRecent {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background-image: url('../images/view.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    max-height: 690px;
-}
-
-.section1_powerImg {
- 	position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background-image: url('../images/power.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    max-height: 720px;
-}
-
-.section1_styleImg {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background-image: url('../images/style.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    max-height: 701px;
-}
-
-.text_sec1 {
-    margin-left: 12.5%;
-    font-family: 'lg_smartlight';
-    color: #333;
-}
-
-.text_sec1 .h1 {
-	padding-top: 20px;
-}
-
-.section1_power .text_sec1 {
-    padding-top: 285px;
-}
-
-.text_sec7_top {
-    margin-left: 54.2%;
-    padding-top: 240px;
-    height: 440px;
-    width: 600px;
-    font-family: 'lg_smartlight';
-    color: #333;
-}
-
-.text_sec7_middle {
-    margin-left: 12.5%;
-    padding-top: 190px;
-    height: 160px;
-    width: 700px;
-    font-family: 'lg_smartlight';
-    color: #333;
-}
-
-.text_sec7_bottom {
-    margin: auto;
-    padding-top: 200px;
-    height: 140px;
-    width: 1050px;
-    font-family: 'lg_smartlight';
-    color: #333;
+    cursor: pointer;
+    width: 134px;
+    height: 39px;
+    right: 54px;
+    bottom: 179px;
+    border: 1px solid #1D1D1B;
     text-align: center;
 }
 
-.h2 {
-    font-size: 30px;
-    padding-top: 15px;
-    padding-bottom: 50px;
+.buttonRecent p {
+    padding-top: 10px;
 }
 
-.button_sec1 {
-    font-family: 'lg_smartlight';
-    color: #fff;
-    font-size: 23px;
-    background-color: #a50034;
-    padding: 9px 14px;
-    text-decoration: none;
-    position: relative;
-    border-radius: 6px;
-}
-
-.star {
-    left: 12.5%;
-    bottom: 30px;
-    font-family: 'lg_smartlight';
-    color: #333;
-    font-size: 18px;
+.buttonContact {
     position: absolute;
-}
-
-/* SECTION 1. CAROUSEL END*/
-
-/* SECTION 2. LG X CAM - description START*/
-
-.section2 {
-    width: 100%;
-    background-image: url('../images/section2.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.text_sec2 {
-    padding-left: 12.5%;
-    width: 33%;
-    font-family: 'lg_smartlight';
-    color: #333;
-}
-
-.h1 {
-    font-size: 70px;
-    padding-top: 0;
-}
-
-.h2_sec2 {
-    font-size: 20px;
-    padding-top: 27px;
-    padding-bottom: 50px;
-}
-
-.sectionLogo2 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 199px;
-    height: 51px;
-}
-
-.sectionAngle {
-    position: absolute;
-    left: 12.5%;
-}
-
-.sectionDouble {
-    position: absolute;
-    right: 12.5%;
-}
-
-#angle120 {
-	max-height: 214px; 
-}
-
-#doubleCamera {
-	max-height: 948px;
-}
-
-/* SECTION 2. LG X CAM - description END*/
-
-/* SECTION 3. LG X VIEW - description START*/
-
-.section3 {
-    width: 100%;
-    background-image: url('../images/section3.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.text_sec3 {
-    margin-left: 54.2%;
-    width: 575px;
-    font-family: 'lg_smartlight';
-    color: #333;
-}
-
-.sectionLogo3 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 203px;
-    height: 51px;
-}
-
-.section3Drawing {
-    position: absolute;
-    right: 12.5%;
-}
-
-.section3Main {
-    position: absolute;
-    left: 10.8%;
-    bottom: -4px;
-}
-
-#viewDrawing {
-	max-height: 107px; 
-}
-
-#viewMain {
-	max-height: 603px;
-}
-
-/* SECTION 3. LG X VIEW - description END*/
-
-/* SECTION 4. LG X POWER - description START*/
-
-.section4 {
-    width: 100%;
-    background-image: url('../images/section4.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.text_sec4 {
-    margin-left: 12.5%;
-    width: 635px;
-    font-family: 'lg_smartlight';
-    color: #333;
-}
-
-.sectionLogo4 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 227px;
-    height: 59px;
-}
-
-.section4Drawing {
-    position: absolute;
-    left: 12.5%;
-}
-
-.section4Main {
-    position: absolute;
-    right: 26.2%;
-    bottom: -4px;
-}
-
-.section4Hour {
-    position: absolute;
-    right: 15%;
-}
-
-#powerMain {
-	max-height: 737px;
-}
-
-#powerMDrawing {
-	max-height: 113px;
-}
-
-/* SECTION 4. LG X POWER - description END*/
-
-/* SECTION 5. LG X STYLE - description START*/
-
-.section5 {
-    width: 100%;
-    background-image: url('../images/section5.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.sectionLogo5 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 206px;
-    height: 59px;
-}
-
-.text_sec5 {
-    margin-left: 54.2%;
-    width: 575px;
-    font-family: 'lg_smartlight';
-    color: #333;
-}
-
-.h2_sec5 {
-    font-size: 24px;
-    padding-top: 27px;
-    padding-bottom: 50px;
-}
-
-.section5Main {
-    position: absolute;
-    left: 14.6%;
-    bottom: -4px;
-}
-
-.section5Drawing {
-    position: absolute;
-    left: 54.2%;
-}
-
-#styleMain {
-	max-height: 734px;
-}
-
-#styleDrawing {
-	max-height: 150px;
-}
-
-/* SECTION 5. LG X STYLE - description END*/
-
-/* SECTION 6. COMPARE table START*/
-
-.section6 {
-    width: 100%;
-}
-
-table {
-    font-family: 'lg_smartlight';
-    font-size: 24px;
-    color: #333;
-    width: 1280px;
-    height: 100%;
-    margin: 0px auto;
-    border-collapse: collapse;
-}
-
-tr {
-    vertical-align: top;
-    border-bottom: 1px solid #d8d8d8;
-}
-
-tr:first-child {
-    border-bottom: none;
-}
-
-tr:nth-child(2) {
-    border-bottom: none;
-}
-
-tr:last-child {
-    border-bottom: 0px solid #d8d8d8;
-    padding-bottom: 30px;
-}
-
-td {
-    width: 256px;
-    padding: 20px 25px 0px 25px;
-}
-
-td:nth-child(2) {
-    color: #622601;
-}
-
-td:nth-child(3) {
-    color: #014f29;
-}
-
-td:nth-child(4) {
-    color: #a70107;
-}
-
-td:last-child {
-    color: #511f49;
-}
-
-/* SECTION 6. COMPARE table END*/
-
-.section7 {
-    background-image: url('../images/section7.jpg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    widows: 100%;
-    height: 1728px;
-}
-
-.sectionLogo7 {
-    position: absolute;
-    top: 185px;
-    left: 54.2%;
-    width: 215px;
-    height: 51px;
-}
-
-.section7Main {
-    position: absolute;
-    left: 13.7%;
-    top: 65px;
-    height: 716px;
-    width: 648px;
-}
-
-.section7Adnroid {
-    position: absolute;
-    right: 24.2%;
-    top: 833px;
-    height: 254px;
-    width: 186px;
-}
-
-.sec7_functions {
-    margin: auto;
-    width: 1280px;
-    height: 240px;
-    font-family: 'lg_smartlight';
-    font-size: 24px;
-    color: #333;
+    cursor: pointer;
+    width: 134px;
+    height: 39px;
+    right: 54px;
+    bottom: 97px;
+    border: 1px solid #1D1D1B;
     text-align: center;
 }
 
-.function1 {
-    width: 270px;
-    margin-top: 30px;
-    padding: 25px;
-    float: left;
-    text-align: left;
+.buttonContact p {
+    padding-top: 10px;
 }
 
-.bold {
-    font-family: 'lg_smartbold';
-}
-
-.footer {
-    width: 100%;
-}
-
-.legendWrapper {
-    width: 100%;
-    background-color: #e9ecf0;
-    height: 84px;
-}
-
-.legend {
-    width: 1210px;
-    margin: auto;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.legendText {
-    font-family: 'lg_smartlight';
-    font-size: 19px;
-    color: #666;
-}
-
-.bottomMenuWrapper {
-    width: 100%;
-    background-color: #333333;
-    height: 68px;
-}
-
-.bottomMenu {
-    width: 1210px;
-    height: 100%;
-    margin: auto;
-}
-
-.bottomText {
-    font-family: 'lg_smartlight';
-    font-size: 19px;
-    color: #fff;
-}
-
-.bottomRightText {
-    font-family: 'lg_smartlight';
-    font-size: 19px;
-    color: #fff;
-    width: auto;
-    float: left;
-    padding-top: 24px;
-    padding-right: 15px;
-}
-
-.bottomLeft {
-    width: auto;
-    text-align: left;
-    padding-top: 24px;
-    float: left;
-}
-
-.bottomRight {
-    width: auto;
-    text-align: right;
-    float: right;
-}
-
-.bottomSocial {
-    width: auto;
-    text-align: right;
-    padding-top: 19px;
-    float: right;
-}
-
-.bottomBold {
-    font-family: 'lg_smartbold';
-}
-
-@media only screen and (max-width: 1600px) {
-    .text_sec1 {
-        margin-left: 5%;
-    }
-    .star {
-        left: 5%;
-    }
-    .text_sec2 {
-        padding-left: 5%;
-    }
-    .sectionAngle {
-        left: 5%;
-    }
-    .sectionDouble {
-        right: 5%;
-    }
-    .text_sec3 {
-        margin-left: 55%;
-    }
-    .section3Drawing {
-        right: 5%;
-    }
-    .section3Main {
-        left: 3%;
-    }
-    .text_sec4 {
-        margin-left: 5%;
-    }
-    .section4Drawing {
-        left: 5%;
-    }
-    .section4Main {
-        right: 21.5%;
-    }
-    .section4Hour {
-        right: 8%;
-    }
-    .section5Main {
-        left: 7.7%;
-    }
-    .text_sec5 {
-        margin-left: 55%;
-    }
-    .section5Drawing {
-        left: 55%;
-    }
-    .section7Main {
-        left: 6.5%;
-    }
-    .text_sec7_top {
-        margin-left: 55%;
-    }
-    .sectionLogo7 {
-        left: 55%;
-    }
-    .text_sec7_middle {
-        margin-left: 5%;
-    }
-    .section7Adnroid {
-        right: 19%;
-    }
+.corner {
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    bottom: 0;
+    right: 0;
+    border-top: 1px solid #1D1D1B;
+    border-left: 1px solid #1D1D1B;
 }
