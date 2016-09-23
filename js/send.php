@@ -1,43 +1,42 @@
 <?php
-  //If a form has been submited
-  if(isset($_POST['submit'])) {
- //Проверка Поля ИМЯ
-  if(trim($_POST['firstname']) == '') {
-  $hasError = true;
-  } else {
-  $name = trim($_POST['firstname']);
+$method = $_SERVER['REQUEST_METHOD'];
+//Script Foreach
+$c = true;
+if ( $method === 'POST' ) {
+  $project_name = trim($_POST["project_name"]);
+  $admin_email  = trim($_POST["admin_email"]);
+  $form_subject = trim($_POST["form_subject"]);
+  foreach ( $_POST as $key => $value ) {
+    if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
+      $message .= "
+      " . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
+      <td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
+      <td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
+    </tr>
+    ";
   }
- //Validate fill-in message field
-  if(trim($_POST['subject']) == 'question about') {
-  $hasError = true;
-  } else {
-  $subject = trim($_POST['subject']);
+}
+} else if ( $method === 'GET' ) {
+  $project_name = trim($_GET["project_name"]);
+  $admin_email  = trim($_GET["admin_email"]);
+  $form_subject = trim($_GET["form_subject"]);
+  foreach ( $_GET as $key => $value ) {
+    if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
+      $message .= "
+      " . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
+      <td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
+      <td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
+    </tr>
+    ";
   }
- //Validate correct e-mail
-  if(trim($_POST['email']) == '')  {
-  $hasError = true;
-  } else if (!eregi("^[A-Z0-9._%-]+@[A-Z0-9._%-]+\.[A-Z]{2,4}$", trim($_POST['email']))) {
-  $hasError = true;
-  } else {
-  $email = trim($_POST['email']);
-  }
- //Validate fill-in message field
-  if(trim($_POST['message']) == '') {
-  $hasError = true;
-  } else {
-  if(function_exists('stripslashes')) {
-  $comments = stripslashes(trim($_POST['message']));
-  } else {
-  $comments = trim($_POST['message']);
-  }
-  }
- //Если ошибок нет, отправить email
-  if(!isset($hasError)) {
-  $emailTo = 'dkireev.com.ua@gmail.com'; //Your e-mail
-  $body = "Name: $name \n\nEmail: $email \n\nSubject: $subject \n\nComments:\n $comments";
-  $headers = 'From: My Site <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
- mail($emailTo, $subject, $body, $headers);
-  $emailSent = true;
-  }
-  }
-  ?> 
+}
+}
+$message = "<table style='width: 100%;'>$message</table>";
+function adopt($text) {
+  return '=?UTF-8?B?'.Base64_encode($text).'?=';
+}
+$headers = "MIME-Version: 1.0" . PHP_EOL .
+"Content-Type: text/html; charset=utf-8" . PHP_EOL .
+'From: '.adopt($project_name).' <'.$admin_email.'>' . PHP_EOL .
+'Reply-To: '.$admin_email.'' . PHP_EOL;
+mail($admin_email, adopt($form_subject), $message, $headers );
