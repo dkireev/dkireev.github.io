@@ -22,7 +22,7 @@ $(document).ready(function() {
 		var th = $(this);
 		$.ajax({
 			type: "POST",
-			url: "../send.php", //Change
+			url: "send.php", //Change
 			data: th.serialize()
 		}).done(function() {
 			alert("Thank you!");
