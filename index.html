@@ -62,12 +62,7 @@
     </div>
     <div class="contactFrom">
         <p>contact other.cool</p>
-        <form autocomplete="on" id="form">
-        	<!-- Hidden Required Fields -->
-			<input type="hidden" name="project_name" value="Other Cool Site">
-			<input type="hidden" name="admin_email" value="dkireev.com.ua@gmail.com">
-			<input type="hidden" name="form_subject" value="New request">
-			<!-- END Hidden Required Fields -->
+        <form action="js/send.php" method="post" autocomplete="on">
             <input type="text" name="firstname" id="firstname" placeholder="name" maxlength="10" autofocus>
             <input type="email" name="email" id="email" placeholder="e-mail" maxlength="30">
             <select name="subject" id="subject">
@@ -82,7 +77,7 @@
             <textarea name="message" maxlength="500" placeholder="message..." id="message"></textarea>
             <input type="checkbox" name="check" value="checked" id="check">
             <label for="check">sing-up for newsletter</label>
-            <button type="submit">Send</button>
+            <input type="submit" value="send">
         </form>
         <p>info</p>
         <p>other.cool</p>

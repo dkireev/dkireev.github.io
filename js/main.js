@@ -16,21 +16,4 @@ $(document).ready(function() {
         $('.contactFrom').animate({ opacity: "1" }, 1000);
         $('.sections').animate({ opacity: "0" }, 500);
     });
-
-    //E-mail Ajax Send
-	$('#form').submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "../send.php", //Change
-			data: th.serialize()
-		}).done(function() {
-			alert("Thank you!");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
-		});
-		return false;
-	});
 });
