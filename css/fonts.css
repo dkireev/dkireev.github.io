@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'Isidora';
-    src: url('../fonts/Isidora-Regular.eot');
-    src: url('../fonts/Isidora-Regular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Isidora-Regular.woff') format('woff'),
-         url('../fonts/Isidora-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
