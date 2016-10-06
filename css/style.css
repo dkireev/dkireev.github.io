@@ -92,7 +92,7 @@ section#benefits i {
 section#benefits i:hover {
 	text-shadow: 0 0 2px #555; 
 }
-section#benefits h1 {
+section#benefits h6 {
 	font-size: 0;
 }
 section#benefits .row {
@@ -265,4 +265,87 @@ form button:active {
 	text-align: center;
 	font-size: 14px;
 	padding-top: 80px;
+}
+@media only screen and (max-width : 1400px) {
+	header h1 {
+		padding-top: 12%;
+	}
+	.header_button {
+		bottom: -150px;
+	}
+	section#benefits .row {
+		padding-top: 10%;
+	}
+	section#services {
+		padding-top: 30px;
+	}
+	.s_wrap {
+		padding-top: 100px;
+	}
+	.services_button {
+		padding-top: 90px;
+	}
+	section#about {
+		padding-top: 30px;
+	}
+	.a_wrap {
+		padding-top: 20px;
+	}
+	section#about img {
+		margin-top: -40px;
+	}
+	section#portfolio img {
+		height: 200px;
+		width: auto;
+	}
+	.copyright {
+	text-align: center;
+	font-size: 14px;
+	padding-top: 30px;
+	padding-bottom: 10px;
+	}
+}
+@media only screen and (max-width : 1200px) {
+	section#benefits {
+		font-size: 18px;
+	}
+	section#benefits i {
+	font-size: 60px;
+	}
+	section#benefits .row {
+		padding-top: 12%;
+	}
+	.service_item ul {
+		font-size: 14px;
+		line-height: 25px;
+	}
+	.service_item li {
+		padding-left: 5px;
+	}
+	.service_item {
+		height: 290px;
+		padding-top: 8px;
+	}
+	section#about {
+		padding-top: 10px;
+		height: 75vh;
+	}
+	.a_wrap {
+		padding-top: 0;
+	}
+	section#portfolio {
+		padding-top: 20px;
+	}
+	section#portfolio h3 {
+		padding-bottom: 10px;
+	}
+	footer {
+		padding-top: 20px;
+	}
+	form {
+		padding-top: 30px;
+	}
+	.map {
+		padding-top: 30px;
+	}
 }
