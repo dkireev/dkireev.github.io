@@ -1,351 +1,447 @@
 header {
-	background-image: url(../img/header.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	-webkit-background-size: cover;
-	background-size: cover;
-	padding: 0 0 50px 0;
-	color: #fff;
-	font-family: 'RobotoLight';
-	text-align: center;
-	position: relative;
-	height: 100vh;
+    background-image: url(../img/header.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding: 0;
+    color: #fff;
+    font-family: 'RobotoLight';
+    text-align: center;
+    position: relative;
+    height: 100vh;
 }
-a:link, a:hover, a:active, a:visited {
-	text-decoration: none; 
-	color: #fff;
+
+a:link,
+a:hover,
+a:active,
+a:visited {
+    text-decoration: none;
+    color: #fff;
 }
+
 p {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
+
 .header_phone {
-	font-size: 23px;
-	padding: 3px 0 5px;
-	border-left: 2px solid #fff;
-	border-bottom: 2px solid #fff;
-	border-right: 2px solid #fff;
-	border-bottom-right-radius: 15px;
-	border-bottom-left-radius: 15px;	
-	margin: auto;
-	width: 290px;
-	text-align: center;
+    font-size: 23px;
+    padding: 3px 0 5px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin: auto;
+    width: 290px;
+    text-align: center;
 }
+
 span {
-	font-family: 'RobotoBold';
+    font-family: 'RobotoBold';
 }
+
 header h1 {
-	font-size: 23px;
-	padding-top: 20%;
+    font-size: 23px;
+    padding-top: 25vh;
 }
+
 header h2 {
-	font-size: 58px;
-	padding-top: 2%;
+    font-size: 58px;
+    padding-top: 2vh;
 }
+
 header h3 {
-	font-size: 76px;
-	font-family: 'RobotoMedium';
+    font-size: 76px;
+    font-family: 'RobotoMedium';
 }
+
 header img {
-	padding-top: 4%;
+    padding-top: 5vh;
 }
+
 .header_button {
-	position: absolute;
-	bottom: -210px;
-	margin: auto;
-	left: 0;
-	right: 0;
+    position: absolute;
+    bottom: -21vh;
+    margin: auto;
+    left: 0;
+    right: 0;
 }
+
 .button {
-	display: inline-block;
-	padding: 15px 30px;
-	border: 2px solid #fff;
-	border-radius: 7px;
-	font-size: 23px;
-	line-height: 23px;
-	font-family: 'RobotoLight';
-	transition: all .2s;
-	vertical-align: middle;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #fff;
+    border-radius: 7px;
+    font-size: 23px;
+    line-height: 23px;
+    font-family: 'RobotoLight';
+    transition: all .1s;
+    vertical-align: middle;
 }
+
 .button:hover {
-	background-color: rgba(255,255,255,.2);
-	box-shadow: 0 0 10px rgba(255,255,255,.4);
+    background-color: rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, .4);
 }
+
 .button:active {
-	background-color: rgba(255,255,255,.4);
-	box-shadow: 0 0 10px rgba(255,255,255,.8);
+    background-color: rgba(255, 255, 255, .4);
+    box-shadow: 0 0 10px rgba(255, 255, 255, .8);
 }
+
 section#benefits {
-	height: 70vh;
-	color: #555;
-	font-size: 23px;
-	font-family: 'RobotoLight';
+    height: 70vh;
+    color: #555;
+    font-size: 23px;
+    font-family: 'RobotoLight';
 }
+
 section#benefits span,
 section#services span {
-	font-family: 'RobotoMedium';
+    font-family: 'RobotoMedium';
 }
+
 section#benefits i {
-	font-size: 70px;
-	transition: all .2s;
+    font-size: 70px;
+    transition: all .1s;
 }
+
 section#benefits i:hover {
-	text-shadow: 0 0 2px #555; 
+    text-shadow: 0 0 2px #555;
 }
+
 section#benefits h6 {
-	font-size: 0;
+    font-size: 0;
 }
+
 section#benefits .row {
-	padding-top: 14%;
+    padding-top: 17vh;
 }
+
 section#benefits p {
-	display: inline-block;
-	padding-left: 30px;
+    display: inline-block;
+    padding-left: 30px;
 }
+
 section#services {
-	background-image: url(../img/services.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	-webkit-background-size: cover;
-	background-size: cover;
-	padding: 60px 0 50px 0;
-	color: #fff;
-	font-family: 'RobotoLight';
-	text-align: center;
-	position: relative;
-	height: 100vh;
+    background-image: url(../img/services.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding: 6vh 0 5vh 0;
+    color: #fff;
+    font-family: 'RobotoLight';
+    text-align: center;
+    position: relative;
+    height: 100vh;
 }
+
 section#services h3,
 section#portfolio h3 {
-	font-size: 50px;
+    font-size: 50px;
 }
+
 .s_wrap {
-	padding-top: 180px;
+    padding-top: 19vh;
 }
+
 .service_item {
-	border: 2px solid #fff;
-	height: 350px;
-	padding-top: 25px;
-	transition: all .2s;
+    border: 2px solid #fff;
+    height: 37vh;
+    padding-top: 3vh;
+    transition: all .1s;
 }
+
 .service_item:hover {
-	background-color: rgba(255,255,255,.1);
+    background-color: rgba(255, 255, 255, .1);
 }
+
 .service_item h4 {
-	font-size: 24px;
-	line-height: 30px;
+    font-size: 24px;
+    line-height: 3vh;
 }
+
 .service_item ul {
-	font-size: 16px;
-	text-align: left;
-	padding-top: 20px;
-	line-height: 30px;
+    font-size: 16px;
+    text-align: left;
+    padding-top: 2vh;
+    line-height: 3vh;
 }
+
 .service_item li {
-	padding-left: 10px;
+    padding-left: 10px;
 }
+
 .service_item div {
-	padding-top: 20px;
+    padding-top: 3vh;
 }
+
 .service_item p {
-	display: inline;
-	font-size: 16px;
+    display: inline;
+    font-size: 16px;
 }
+
 .service_item h5 {
-	display: inline;
-	font-size: 24px;
-	font-family: 'RobotoMedium';
-	padding: 0 7px;
+    display: inline;
+    font-size: 24px;
+    font-family: 'RobotoMedium';
+    padding: 0 7px;
 }
+
 .services_button {
-	padding-top: 115px;
+    padding-top: 12vh;
 }
+
 section#about {
-	height: 70vh;
-	color: #555;
-	font-size: 23px;
-	font-family: 'RobotoLight';
-	padding: 60px 0 50px 0;
+    height: 70vh;
+    color: #555;
+    font-size: 23px;
+    font-family: 'RobotoLight';
+    padding: 6vh 0 5vh 0;
 }
+
 section#about h3 {
-	font-size: 50px;
-	text-align: center;
+    font-size: 50px;
+    text-align: center;
 }
+
 section#about p {
-	margin-bottom: 14px;
-	font-size: 14px;
+    margin-bottom: 1.4vh;
+    font-size: 14px;
 }
+
 section#about ul {
-	font-size: 14px;
+    font-size: 14px;
 }
+
 .a_wrap {
-	padding-top: 60px;
+    padding-top: 6vh;
 }
+
 section#portfolio {
-	background-image: url(../img/portfolio.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	-webkit-background-size: cover;
-	background-size: cover;
-	padding-top: 40px;
-	color: #fff;
-	font-family: 'RobotoLight';
-	text-align: center;
-	position: relative;
-	height: 100vh;
+    background-image: url(../img/portfolio.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding-top: 4vh;
+    color: #fff;
+    font-family: 'RobotoLight';
+    text-align: center;
+    position: relative;
+    height: 100vh;
 }
+
 section#portfolio h3 {
-	padding-bottom: 30px;
+    padding-bottom: 3vh;
 }
+
 .portfolio_button {
-	padding-top: 20px;
+    padding-top: 2vh;
 }
+
 footer {
-	height: 70vh;
-	color: #555;
-	font-size: 23px;
-	font-family: 'RobotoLight';
-	padding-top: 40px;
+    height: 70vh;
+    color: #555;
+    font-size: 23px;
+    font-family: 'RobotoLight';
+    padding-top: 4vh;
 }
+
 footer h3 {
-	font-size: 50px;
-	text-align: center;
+    font-size: 50px;
+    text-align: center;
 }
+
 footer p {
-	text-align: center;
-	padding-top: 30px;
-	line-height: 0;
+    text-align: center;
+    padding-top: 3vh;
+    line-height: 0;
 }
+
 form {
-	width: 100%;
-	padding-top: 50px;
-	font-size: 18px;
+    width: 100%;
+    padding-top: 5vh;
+    font-size: 18px;
 }
+
 input {
-	width: 100%;
-	padding: 5px 20px;
-	border-radius: 5px;
-	border: 1px solid #555;
-	margin-bottom: 20px;
+    width: 100%;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    margin-bottom: 2vh;
 }
+
 textarea {
-	width: 100%;
-	height: 100px;
-	border-radius: 5px;
-	border: 1px solid #555;
-	padding: 5px 20px;
-	margin-bottom: 20px;
-	resize: none;
+    width: 100%;
+    height: 10vh;
+    border-radius: 5px;
+    border: 1px solid #555;
+    padding: 5px 20px;
+    margin-bottom: 2vh;
+    resize: none;
 }
+
 form button {
-	background-color: #fff;
-	display: inline-block;
-	padding: 15px 30px;
-	border: 2px solid #555;
-	border-radius: 7px;
-	font-size: 23px;
-	line-height: 23px;
-	font-family: 'RobotoLight';
-	transition: all .2s;
-	vertical-align: middle;
+    background-color: #fff;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #555;
+    border-radius: 7px;
+    font-size: 23px;
+    line-height: 23px;
+    font-family: 'RobotoLight';
+    transition: all .1s;
+    vertical-align: middle;
 }
+
 form button:hover {
-	background-color: rgba(125,125,125,.2);
-	box-shadow: 0 0 10px rgba(125,125,125,.4);
+    background-color: rgba(125, 125, 125, .2);
+    box-shadow: 0 0 10px rgba(125, 125, 125, .4);
 }
+
 form button:active {
-	background-color: rgba(125,125,125,.4);
-	box-shadow: 0 0 10px rgba(125,125,125,.8);
+    background-color: rgba(125, 125, 125, .4);
+    box-shadow: 0 0 10px rgba(125, 125, 125, .8);
 }
+
 .map {
-	padding-top: 50px;
-	height: 404px;
+    padding-top: 5vh;
+    height: 41vh;
 }
+
 .copyright {
-	text-align: center;
-	font-size: 14px;
-	padding-top: 80px;
+    text-align: center;
+    font-size: 14px;
+    padding-top: 8vh;
 }
-@media only screen and (max-width : 1400px) {
-	header h1 {
-		padding-top: 12%;
-	}
-	.header_button {
-		bottom: -150px;
-	}
-	section#benefits .row {
-		padding-top: 10%;
-	}
-	section#services {
-		padding-top: 30px;
-	}
-	.s_wrap {
-		padding-top: 100px;
-	}
-	.services_button {
-		padding-top: 90px;
-	}
-	section#about {
-		padding-top: 30px;
-	}
-	.a_wrap {
-		padding-top: 20px;
+
+@media only screen and (max-width: 1600px) {
+    section#portfolio img {
+        height: 27vh;
+        width: auto;
+    }
+    .copyright {
+        padding-top: 5vh;
+    }
+    section#services {
+    	padding-top: 4vh;
+    }
+    section#about {
+    	padding-top: 3vh;
+    }
+    .a_wrap {
+    	padding-top: 3vh;
 	}
 	section#about img {
-		margin-top: -40px;
-	}
-	section#portfolio img {
-		height: 200px;
-		width: auto;
-	}
-	.copyright {
-	text-align: center;
-	font-size: 14px;
-	padding-top: 30px;
-	padding-bottom: 10px;
+		margin-top: -5vh;
 	}
 }
-@media only screen and (max-width : 1200px) {
-	section#benefits {
-		font-size: 18px;
+
+@media only screen and (max-width: 1400px) {
+    header h1 {
+        padding-top: 12vh;
+    }
+    .header_button {
+        bottom: -20vh;
+    }
+    section#benefits .row {
+        padding-top: 14vh;
+    }
+    section#services {
+        padding-top: 3vh;
+    }
+    .s_wrap {
+        padding-top: 13vh;
+    }
+    .services_button {
+        padding-top: 15vh;
+    }
+    section#about {
+        padding-top: 2vh;
+    }
+    .a_wrap {
+        padding-top: 1vh;
+    }
+    section#about p {
+    	font-size: 12px;
 	}
-	section#benefits i {
-	font-size: 60px;
+    section#about img {
+        margin-top: -8vh;
+        height: 60vh;
+    }
+    section#portfolio {
+    	padding-top: 2vh;
+    }
+    section#portfolio img {
+        height: 28vh;
+        width: auto;
+    }
+    .copyright {
+        text-align: center;
+        font-size: 14px;
+        padding-top: 2vh;
+        padding-bottom: 1vh;
+    }
+    footer {
+    	padding-top: 2vh;
+    }
+    footer p {
+    	padding-top: 4vh;
+    	line-height: 1vh;
 	}
-	section#benefits .row {
-		padding-top: 12%;
-	}
-	.service_item ul {
-		font-size: 14px;
-		line-height: 25px;
-	}
-	.service_item li {
-		padding-left: 5px;
-	}
-	.service_item {
-		height: 290px;
-		padding-top: 8px;
-	}
-	section#about {
-		padding-top: 10px;
-		height: 75vh;
-	}
-	.a_wrap {
-		padding-top: 0;
-	}
-	section#portfolio {
-		padding-top: 20px;
-	}
-	section#portfolio h3 {
-		padding-bottom: 10px;
-	}
-	footer {
-		padding-top: 20px;
-	}
-	form {
-		padding-top: 30px;
-	}
-	.map {
-		padding-top: 30px;
-	}
+}
+
+@media only screen and (max-width: 1200px) {
+    section#benefits {
+        font-size: 18px;
+    }
+    section#benefits i {
+        font-size: 60px;
+    }
+    section#benefits .row {
+        padding-top: 16vh;
+    }
+    .service_item ul {
+        font-size: 14px;
+        line-height: 3.5vh;
+    }
+    .service_item li {
+        padding-left: 5px;
+    }
+    .service_item {
+        height: 40vh;
+        padding-top: 2vh;
+    }
+    section#about {
+        padding-top: 2vh;
+        height: 75vh;
+    }
+    .a_wrap {
+        padding-top: 2vh;
+    }
+    section#portfolio {
+        padding-top: 2vh;
+    }
+    section#portfolio h3 {
+        padding-bottom: 3vh;
+    }
+    footer {
+        padding-top: 2vh;
+    }
+    form {
+        padding-top: 3vh;
+    }
+    .map {
+        padding-top: 3vh;
+        height: 45vh;
+    }
+    .copyright {
+        padding-top: 5vh;
+        padding-bottom: 1vh;
+    }
 }
