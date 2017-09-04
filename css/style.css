@@ -1,4 +1,18 @@
 .header {
 	background-image: url('../images/header.png');
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
 	color: #ffffff;
+	text-transform: uppercase;
+}
+.header-line {
+	background-color: #0d904f;
+	height: 5px;
+	margin: 30px 0;
+}
+.home-button {
+	width: 300px;
+	color: #0d904f;
+	border-color: #0d904f;
 }
