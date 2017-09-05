@@ -27,7 +27,6 @@
 .home-button:hover {
 	background-color: #0d904f;
 	border-color: #0d904f;
-	cursor: pointer;
 }
 @media (max-width: 1199px) {
 	.display-2 {
