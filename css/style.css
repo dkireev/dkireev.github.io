@@ -22,23 +22,34 @@
 	width: 300px;
 	color: #0d904f;
 	border-color: #0d904f;
-	margin: 50px auto 100px; auto;	
+	margin: 50px auto;	
 }
 .home-button:hover {
 	background-color: #0d904f;
 	border-color: #0d904f;
 	cursor: pointer;
 }
-.footer {
-	background-image: url('../images/header.png');
-	-webkit-background-size: cover;
-	background-size: cover;
-	background-position: center;
-	color: #ffffff;
-	position: fixed;
-	bottom: 0;
+@media (max-width: 1199px) {
+	.display-2 {
+		font-size: 4.5rem;
+	}
 }
-.footer p {
-	padding: 10px 0;
-	margin: 0;
+@media (max-width: 991px) {
+	.display-2 {
+		font-size: 3.5rem;
+	}
+	.lead {
+		text-transform: none;
+	}
+}
+@media (max-width: 767px) {
+	.display-2 {
+		font-size: 2.5rem;
+	}
+	.lead {
+		font-size: 1rem;
+	}
+}
+@media (max-width: 575px) {
+	
 }
