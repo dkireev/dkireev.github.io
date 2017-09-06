@@ -15,22 +15,39 @@
 	<div class="jumbotron jumbotron-fluid text-center header">
 		<div class="container">
 			<!-- <h1 class="display-2">How much is my time</h1> -->
-			<h1 class="display-2">Сколько стоит время</h1>
-			<div class="header-line"></div>
-			<!-- <p class="lead">Relax and don't worry about numbers, we'll take care about it</p> -->
-			<p class="lead">Расслабьтесь и не беспокойтесь о цифрах, мы позаботимся об этом</p>
+			<h1 class="display-4">Заполнение формы</h1>
 		</div>
     </div>
-    <div class="container home-text">
-    	<p>Здравствуйте!</p>
-		<p>Заполнив данную форму, Вы узнаете ориентировочную стоимость часа вашей работы. Полученный результат возможно откроет Вам глаза либо подтвердит ваши догадки. Результат Вы получите на электронную почту после его обработки.</p>
-		<p>Все ответы давайте точно так, как показано в примерах. Единицы измерения: гривня, час. Чем точнее и правдивее ваши ответы, тем точнее результат Вы получите. Делитесь этой формой со своими друзьями-фотографами, может это и для них станет отличным советом.</p>
-		<p>Полученные данные не передаются третьим лицам и являются конфидециальными.</p>
-		<p><em>Версия формулы: v.0.2</em></p>
-    </div>
-    <div class="container home-button-wrapper">
-    	<!-- <button type="button" class="btn btn-lg btn-outline-light home-button">START</button> -->
-    	<a class="btn btn-lg btn-outline-light home-button" href="form.html" role="button">НАЧАТЬ</a>
+    <div class="container">
+    	<form action="" id="gform-jquery">
+    <label>Электронный адрес
+        <input type="text" name="emailAddress" class="req">
+    </label>
+    <label>Сколько стоит час вашей работы? (Пример: 400)
+        <input type="text" name="entry.2146610605" class="req">
+    </label>
+    <label>Подсчитайте максимально точную стоимость ВСЕГО вашего оборудования, начиная от карт памяти, заканчивая объективами. (Пример: 50480)
+        <input type="text" name="entry.1399961435" class="req">
+    </label>
+    <label>Подсчитайте максимально точную стоимость ВСЕХ ЕЖЕМЕСЯЧНЫХ расходов. Такие как: аренда, налоги, реклама, ЗП наемным сотрудникам и пр. (Пример: 10500)
+        <input type="text" name="entry.1804994227" class="req">
+    </label>
+    <label>Сколько в среднем часов в МЕСЯЦ Вы снимаете? (Пример: 30)
+        <input type="text" name="entry.1304972879" class="req">
+    </label>
+    <label>Какой доход в МЕСЯЦ Вы хотите иметь? (Пример: 10000)
+        <input type="text" name="entry.363121096" class="req">
+    </label>
+    <p>В каком регионе Вы работаете?</p>
+    <label><input type="radio" name="entry.828397169" value="Вариант 1">Любой город Украины (кроме Киева)</label>
+    <label><input type="radio" name="entry.828397169" value="Вариант 2">Киев</label>
+    <p>В каком регионе Вы работаете?</p>
+    <label><input type="radio" name="entry.1657582195" value="Вариант 1">Новичек</label>
+    <label><input type="radio" name="entry.1657582195" value="Вариант 2">Фотограф среднего уровня</label>
+    <label><input type="radio" name="entry.1657582195" value="Вариант 2">Топ-фотограф</label>
+    <input type="hidden" name="entry.635644082" value="Собственный HTML+jQuery">
+    <button type="submit">Отправить</button>
+</form>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -44,6 +61,7 @@
     <script defer src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script asinc src="js/main.js"></script>
 </body>
 
 </html>
