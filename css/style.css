@@ -67,6 +67,19 @@
 	}
 }
 @media (max-width: 575px) {
+	.header {
+		margin-bottom: 20px;
+		padding: 20px 0;
+	}
+	.header-line {
+		margin: 20px 0;
+	}
+	.lead {
+		margin-bottom: 0;
+	}
+	.display-2 {
+		font-size: 1.5rem;
+	}
 	.home-text {
 		padding-top: 0;
 	}
@@ -78,8 +91,13 @@
 	.home-info {
 		max-width: 100%;
 		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+	.form-info {
+		margin-bottom: 20px;
 	}
 	.info-heading {
 		margin-top: 0;
+		margin-bottom: 20px;
 	}
 }
