@@ -36,6 +36,9 @@
 	width: 100%;
 	margin: 30px auto;
 }
+.info-heading {
+	margin: 5vh 0;
+}
 @media (max-width: 1199px) {
 	.display-2 {
 		font-size: 4.5rem;
@@ -64,12 +67,19 @@
 	}
 }
 @media (max-width: 575px) {
+	.home-text {
+		padding-top: 0;
+	}
 	.home-start {
 		max-width: 100%;
 		margin-bottom: 10px;
+		margin-top: 10px;
 	}
 	.home-info {
 		max-width: 100%;
 		margin-top: 10px;
+	}
+	.info-heading {
+		margin-top: 0;
 	}
 }
