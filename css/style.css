@@ -15,18 +15,25 @@
 	text-align: justify;
 	padding-top: 50px;
 }
-.home-button-wrapper {
-	text-align: center;
-}
-.home-button {
-	width: 300px;
-	color: #0d904f;
-	border-color: #0d904f;
+.home-start {
+	max-width: 300px;
+	width: 100%;
+	background-color: #0d904f;
 	margin: 50px auto;	
 }
-.home-button:hover {
-	background-color: #0d904f;
-	border-color: #0d904f;
+.home-start:hover {
+	background-color: #fff;
+	color: #0d904f;
+}
+.home-info {
+	max-width: 300px;
+	width: 100%;
+	margin: 50px auto;
+}
+.form-info {
+	max-width: 300px;
+	width: 100%;
+	margin: 30px auto;
 }
 @media (max-width: 1199px) {
 	.display-2 {
@@ -56,5 +63,12 @@
 	}
 }
 @media (max-width: 575px) {
-	
+	.home-start {
+		max-width: 100%;
+		margin-bottom: 10px;
+	}
+	.home-info {
+		max-width: 100%;
+		margin-top: 10px;
+	}
 }
