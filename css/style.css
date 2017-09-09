@@ -39,6 +39,11 @@
 .info-heading {
 	margin: 5vh 0;
 }
+.average {
+	margin-bottom: 0;
+	color: #0d904f;
+	font-weight: bold;
+}
 @media (max-width: 1199px) {
 	.display-2 {
 		font-size: 4.5rem;
