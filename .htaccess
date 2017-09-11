@@ -14,10 +14,10 @@
     ExpiresByType application/xhtml+xml "access plus 600 seconds"
 </ifModule>
 <Files .htaccess>
-    order allow,deny
-    deny from all
+    Order allow,deny
+    Deny from all
 </Files>
-<FilesMatch "\.js$">
-    order allow, deny
-    deny from all
-</FilesMatch>
+<Files main.js>
+    Order allow, deny
+    Deny from all
+</Files>
