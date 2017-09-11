@@ -1,0 +1,7 @@
+Order allow,deny
+Deny from all
+
+<Files main.js>
+    Order allow, deny
+    Deny from all
+</Files>
