@@ -17,7 +17,7 @@
     order allow,deny
     deny from all
 </Files>
-<FilesMatch "\.(js)$">
+<FilesMatch "\.js$">
     order allow, deny
     deny from all
 </FilesMatch>
