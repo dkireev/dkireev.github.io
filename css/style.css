@@ -43,16 +43,6 @@
 	margin-bottom: 0;
 	color: #0d904f;
 }
-.ad-popup {
-	width: 100%;
-	position: absolute;
-	display: none;
-	z-index: 1002;
-	top: 0;
-	left: 0;
-	height: 100vh;
-	background-color: rgba(0,0,0,.8);
-}
 @media (max-width: 991px) {
 	.display-3 {
 		font-size: 3.5rem;
