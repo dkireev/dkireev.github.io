@@ -1,6 +1,3 @@
-$(document).ready(function(){
-	function showAd () {
-		$('.ad-popup').css('display','block')
-	};
-	setTimeout(showAd,5000);
-});
+setTimeout(function(){
+  $('.home-start').trigger('click');
+}, 1000);
