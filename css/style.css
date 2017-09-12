@@ -43,6 +43,9 @@
 	margin-bottom: 0;
 	color: #0d904f;
 }
+.buttons {
+	margin-bottom: 3rem;
+}
 @media (max-width: 991px) {
 	.display-3 {
 		font-size: 3.5rem;
@@ -103,8 +106,5 @@
 		font-size: 1rem;
 		line-height: 1.25;
 		padding: .5rem .75rem !important;
-	}
-	.buttons {
-		margin-bottom: 3rem;
 	}
 }
