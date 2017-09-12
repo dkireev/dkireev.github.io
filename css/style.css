@@ -46,6 +46,15 @@
 .buttons {
 	margin-bottom: 3rem;
 }
+.ad {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,.8);
+	padding-top: 40%;
+}
 @media (max-width: 991px) {
 	.display-3 {
 		font-size: 3.5rem;
