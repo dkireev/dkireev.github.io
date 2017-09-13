@@ -56,6 +56,10 @@
 	background-color: rgba(0,0,0,.8);
 	z-index: 1002;
 }
+.ad p {
+	z-index: 1003;
+	color: #fff;
+}
 .ad>.adsbygoogle {
 	display: table-cell !important;
 	vertical-align: middle;
