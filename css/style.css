@@ -20,7 +20,7 @@
 	width: 100%;
 	background-color: #0d904f;
 	border-color: #0d904f;
-	margin: 3.1rem auto;	
+	margin: 1.8rem auto;	
 }
 .home-start:hover {
 	background-color: #fff;
@@ -29,7 +29,12 @@
 .home-info {
 	max-width: 18.7rem;
 	width: 100%;
-	margin: 3.1rem auto;
+	margin: 1.8rem auto;
+}
+.home-main {
+	max-width: 18.7rem;
+	width: 100%;
+	margin: 1.8rem auto;
 }
 .form-info {
 	max-width: 18.7rem;
@@ -39,30 +44,15 @@
 .info-heading {
 	margin: 1rem 0;
 }
-.average {
+.info-text p {
 	margin-bottom: 0;
+}
+.average {
+	margin: 0;
 	color: #0d904f;
 }
 .buttons {
 	margin-bottom: 3rem;
-}
-.ad {
-	position: absolute;
-	display: table;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100vh;
-	background-color: rgba(0,0,0,.8);
-	z-index: 1002;
-}
-.ad p {
-	z-index: 1003;
-	color: #fff;
-}
-.ad>.adsbygoogle {
-	display: table-cell !important;
-	vertical-align: middle;
 }
 @media (max-width: 991px) {
 	.display-3 {
