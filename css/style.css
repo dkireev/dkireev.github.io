@@ -15,28 +15,28 @@
 	text-align: justify;
 	padding-top: 3.1rem;
 }
-.home-start {
+.fill-form {
 	max-width: 18.7rem;
 	width: 100%;
 	background-color: #0d904f;
 	border-color: #0d904f;
 	margin: 1.8rem auto;	
 }
-.home-start:hover {
+.fill-form:hover {
 	background-color: #fff;
 	color: #0d904f;
 }
-.home-info {
+.infographics {
 	max-width: 18.7rem;
 	width: 100%;
 	margin: 1.8rem auto;
 }
-.home-main {
+.home-page {
 	max-width: 18.7rem;
 	width: 100%;
 	margin: 1.8rem auto;
 }
-.form-info {
+.infographics {
 	max-width: 18.7rem;
 	width: 100%;
 	margin: 1.8rem auto;
@@ -54,6 +54,7 @@
 .buttons {
 	margin-bottom: 3rem;
 }
+
 @media (max-width: 991px) {
 	.display-3 {
 		font-size: 3.5rem;
@@ -93,18 +94,16 @@
 	.home-text {
 		padding-top: 0;
 	}
-	.home-start {
+	.fill-form {
 		max-width: 100%;
 		margin-bottom: .6rem;
 		margin-top: .6rem;
 	}
-	.home-info {
+	.infographics {
 		max-width: 100%;
-		margin-top: .6rem;
-		margin-bottom: 1.2rem;
 	}
-	.form-info {
-		margin-bottom: 1.2rem;
+	.home-page {
+		max-width: 100%;
 	}
 	.info-heading {
 		margin-top: 0;
@@ -113,6 +112,6 @@
 	.btn-lg {
 		font-size: 1rem;
 		line-height: 1.25;
-		padding: .5rem .75rem !important;
+		padding: .5rem .75rem;
 	}
 }
