@@ -39,6 +39,9 @@ body {
 .ad {
 	margin-top: 2rem;
 }
+.small {
+	margin: 1rem 0 3rem 0;
+}
 
 @media (max-width: 991px) {
 	.display-3 {
