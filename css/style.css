@@ -1,3 +1,6 @@
+body {
+	overflow-x: hidden;
+}
 .header {
 	background-image: url('../images/header.jpg');
 	-webkit-background-size: cover;
@@ -15,6 +18,9 @@
 	text-align: justify;
 	padding-top: 3.1rem;
 }
+.buttons-row {
+	margin-top: 2rem;
+}
 .button {
 	max-width: 18.7rem;
 	width: 100%;
@@ -29,6 +35,9 @@
 .average {
 	margin: 0;
 	color: #0d904f;
+}
+.ad {
+	margin-top: 2rem;
 }
 
 @media (max-width: 991px) {
@@ -70,6 +79,9 @@
 	.home-text {
 		padding-top: 0;
 	}
+	.buttons-row {
+		margin-top: 1rem;
+	}
 	.button {
 		max-width: 100%;
 	}
@@ -81,5 +93,8 @@
 		font-size: 1rem;
 		line-height: 1.25;
 		padding: .5rem .75rem;
+	}
+	.ad {
+		margin-top: 1rem;
 	}
 }
