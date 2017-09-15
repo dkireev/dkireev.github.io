@@ -15,31 +15,10 @@
 	text-align: justify;
 	padding-top: 3.1rem;
 }
-.fill-form {
+.button {
 	max-width: 18.7rem;
 	width: 100%;
-	background-color: #0d904f;
-	border-color: #0d904f;
-	margin: 1.8rem auto;	
-}
-.fill-form:hover {
-	background-color: #fff;
-	color: #0d904f;
-}
-.infographics {
-	max-width: 18.7rem;
-	width: 100%;
-	margin: 1.8rem auto;
-}
-.home-page {
-	max-width: 18.7rem;
-	width: 100%;
-	margin: 1.8rem auto;
-}
-.infographics {
-	max-width: 18.7rem;
-	width: 100%;
-	margin: 1.8rem auto;
+	margin-bottom: 1rem;
 }
 .info-heading {
 	margin: 1rem 0;
@@ -50,9 +29,6 @@
 .average {
 	margin: 0;
 	color: #0d904f;
-}
-.buttons {
-	margin-bottom: 3rem;
 }
 
 @media (max-width: 991px) {
@@ -94,15 +70,7 @@
 	.home-text {
 		padding-top: 0;
 	}
-	.fill-form {
-		max-width: 100%;
-		margin-bottom: .6rem;
-		margin-top: .6rem;
-	}
-	.infographics {
-		max-width: 100%;
-	}
-	.home-page {
+	.button {
 		max-width: 100%;
 	}
 	.info-heading {
