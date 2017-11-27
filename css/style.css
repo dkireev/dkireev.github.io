@@ -2,7 +2,7 @@ body {
 	overflow-x: hidden;
 }
 .header {
-	background-image: url('../images/header.jpg');
+	background-image: url('../images/header.png');
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-position: center;
