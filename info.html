@@ -17,9 +17,8 @@
             <div class="col-12">
                 <p class="info-heading">Процентное соотношение ценовых диапазонов, грн/час.</p>
                 <iframe width="268" height="269" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTS5wtYeE4TzzxzK1w2WlQgF4VEcSD2pbpMoszu6P7oxxAQYBZOTq48f0U0w09NizklbarHWA2cNmef/pubchart?oid=703820260&amp;format=interactive" style="margin-bottom: 1rem; border: none; overflow: hidden;"></iframe>
-                <p class="info-text">Фотограф в среднем снимает:<span class="display-4 average"> 25 </span>часов/месяц за<span class="display-4 average"> 691 </span>грн/час.</p>
+                <p class="info-text">Фотограф в среднем снимает:<span class="display-4 average" id="hours"> 25 </span>часов/месяц за<span class="display-4 average"> 691 </span>грн/час.</p>
             </div>
-            <p id="demo"></p>
         </div>
         <div class="row buttons-row">
             <div class="col-sm-6 text-right">
@@ -56,7 +55,7 @@
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 var myObj = JSON.parse(this.responseText);
-                document.getElementById("demo").innerHTML = myObj.hours;
+                document.getElementById("hours").innerHTML = myObj.hours;
             }
         };
         xmlhttp.open("GET", "numbers.txt", true);
