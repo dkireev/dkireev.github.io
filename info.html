@@ -59,21 +59,9 @@
             document.getElementById("price").innerHTML = ' ' + myObj.price + ' ';
             if (myObj.hours == 1 || myObj.hours == 21 || myObj.hours == 31 || myObj.hours == 41) {
                     document.getElementById("hoursMonth").innerHTML = 'час';
-                } else if (myObj.hours > 1 && myObj.hours < 5) {
+                } else if ((myObj.hours > 1 && myObj.hours < 5) || (myObj.hours > 21 && myObj.hours < 25) || (myObj.hours > 31 && myObj.hours < 35) || (myObj.hours > 41 && myObj.hours < 45)) {
                     document.getElementById("hoursMonth").innerHTML = 'часа';
-                } else if (myObj.hours > 21 && myObj.hours < 25) {
-                    document.getElementById("hoursMonth").innerHTML = 'часа';
-                } else if (myObj.hours > 31 && myObj.hours < 35) {
-                    document.getElementById("hoursMonth").innerHTML = 'часа';
-                } else if (myObj.hours > 41 && myObj.hours < 45) {
-                    document.getElementById("hoursMonth").innerHTML = 'часа';
-                } else if (myObj.hours >= 5 && myObj.hours <= 20) {
-                    document.getElementById("hoursMonth").innerHTML = 'часов';
-                } else if (myObj.hours >= 25 && myObj.hours <= 30) {
-                    document.getElementById("hoursMonth").innerHTML = 'часов';
-                } else if (myObj.hours >= 35 && myObj.hours <= 40) {
-                    document.getElementById("hoursMonth").innerHTML = 'часов';
-                } else if (myObj.hours >= 45 && myObj.hours <= 50) {
+                } else if ((myObj.hours >= 5 && myObj.hours <= 20) || (myObj.hours >= 25 && myObj.hours <= 30) || (myObj.hours >= 35 && myObj.hours <= 40) || (myObj.hours >= 45 && myObj.hours <= 50)) {
                     document.getElementById("hoursMonth").innerHTML = 'часов';
                 } else document.getElementById("hoursMonth").innerHTML = 'час';
             }
