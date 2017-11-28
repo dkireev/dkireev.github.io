@@ -6,7 +6,8 @@ body {
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-position: center;
-	color: #ffffff;
+	background-color: #3e3e3e;
+	color: #fff;
 	text-transform: uppercase;
 }
 .header-line {
