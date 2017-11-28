@@ -53,33 +53,33 @@
     <script>
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                var myObj = JSON.parse(this.responseText);
-                document.getElementById("hours").innerHTML = ' ' + myObj.hours + ' ';
-                document.getElementById("price").innerHTML = ' ' + myObj.price + ' ';
+        if (this.readyState == 4 && this.status == 200) {
+            var myObj = JSON.parse(this.responseText);
+            document.getElementById("hours").innerHTML = ' ' + myObj.hours + ' ';
+            document.getElementById("price").innerHTML = ' ' + myObj.price + ' ';
+            if (myObj.hours == 1 || myObj.hours == 21 || myObj.hours == 31 || myObj.hours == 41) {
+                    document.getElementById("hoursMonth").innerHTML = 'час';
+                } else if (myObj.hours > 1 && myObj.hours < 5) {
+                    document.getElementById("hoursMonth").innerHTML = 'часа';
+                } else if (myObj.hours > 21 && myObj.hours < 25) {
+                    document.getElementById("hoursMonth").innerHTML = 'часа';
+                } else if (myObj.hours > 31 && myObj.hours < 35) {
+                    document.getElementById("hoursMonth").innerHTML = 'часа';
+                } else if (myObj.hours > 41 && myObj.hours < 45) {
+                    document.getElementById("hoursMonth").innerHTML = 'часа';
+                } else if (myObj.hours >= 5 && myObj.hours <= 20) {
+                    document.getElementById("hoursMonth").innerHTML = 'часов';
+                } else if (myObj.hours >= 25 && myObj.hours <= 30) {
+                    document.getElementById("hoursMonth").innerHTML = 'часов';
+                } else if (myObj.hours >= 35 && myObj.hours <= 40) {
+                    document.getElementById("hoursMonth").innerHTML = 'часов';
+                } else if (myObj.hours >= 45 && myObj.hours <= 50) {
+                    document.getElementById("hoursMonth").innerHTML = 'часов';
+                } else document.getElementById("hoursMonth").innerHTML = 'час';
             }
         };
         xmlhttp.open("GET", "numbers.txt", true);
         xmlhttp.send();
-        if (myObj.hours == 1 || myObj.hours == 21 || myObj.hours == 31 || myObj.hours == 41) {
-            document.getElementById("hoursMonth").innerHTML = 'час';
-        } else if (myObj.hours > 1 && myObj.hours < 5) {
-            document.getElementById("hoursMonth").innerHTML = 'часа';
-        } else if (myObj.hours > 21 && myObj.hours < 25) {
-            document.getElementById("hoursMonth").innerHTML = 'часа';
-        } else if (myObj.hours > 31 && myObj.hours < 35) {
-            document.getElementById("hoursMonth").innerHTML = 'часа';
-        } else if (myObj.hours > 41 && myObj.hours < 45) {
-            document.getElementById("hoursMonth").innerHTML = 'часа';
-        } else if (myObj.hours >= 5 && myObj.hours <= 20) {
-            document.getElementById("hoursMonth").innerHTML = 'часов';
-        } else if (myObj.hours >= 25 && myObj.hours <= 30) {
-            document.getElementById("hoursMonth").innerHTML = 'часов';
-        } else if (myObj.hours >= 35 && myObj.hours <= 40) {
-            document.getElementById("hoursMonth").innerHTML = 'часов';
-        } else if (myObj.hours >= 45 && myObj.hours <= 50) {
-            document.getElementById("hoursMonth").innerHTML = 'часов';
-        } else document.getElementById("hoursMonth").innerHTML = 'час';
     </script>
     <!-- uSocial -->
     <script async src="https://usocial.pro/usocial/usocial.js?v=6.1.4" data-script="usocial" charset="utf-8"></script>
