@@ -1,4 +1,4 @@
 {
-    "hours":24,
-    "price":796
+    "hours":23,
+    "price":772
 }
