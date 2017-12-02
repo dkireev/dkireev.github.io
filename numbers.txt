@@ -1,6 +1,6 @@
 {
-    "hours":24,
-    "price":784,
-    "votes":32,
+    "hours":23,
+    "price":771,
+    "votes":33,
     "version":"1.7"
 }
