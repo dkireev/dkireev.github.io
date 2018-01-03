@@ -1,61 +1,74 @@
 header {
   height: 84px;
   background-color: #fff;
-  border-bottom: 1px solid #cccdc0; }
-  header div {
-    background-color: #fff;
-    width: 100%;
-    height: inherit;
-    max-width: 1370px;
-    margin: 0 auto;
-    border-bottom: inherit; }
-    header div img {
-      padding: 22px 0 0 20px; }
+  border-bottom: 1px solid #cccdc0;
+}
+header div {
+  background-color: #fff;
+  width: 100%;
+  height: inherit;
+  max-width: 1370px;
+  margin: 0 auto;
+  border-bottom: inherit;
+}
+header div img {
+  padding: 22px 0 0 20px;
+}
 
 section#main-banner-section {
   height: 494px;
   background: #e5e6d2 url("../img/main-banner.jpg") no-repeat;
   background-size: cover;
-  background-position: center center; }
-  section#main-banner-section div {
-    width: 100%;
-    height: inherit;
-    max-width: 1370px;
-    margin: 0 auto;
-    border-bottom: inherit;
-    position: relative; }
-    section#main-banner-section div img {
-      position: absolute;
-      right: 0;
-      top: 75px;
-      padding-right: 20px; }
+  background-position: center center;
+}
+section#main-banner-section div {
+  width: 100%;
+  height: inherit;
+  max-width: 1370px;
+  margin: 0 auto;
+  border-bottom: inherit;
+  position: relative;
+}
+section#main-banner-section div img {
+  position: absolute;
+  right: 0;
+  top: 75px;
+  padding-right: 20px;
+}
 
 section#special-offer-section {
   height: 956px;
-  background-color: #fff; }
+  background-color: #fff;
+}
 
 section#category-1-section {
   height: 561px;
-  background-color: #e5e6d2; }
+  background-color: #e5e6d2;
+}
 
 section#category-2-section {
   height: 561px;
-  background-color: #fff; }
+  background-color: #fff;
+}
 
 section#bottom-banner-section {
   height: 352px;
   background: #43cf9f url("../img/bottom-banner.jpg") no-repeat;
   background-size: cover;
-  background-position: center center; }
+  background-position: center center;
+}
 
 section#articles-section {
   height: 491px;
-  background-color: #f4f4f4; }
+  background-color: #f4f4f4;
+}
 
 section#customer-section {
   height: 581px;
-  background-color: #fff; }
+  background-color: #fff;
+}
 
 footer {
   height: 328px;
-  background-color: #171514; }
+  background-color: #171514;
+}
