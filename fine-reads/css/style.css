@@ -12,7 +12,7 @@
 }
 body {
   font-family: Karla-Regular;
-  font-size: 100%;
+  font-size: 16px;
 }
 
 header {
@@ -48,15 +48,17 @@ section#main-banner-section .main-banner-vertical {
   padding-left: 20px;
 }
 section#main-banner-section h1 {
-  font-size: 3em;
+  font-size: 3.23em;
   line-height: 1;
   margin-bottom: 0;
+  color: #433a36;
 }
 section#main-banner-section h2 {
-  font-size: 3.5em;
+  font-size: 3.53em;
   font-family: Karla-Bold;
   line-height: 1;
   margin-bottom: 0;
+  color: #433a36;
 }
 section#main-banner-section .main-banner-button {
   height: 56px;
@@ -65,9 +67,10 @@ section#main-banner-section .main-banner-button {
   border-radius: 28px;
   margin: 30px 0 10px 0;
   display: block;
+  color: #2a2e28;
   font-family: Karla-Bold;
   text-transform: uppercase;
-  font-size: 0.85em;
+  font-size: 0.82em;
   text-align: center;
   text-decoration: none;
   color: inherit;
@@ -135,14 +138,14 @@ section#bottom-banner-section .bottom-banner-vertical {
 section#bottom-banner-section h3 {
   color: #fff;
   font-family: Karla-Bold;
-  font-size: 3.5em;
+  font-size: 3.53em;
   line-height: 1;
   margin-bottom: 0;
 }
 section#bottom-banner-section p {
   color: #fff;
   font-family: Karla-Regular;
-  font-size: 1.9em;
+  font-size: 1.76em;
   line-height: 1;
   margin-bottom: 40px;
 }
@@ -150,7 +153,7 @@ section#bottom-banner-section form {
   width: 753px;
   margin: 0 auto;
   text-align: left;
-  font-size: 0.85em;
+  font-size: 0.94em;
 }
 section#bottom-banner-section input {
   width: 527px;
@@ -177,6 +180,7 @@ section#bottom-banner-section button {
   background-color: #fdd05f;
   position: absolute;
   right: 209px;
+  font-size: 0.88em;
 }
 section#bottom-banner-section button:hover {
   cursor: pointer;
@@ -192,7 +196,6 @@ section#bottom-banner-section button::before {
 section#articles-section {
   height: 491px;
   background-color: #f4f4f4;
-  font-size: 14px;
 }
 section#articles-section a {
   text-decoration: none;
@@ -201,13 +204,15 @@ section#articles-section h4 {
   color: #321d14;
   text-decoration: none;
   font-family: Karla-Bold;
-  font-size: 21px;
+  font-size: 1.29em;
 }
 section#articles-section .posted-by {
   color: #a6a6a6;
+  font-size: 0.82em;
 }
 section#articles-section .posted-by-details {
   font-family: Karla-Bold;
+  font-size: 0.82em;
 }
 
 section#customer-section {
@@ -219,7 +224,7 @@ section#customer-section {
 section#customer-section h4 {
   text-transform: uppercase;
   color: #2e2e2e;
-  font-size: 30px;
+  font-size: 1.76em;
   font-family: Karla-Bold;
   margin-bottom: 20px;
 }
@@ -235,7 +240,7 @@ section#customer-section .total-score {
   color: #9e7715;
   font-family: Karla-Bold;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 1.41em;
   float: left;
   display: inline-block;
 }
@@ -247,9 +252,9 @@ section#customer-section .total-score .total-score-circle {
   border: 8px solid #9e7715;
   margin: 0 auto 20px auto;
   border-radius: 75px;
-  font-size: 60px;
+  font-size: 3.23em;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 section#customer-section .detailed-score {
   height: 284;
@@ -262,17 +267,17 @@ section#customer-section .detailed-score .detailed-score-title {
   border-bottom: 1px solid #e8e8e8;
   height: 76px;
   text-align: left;
-  font-size: 14px;
+  font-size: 0.82em;
   padding-left: 140px;
   position: relative;
 }
 section#customer-section .detailed-score .detailed-score-title span#percentage {
   position: absolute;
-  left: 25px;
-  top: 10px;
+  left: 35px;
+  top: 13px;
   color: #505151;
   font-family: Karla-Bold;
-  font-size: 48px;
+  font-size: 2.82em;
   line-height: 1;
 }
 section#customer-section .detailed-score .detailed-score-rating {
@@ -283,7 +288,7 @@ section#customer-section .detailed-score .detailed-score-column {
   width: 50%;
   text-align: center;
   vertical-align: middle;
-  font-size: 14px;
+  font-size: 0.82em;
 }
 section#customer-section .detailed-score .detailed-score-column .detailed-score-star {
   font-family: Karla-Bold;
@@ -306,7 +311,7 @@ section#customer-section .customer p {
   line-height: 1.25;
 }
 section#customer-section .customer .customer-feedback {
-  font-size: 14px;
+  font-size: 0.94em;
   line-height: 16px;
   margin-top: 10px;
 }
@@ -324,7 +329,7 @@ footer {
   background-color: #171514;
   padding-top: 70px;
   color: #9a928e;
-  font-size: 0.85em;
+  font-size: 0.88em;
 }
 footer .wrapper {
   margin: 0 auto;

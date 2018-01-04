@@ -12,7 +12,7 @@
 }
 body {
 	font-family: Karla-Regular;
-	font-size: 100%;
+	font-size: 16px;
 }
 header {
 	height: 84px;
@@ -46,15 +46,17 @@ section#main-banner-section {
 		padding-left: 20px;
 	}
 	h1 {
-		font-size: 3em;
+		font-size: 3.23em;
 		line-height: 1;
 		margin-bottom: 0;
+		color: #433a36;
 	}
 	h2 {
-		font-size: 3.5em;
+		font-size: 3.53em;
 		font-family: Karla-Bold;
 		line-height: 1;
 		margin-bottom: 0;
+		color: #433a36;
 	}
 	.main-banner-button {
 		height: 56px;
@@ -63,9 +65,10 @@ section#main-banner-section {
 		border-radius: 28px;
 		margin: 30px 0 10px 0;
 		display: block;
+		color: #2a2e28;
 		font-family: Karla-Bold;
 		text-transform: uppercase;
-		font-size: 0.85em;
+		font-size: 0.82em;
 		text-align: center;
 		text-decoration: none;
 		color: inherit;
@@ -129,14 +132,14 @@ section#bottom-banner-section {
 	h3 {
 		color: #fff;
 		font-family: Karla-Bold;
-		font-size: 3.5em;
+		font-size: 3.53em;
 		line-height: 1;
 		margin-bottom: 0;
 	}
 	p {
 		color: #fff;
 		font-family: Karla-Regular;
-		font-size: 1.9em;
+		font-size: 1.76em;
 		line-height: 1;
 		margin-bottom: 40px;
 	}
@@ -144,7 +147,7 @@ section#bottom-banner-section {
 		width: 753px;
 		margin: 0 auto;
 		text-align: left;
-		font-size: 0.85em;
+		font-size: 0.94em;
 	}
 	input {
 		width: 527px;
@@ -171,6 +174,7 @@ section#bottom-banner-section {
 		background-color: #fdd05f;
 		position: absolute;
 		right: 209px;
+		font-size: 0.88em;
 	}
 	button:hover {
 		cursor: pointer;
@@ -186,7 +190,6 @@ section#bottom-banner-section {
 section#articles-section {
 	height: 491px;
 	background-color: #f4f4f4;
-	font-size: 14px;
 	a {
 		text-decoration: none;
 	}
@@ -194,13 +197,15 @@ section#articles-section {
 		color: #321d14;
 		text-decoration: none;
 		font-family: Karla-Bold;
-		font-size: 21px;
+		font-size: 1.29em;
 	}
 	.posted-by {
 		color: #a6a6a6;
+		font-size: 0.82em;
 	}
 	.posted-by-details {
 		font-family: Karla-Bold;
+		font-size: 0.82em;
 	}
 }
 section#customer-section {
@@ -211,7 +216,7 @@ section#customer-section {
 	h4 {
 		text-transform: uppercase;
 		color: #2e2e2e;
-		font-size: 30px;
+		font-size: 1.76em;
 		font-family: Karla-Bold;
 		margin-bottom: 20px;
 	}
@@ -227,7 +232,7 @@ section#customer-section {
 		color: #9e7715;
 		font-family: Karla-Bold;
 		text-transform: uppercase;
-		font-size: 24px;
+		font-size: 1.41em;
 		float: left;
 		display: inline-block;
 		.total-score-circle {
@@ -237,9 +242,9 @@ section#customer-section {
 			border: 8px solid #9e7715;
 			margin: 0 auto 20px auto;
 			border-radius: 75px;
-			font-size: 60px;
+			font-size: 3.23em;
 			text-align: center;
-			padding-top: 20px;
+			padding-top: 10px;
 		}
 	}
 	.detailed-score {
@@ -252,16 +257,16 @@ section#customer-section {
 			border-bottom: 1px solid #e8e8e8;
 			height: 76px;
 			text-align: left;
-			font-size: 14px;
+			font-size: 0.82em;
 			padding-left: 140px;
 			position: relative;
 			span#percentage {
 				position: absolute;
-				left: 25px;
-				top: 10px;
+				left: 35px;
+				top: 13px;
 				color: #505151;
 				font-family: Karla-Bold;
-				font-size: 48px;
+				font-size: 2.82em;
 				line-height: 1;
 			}
 		}
@@ -273,7 +278,7 @@ section#customer-section {
 			width: 50%;
 			text-align: center;
 			vertical-align: middle;
-			font-size: 14px;
+			font-size: 0.82em;
 			.detailed-score-star {
 				font-family: Karla-Bold;
 				padding-left: 15px;
@@ -294,7 +299,7 @@ section#customer-section {
 			line-height: 1.25;
 		}
 		.customer-feedback {
-			font-size: 14px;
+			font-size: 0.94em;
 			line-height: 16px;
 			margin-top: 10px;
 		}
@@ -313,7 +318,7 @@ footer {
 	background-color: #171514;
 	padding-top: 70px;
 	color: #9a928e;
-	font-size: 0.85em;
+	font-size: 0.88em;
 	.wrapper {
 		margin: 0 auto;
 		max-width: 480px;
