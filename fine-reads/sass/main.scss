@@ -172,6 +172,10 @@ section#bottom-banner-section {
 		position: absolute;
 		right: 209px;
 	}
+	button:hover {
+		cursor: pointer;
+		background-color: #e3bb55;
+	}
 	button::before {
 		content: url('../img/email-icon.png');
 		position: absolute;
@@ -186,6 +190,40 @@ section#articles-section {
 section#customer-section {
 	height: 581px;
 	background-color: #fff;
+	text-align: center;
+	padding-top: 70px;
+	h4 {
+		text-transform: uppercase;
+		color: #2e2e2e;
+		font-size: 30px;
+		font-family: Karla-Bold;
+		margin-bottom: 20px;
+	}
+	p {
+		color: #2e2e2e;
+		margin-bottom: 60px;
+	}
+	.total-score {
+		background-color: #fdd05f;
+		width: 227px;
+		height: 284px;
+		padding-top: 45px;
+		color: #9e7715;
+		font-family: Karla-Bold;
+		text-transform: uppercase;
+		font-size: 24px;
+		.total-score-circle {
+			width: 150px;
+			height: 150px;
+			box-sizing: border-box;
+			border: 8px solid #9e7715;
+			margin: 0 auto 20px auto;
+			border-radius: 75px;
+			font-size: 60px;
+			text-align: center;
+			padding-top: 20px;
+		}
+	}
 }
 footer {
 	height: 328px;

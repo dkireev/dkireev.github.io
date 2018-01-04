@@ -178,6 +178,10 @@ section#bottom-banner-section button {
   position: absolute;
   right: 209px;
 }
+section#bottom-banner-section button:hover {
+  cursor: pointer;
+  background-color: #e3bb55;
+}
 section#bottom-banner-section button::before {
   content: url("../img/email-icon.png");
   position: absolute;
@@ -193,6 +197,41 @@ section#articles-section {
 section#customer-section {
   height: 581px;
   background-color: #fff;
+  text-align: center;
+  padding-top: 70px;
+}
+section#customer-section h4 {
+  text-transform: uppercase;
+  color: #2e2e2e;
+  font-size: 30px;
+  font-family: Karla-Bold;
+  margin-bottom: 20px;
+}
+section#customer-section p {
+  color: #2e2e2e;
+  margin-bottom: 60px;
+}
+section#customer-section .total-score {
+  background-color: #fdd05f;
+  width: 227px;
+  height: 284px;
+  padding-top: 45px;
+  color: #9e7715;
+  font-family: Karla-Bold;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+section#customer-section .total-score .total-score-circle {
+  width: 150px;
+  height: 150px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 8px solid #9e7715;
+  margin: 0 auto 20px auto;
+  border-radius: 75px;
+  font-size: 60px;
+  text-align: center;
+  padding-top: 20px;
 }
 
 footer {
