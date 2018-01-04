@@ -233,6 +233,35 @@ section#customer-section .total-score .total-score-circle {
   text-align: center;
   padding-top: 20px;
 }
+section#customer-section .customer {
+  height: 135px;
+  border: 1px solid #d9d9d9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 0 40px #ededed;
+          box-shadow: 0 0 40px #ededed;
+  padding: 15px 0 0 80px;
+  text-align: left;
+  color: #35363b;
+  position: relative;
+}
+section#customer-section .customer p {
+  margin: 5px 0;
+  line-height: 1.25;
+}
+section#customer-section .customer .customer-feedback {
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 10px;
+}
+section#customer-section .customer img.customer-image {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+section#customer-section .customer:first-child {
+  margin-bottom: 15px;
+}
 
 footer {
   height: 328px;

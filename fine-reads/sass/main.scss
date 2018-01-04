@@ -224,6 +224,33 @@ section#customer-section {
 			padding-top: 20px;
 		}
 	}
+	.customer {
+		height: 135px;
+		border: 1px solid #d9d9d9;
+		box-sizing: border-box;
+		box-shadow: 0 0 40px #ededed;
+		padding: 15px 0 0 80px;
+		text-align: left;
+		color: #35363b;
+		position: relative;
+		p {
+			margin: 5px 0;
+			line-height: 1.25;
+		}
+		.customer-feedback {
+			font-size: 14px;
+			line-height: 16px;
+			margin-top: 10px;
+		}
+		img.customer-image {
+			position: absolute;
+			left: 20px;
+			top: 20px;
+		}
+	}
+	.customer:first-child {
+		margin-bottom: 15px;
+	}
 }
 footer {
 	height: 328px;
