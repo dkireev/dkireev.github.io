@@ -39,16 +39,12 @@ section#main-banner-section div img {
 section#special-offer-section {
   height: 956px;
   background-color: #fff;
+  padding-top: 69px;
 }
 
-section#category-1-section {
+section.category-section {
   height: 561px;
   background-color: #e5e6d2;
-}
-
-section#category-2-section {
-  height: 561px;
-  background-color: #fff;
 }
 
 section#bottom-banner-section {
