@@ -1,3 +1,20 @@
+@font-face {
+  font-family: Karla-Bold;
+  src: url(../fonts/Karla-Bold.ttf);
+}
+@font-face {
+  font-family: Karla-Italic;
+  src: url(../fonts/Karla-Italic.ttf);
+}
+@font-face {
+  font-family: Karla-Regular;
+  src: url(../fonts/Karla-Regular.ttf);
+}
+body {
+  font-family: Karla-Regular;
+  font-size: 100%;
+}
+
 header {
   height: 84px;
   background-color: #fff;
@@ -17,23 +34,56 @@ header div img {
 
 section#main-banner-section {
   height: 494px;
+  line-height: 494px;
   background: #e5e6d2 url("../img/main-banner.jpg") no-repeat;
   background-size: cover;
   background-position: center center;
-}
-section#main-banner-section div {
-  width: 100%;
-  height: inherit;
-  max-width: 1370px;
-  margin: 0 auto;
-  border-bottom: inherit;
   position: relative;
 }
-section#main-banner-section div img {
+section#main-banner-section .vertical-wrapper {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: -50px;
+  line-height: 56px;
+  padding-left: 20px;
+}
+section#main-banner-section h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom: 0;
+}
+section#main-banner-section h2 {
+  font-size: 3.5em;
+  font-family: Karla-Bold;
+  line-height: 1;
+  margin-bottom: 0;
+}
+section#main-banner-section .main-banner-button {
+  height: 56px;
+  width: 390px;
+  background-color: #fdd05f;
+  border-radius: 28px;
+  margin: 30px 0 10px 0;
+  display: block;
+  font-family: Karla-Bold;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+section#main-banner-section .main-banner-button::after {
+  content: url("../img/main-banner-arrow.png");
   position: absolute;
-  right: 0;
-  top: 75px;
-  padding-right: 20px;
+  background-size: 100%;
+  top: 2px;
+  right: 25px;
+}
+section#main-banner-section img {
+  position: absolute;
+  right: -100px;
+  top: 70px;
 }
 
 section#special-offer-section {
@@ -58,7 +108,7 @@ section#special-offer-section img:hover {
 
 section.category-section {
   height: 561px;
-  background-color: #e5e6d2;
+  background-color: #ffffff;
 }
 
 section#bottom-banner-section {
