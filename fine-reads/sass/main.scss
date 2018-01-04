@@ -186,6 +186,22 @@ section#bottom-banner-section {
 section#articles-section {
 	height: 491px;
 	background-color: #f4f4f4;
+	font-size: 14px;
+	a {
+		text-decoration: none;
+	}
+	h4 {
+		color: #321d14;
+		text-decoration: none;
+		font-family: Karla-Bold;
+		font-size: 21px;
+	}
+	.posted-by {
+		color: #a6a6a6;
+	}
+	.posted-by-details {
+		font-family: Karla-Bold;
+	}
 }
 section#customer-section {
 	height: 581px;
