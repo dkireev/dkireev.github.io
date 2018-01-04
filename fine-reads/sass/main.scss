@@ -71,14 +71,15 @@ section#main-banner-section {
 		color: inherit;
 		position: relative;
 	}
+	.main-banner-button:hover {
+		box-shadow: 0 0 20px #aaa;
+	}
 	.main-banner-button::after {
 		content: url('../img/main-banner-arrow.png');
 		position: absolute;
 		background-size: 100%;
 		top: 2px;
 		right: 25px;
-
-
 	}
 	img {
 		position: absolute;
@@ -126,4 +127,19 @@ section#customer-section {
 footer {
 	height: 328px;
 	background-color: #171514;
+	padding-top: 70px;
+	.wrapper {
+		margin: 0 auto;
+		max-width: 480px;
+		text-align: center;
+		.footer-social {
+			margin-right: 10px;
+		}
+		.footer-social:last-child {
+			margin-right: 0;
+		}
+		.footer-logo {
+			margin-bottom: 45px;
+		}
+	}
 }

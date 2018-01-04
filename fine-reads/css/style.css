@@ -73,6 +73,10 @@ section#main-banner-section .main-banner-button {
   color: inherit;
   position: relative;
 }
+section#main-banner-section .main-banner-button:hover {
+  -webkit-box-shadow: 0 0 20px #aaa;
+          box-shadow: 0 0 20px #aaa;
+}
 section#main-banner-section .main-banner-button::after {
   content: url("../img/main-banner-arrow.png");
   position: absolute;
@@ -131,4 +135,19 @@ section#customer-section {
 footer {
   height: 328px;
   background-color: #171514;
+  padding-top: 70px;
+}
+footer .wrapper {
+  margin: 0 auto;
+  max-width: 480px;
+  text-align: center;
+}
+footer .wrapper .footer-social {
+  margin-right: 10px;
+}
+footer .wrapper .footer-social:last-child {
+  margin-right: 0;
+}
+footer .wrapper .footer-logo {
+  margin-bottom: 45px;
 }
