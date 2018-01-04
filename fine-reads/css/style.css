@@ -39,7 +39,21 @@ section#main-banner-section div img {
 section#special-offer-section {
   height: 956px;
   background-color: #fff;
-  padding-top: 69px;
+  padding-top: 70px;
+}
+section#special-offer-section img.special-offer-1 {
+  width: 100%;
+  max-width: 378px;
+  margin-bottom: 30px;
+}
+section#special-offer-section img.special-offer-2 {
+  width: 100%;
+  max-width: 774px;
+  margin-bottom: 30px;
+}
+section#special-offer-section img:hover {
+  -webkit-box-shadow: 0 0 20px #aaa;
+          box-shadow: 0 0 20px #aaa;
 }
 
 section.category-section {
