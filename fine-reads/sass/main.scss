@@ -212,6 +212,8 @@ section#customer-section {
 		font-family: Karla-Bold;
 		text-transform: uppercase;
 		font-size: 24px;
+		float: left;
+		display: inline-block;
 		.total-score-circle {
 			width: 150px;
 			height: 150px;
@@ -222,6 +224,44 @@ section#customer-section {
 			font-size: 60px;
 			text-align: center;
 			padding-top: 20px;
+		}
+	}
+	.detailed-score {
+		height: 284;
+		float: right;
+		display: inline-block;
+		width: 100%;
+		max-width: 313px;
+		.detailed-score-title {
+			border-bottom: 1px solid #e8e8e8;
+			height: 76px;
+			text-align: left;
+			font-size: 14px;
+			padding-left: 140px;
+			position: relative;
+			span#percentage {
+				position: absolute;
+				left: 25px;
+				top: 10px;
+				color: #505151;
+				font-family: Karla-Bold;
+				font-size: 48px;
+				line-height: 1;
+			}
+		}
+		.detailed-score-rating {
+			display: table;
+		}
+		.detailed-score-column {
+			display: table-cell;
+			width: 50%;
+			text-align: center;
+			vertical-align: middle;
+			font-size: 14px;
+			.detailed-score-star {
+				font-family: Karla-Bold;
+				padding-left: 15px;
+			}
 		}
 	}
 	.customer {

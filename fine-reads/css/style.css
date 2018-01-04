@@ -220,6 +220,8 @@ section#customer-section .total-score {
   font-family: Karla-Bold;
   text-transform: uppercase;
   font-size: 24px;
+  float: left;
+  display: inline-block;
 }
 section#customer-section .total-score .total-score-circle {
   width: 150px;
@@ -232,6 +234,44 @@ section#customer-section .total-score .total-score-circle {
   font-size: 60px;
   text-align: center;
   padding-top: 20px;
+}
+section#customer-section .detailed-score {
+  height: 284;
+  float: right;
+  display: inline-block;
+  width: 100%;
+  max-width: 313px;
+}
+section#customer-section .detailed-score .detailed-score-title {
+  border-bottom: 1px solid #e8e8e8;
+  height: 76px;
+  text-align: left;
+  font-size: 14px;
+  padding-left: 140px;
+  position: relative;
+}
+section#customer-section .detailed-score .detailed-score-title span#percentage {
+  position: absolute;
+  left: 25px;
+  top: 10px;
+  color: #505151;
+  font-family: Karla-Bold;
+  font-size: 48px;
+  line-height: 1;
+}
+section#customer-section .detailed-score .detailed-score-rating {
+  display: table;
+}
+section#customer-section .detailed-score .detailed-score-column {
+  display: table-cell;
+  width: 50%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+}
+section#customer-section .detailed-score .detailed-score-column .detailed-score-star {
+  font-family: Karla-Bold;
+  padding-left: 15px;
 }
 section#customer-section .customer {
   height: 135px;
