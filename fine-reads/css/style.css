@@ -137,12 +137,14 @@ section#bottom-banner-section h3 {
   font-family: Karla-Bold;
   font-size: 3.5em;
   line-height: 1;
+  margin-bottom: 0;
 }
 section#bottom-banner-section p {
   color: #fff;
   font-family: Karla-Regular;
   font-size: 1.9em;
   line-height: 1;
+  margin-bottom: 40px;
 }
 section#bottom-banner-section form {
   width: 753px;
