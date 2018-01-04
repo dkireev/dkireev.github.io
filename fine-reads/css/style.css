@@ -40,7 +40,7 @@ section#main-banner-section {
   background-position: center center;
   position: relative;
 }
-section#main-banner-section .vertical-wrapper {
+section#main-banner-section .main-banner-vertical {
   display: inline-block;
   vertical-align: middle;
   margin-left: -50px;
@@ -117,9 +117,70 @@ section.category-section {
 
 section#bottom-banner-section {
   height: 352px;
+  line-height: 352px;
   background: #43cf9f url("../img/bottom-banner.jpg") no-repeat;
   background-size: cover;
   background-position: center center;
+  text-align: center;
+  position: relative;
+}
+section#bottom-banner-section .bottom-banner-vertical {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: -50px;
+  line-height: 56px;
+  padding-left: 20px;
+  line-height: 1;
+}
+section#bottom-banner-section h3 {
+  color: #fff;
+  font-family: Karla-Bold;
+  font-size: 3.5em;
+  line-height: 1;
+}
+section#bottom-banner-section p {
+  color: #fff;
+  font-family: Karla-Regular;
+  font-size: 1.9em;
+  line-height: 1;
+}
+section#bottom-banner-section form {
+  width: 753px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 0.85em;
+}
+section#bottom-banner-section input {
+  width: 527px;
+  height: 66px;
+  border-bottom-left-radius: 33px;
+  border-top-left-radius: 33px;
+  border: none;
+  outline: none;
+  padding: 0 0 0 50px;
+  color: #414241;
+  position: relative;
+}
+section#bottom-banner-section button {
+  width: 226px;
+  height: 66px;
+  border-bottom-right-radius: 33px;
+  border-top-right-radius: 33px;
+  text-transform: uppercase;
+  font-family: Karla-Bold;
+  color: #2a2e28;
+  border: none;
+  outline: none;
+  padding: 0;
+  background-color: #fdd05f;
+  position: absolute;
+  right: 209px;
+}
+section#bottom-banner-section button::before {
+  content: url("../img/email-icon.png");
+  position: absolute;
+  left: 35px;
+  top: 27px;
 }
 
 section#articles-section {
