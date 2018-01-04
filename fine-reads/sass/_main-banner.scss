@@ -9,18 +9,20 @@ section#main-banner-section {
 	.main-banner-vertical {
 		display: inline-block;
 		vertical-align: middle;
-		margin-left: -50px;
+		margin-left: -9px;
 		line-height: 56px;
-		padding-left: 20px;
+		padding-left: 0;
 	}
 	h1 {
-		font-size: 3.23em;
+		font-size: 3.43em;
+		letter-spacing: -3px;
 		line-height: 1;
 		margin-bottom: 0;
 		color: #433a36;
 	}
 	h2 {
-		font-size: 3.53em;
+		font-size: 3.75em;
+		letter-spacing: -3px;
 		font-family: Karla-Bold;
 		line-height: 1;
 		margin-bottom: 0;
@@ -36,7 +38,7 @@ section#main-banner-section {
 		color: #2a2e28;
 		font-family: Karla-Bold;
 		text-transform: uppercase;
-		font-size: 0.82em;
+		font-size: 0.87em;
 		text-align: center;
 		text-decoration: none;
 		color: inherit;
@@ -49,12 +51,15 @@ section#main-banner-section {
 		content: url('../img/main-banner-arrow.png');
 		position: absolute;
 		background-size: 100%;
-		top: 2px;
+		top: 3px;
 		right: 25px;
 	}
 	img {
 		position: absolute;
-		right: -100px;
-		top: 70px;
+		right: -70px;
+		top: 79px;
+		width: 100%;
+		max-width: 773px;
+		min-width: 318px;
 	}
 }

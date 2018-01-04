@@ -2,17 +2,19 @@ section#customer-section {
 	height: 581px;
 	background-color: #fff;
 	text-align: center;
-	padding-top: 70px;
+	padding-top: 62px;
 	h4 {
 		text-transform: uppercase;
 		color: #2e2e2e;
-		font-size: 1.76em;
+		font-size: 1.87em;
+		letter-spacing: -2px;
 		font-family: Karla-Bold;
-		margin-bottom: 20px;
+		margin-bottom: 14px;
 	}
 	p {
 		color: #2e2e2e;
-		margin-bottom: 60px;
+		margin-bottom: 73px;
+		letter-spacing: -0.5px;
 	}
 	.total-score {
 		background-color: #fdd05f;
@@ -32,9 +34,9 @@ section#customer-section {
 			border: 8px solid #9e7715;
 			margin: 0 auto 20px auto;
 			border-radius: 75px;
-			font-size: 3.23em;
+			font-size: 2.44em;
 			text-align: center;
-			padding-top: 10px;
+			padding-top: 29px;
 		}
 	}
 	.detailed-score {
@@ -47,16 +49,18 @@ section#customer-section {
 			border-bottom: 1px solid #e8e8e8;
 			height: 76px;
 			text-align: left;
-			font-size: 0.82em;
-			padding-left: 140px;
+			font-size: 0.87em;
+			padding-left: 111px;
+			padding-top: 6px;
 			position: relative;
 			span#percentage {
 				position: absolute;
-				left: 35px;
-				top: 13px;
+				left: -4px;
+				top: 11px;
 				color: #505151;
 				font-family: Karla-Bold;
-				font-size: 2.82em;
+				font-size: 3.72em;
+				letter-spacing: -3px;
 				line-height: 1;
 			}
 		}
