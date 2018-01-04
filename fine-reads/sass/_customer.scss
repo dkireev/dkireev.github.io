@@ -1,0 +1,105 @@
+section#customer-section {
+	height: 581px;
+	background-color: #fff;
+	text-align: center;
+	padding-top: 70px;
+	h4 {
+		text-transform: uppercase;
+		color: #2e2e2e;
+		font-size: 1.76em;
+		font-family: Karla-Bold;
+		margin-bottom: 20px;
+	}
+	p {
+		color: #2e2e2e;
+		margin-bottom: 60px;
+	}
+	.total-score {
+		background-color: #fdd05f;
+		width: 227px;
+		height: 284px;
+		padding-top: 45px;
+		color: #9e7715;
+		font-family: Karla-Bold;
+		text-transform: uppercase;
+		font-size: 1.41em;
+		float: left;
+		display: inline-block;
+		.total-score-circle {
+			width: 150px;
+			height: 150px;
+			box-sizing: border-box;
+			border: 8px solid #9e7715;
+			margin: 0 auto 20px auto;
+			border-radius: 75px;
+			font-size: 3.23em;
+			text-align: center;
+			padding-top: 10px;
+		}
+	}
+	.detailed-score {
+		height: 284;
+		float: right;
+		display: inline-block;
+		width: 100%;
+		max-width: 313px;
+		.detailed-score-title {
+			border-bottom: 1px solid #e8e8e8;
+			height: 76px;
+			text-align: left;
+			font-size: 0.82em;
+			padding-left: 140px;
+			position: relative;
+			span#percentage {
+				position: absolute;
+				left: 35px;
+				top: 13px;
+				color: #505151;
+				font-family: Karla-Bold;
+				font-size: 2.82em;
+				line-height: 1;
+			}
+		}
+		.detailed-score-rating {
+			display: table;
+		}
+		.detailed-score-column {
+			display: table-cell;
+			width: 50%;
+			text-align: center;
+			vertical-align: middle;
+			font-size: 0.82em;
+			.detailed-score-star {
+				font-family: Karla-Bold;
+				padding-left: 15px;
+			}
+		}
+	}
+	.customer {
+		height: 135px;
+		border: 1px solid #d9d9d9;
+		box-sizing: border-box;
+		box-shadow: 0 0 40px #ededed;
+		padding: 15px 0 0 80px;
+		text-align: left;
+		color: #35363b;
+		position: relative;
+		p {
+			margin: 5px 0;
+			line-height: 1.25;
+		}
+		.customer-feedback {
+			font-size: 0.94em;
+			line-height: 16px;
+			margin-top: 10px;
+		}
+		img.customer-image {
+			position: absolute;
+			left: 20px;
+			top: 20px;
+		}
+	}
+	.customer:first-child {
+		margin-bottom: 15px;
+	}
+}

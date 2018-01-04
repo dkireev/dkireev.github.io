@@ -1,0 +1,60 @@
+section#main-banner-section {
+	height: 494px;
+	line-height: 494px;
+	background: #e5e6d2 url('../img/main-banner.jpg') no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+	.main-banner-vertical {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: -50px;
+		line-height: 56px;
+		padding-left: 20px;
+	}
+	h1 {
+		font-size: 3.23em;
+		line-height: 1;
+		margin-bottom: 0;
+		color: #433a36;
+	}
+	h2 {
+		font-size: 3.53em;
+		font-family: Karla-Bold;
+		line-height: 1;
+		margin-bottom: 0;
+		color: #433a36;
+	}
+	.main-banner-button {
+		height: 56px;
+		width: 390px;
+		background-color: #fdd05f;
+		border-radius: 28px;
+		margin: 30px 0 10px 0;
+		display: block;
+		color: #2a2e28;
+		font-family: Karla-Bold;
+		text-transform: uppercase;
+		font-size: 0.82em;
+		text-align: center;
+		text-decoration: none;
+		color: inherit;
+		position: relative;
+	}
+	.main-banner-button:hover {
+		box-shadow: 0 0 20px #aaa;
+	}
+	.main-banner-button::after {
+		content: url('../img/main-banner-arrow.png');
+		position: absolute;
+		background-size: 100%;
+		top: 2px;
+		right: 25px;
+	}
+	img {
+		position: absolute;
+		right: -100px;
+		top: 70px;
+	}
+}

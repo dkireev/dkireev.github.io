@@ -1,0 +1,18 @@
+section#special-offer-section {
+	height: 956px;
+	background-color: #fff;
+	padding-top: 70px;
+	img.special-offer-1 {
+		width: 100%;
+		max-width: 378px;
+		margin-bottom: 30px;
+	}
+	img.special-offer-2 {
+		width: 100%;
+		max-width: 774px;
+		margin-bottom: 30px;
+	}
+	img:hover {
+		box-shadow: 0 0 20px #aaa;
+	}
+}
