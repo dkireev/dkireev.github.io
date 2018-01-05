@@ -204,7 +204,7 @@ section#bottom-banner-section button::before {
 section#articles-section {
   height: 491px;
   background-color: #f4f4f4;
-  padding-top: 74px;
+  padding-top: 69px;
   position: relative;
 }
 section#articles-section h3 {
@@ -212,17 +212,89 @@ section#articles-section h3 {
   color: #222326;
   font-size: 1.5em;
   font-family: Karla-Bold;
-  padding-left: 7px;
   letter-spacing: 3px;
   margin-bottom: 37px;
+  padding-left: 7px;
+  padding-top: 5px;
+  display: inline-block;
+}
+section#articles-section form {
+  display: inline-block;
+  width: 740px;
+  height: 30px;
+  padding-left: 40px;
+  margin-top: 12px;
+  margin-left: 120px;
+  font-size: 0.87em;
+  vertical-align: top;
+  position: relative;
+}
+section#articles-section form button {
+  background: transparent url(../img/search-event-icon.png) no-repeat;
+  background-position: center;
+  border: none;
+  outline: none;
+  width: 40px;
+  height: 22px;
+  padding: 0;
+  left: 0;
+  position: absolute;
+}
+section#articles-section form button:hover {
+  cursor: pointer;
+}
+section#articles-section form input {
+  width: 370px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #cccccc;
+  background: transparent;
+  color: #aaaaaa;
+  text-transform: uppercase;
+  padding: 0 0 0 10px;
+}
+section#articles-section form ::-webkit-input-placeholder {
+  color: #aaaaaa;
+}
+section#articles-section form :-ms-input-placeholder {
+  color: #aaaaaa;
+}
+section#articles-section form ::-ms-input-placeholder {
+  color: #aaaaaa;
+}
+section#articles-section form ::placeholder {
+  color: #aaaaaa;
+}
+section#articles-section form select {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #aaaaaa;
+  text-transform: uppercase;
+  padding: 0 5px;
+  margin-left: 15px;
+}
+section#articles-section form select:hover {
+  cursor: pointer;
+}
+section#articles-section form option {
+  color: #aaaaaa;
+  background: transparent;
+  font-size: 0.87em;
+  border: none;
 }
 section#articles-section .articles-arrows {
   width: 100px;
-  height: 100px;
-  background-color: red;
+  height: 25px;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 10px;
+  top: 8px;
+  text-align: right;
+}
+section#articles-section .articles-arrows img {
+  margin-left: 6px;
+  margin-right: 6px;
+  vertical-align: top;
 }
 section#articles-section .articles-item {
   padding-left: 7px;
