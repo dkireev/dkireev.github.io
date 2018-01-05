@@ -11,6 +11,43 @@ header {
 		border-bottom: inherit;
 		img {
 			padding: 23px 0 0 21px;
+			float: left;
+		}
+		ul {
+			list-style-type: none;
+			padding: 0;
+			display: inline-block;
+			margin-top: 30px;
+			margin-left: 58px;
+			float: left;
+			li {
+				display: inline-block;
+				padding-right: 45px;
+				text-transform: uppercase;
+				color: #57595b;
+				font-family: Karla-Bold;
+				font-size: 0.94em;
+			}
+			li:last-child {
+				padding-right: 0;
+			}
+			a {
+				color: inherit;
+			}
+			a:hover {
+				color: inherit;
+				text-decoration: none;
+			}
+		}
+		.header-search {
+			display: inline-block;
+			width: 408px;
+			height: 44px;
+			border-radius: 22px;
+			border: 1px solid #d2d2d2;
+			position: relative;
+			margin-top: 19px;
+			margin-left: 48px;
 		}
 	}
 }
