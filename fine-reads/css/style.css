@@ -204,23 +204,50 @@ section#bottom-banner-section button::before {
 section#articles-section {
   height: 491px;
   background-color: #f4f4f4;
+  padding-top: 74px;
+  position: relative;
 }
-section#articles-section a {
+section#articles-section h3 {
+  text-transform: uppercase;
+  color: #222326;
+  font-size: 1.5em;
+  font-family: Karla-Bold;
+  padding-left: 7px;
+  letter-spacing: 3px;
+  margin-bottom: 37px;
+}
+section#articles-section .articles-arrows {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+section#articles-section .articles-item {
+  padding-left: 7px;
+}
+section#articles-section .articles-item a {
   text-decoration: none;
 }
-section#articles-section h4 {
+section#articles-section .articles-item h4 {
   color: #321d14;
   text-decoration: none;
   font-family: Karla-Bold;
-  font-size: 1.29em;
+  font-size: 1.37em;
+  letter-spacing: -0.5px;
 }
-section#articles-section .posted-by {
+section#articles-section .articles-item .posted-by {
   color: #a6a6a6;
-  font-size: 0.82em;
+  font-size: 0.87em;
 }
-section#articles-section .posted-by-details {
+section#articles-section .articles-item .posted-by-details {
   font-family: Karla-Bold;
-  font-size: 0.82em;
+  font-size: 0.87em;
+  color: #6e6c6b;
+}
+section#articles-section .articles-item img {
+  margin-bottom: 17px;
 }
 
 section#customer-section {
