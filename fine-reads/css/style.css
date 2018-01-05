@@ -67,7 +67,7 @@ header div .header-search {
   margin-top: 19px;
   margin-left: 48px;
   float: left;
-  padding: 8px 19px 5px 19px;
+  padding: 8px 10px 5px 19px;
 }
 header div .header-search form input {
   border: none;
@@ -86,6 +86,8 @@ header div .header-search form select {
   outline: none;
   font-size: .87em;
   color: #6b716d;
+  width: 60px;
+  padding-left: 5px;
 }
 header div .header-search form option {
   font-size: .87em;
