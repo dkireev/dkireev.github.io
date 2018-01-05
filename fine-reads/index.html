@@ -83,15 +83,95 @@
 		</div>
 	</section>
 
-	<section class="category-section">
+	<section id="category-section">
 		<div class="container">
 			<div class="row">
-				
+				<div class="col">
+					<div class="category-section-row">
+						<div class="category-section-heading">
+							
+						</div>
+						<div class="category-section-item">
+							<a href=""><img src="img/book-1-1.jpg" alt=""></a>
+							<h5 class="section-item-title">The Gruffalo</h5>
+							<span class="section-item-author">by Julia Donaldson</span><br>
+							<p class="section-item-price">$8.21</p><span class="section-item-currency">USD</span>
+							<a href="" class="section-item-button">Add to cart</a>
+						</div>
+						<div class="category-section-item">
+							<a href=""><img src="img/book-1-2.jpg" alt=""></a>
+							<h5 class="section-item-title">Peace at Last</h5>
+							<span class="section-item-author">by Jill Murphy</span><br>
+							<p class="section-item-price">$11.00</p><span class="section-item-currency">USD</span>
+							<a href="" class="section-item-button">Add to cart</a>
+						</div>
+						<div class="category-section-item">
+							<a href=""><img src="img/book-1-3.jpg" alt=""></a>
+							<h5 class="section-item-title">The Teddy Robinson</h5>
+							<span class="section-item-author">by Julia Donaldson</span><br>
+							<p class="section-item-price">$7.20</p><span class="section-item-currency">USD</span>
+							<a href="" class="section-item-button">Add to cart</a>
+						</div>
+						<div class="category-section-item">
+							<a href=""><img src="img/book-1-4.jpg" alt=""></a>
+							<h5 class="section-item-title">Gobbolino the Witch's</h5>
+							<span class="section-item-author">by Julia Donaldson</span><br>
+							<p class="section-item-price">$8.21</p><span class="section-item-currency">USD</span>
+							<a href="" class="section-item-button">Add to cart</a>
+						</div>
+						<div class="category-section-item">
+							<a href=""><img src="img/book-1-5.jpg" alt=""></a>
+							<h5 class="section-item-title">Island of Adventure</h5>
+							<span class="section-item-author">by Ursula Moray Williams</span><br>
+							<p class="section-item-price">$9.69</p><span class="section-item-currency">USD</span>
+							<a href="" class="section-item-button">Add to cart</a>
+						</div>
+					</div>
+				</div>
+				<div class="category-section-row">
+						<div class="category-section-heading">
+							
+						</div>
+						<div class="category-section-item">
+							<a href=""><img src="img/book-2-1.jpg" alt=""></a>
+							<h5 class="section-item-title">The Martian</h5>
+							<span class="section-item-author">by Andy Weir</span><br>
+							<p class="section-item-price">$8.21</p><span class="section-item-currency">USD</span>
+							<a href="" class="section-item-button">Add to cart</a>
+						</div>
+						<div class="category-section-item">
+							<a href=""><img src="img/book-2-2.jpg" alt=""></a>
+							<h5 class="section-item-title">The Great Gatsby</h5>
+							<span class="section-item-author">by F. Scott Fitzgerald</span><br>
+							<p class="section-item-price">$11.00</p><span class="section-item-currency">USD</span>
+							<a href="" class="section-item-button">Add to cart</a>
+						</div>
+						<div class="category-section-item">
+							<a href=""><img src="img/book-2-3.jpg" alt=""></a>
+							<h5 class="section-item-title">The Catcher in the Rye</h5>
+							<span class="section-item-author">by J. D. Salinger</span><br>
+							<p class="section-item-price">$7.20</p><span class="section-item-currency">USD</span>
+							<a href="" class="section-item-button">Add to cart</a>
+						</div>
+						<div class="category-section-item">
+							<a href=""><img src="img/book-2-4.jpg" alt=""></a>
+							<h5 class="section-item-title">The Art of Racing</h5>
+							<span class="section-item-author">by Ursula Moray Williams</span><br>
+							<p class="section-item-price">$9.69</p><span class="section-item-currency">USD</span>
+							<a href="" class="section-item-button">Add to cart</a>
+						</div>
+						<div class="category-section-item">
+							<a href=""><img src="img/book-2-5.jpg" alt=""></a>
+							<h5 class="section-item-title">Lord of the Flies</h5>
+							<span class="section-item-author">by William Golding</span><br>
+							<p class="section-item-price">$8.21</p><span class="section-item-currency">USD</span>
+							<a href="" class="section-item-button">Add to cart</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
-
-	<section class="category-section">&nbsp;</section>
 
 	<section id="bottom-banner-section">
 		<div class="container">
@@ -276,5 +356,12 @@
 		</div>
 	</footer>
 
+	<script>
+		var categoryRow = document.getElementsByClassName('category-section-row');
+		var i = 0;
+		for (i; i < categoryRow.length; i++) {
+			categoryRow[i].getElementsByClassName('category-section-item')[4].style.marginRight= 0;
+		}
+	</script>
 </body>
 </html>
