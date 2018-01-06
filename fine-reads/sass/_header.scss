@@ -156,10 +156,12 @@ header {
 
 @media screen and (max-width:767px) {
 	header {
+		div {
+			width: 100%;
+		}
 		line-height: 52px;
 		height: 52px;
-		max-width: 522px;
-		width: 100%;
+		width: 522px;
 		margin: auto;
 		border: none;
 		.header-logo {
