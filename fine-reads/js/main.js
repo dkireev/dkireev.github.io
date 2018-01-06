@@ -1,13 +1,24 @@
-var categoryRow = document.getElementsByClassName('category-section-row');
-for (var i = 0; i < categoryRow.length; i++) {
-    categoryRow[i].getElementsByClassName('category-section-item')[4].style.marginRight = 0;
+var categoryFirstWidth = 0;
+var categoryFirstRow = document.getElementById('category-row-first').getElementsByClassName('category-section-item');
+for (var i = 0; i < categoryFirstRow.length; i++) {
+	var itemCategoryWidth = getComputedStyle(categoryFirstRow[i]);
+	categoryFirstWidth = categoryFirstWidth + parseInt(itemCategoryWidth.width) + parseInt(itemCategoryWidth.marginRight);
 }
+document.getElementById('category-row-first').style.width = categoryFirstWidth + 'px';
+
+var categorySecondWidth = 0;
+var categorySecondRow = document.getElementById('category-row-second').getElementsByClassName('category-section-item');
+for (var i = 0; i < categorySecondRow.length; i++) {
+	var itemCategoryWidth = getComputedStyle(categorySecondRow[i]);
+	categorySecondWidth = categorySecondWidth + parseInt(itemCategoryWidth.width) + parseInt(itemCategoryWidth.marginRight);
+}
+document.getElementById('category-row-second').style.width = categorySecondWidth + 'px';
 
 var articlesRowWidth = 0;
 var articlesRow = document.getElementsByClassName('articles-item');
 for (var i = 0; i < articlesRow.length; i++) {
-	var itemWidth = getComputedStyle(articlesRow[i]);
-	articlesRowWidth = articlesRowWidth + parseInt(itemWidth.width) + parseInt(itemWidth.marginRight);
+	var itemArticleWidth = getComputedStyle(articlesRow[i]);
+	articlesRowWidth = articlesRowWidth + parseInt(itemArticleWidth.width) + parseInt(itemArticleWidth.marginRight);
 }
 document.getElementById('articles-items-wrapper').style.width = articlesRowWidth + 'px';
 
