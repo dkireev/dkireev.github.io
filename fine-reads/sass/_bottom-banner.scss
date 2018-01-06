@@ -75,6 +75,31 @@ section#bottom-banner-section {
 		top: 27px;
 	}
 }
+
+@media screen and (max-width:767px) {
+	section#bottom-banner-section {
+		h3 {
+			font-size: 3.25em;
+		}
+		p {
+			font-size: 1.5em;
+		}
+		input {
+			width: 340px;
+			font-size: 0.94em;
+			padding-left: 35px;
+		}
+		button {
+			font-size: 0.87em;
+			width: 182px;
+			padding-left: 17px;
+		}
+		button::before {
+			left: 23px;
+		}
+	}
+}
+
 @media screen and (max-width:575px) {
 	section#bottom-banner-section {
 		height: 285px;
@@ -95,7 +120,6 @@ section#bottom-banner-section {
 				width: 100%;
 				height: 50px;
 				border-radius: 25px;
-				font-size: 0.94em;
 				text-align: center;
 				padding-left: 0;
 			}
@@ -104,7 +128,6 @@ section#bottom-banner-section {
 				height: 50px;
 				border-radius: 25px;
 				margin-top: 6px;
-				font-size: 0.87em;
 				padding-left: 18px;
 			}
 			button::before {

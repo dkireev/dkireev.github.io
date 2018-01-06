@@ -62,6 +62,7 @@ section#main-banner-section {
 		width: 773px;
 	}
 }
+
 @media screen and (max-width:1369px) {
 	section#main-banner-section {
 		.main-banner-vertical {
@@ -73,16 +74,17 @@ section#main-banner-section {
 		}
 	}
 }
-@media screen and (max-width:575px) {
+
+@media screen and (max-width:767px) {
 	section#main-banner-section {
-		height: 412px;
-		line-height: 412px;
 		text-align: center;
+		border-top: 1px solid #cccdc0;
 		img {
-			width: 319px;
+			width: 380px;
 			top: initial;
 			right: initial;
 			position: relative;
+			margin: auto;
 		}
 		.main-banner-vertical {
 			h1 {
@@ -98,10 +100,30 @@ section#main-banner-section {
 				height: 43px;
 				line-height: 44px;
 				font-size: 0.75em;
-				margin-bottom: 23px;
+				margin: 30px auto;
 			}
 			.main-banner-button::after {
 				right: 15px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width:575px) {
+	section#main-banner-section {
+		height: 412px;
+		line-height: 412px;
+		text-align: center;
+		border: none;
+		img {
+			width: 319px;
+			top: initial;
+			right: initial;
+			position: relative;
+		}
+		.main-banner-vertical {
+			.main-banner-button {
+				margin-bottom: 23px;
 			}
 		}
 	}

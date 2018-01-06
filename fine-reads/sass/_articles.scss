@@ -115,6 +115,23 @@ section#articles-section {
 		}
 	}
 }
+
+@media screen and (max-width:767px) {
+	section#articles-section {
+		form {
+			width: 100%;
+			margin-left: -3px;
+			margin-bottom: 14px;
+			input {
+				width: 100%;
+			}
+			select {
+				display: none;
+			}
+		}
+	}
+}
+
 @media screen and (max-width:575px) {
 	section#articles-section {
 		padding-top: 39px;
@@ -128,17 +145,6 @@ section#articles-section {
 			font-size: 1.37em;
 			margin-bottom: 10px;
 			padding-top: 9px;
-		}
-		form {
-			width: 100%;
-			margin-left: -3px;
-			margin-bottom: 14px;
-			input {
-				width: 100%;
-			}
-			select {
-				display: none;
-			}
 		}
 		.articles-items-wrapper {
 			max-width: 200px;

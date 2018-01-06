@@ -128,6 +128,7 @@ header {
 		}
 	}
 }
+
 @media screen and (max-width:1369px) {
 	header div {
 		width: 1170px;
@@ -152,21 +153,42 @@ header {
 		}
 	}
 }
-@media screen and (max-width:575px) {
+
+@media screen and (max-width:767px) {
 	header {
-		height: 110px;
+		line-height: 52px;
+		height: 52px;
+		max-width: 522px;
 		width: 100%;
+		margin: auto;
 		border: none;
 		.header-logo {
-			margin: 20px auto 0 auto;
-			float: none;
-			display: block;
+			margin: 7px 20px auto 21px;
 		}
 		.header-desktop {
 			display: none;
 		}
 		.header-mobile {
 			display: block;
+			img {
+				margin: 0 5px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width:575px) {
+	header {
+		height: 110px;
+		width: 100%;
+		border: none;
+		margin: 0;
+		.header-logo {
+			margin: 20px auto 0 auto;
+			float: none;
+			display: block;
+		}
+		.header-mobile {
 			border-top: 1px solid #cccdc0;
 			border-bottom: 1px solid #cccdc0;
 			height: 53px;

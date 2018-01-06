@@ -30,10 +30,14 @@ header .header-desktop .cart-account .account-text { color: #57595b; text-transf
   header div ul li { padding-right: 25px; font-size: .87em; }
   header div .header-search { margin-left: 30px; width: 340px; }
   header div .header-search form input { width: 242px; } }
-@media screen and (max-width: 575px) { header { height: 110px; width: 100%; border: none; }
-  header .header-logo { margin: 20px auto 0 auto; float: none; display: block; }
+@media screen and (max-width: 767px) { header { line-height: 52px; height: 52px; max-width: 522px; width: 100%; margin: auto; border: none; }
+  header .header-logo { margin: 7px 20px auto 21px; }
   header .header-desktop { display: none; }
-  header .header-mobile { display: block; border-top: 1px solid #cccdc0; border-bottom: 1px solid #cccdc0; height: 53px; margin-top: 24px; text-align: center; width: 100%; vertical-align: middle; }
+  header .header-mobile { display: block; }
+  header .header-mobile img { margin: 0 5px; } }
+@media screen and (max-width: 575px) { header { height: 110px; width: 100%; border: none; margin: 0; }
+  header .header-logo { margin: 20px auto 0 auto; float: none; display: block; }
+  header .header-mobile { border-top: 1px solid #cccdc0; border-bottom: 1px solid #cccdc0; height: 53px; margin-top: 24px; text-align: center; width: 100%; vertical-align: middle; }
   header .header-mobile img { margin: 0 6px; } }
 section#main-banner-section { height: 494px; line-height: 494px; background: #e5e6d2 url("../img/main-banner.jpg") no-repeat; background-size: cover; background-position: center center; position: relative; overflow: hidden; }
 section#main-banner-section .main-banner-vertical { display: inline-block; vertical-align: middle; margin-left: -9px; line-height: 56px; padding-left: 0; }
@@ -46,12 +50,15 @@ section#main-banner-section img { position: absolute; right: -70px; top: 79px; w
 
 @media screen and (max-width: 1369px) { section#main-banner-section .main-banner-vertical { margin-left: 0; }
   section#main-banner-section img { width: 734px; top: 85px; } }
-@media screen and (max-width: 575px) { section#main-banner-section { height: 412px; line-height: 412px; text-align: center; }
-  section#main-banner-section img { width: 319px; top: initial; right: initial; position: relative; }
+@media screen and (max-width: 767px) { section#main-banner-section { text-align: center; border-top: 1px solid #cccdc0; }
+  section#main-banner-section img { width: 380px; top: initial; right: initial; position: relative; margin: auto; }
   section#main-banner-section .main-banner-vertical h1 { font-size: 1.87em; letter-spacing: -1px; }
   section#main-banner-section .main-banner-vertical h2 { font-size: 2.25em; letter-spacing: -1px; }
-  section#main-banner-section .main-banner-vertical .main-banner-button { width: 308px; height: 43px; line-height: 44px; font-size: 0.75em; margin-bottom: 23px; }
+  section#main-banner-section .main-banner-vertical .main-banner-button { width: 308px; height: 43px; line-height: 44px; font-size: 0.75em; margin: 30px auto; }
   section#main-banner-section .main-banner-vertical .main-banner-button::after { right: 15px; } }
+@media screen and (max-width: 575px) { section#main-banner-section { height: 412px; line-height: 412px; text-align: center; border: none; }
+  section#main-banner-section img { width: 319px; top: initial; right: initial; position: relative; }
+  section#main-banner-section .main-banner-vertical .main-banner-button { margin-bottom: 23px; } }
 section#special-offer-section { height: auto; background-color: #fff; padding-top: 70px; padding-bottom: 42px; }
 section#special-offer-section img.special-offer-1 { width: 100%; max-width: 378px; margin-bottom: 18px; }
 section#special-offer-section img.special-offer-2 { width: 100%; max-width: 774px; margin-bottom: 18px; }
@@ -98,12 +105,17 @@ section#bottom-banner-section button { width: 226px; height: 66px; border-bottom
 section#bottom-banner-section button:hover { cursor: pointer; background-color: #e3bb55; }
 section#bottom-banner-section button::before { content: url("../img/email-icon.png"); position: absolute; left: 31px; top: 27px; }
 
+@media screen and (max-width: 767px) { section#bottom-banner-section h3 { font-size: 3.25em; }
+  section#bottom-banner-section p { font-size: 1.5em; }
+  section#bottom-banner-section input { width: 340px; font-size: 0.94em; padding-left: 35px; }
+  section#bottom-banner-section button { font-size: 0.87em; width: 182px; padding-left: 17px; }
+  section#bottom-banner-section button::before { left: 23px; } }
 @media screen and (max-width: 575px) { section#bottom-banner-section { height: 285px; line-height: 285px; }
   section#bottom-banner-section h3 { font-size: 2.25em; letter-spacing: -1px; }
   section#bottom-banner-section p { font-size: 1.25em; letter-spacing: 0; margin-bottom: 20px; margin-top: 5px; }
   section#bottom-banner-section form { width: 312px; }
-  section#bottom-banner-section form input { width: 100%; height: 50px; border-radius: 25px; font-size: 0.94em; text-align: center; padding-left: 0; }
-  section#bottom-banner-section form button { width: 100%; height: 50px; border-radius: 25px; margin-top: 6px; font-size: 0.87em; padding-left: 18px; }
+  section#bottom-banner-section form input { width: 100%; height: 50px; border-radius: 25px; text-align: center; padding-left: 0; }
+  section#bottom-banner-section form button { width: 100%; height: 50px; border-radius: 25px; margin-top: 6px; padding-left: 18px; }
   section#bottom-banner-section form button::before { left: 87px; top: 20px; } }
 section#articles-section { height: auto; background-color: #f4f4f4; padding-top: 69px; padding-bottom: 50px; position: relative; overflow-x: hidden; }
 section#articles-section h3 { text-transform: uppercase; color: #222326; font-size: 1.5em; font-family: Karla-Bold; letter-spacing: 3px; margin-bottom: 37px; padding-top: 5px; display: inline-block; }
@@ -128,12 +140,12 @@ section#articles-section .articles-item .posted-by-details { font-family: Karla-
 section#articles-section .articles-item img { margin-bottom: 17px; }
 section#articles-section .articles-item img:hover { -webkit-box-shadow: 0 0 20px #aaa; box-shadow: 0 0 20px #aaa; }
 
+@media screen and (max-width: 767px) { section#articles-section form { width: 100%; margin-left: -3px; margin-bottom: 14px; }
+  section#articles-section form input { width: 100%; }
+  section#articles-section form select { display: none; } }
 @media screen and (max-width: 575px) { section#articles-section { padding-top: 39px; padding-bottom: 25px; }
   section#articles-section .container { max-width: 490px; margin: auto; overflow-x: hidden; }
   section#articles-section h3 { font-size: 1.37em; margin-bottom: 10px; padding-top: 9px; }
-  section#articles-section form { width: 100%; margin-left: -3px; margin-bottom: 14px; }
-  section#articles-section form input { width: 100%; }
-  section#articles-section form select { display: none; }
   section#articles-section .articles-items-wrapper { max-width: 200px; height: auto; }
   section#articles-section .articles-item { width: 320px; }
   section#articles-section .articles-item img { width: 100%; height: auto; }
@@ -143,8 +155,8 @@ section#customer-section { height: auto; background-color: #fff; text-align: cen
 section#customer-section h4 { text-transform: uppercase; color: #2e2e2e; font-size: 1.87em; letter-spacing: -2px; font-family: Karla-Bold; margin-bottom: 14px; }
 section#customer-section p { color: #2e2e2e; margin-bottom: 73px; letter-spacing: -0.5px; }
 section#customer-section .total-score { background-color: #fdd05f; width: 227px; height: 284px; padding-top: 45px; color: #9e7715; font-family: Karla-Bold; text-transform: uppercase; float: left; display: inline-block; }
-section#customer-section .total-score .total-score-circle { width: 150px; height: 150px; -webkit-box-sizing: border-box; box-sizing: border-box; border: 8px solid #9e7715; margin: 0 auto 20px auto; border-radius: 75px; text-align: center; padding-top: 29px; }
-section#customer-section .total-score .total-score-circle span#total-score-number { font-size: 2.44em; }
+section#customer-section .total-score .total-score-circle { width: 150px; height: 150px; -webkit-box-sizing: border-box; box-sizing: border-box; border: 8px solid #9e7715; margin: 0 auto 20px auto; border-radius: 75px; text-align: center; padding-top: 25px; }
+section#customer-section .total-score .total-score-circle span#total-score-number { font-size: 3.44em; }
 section#customer-section .total-score span.total-score-out { font-size: 1.41em; }
 section#customer-section .detailed-score { display: inline-block; width: 344px; }
 section#customer-section .detailed-score .detailed-score-title { border-bottom: 1px solid #e8e8e8; height: 76px; text-align: left; font-size: 0.87em; padding: 6px 40px 0 147px; position: relative; }
@@ -161,13 +173,21 @@ section#customer-section .customer .customer-feedback { font-size: 0.87em; line-
 section#customer-section .customer img.customer-image { position: absolute; left: 20px; top: 20px; }
 section#customer-section .customer:first-child { margin-bottom: 15px; }
 
-@media screen and (max-width: 767px) { section#customer-section .col-sm-6 { width: 521px; } }
+@media screen and (max-width: 767px) { section#customer-section .total-score span#total-score-number { font-size: 3em; }
+  section#customer-section .total-score { min-width: 110px; width: 35%; max-width: 200px; padding-top: 60px; }
+  section#customer-section .total-score .total-score-circle { width: 100px; height: 100px; border-radius: 50px; border: 5px solid #9e7715; padding-top: 13px; }
+  section#customer-section .total-score .total-score-circle span#total-score-number { font-size: 2.6em; }
+  section#customer-section .total-score span.total-score-out { font-size: 1.2em; }
+  section#customer-section .detailed-score { width: 338px; }
+  section#customer-section .detailed-score .detailed-score-rating { width: 338px; }
+  section#customer-section .detailed-score table { width: 338px; }
+  section#customer-section .customer:first-child { margin-top: 28px; } }
 @media screen and (max-width: 575px) { section#customer-section { padding-top: 42px; padding-bottom: 32px; }
   section#customer-section .container { max-width: 490px; margin: auto; padding-left: 9px; padding-right: 9px; }
   section#customer-section .container .full-width-col { width: 100%; }
   section#customer-section h4 { font-size: 1.5em; padding: 0 45px; }
   section#customer-section p { font-size: 0.94em; margin-bottom: 25px; }
-  section#customer-section .total-score { height: 185px; min-width: 110px; width: 35%; max-width: 180px; }
+  section#customer-section .total-score { height: 185px; min-width: 110px; width: 35%; max-width: 180px; padding-top: 45px; }
   section#customer-section .total-score .total-score-circle { width: 56px; height: 56px; border-radius: 28px; border: 3px solid #9e7715; padding-top: 9px; font-family: Karla-Regular; }
   section#customer-section .total-score .total-score-circle span#total-score-number { font-size: 1.31em; }
   section#customer-section .total-score span.total-score-out { font-size: 1em; }
@@ -183,8 +203,7 @@ section#customer-section .customer:first-child { margin-bottom: 15px; }
   section#customer-section .detailed-score table td:last-child { min-width: 96px; width: 50%; padding: 0; line-height: 1em; }
   section#customer-section .detailed-score table td:last-child img { min-width: 91px; width: 90%; }
   section#customer-section .customer { font-size: 0.94em; padding-top: 20px; }
-  section#customer-section .customer .customer-feedback { padding-bottom: 20px; }
-  section#customer-section .customer:first-child { margin-top: 28px; } }
+  section#customer-section .customer .customer-feedback { padding-bottom: 20px; } }
 footer { height: 328px; background-color: #171514; padding-top: 72px; color: #9a928e; font-size: 0.94em; position: relative; }
 footer .footer-divider-left { width: 436px; height: 1px; background-color: #272625; position: absolute; top: 92px; left: 0; }
 footer .footer-divider-right { width: 436px; height: 1px; background-color: #272625; position: absolute; top: 92px; right: 0; }
@@ -200,5 +219,5 @@ footer .wrapper ul a { color: inherit; }
 footer .wrapper p { margin-bottom: 0; font-size: 0.87em; }
 footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 
-@media screen and (max-width: 575px) { footer { padding-top: 45px; }
+@media screen and (max-width: 767px) { footer { padding-top: 45px; }
   footer .footer-divider-left, footer .footer-divider-right { display: none; } }
