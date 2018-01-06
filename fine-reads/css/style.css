@@ -113,7 +113,7 @@ section#articles-section .articles-item .posted-by-details { font-family: Karla-
 section#articles-section .articles-item img { margin-bottom: 17px; }
 section#articles-section .articles-item img:hover { -webkit-box-shadow: 0 0 20px #aaa; box-shadow: 0 0 20px #aaa; }
 
-section#customer-section { height: auto; background-color: #fff; text-align: center; padding-top: 62px; }
+section#customer-section { height: auto; background-color: #fff; text-align: center; padding-top: 62px; padding-bottom: 54px; }
 section#customer-section h4 { text-transform: uppercase; color: #2e2e2e; font-size: 1.87em; letter-spacing: -2px; font-family: Karla-Bold; margin-bottom: 14px; }
 section#customer-section p { color: #2e2e2e; margin-bottom: 73px; letter-spacing: -0.5px; }
 section#customer-section .total-score { background-color: #fdd05f; width: 227px; height: 284px; padding-top: 45px; color: #9e7715; font-family: Karla-Bold; text-transform: uppercase; float: left; display: inline-block; }
@@ -125,7 +125,6 @@ section#customer-section .detailed-score .detailed-score-title { border-bottom: 
 section#customer-section .detailed-score .detailed-score-title span#percentage { position: absolute; left: 30px; top: 11px; color: #505151; font-family: Karla-Bold; font-size: 3.72em; letter-spacing: -3px; line-height: 1; }
 section#customer-section .detailed-score .detailed-score-rating { display: table; width: 349px; padding: 10px 0; }
 section#customer-section .detailed-score .detailed-score-rating .detailed-score-column { display: table-cell; width: 50%; text-align: right; font-size: 1.12em; }
-section#customer-section .detailed-score .detailed-score-rating .detailed-score-column .detailed-score-star { font-family: Karla-Bold; padding-left: 15px; }
 section#customer-section .detailed-score table { width: 349px; }
 section#customer-section .detailed-score table td:first-child { padding: 0 10px 5px 0; vertical-align: bottom; text-align: right; font-size: 0.75em; }
 section#customer-section .detailed-score table td:nth-child(2) { padding: 0 10px 5px 10px; vertical-align: bottom; text-align: right; font-size: 0.87em; font-family: Karla-Bold; width: 60px; }
@@ -145,7 +144,17 @@ section#customer-section .customer:first-child { margin-bottom: 15px; }
   section#customer-section .total-score span.total-score-out { font-size: 1em; }
   section#customer-section .detailed-score { width: 210px; }
   section#customer-section .detailed-score .detailed-score-title { padding: 0 0 0 65px; height: 50px; line-height: 1.1; }
-  section#customer-section .detailed-score .detailed-score-title span#percentage { font-size: 1.87em; left: 11px; } }
+  section#customer-section .detailed-score .detailed-score-title span#percentage { font-size: 1.87em; left: 11px; }
+  section#customer-section .detailed-score .detailed-score-rating { width: 210px; }
+  section#customer-section .detailed-score .detailed-score-rating .detailed-score-column { padding-left: 5px; text-align: center; font-size: 0.94em; letter-spacing: -0.5px; }
+  section#customer-section .detailed-score .detailed-score-rating .detailed-score-column img { width: 100%; padding-left: 5px; }
+  section#customer-section .detailed-score table { width: 210px; text-align: right; }
+  section#customer-section .detailed-score table td:first-child { padding: 0; font-size: 0.69em; line-height: 12px; }
+  section#customer-section .detailed-score table td:nth-child(2) { padding: 0 5px 0 5px; font-size: 0.75em; line-height: 12px; width: 50px; }
+  section#customer-section .detailed-score table td:last-child { width: 96px; padding: 0; line-height: 1em; }
+  section#customer-section .detailed-score table td:last-child img { width: 91px; }
+  section#customer-section .customer { font-size: 0.94em; height: 153px; padding-top: 20px; }
+  section#customer-section .customer:first-child { margin-top: 28px; } }
 footer { height: 328px; background-color: #171514; padding-top: 72px; color: #9a928e; font-size: 0.94em; position: relative; }
 footer .footer-divider-left { width: 436px; height: 1px; background-color: #272625; position: absolute; top: 92px; left: 0; }
 footer .footer-divider-right { width: 436px; height: 1px; background-color: #272625; position: absolute; top: 92px; right: 0; }
