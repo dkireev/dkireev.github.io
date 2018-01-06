@@ -79,15 +79,17 @@ section#category-section {
 					color: #359d68;
 					font-family: Karla-Bold;
 					font-size: 1.25em;
-					display: inline-block;
-					margin-top: 8px;
-					margin-right: -4px;
+					position: absolute;
+					bottom: 34px;
+					left: 0;
 				}
 				.section-item-currency {
 					color: #b8b8b8;
 					font-family: Karla-Bold;
 					font-size: .75em;
-					padding-left: 10px;
+					position: absolute;
+					bottom: 54px;
+					left: 65px;
 				}
 				.section-item-button {
 					display: block;
@@ -120,6 +122,9 @@ section#category-section {
 		.category-section-row {
 			height: auto;
 			padding-bottom: 32px;
+			width: 100%;
+			max-width: 490px;
+			margin: auto;
 			.category-section-heading {
 				padding-bottom: 10px;
 				.section-heading-icon {
@@ -145,6 +150,9 @@ section#category-section {
 					height: 350px;
 					img {
 						width: 100%;
+					}
+					.section-item-title {
+						line-height: 1;
 					}
 				}
 			}

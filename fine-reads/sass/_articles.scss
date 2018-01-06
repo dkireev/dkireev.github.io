@@ -118,7 +118,12 @@ section#articles-section {
 @media screen and (max-width:575px) {
 	section#articles-section {
 		padding-top: 39px;
-		padding-bottom: 8px;
+		padding-bottom: 25px;
+		.container {
+			max-width: 490px;
+			margin: auto;
+			overflow-x: hidden;
+		}
 		h3 {
 			font-size: 1.37em;
 			margin-bottom: 10px;
@@ -126,7 +131,6 @@ section#articles-section {
 		}
 		form {
 			width: 100%;
-			max-width: 320px;
 			margin-left: -3px;
 			margin-bottom: 14px;
 			input {
@@ -136,12 +140,22 @@ section#articles-section {
 				display: none;
 			}
 		}
+		.articles-items-wrapper {
+			max-width: 200px;
+			height: auto;
+		}
 		.articles-item {
 			width: 320px;
 			img {
 				width: 100%;
 				height: auto;
 			}
+			h4 {
+				font-size: 1.25em;
+			}
+		}
+		.articles-arrows {
+			right: 2px;
 		}
 	}
 }

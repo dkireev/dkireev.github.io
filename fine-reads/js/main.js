@@ -24,7 +24,6 @@ document.getElementById('articles-items-wrapper').style.width = articlesRowWidth
 
 function specialOfferImageSet() {
 	var screenWidth = document.documentElement.clientWidth;
-	articlesImageSet();
 	if (screenWidth < 575) {
 		var specialOffer = document.getElementsByClassName('special-offer-images');
 		for (var i = 1; i <= specialOffer.length; i++) {
@@ -53,5 +52,13 @@ function articlesImageSet() {
 	}
 }
 
+function mainBannerImageSet() {
+	var screenWidth = document.documentElement.clientWidth;
+	if (screenWidth < 575) {
+		document.getElementById('main-banner-image').src = 'img/mobile/bookshelf.png';
+	} else document.getElementById('main-banner-image').src = 'img/bookshelf.png';
+}
+
 articlesImageSet();
 specialOfferImageSet();
+mainBannerImageSet();
