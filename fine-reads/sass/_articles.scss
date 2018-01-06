@@ -1,8 +1,10 @@
 section#articles-section {
-	height: 491px;
+	height: auto;
 	background-color: #f4f4f4;
 	padding-top: 69px;
+	padding-bottom: 50px;
 	position: relative;
+	overflow-x: hidden;
 	h3 {
 		text-transform: uppercase;
 		color: #222326;
@@ -10,7 +12,6 @@ section#articles-section {
 		font-family: Karla-Bold;
 		letter-spacing: 3px;
 		margin-bottom: 37px;
-		padding-left: 7px;
 		padding-top: 5px;
 		display: inline-block;
 	}
@@ -84,7 +85,9 @@ section#articles-section {
 		}
 	}
 	.articles-item {
-		padding-left: 7px;
+		float: left;
+		width: 364px;
+		margin-right: 37px;
 		a {
 			text-decoration: none;
 		}
@@ -109,6 +112,37 @@ section#articles-section {
 		}
 		img:hover {
 			box-shadow: 0 0 20px #aaa;
+		}
+	}
+}
+@media screen and (max-width:575px) {
+	section#articles-section {
+		padding-top: 39px;
+		padding-bottom: 8px;
+		h3 {
+			font-size: 1.37em;
+			margin-bottom: 10px;
+			padding-top: 9px;
+		}
+		form {
+			width: 100%;
+			max-width: 320px;
+			margin-left: -3px;
+			margin-bottom: 14px;
+			input {
+				width: 100%;
+			}
+			select {
+				display: none;
+			}
+		}
+		.articles-item {
+			width: 320px;
+			img {
+				width: 100%;
+				height: auto;
+				padding-left: 3px;
+			}
 		}
 	}
 }

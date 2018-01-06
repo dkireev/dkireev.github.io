@@ -63,21 +63,21 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4">
-					<a href=""><img src="img/special-offer-1.jpg" class="special-offer-1" alt=""></a>
+					<a href=""><img src="img/special-offer-1.jpg" class="special-offer-images special-offer-1" alt=""></a>
 				</div>
 				<div class="col-sm-4">
-					<a href=""><img src="img/special-offer-2.jpg" class="special-offer-1" alt=""></a>
+					<a href=""><img src="img/special-offer-2.jpg" class="special-offer-images special-offer-1" alt=""></a>
 				</div>
 				<div class="col-sm-4">
-					<a href=""><img src="img/special-offer-3.jpg" class="special-offer-1" alt=""></a>
+					<a href=""><img src="img/special-offer-3.jpg" class="special-offer-images special-offer-1" alt=""></a>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-sm-8">
-					<a href=""><img src="img/special-offer-4.jpg" class="special-offer-2" alt=""></a>
+					<a href=""><img src="img/special-offer-4.jpg" class="special-offer-images special-offer-2" alt=""></a>
 				</div>
 				<div class="col-sm-4">
-					<a href=""><img src="img/special-offer-5.jpg" class="special-offer-1" alt=""></a>
+					<a href=""><img src="img/special-offer-5.jpg" class="special-offer-images special-offer-1" alt=""></a>
 				</div>
 			</div>
 		</div>
@@ -120,6 +120,13 @@
 							<h5 class="section-item-title">Gobbolino the Witch's</h5>
 							<span class="section-item-author">by Julia Donaldson</span><br>
 							<p class="section-item-price">$8.21</p><span class="section-item-currency">USD</span>
+							<a href="" class="section-item-button">Add to cart</a>
+						</div>
+						<div class="category-section-item">
+							<a href=""><img src="img/book-1-5.jpg" alt=""></a>
+							<h5 class="section-item-title">Island of Adventure</h5>
+							<span class="section-item-author">by Ursula Moray Williams</span><br>
+							<p class="section-item-price">$9.69</p><span class="section-item-currency">USD</span>
 							<a href="" class="section-item-button">Add to cart</a>
 						</div>
 						<div class="category-section-item">
@@ -227,31 +234,29 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-4">
-					<div class="articles-item">
-						<a href="">
-							<img src="img/article-1.jpg" alt="">
-							<h4 id="article-1">Vestibulum ac ex eu magna condimentum.</h4>
-						</a>
-						<span class="posted-by">Posted by</span> <span class="posted-by-details"><span id="user-name-1">Cybil</span> on <span id="post-date-1">December 18, 2017</span></span>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="articles-item">
-						<a href="">
-							<img src="img/article-2.jpg" alt="">
-							<h4 id="article-2">Nunc sit amet leo rhoncusporttitor libero eu sodales libero.</h4>
-						</a>
-						<span class="posted-by">Posted by</span> <span class="posted-by-details"><span id="user-name-2">Cybil</span> on <span id="post-date-2">December 18, 2017</span></span>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="articles-item">
-						<a href="">
-							<img src="img/article-3.jpg" alt="">
-							<h4 id="article-3">Nunc a efficitur ante nunc laoreet bibendum auctor.</h4>
-						</a>
-						<span class="posted-by">Posted by</span> <span class="posted-by-details"><span id="user-name-3">Cybil</span> on <span id="post-date-3">December 18, 2017</span></span>
+				<div class="col">
+					<div id="articles-items-wrapper">
+						<div class="articles-item">
+							<a href="">
+								<img src="img/article-1.jpg" class="articles-item-image" alt="">
+								<h4 id="article-1">Vestibulum ac ex eu magna condimentum.</h4>
+							</a>
+							<span class="posted-by">Posted by</span> <span class="posted-by-details"><span id="user-name-1">Cybil</span> on <span id="post-date-1">December 18, 2017</span></span>
+						</div>
+						<div class="articles-item">
+							<a href="">
+								<img src="img/article-2.jpg" class="articles-item-image" alt="">
+								<h4 id="article-2">Nunc sit amet leo rhoncusporttitor libero eu sodales libero.</h4>
+							</a>
+							<span class="posted-by">Posted by</span> <span class="posted-by-details"><span id="user-name-2">Cybil</span> on <span id="post-date-2">December 18, 2017</span></span>
+						</div>
+						<div class="articles-item">
+							<a href="">
+								<img src="img/article-3.jpg" class="articles-item-image" alt="">
+								<h4 id="article-2">Nunc a efficitur ante nunc laoreet  bibendum auctor.</h4>
+							</a>
+							<span class="posted-by">Posted by</span> <span class="posted-by-details"><span id="user-name-2">Cybil</span> on <span id="post-date-2">December 18, 2017</span></span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -364,13 +369,6 @@
 			</div>
 		</div>
 	</footer>
-
-	<script>
-		var categoryRow = document.getElementsByClassName('category-section-row');
-		var i = 0;
-		for (i; i < categoryRow.length; i++) {
-			categoryRow[i].getElementsByClassName('category-section-item')[4].style.marginRight = 0;
-		}
-	</script>
+	<script async type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
