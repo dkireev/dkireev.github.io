@@ -126,6 +126,15 @@ section#customer-section {
 		margin-bottom: 15px;
 	}
 }
+
+@media screen and (max-width:767px) {
+	section#customer-section {
+		.col-sm-6 {
+			width: 521px;
+		}
+	}
+}
+
 @media screen and (max-width:575px) {
 	section#customer-section {
 		padding-top: 42px;
@@ -133,6 +142,11 @@ section#customer-section {
 		.container {
 			max-width: 490px;
 			margin: auto;
+			padding-left: 9px;
+			padding-right: 9px;
+			.full-width-col {
+				width: 100%;
+			}
 		}
 		h4 {
 			font-size: 1.5em;
@@ -164,8 +178,8 @@ section#customer-section {
 		}
 		.detailed-score {
 			min-width: 210px;
-			width: 59%;
-			max-width: 278px;
+			width: 63%;
+			max-width: 283px;
 			.detailed-score-title {
 				padding: 0 0 0 65px;
 				height: 50px;

@@ -161,15 +161,17 @@ section#customer-section .customer .customer-feedback { font-size: 0.87em; line-
 section#customer-section .customer img.customer-image { position: absolute; left: 20px; top: 20px; }
 section#customer-section .customer:first-child { margin-bottom: 15px; }
 
+@media screen and (max-width: 767px) { section#customer-section .col-sm-6 { width: 521px; } }
 @media screen and (max-width: 575px) { section#customer-section { padding-top: 42px; padding-bottom: 32px; }
-  section#customer-section .container { max-width: 490px; margin: auto; }
+  section#customer-section .container { max-width: 490px; margin: auto; padding-left: 9px; padding-right: 9px; }
+  section#customer-section .container .full-width-col { width: 100%; }
   section#customer-section h4 { font-size: 1.5em; padding: 0 45px; }
   section#customer-section p { font-size: 0.94em; margin-bottom: 25px; }
   section#customer-section .total-score { height: 185px; min-width: 110px; width: 35%; max-width: 180px; }
   section#customer-section .total-score .total-score-circle { width: 56px; height: 56px; border-radius: 28px; border: 3px solid #9e7715; padding-top: 9px; font-family: Karla-Regular; }
   section#customer-section .total-score .total-score-circle span#total-score-number { font-size: 1.31em; }
   section#customer-section .total-score span.total-score-out { font-size: 1em; }
-  section#customer-section .detailed-score { min-width: 210px; width: 59%; max-width: 278px; }
+  section#customer-section .detailed-score { min-width: 210px; width: 63%; max-width: 283px; }
   section#customer-section .detailed-score .detailed-score-title { padding: 0 0 0 65px; height: 50px; line-height: 1.1; }
   section#customer-section .detailed-score .detailed-score-title span#percentage { font-size: 1.87em; left: 11px; }
   section#customer-section .detailed-score .detailed-score-rating { width: 100%; }
