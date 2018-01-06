@@ -59,8 +59,17 @@ section#main-banner-section {
 		position: absolute;
 		right: -70px;
 		top: 79px;
-		width: 100%;
-		max-width: 773px;
-		min-width: 318px;
+		width: 773px;
+	}
+}
+@media screen and (max-width:1369px) {
+	section#main-banner-section {
+		.main-banner-vertical {
+			margin-left: 0;
+		}
+		img {
+			width: 734px;
+			top: 85px;
+		}
 	}
 }

@@ -122,3 +122,27 @@ header {
 		}
 	}
 }
+@media screen and (max-width:1369px) {
+	header div {
+		width: 1170px;
+		.header-logo {
+			margin-left: 10px;
+		}
+		ul {
+			margin-left: 30px;
+			li {
+				padding-right: 25px;
+				font-size: .87em;
+			}
+		}
+		.header-search {
+			margin-left: 30px;
+			width: 340px;
+			form {
+				input {
+					width: 242px;
+				}
+			}
+		}
+	}
+}

@@ -104,3 +104,12 @@ section#category-section {
 		}
 	}
 }
+@media screen and (max-width:1369px) {
+	section#category-section {
+		.category-section-row {
+			.category-section-item {
+				margin-right: 30px;
+			}
+		}
+	}
+}
