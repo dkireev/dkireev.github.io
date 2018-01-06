@@ -1,7 +1,8 @@
 section#special-offer-section {
-	height: 956px;
+	height: auto;
 	background-color: #fff;
 	padding-top: 70px;
+	padding-bottom: 42px;
 	img.special-offer-1 {
 		width: 100%;
 		max-width: 378px;
@@ -16,6 +17,15 @@ section#special-offer-section {
 		box-shadow: 0 0 20px #aaa;
 	}
 }
-@media screen and (max-width:576px) {
-	height: auto;
+@media screen and (max-width:575px) {
+	section#special-offer-section {
+		padding-top: 20px;
+		padding-bottom: 35px;
+		.col-sm-4, .col-sm-8 {
+			text-align: center;
+		}
+		img.special-offer-1, img.special-offer-2 {
+			width: 320px;
+		}
+	}
 }

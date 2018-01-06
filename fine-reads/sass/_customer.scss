@@ -1,5 +1,5 @@
 section#customer-section {
-	height: 581px;
+	height: auto;
 	background-color: #fff;
 	text-align: center;
 	padding-top: 62px;
@@ -24,7 +24,6 @@ section#customer-section {
 		color: #9e7715;
 		font-family: Karla-Bold;
 		text-transform: uppercase;
-		font-size: 1.41em;
 		float: left;
 		display: inline-block;
 		.total-score-circle {
@@ -34,15 +33,19 @@ section#customer-section {
 			border: 8px solid #9e7715;
 			margin: 0 auto 20px auto;
 			border-radius: 75px;
-			font-size: 2.44em;
 			text-align: center;
 			padding-top: 29px;
+			span#total-score-number {
+				font-size: 2.44em;
+			}
+		}
+		span.total-score-out {
+			font-size: 1.41em;
 		}
 	}
 	.detailed-score {
 		display: inline-block;
-		width: 100%;
-		max-width: 344px;
+		width: 344px;
 		.detailed-score-title {
 			border-bottom: 1px solid #e8e8e8;
 			height: 76px;
@@ -125,5 +128,49 @@ section#customer-section {
 	}
 	.customer:first-child {
 		margin-bottom: 15px;
+	}
+}
+@media screen and (max-width:575px) {
+	section#customer-section {
+		padding-top: 42px;
+		padding-bottom: 32px;
+		h4 {
+			font-size: 1.5em;
+			padding: 0 45px;
+		}
+		p {
+			font-size: 0.94em;
+			margin-bottom: 25px;
+		}
+		.total-score {
+			height: 185px;
+			width: 110px;
+			.total-score-circle {
+				width: 56px;
+				height: 56px;
+				border-radius: 28px;
+				border: 3px solid #9e7715;
+				padding-top: 9px;
+				font-family: Karla-Regular;
+				span#total-score-number {
+					font-size: 1.31em;
+				}
+			}
+			span.total-score-out {
+				font-size: 1em;
+			}
+		}
+		.detailed-score {
+			width: 210px;
+			.detailed-score-title {
+				padding: 0 0 0 65px;
+				height: 50px;
+				line-height: 1.1;
+				span#percentage {
+					font-size: 1.87em;
+					left: 11px;
+				}
+			}
+		}
 	}
 }
