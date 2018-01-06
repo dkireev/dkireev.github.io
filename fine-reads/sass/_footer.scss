@@ -65,3 +65,11 @@ footer {
 		}
 	}
 }
+@media screen and (max-width:576px) {
+	footer {
+		padding-top: 45px;
+		.footer-divider-left, .footer-divider-right {
+			display: none;
+		}
+	}
+}
