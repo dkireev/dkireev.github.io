@@ -154,6 +154,31 @@ header {
 	}
 }
 
+@media screen and (max-width:991px) {
+	header {
+		div {
+			width: 100%;
+		}
+		line-height: 52px;
+		height: 52px;
+		width: 702px;
+		margin: auto;
+		border: none;
+		.header-logo {
+			margin: 7px 188px auto 21px;
+		}
+		.header-desktop {
+			display: none;
+		}
+		.header-mobile {
+			display: block;
+			img {
+				margin: 0 5px;
+			}
+		}
+	}
+}
+
 @media screen and (max-width:767px) {
 	header {
 		div {
