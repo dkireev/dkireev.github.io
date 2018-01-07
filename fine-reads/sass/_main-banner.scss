@@ -75,10 +75,32 @@ section#main-banner-section {
 	}
 }
 
+@media screen and (max-width:991px) {
+    section#main-banner-section {
+        border-top: 1px solid #cccdc0;
+        height: 430px;
+        line-height: 430px;
+        img {
+			width: 500px;
+			top: 93px;
+			right: -223px;
+		}
+        .main-banner-vertical {
+        	h1 {
+				font-size: 2.2em;
+				letter-spacing: -1px;
+			}
+			h2 {
+				font-size: 2.5em;
+				letter-spacing: -1px;
+			}
+        }
+    }
+}
+
 @media screen and (max-width:767px) {
 	section#main-banner-section {
 		text-align: center;
-		border-top: 1px solid #cccdc0;
 		img {
 			width: 380px;
 			top: initial;
@@ -89,11 +111,9 @@ section#main-banner-section {
 		.main-banner-vertical {
 			h1 {
 				font-size: 1.87em;
-				letter-spacing: -1px;
 			}
 			h2 {
 				font-size: 2.25em;
-				letter-spacing: -1px;
 			}
 			.main-banner-button {
 				width: 308px;

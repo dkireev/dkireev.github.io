@@ -2,10 +2,6 @@ header {
 	height: 84px;
 	background-color: #fff;
 	border-bottom: 1px solid #cccdc0;
-	.header-logo {
-		margin: 23px 0 0 21px;
-		float: left;
-	}
 	.header-mobile {
 		display: none;
 	}
@@ -16,6 +12,10 @@ header {
 		max-width: 1370px;
 		margin: 0 auto;
 		border-bottom: inherit;
+		.header-logo {
+			margin: 23px 0 0 21px;
+			float: left;
+		}
 		ul {
 			list-style-type: none;
 			padding: 0;
@@ -130,24 +130,27 @@ header {
 }
 
 @media screen and (max-width:1369px) {
-	header div {
+	header {
 		width: 1170px;
-		.header-logo {
-			margin-left: 10px;
-		}
-		ul {
-			margin-left: 30px;
-			li {
-				padding-right: 25px;
-				font-size: .87em;
+		margin: auto;
+		.header-desktop {
+			.header-logo {
+				margin-left: 10px;
 			}
-		}
-		.header-search {
-			margin-left: 30px;
-			width: 340px;
-			form {
-				input {
-					width: 242px;
+			ul {
+				margin-left: 30px;
+				li {
+					padding-right: 25px;
+					font-size: .87em;
+				}
+			}
+			.header-search {
+				margin-left: 30px;
+				width: 340px;
+				form {
+					input {
+						width: 242px;
+					}
 				}
 			}
 		}
@@ -156,24 +159,55 @@ header {
 
 @media screen and (max-width:991px) {
 	header {
-		div {
-			width: 100%;
-		}
-		line-height: 52px;
-		height: 52px;
-		width: 702px;
-		margin: auto;
+		width: 701px;
 		border: none;
-		.header-logo {
-			margin: 7px 188px auto 21px;
-		}
+		position: relative;
 		.header-desktop {
-			display: none;
+			.header-logo {
+				margin-left: 0;
+			}
+			ul {
+				margin-left: 20px;
+				display: none;
+				li {
+					padding-right: 15px;
+					font-size: .87em;
+				}
+			}
+			.header-search {
+				margin-left: 65px;
+				width: 267px;
+				form {
+					input {
+						width: 170px;
+					}
+				}
+			}
+			.cart-account {
+				float: right;
+				margin-right: 0;
+				.account-text {
+					display: none;
+				}
+				.header-account {
+					margin-right: 0;
+				}
+			}
 		}
 		.header-mobile {
 			display: block;
+			height: inherit;
+			position: absolute;
+			top: 18px;
+			left: 185px;
+			.header-menu-button {
+				display: none;
+			}
 			img {
-				margin: 0 5px;
+				display: none;
+			}
+			.header-menu-burger {
+				display: block;
 			}
 		}
 	}
@@ -181,9 +215,6 @@ header {
 
 @media screen and (max-width:767px) {
 	header {
-		div {
-			width: 100%;
-		}
 		line-height: 52px;
 		height: 52px;
 		width: 522px;
