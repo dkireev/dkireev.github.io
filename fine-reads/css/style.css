@@ -67,7 +67,7 @@ section#main-banner-section .main-banner-vertical { display: inline-block; verti
 section#main-banner-section .main-banner-vertical h1 { font-size: 3.43em; letter-spacing: -3px; line-height: 1; margin-bottom: 0; color: #433a36; }
 section#main-banner-section .main-banner-vertical h2 { font-size: 3.75em; letter-spacing: -3px; font-family: Karla-Bold; line-height: 1; margin-bottom: 0; color: #433a36; }
 section#main-banner-section .main-banner-vertical .main-banner-button { height: 56px; width: 390px; background-color: #fdd05f; border-radius: 28px; margin: 30px 0 10px 0; display: block; color: #2a2e28; font-family: Karla-Bold; text-transform: uppercase; font-size: 0.87em; text-align: center; text-decoration: none; color: inherit; position: relative; }
-section#main-banner-section .main-banner-vertical .main-banner-button:hover { -webkit-box-shadow: 0 0 20px #aaa; box-shadow: 0 0 20px #aaa; }
+section#main-banner-section .main-banner-vertical .main-banner-button:hover { -webkit-box-shadow: 0 3px 5px #aaa; box-shadow: 0 3px 5px #aaa; }
 section#main-banner-section .main-banner-vertical .main-banner-button::after { content: url("../img/main-banner-arrow.png"); position: absolute; background-size: 100%; top: 3px; right: 25px; }
 section#main-banner-section img { position: absolute; right: -70px; top: 79px; width: 773px; }
 
@@ -91,7 +91,7 @@ section#main-banner-section img { position: absolute; right: -70px; top: 79px; w
 section#special-offer-section { height: auto; background-color: #fff; padding-top: 70px; padding-bottom: 42px; }
 section#special-offer-section img.special-offer-1 { width: 100%; max-width: 378px; margin-bottom: 18px; }
 section#special-offer-section img.special-offer-2 { width: 100%; max-width: 774px; margin-bottom: 18px; }
-section#special-offer-section img:hover { -webkit-box-shadow: 0 0 5px #333; box-shadow: 0 0 5px #333; }
+section#special-offer-section img:hover { -webkit-box-shadow: 0 3px 5px #aaa; box-shadow: 0 3px 5px #aaa; }
 
 @media screen and (max-width: 575px) { section#special-offer-section { padding-top: 20px; padding-bottom: 20px; }
   section#special-offer-section .col-sm-4, section#special-offer-section .col-sm-8 { text-align: center; }
@@ -105,7 +105,7 @@ section#category-section .category-section-row .category-section-heading .catego
 section#category-section .category-section-row .category-section-heading .right-active { background: transparent url("../img/category-right-active.png"); }
 section#category-section .category-section-row .category-section-heading .category-section-left { width: 26px; height: 26px; border: none; outline: none; float: right; background: transparent url("../img/category-left.png"); }
 section#category-section .category-section-row .category-section-heading .left-active { background: transparent url("../img/category-left-active.png"); }
-section#category-section .category-section-row .category-section-heading .category-section-right:hover, section#category-section .category-section-row .category-section-heading .category-section-left:hover { cursor: pointer; }
+section#category-section .category-section-row .category-section-heading .right-active:hover, section#category-section .category-section-row .category-section-heading .left-active:hover { cursor: pointer; }
 section#category-section .category-section-row .articles-items-wrapper { width: 100%; }
 section#category-section .category-section-row .articles-items-wrapper .category-section-item { width: 208px; margin-right: 32px; height: 416px; position: relative; display: inline-block; float: left; }
 section#category-section .category-section-row .articles-items-wrapper .category-section-item .section-item-title { margin-top: 15px; margin-bottom: 0; color: #321d14; font-family: Karla-Bold; font-size: 1.25em; letter-spacing: -0.8px; }
@@ -113,7 +113,8 @@ section#category-section .category-section-row .articles-items-wrapper .category
 section#category-section .category-section-row .articles-items-wrapper .category-section-item .section-item-price { color: #359d68; font-family: Karla-Bold; font-size: 1.25em; position: absolute; bottom: 34px; left: 0; }
 section#category-section .category-section-row .articles-items-wrapper .category-section-item .section-item-currency { color: #b8b8b8; font-family: Karla-Bold; font-size: .75em; position: absolute; bottom: 54px; left: 65px; }
 section#category-section .category-section-row .articles-items-wrapper .category-section-item .section-item-button { display: block; outline: none; background: transparent; border: 1px solid #ea9c26; color: #ea9c26; font-family: Karla-Bold; font-size: .81em; text-transform: uppercase; text-align: center; line-height: 38px; width: 140px; height: 40px; border-radius: 20px; position: absolute; left: 0; bottom: 0; }
-section#category-section .category-section-row .articles-items-wrapper .category-section-item .section-item-button:hover, section#category-section .category-section-row .articles-items-wrapper .category-section-item img:hover { text-decoration: none; -webkit-box-shadow: 0 0 5px #333; box-shadow: 0 0 5px #333; }
+section#category-section .category-section-row .articles-items-wrapper .category-section-item img:hover { text-decoration: none; -webkit-box-shadow: 0 3px 5px #aaa; box-shadow: 0 3px 5px #aaa; }
+section#category-section .category-section-row .articles-items-wrapper .category-section-item .section-item-button:hover { background-color: #ea9c26; color: #fff; text-decoration: none; -webkit-box-shadow: none; box-shadow: none; }
 
 @media screen and (max-width: 575px) { section#category-section .category-section-row { height: auto; padding-bottom: 32px; width: 100%; max-width: 490px; margin: auto; }
   section#category-section .category-section-row .category-section-heading { padding-bottom: 10px; }
@@ -170,7 +171,7 @@ section#articles-section .articles-item h4 { color: #321d14; text-decoration: no
 section#articles-section .articles-item .posted-by { color: #a6a6a6; font-size: 0.87em; }
 section#articles-section .articles-item .posted-by-details { font-family: Karla-Bold; font-size: 0.87em; color: #6e6c6b; }
 section#articles-section .articles-item img { margin-bottom: 17px; margin-top: 5px; }
-section#articles-section .articles-item img:hover { -webkit-box-shadow: 0 0 5px #333; box-shadow: 0 0 5px #333; }
+section#articles-section .articles-item img:hover { -webkit-box-shadow: 0 3px 5px #aaa; box-shadow: 0 3px 5px #aaa; }
 
 @media screen and (max-width: 1199px) { section#articles-section form { margin-left: 25px; width: 583px; }
   section#articles-section form input { width: 273px; }

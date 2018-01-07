@@ -46,7 +46,7 @@ section#main-banner-section {
 			position: relative;
 		}
 		.main-banner-button:hover {
-			box-shadow: 0 0 20px #aaa;
+			box-shadow: 0 3px 5px #aaa;
 		}
 		.main-banner-button::after {
 			content: url('../img/main-banner-arrow.png');

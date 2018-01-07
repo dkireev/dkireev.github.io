@@ -51,7 +51,7 @@ section#category-section {
 			.left-active {
 				background: transparent url('../img/category-left-active.png');
 			}
-			.category-section-right:hover, .category-section-left:hover {
+			.right-active:hover, .left-active:hover {
 				cursor: pointer;
 			}
 		}
@@ -110,9 +110,15 @@ section#category-section {
 					left: 0;
 					bottom: 0;
 				}
-				.section-item-button:hover, img:hover {
+				img:hover {
 					text-decoration: none;
-					box-shadow: 0 0 5px #333;
+					box-shadow: 0 3px 5px #aaa;
+				}
+				.section-item-button:hover {
+					background-color: #ea9c26;
+					color: #fff;
+					text-decoration: none;
+					box-shadow: none;
 				}
 			}
 		}
