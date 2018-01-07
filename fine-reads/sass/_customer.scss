@@ -127,6 +127,23 @@ section#customer-section {
 	}
 }
 
+@media screen and (max-width:991px) {
+	section#customer-section {
+		p {
+			margin-bottom: 25px;
+		}
+		.customer:first-child {
+			margin-top: 28px;
+		}
+		.detailed-score {
+			float: right;
+		}
+		.total-score {
+			width: 300px;
+		}
+	} 
+}
+
 @media screen and (max-width:767px) {
 	section#customer-section {
 		.total-score {
@@ -162,9 +179,6 @@ section#customer-section {
 				width: 338px;
 			}
 		}
-		.customer:first-child {
-			margin-top: 28px;
-		}
 	}
 }
 
@@ -177,9 +191,6 @@ section#customer-section {
 			margin: auto;
 			padding-left: 9px;
 			padding-right: 9px;
-			.full-width-col {
-				width: 100%;
-			}
 		}
 		h4 {
 			font-size: 1.5em;
@@ -187,7 +198,6 @@ section#customer-section {
 		}
 		p {
 			font-size: 0.94em;
-			margin-bottom: 25px;
 		}
 		.total-score {
 			height: 185px;

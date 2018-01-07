@@ -76,6 +76,17 @@ section#bottom-banner-section {
 	}
 }
 
+@media screen and (max-width:991px) {
+	section#bottom-banner-section {
+		input {
+			width: 435px;
+		}
+		button {
+			width: 267px;
+		}
+	}
+}
+
 @media screen and (max-width:767px) {
 	section#bottom-banner-section {
 		h3 {
