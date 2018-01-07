@@ -126,20 +126,26 @@ section#bottom-banner-section {
 			margin-top: 5px;
 		}
 		form {
-			width: 312px;
+			max-width: 312px;
+			width: 100%;
+			position: relative;
+			height: 100px;
 			input {
-				width: 100%;
+				width: 302px;
 				height: 50px;
 				border-radius: 25px;
 				text-align: center;
 				padding-left: 0;
+				display: block;
 			}
 			button {
-				width: 100%;
+				width: 302px;
 				height: 50px;
 				border-radius: 25px;
-				margin-top: 6px;
 				padding-left: 18px;
+				position: absolute;
+				left: 0;
+				top: 55px;
 			}
 			button::before {
 				left: 87px;

@@ -25,7 +25,8 @@ section#special-offer-section {
 			text-align: center;
 		}
 		img.special-offer-1, img.special-offer-2 {
-			width: 320px;
+			max-width: 320px;
+			width: 100%;
 		}
 	}
 }

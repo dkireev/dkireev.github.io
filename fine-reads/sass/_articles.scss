@@ -175,7 +175,8 @@ section#articles-section {
 			height: auto;
 		}
 		.articles-item {
-			width: 320px;
+			max-width: 302px;
+			width: 100%;
 			img {
 				width: 100%;
 				height: auto;

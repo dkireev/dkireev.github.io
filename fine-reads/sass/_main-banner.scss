@@ -146,14 +146,17 @@ section#main-banner-section {
 		text-align: center;
 		border: none;
 		img {
-			width: 319px;
+			max-width: 319px;
+			width: 100%;
 			top: initial;
 			right: initial;
 			position: relative;
 		}
 		.main-banner-vertical {
+			width: 100%;
 			.main-banner-button {
 				margin-bottom: 23px;
+				width: 100%;
 			}
 		}
 	}
