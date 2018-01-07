@@ -1,6 +1,5 @@
-@font-face { font-family: Karla-Bold; src: url(../fonts/Karla-Bold.ttf); }
-@font-face { font-family: Karla-Italic; src: url(../fonts/Karla-Italic.ttf); }
-@font-face { font-family: Karla-Regular; src: url(../fonts/Karla-Regular.ttf); }
+@font-face { font-family: 'Karla-Bold'; src: url("../fonts/karla-bold/Karla-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/karla-bold/Karla-Bold.woff") format("woff"), url("../fonts/karla-bold/Karla-Bold.ttf") format("truetype"), url("../fonts/karla-bold/Karla-Bold.svg#Karla-Bold") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Karla-Regular'; src: url("../fonts/karla-regular/Karla-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/karla-regular/Karla-Regular.woff") format("woff"), url("../fonts/karla-regular/Karla-Regular.ttf") format("truetype"), url("../fonts/karla-regular/Karla-Regular.svg#Karla-Regular") format("svg"); font-weight: normal; font-style: normal; }
 body { font-family: Karla-Regular; font-size: 16px; }
 
 header { height: 84px; background-color: #fff; }
@@ -92,6 +91,7 @@ section#special-offer-section { height: auto; background-color: #fff; padding-to
 section#special-offer-section img.special-offer-1 { width: 100%; max-width: 378px; margin-bottom: 18px; }
 section#special-offer-section img.special-offer-2 { width: 100%; max-width: 774px; margin-bottom: 18px; }
 section#special-offer-section img:hover { -webkit-box-shadow: 0 3px 5px #aaa; box-shadow: 0 3px 5px #aaa; }
+section#special-offer-section h3 { display: none; }
 
 @media screen and (max-width: 575px) { section#special-offer-section { padding-top: 20px; padding-bottom: 20px; }
   section#special-offer-section .col-sm-4, section#special-offer-section .col-sm-8 { text-align: center; }

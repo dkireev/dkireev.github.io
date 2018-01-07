@@ -16,6 +16,9 @@ section#special-offer-section {
 	img:hover {
 		box-shadow: 0 3px 5px #aaa;
 	}
+	h3 {
+		display: none;
+	}
 }
 @media screen and (max-width:575px) {
 	section#special-offer-section {
