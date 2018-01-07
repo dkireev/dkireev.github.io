@@ -66,6 +66,15 @@ footer {
 	}
 }
 
+@media screen and (max-width:1199px) {
+	footer {
+		padding-top: 45px;
+		.footer-divider-left, .footer-divider-right {
+			width: 330px;
+		}
+	}
+}
+
 @media screen and (max-width:991px) {
 	footer {
 		padding-top: 45px;

@@ -2,6 +2,7 @@ section#main-banner-section {
 	height: 494px;
 	line-height: 494px;
 	background: #e5e6d2 url('../img/main-banner.jpg') no-repeat;
+	border-top: 1px solid #cccdc0;
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-position: center center;
@@ -75,9 +76,18 @@ section#main-banner-section {
 	}
 }
 
+@media screen and (max-width:1199px) {
+	section#main-banner-section {
+		img {
+			width: 600px;
+			top: 111px;
+			right: -120px;
+		}
+	}
+}
+
 @media screen and (max-width:991px) {
     section#main-banner-section {
-        border-top: 1px solid #cccdc0;
         height: 430px;
         line-height: 430px;
         img {

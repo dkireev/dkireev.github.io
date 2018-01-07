@@ -61,3 +61,4 @@ function mainBannerImageSet() {
 
 articlesImageSet();
 mainBannerImageSet();
+specialOfferImageSet();

@@ -67,7 +67,7 @@ section#customer-section {
 		}
 		.detailed-score-rating {
 			display: table;
-			width: 349px;
+			width: 344px;
 			padding: 10px 0;
 			.detailed-score-column {
 				display: table-cell;
@@ -77,7 +77,7 @@ section#customer-section {
 			}
 		}
 		table {
-			width: 349px;
+			width: 344px;
 			td:first-child {
 				padding: 0 10px 5px 0;
 				vertical-align: bottom;
@@ -127,6 +127,43 @@ section#customer-section {
 	}
 }
 
+@media screen and (max-width:1199px) {
+	section#customer-section {
+		.total-score {
+			width: 180px;
+			.total-score-circle {
+				width: 120px;
+				height: 120px;
+				border-radius: 60;
+				padding-top: 15px;
+				span#total-score-number {
+					font-size: 3em;
+				}
+			}
+		}
+		.detailed-score {
+			width: 280px;
+			.detailed-score-title {
+				padding-right: 0;
+				padding-left: 130px;
+				span#percentage {
+					left: 20px;
+				}
+			}
+			.detailed-score-rating {
+				width: 100%;
+				.detailed-score-column {
+					text-align: center;
+					font-size: 1em;
+				}
+			}
+			table {
+				width: 100%;
+			}
+		}
+	} 
+}
+
 @media screen and (max-width:991px) {
 	section#customer-section {
 		p {
@@ -137,6 +174,13 @@ section#customer-section {
 		}
 		.detailed-score {
 			float: right;
+			width: 344px;
+			.detailed-score-rating {
+				.detailed-score-column {
+					text-align: right;
+					font-size: 1.12em;
+				}
+			}
 		}
 		.total-score {
 			width: 300px;
@@ -146,11 +190,6 @@ section#customer-section {
 
 @media screen and (max-width:767px) {
 	section#customer-section {
-		.total-score {
-			span#total-score-number {
-					font-size: 3em;
-				}
-		}
 		.total-score {
 			min-width: 110px;
 			width: 35%;
@@ -201,8 +240,8 @@ section#customer-section {
 		}
 		.total-score {
 			height: 185px;
-			min-width: 110px;
-			width: 35%;
+			min-width: 103px;
+			width: 31%;
 			max-width: 180px;
 			padding-top: 45px;
 			.total-score-circle {
@@ -221,7 +260,7 @@ section#customer-section {
 			}
 		}
 		.detailed-score {
-			min-width: 210px;
+			min-width: 203px;
 			width: 63%;
 			max-width: 283px;
 			.detailed-score-title {

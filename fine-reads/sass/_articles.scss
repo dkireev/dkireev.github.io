@@ -116,6 +116,21 @@ section#articles-section {
 	}
 }
 
+@media screen and (max-width:1199px) {
+	section#articles-section {
+		form {
+			margin-left: 25px;
+			width: 583px;
+			input {
+				width: 273px;
+			}
+			select {
+				margin-left: 5px;
+			}
+		}
+	}
+}
+
 @media screen and (max-width:991px) {
 	section#articles-section {
 		form {

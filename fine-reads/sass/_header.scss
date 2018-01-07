@@ -1,7 +1,6 @@
 header {
 	height: 84px;
 	background-color: #fff;
-	border-bottom: 1px solid #cccdc0;
 	.header-mobile {
 		display: none;
 	}
@@ -57,8 +56,7 @@ header {
 					border: none;
 					outline: none;
 					padding-left: 26px;
-					background-image: url('../img/search-icon.png');
-					background-repeat: no-repeat;
+					background: #fff url('../img/search-icon.png') no-repeat;
 					background-position: 0 2px;
 					width: 310px;
 					color: #888c89;
@@ -70,6 +68,7 @@ header {
 					outline: none;
 					font-size: .87em;
 					color: #6b716d;
+					background-color: #fff;
 					width: 60px;
 					padding-left: 5px;
 				}
@@ -157,15 +156,49 @@ header {
 	}
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width:1199px) {
 	header {
-		width: 701px;
-		border: none;
-		position: relative;
+		width: 941px;
+		margin: auto;
 		.header-desktop {
 			.header-logo {
 				margin-left: 0;
 			}
+			ul {
+				margin-left: 30px;
+				li {
+					padding-right: 25px;
+					font-size: .87em;
+				}
+			}
+			.header-search {
+				margin-left: 30px;
+				width: 262px;
+				form {
+					input {
+						width: 165px;
+					}
+				}
+			}
+			.cart-account {
+				float: right;
+				margin-right: 0;
+				.account-text {
+					display: none;
+				}
+				.header-account {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width:991px) {
+	header {
+		width: 701px;
+		position: relative;
+		.header-desktop {
 			ul {
 				margin-left: 20px;
 				display: none;
@@ -181,16 +214,6 @@ header {
 					input {
 						width: 170px;
 					}
-				}
-			}
-			.cart-account {
-				float: right;
-				margin-right: 0;
-				.account-text {
-					display: none;
-				}
-				.header-account {
-					margin-right: 0;
 				}
 			}
 		}
@@ -219,17 +242,27 @@ header {
 		height: 52px;
 		width: 522px;
 		margin: auto;
-		border: none;
-		.header-logo {
-			margin: 7px 20px auto 21px;
-		}
 		.header-desktop {
 			display: none;
 		}
 		.header-mobile {
-			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			.header-logo {
+				margin: 7px 40px auto 21px;
+				float: left;
+			}
 			img {
 				margin: 0 5px;
+				display: inline;
+			}
+			.header-menu-button {
+				display: inline;
+			}
+			a:last-child .header-menu-button {
+				margin-right: 0;
 			}
 		}
 	}
@@ -237,23 +270,33 @@ header {
 
 @media screen and (max-width:575px) {
 	header {
-		height: 110px;
+		height: auto;
 		width: 100%;
-		border: none;
 		margin: 0;
-		.header-logo {
-			margin: 20px auto 0 auto;
-			float: none;
+		.header-desktop {
 			display: block;
+			width: 175px;
+			height: 53px;
+			margin: auto;
+			ul, .header-search, .cart-account {
+				display: none;
+			}
+			.header-logo {
+				margin: 8px auto 0 auto;
+				display: inline;
+			}
 		}
 		.header-mobile {
 			border-top: 1px solid #cccdc0;
 			border-bottom: 1px solid #cccdc0;
 			height: 53px;
-			margin-top: 24px;
 			text-align: center;
 			width: 100%;
 			vertical-align: middle;
+			position: relative;
+			.header-logo {
+				display: none;
+			}
 			img {
 				margin: 0 6px;
 			}
