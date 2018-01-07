@@ -4,7 +4,9 @@ section#articles-section {
 	padding-top: 69px;
 	padding-bottom: 50px;
 	position: relative;
-	overflow-x: hidden;
+	.col:last-child {
+		overflow-x: hidden;
+	}
 	h3 {
 		text-transform: uppercase;
 		color: #222326;
@@ -109,9 +111,10 @@ section#articles-section {
 		}
 		img {
 			margin-bottom: 17px;
+			margin-top: 5px;
 		}
 		img:hover {
-			box-shadow: 0 0 20px #aaa;
+			box-shadow: 0 0 5px #333;
 		}
 	}
 }

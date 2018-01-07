@@ -1,12 +1,13 @@
 section#category-section {
 	background-color: #ffffff;
-	overflow: hidden;
 	.category-section-row {
 		height: 560px;
 		width: auto;
 		box-sizing: border-box;
 		padding-bottom: 75px;
 		overflow: hidden;
+		padding-left: 9px;
+		padding-right: 9px;
 		.category-section-heading {
 			height: auto;
 			border-bottom: 1px solid #ded7d3;
@@ -111,7 +112,7 @@ section#category-section {
 				}
 				.section-item-button:hover, img:hover {
 					text-decoration: none;
-					box-shadow: 0 0 20px #aaa;
+					box-shadow: 0 0 5px #333;
 				}
 			}
 		}
