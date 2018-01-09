@@ -1,5 +1,4 @@
 section#articles-section {
-	height: auto;
 	background-color: #f4f4f4;
 	padding-top: 69px;
 	padding-bottom: 50px;
@@ -88,8 +87,9 @@ section#articles-section {
 	}
 	.articles-item {
 		float: left;
-		width: 364px;
-		margin-right: 39px;
+		max-width: 364px;
+		width: 31.1%;
+		margin-right: 3.3%;
 		a {
 			text-decoration: none;
 		}
@@ -112,10 +112,15 @@ section#articles-section {
 		img {
 			margin-bottom: 17px;
 			margin-top: 5px;
+			width: 100%;
+			height: auto;
 		}
 		img:hover {
 			box-shadow: 0 3px 5px #aaa;
 		}
+	}
+	.articles-item:last-child {
+		margin-right: 0;
 	}
 }
 

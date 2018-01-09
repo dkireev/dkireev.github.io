@@ -1,40 +1,6 @@
-var categoryFirstWidth = 0;
-var categorySecondWidth = 0;
-var articlesRowWidth = 0;
-
 articlesImageSet();
 mainBannerImageSet();
 specialOfferImageSet();
-categoryFirstRowWidthSet();
-categorySecondRowWidthSet();
-articlesRowWidthSet();
-
-function categoryFirstRowWidthSet() {
-  var categoryFirstRow = document.getElementById("category-row-first").getElementsByClassName("category-section-item");
-  for (var i = 0; i < categoryFirstRow.length; i++) {
-    var itemCategoryWidth = getComputedStyle(categoryFirstRow[i]);
-    categoryFirstWidth = categoryFirstWidth + parseInt(itemCategoryWidth.width) + parseInt(itemCategoryWidth.marginRight);
-  }
-  document.getElementById("category-row-first").style.width = categoryFirstWidth + "px";
-}
-
-function categorySecondRowWidthSet() {
-  var categorySecondRow = document.getElementById("category-row-second").getElementsByClassName("category-section-item");
-  for (var i = 0; i < categorySecondRow.length; i++) {
-    var itemCategoryWidth = getComputedStyle(categorySecondRow[i]);
-    categorySecondWidth = categorySecondWidth + parseInt(itemCategoryWidth.width) + parseInt(itemCategoryWidth.marginRight);
-  }
-  document.getElementById("category-row-second").style.width = categorySecondWidth + "px";
-}
-
-function articlesRowWidthSet() {
-  var articlesRow = document.getElementsByClassName("articles-item");
-  for (var i = 0; i < articlesRow.length; i++) {
-    var itemArticleWidth = getComputedStyle(articlesRow[i]);
-    articlesRowWidth = articlesRowWidth + parseInt(itemArticleWidth.width) + parseInt(itemArticleWidth.marginRight);
-  }
-  document.getElementById("articles-items-wrapper").style.width = articlesRowWidth + "px";
-}
 
 function specialOfferImageSet() {
   var screenWidth = document.documentElement.clientWidth;
