@@ -2,12 +2,12 @@ section#main-banner-section {
 	height: 494px;
 	line-height: 494px;
 	background: #e5e6d2 url('../img/main-banner.jpg') no-repeat;
-	border-top: 1px solid #cccdc0;
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-position: center center;
 	position: relative;
 	overflow: hidden;
+	margin-top: 84px;
 	.main-banner-vertical {
 		display: inline-block;
 		vertical-align: middle;
@@ -68,10 +68,6 @@ section#main-banner-section {
 	section#main-banner-section {
 		.main-banner-vertical {
 			margin-left: 0;
-		}
-		img {
-			width: 734px;
-			top: 85px;
 		}
 	}
 }

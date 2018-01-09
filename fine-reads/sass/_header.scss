@@ -1,6 +1,12 @@
 header {
 	height: 84px;
+	width: 100%;
 	background-color: #fff;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	border-bottom: 1px solid #cccdc0;
+	box-sizing: border-box;
 	.header-mobile {
 		display: none;
 	}
@@ -63,16 +69,16 @@ header {
 					font-size: .87em;
 					border-right: 1px solid #d2d2d2;
 				}
-				select {
+				button {
 					border: none;
 					outline: none;
 					font-size: .87em;
 					color: #6b716d;
 					background-color: #fff;
 					width: 60px;
-					padding-left: 5px;
+					padding-left: 11px;
 				}
-				select:hover {
+				button:hover {
 					cursor: pointer;
 				}
 				option {
@@ -128,13 +134,12 @@ header {
 	}
 }
 
-@media screen and (max-width:1369px) {
+@media screen and (max-width:1385px) {
 	header {
-		width: 1170px;
-		margin: auto;
 		.header-desktop {
+			width: 1170px;
 			.header-logo {
-				margin-left: 10px;
+				margin-left: 0;
 			}
 			ul {
 				margin-left: 30px;
@@ -145,10 +150,10 @@ header {
 			}
 			.header-search {
 				margin-left: 30px;
-				width: 340px;
+				width: 352px;
 				form {
 					input {
-						width: 242px;
+						width: 254px;
 					}
 				}
 			}
@@ -158,12 +163,8 @@ header {
 
 @media screen and (max-width:1199px) {
 	header {
-		width: 941px;
-		margin: auto;
 		.header-desktop {
-			.header-logo {
-				margin-left: 0;
-			}
+			width: 941px;
 			ul {
 				margin-left: 30px;
 				li {
@@ -196,9 +197,8 @@ header {
 
 @media screen and (max-width:991px) {
 	header {
-		width: 701px;
-		position: relative;
 		.header-desktop {
+			width: 701px;
 			ul {
 				margin-left: 20px;
 				display: none;
@@ -218,11 +218,8 @@ header {
 			}
 		}
 		.header-mobile {
-			display: block;
+			display: inline-block;
 			height: inherit;
-			position: absolute;
-			top: 18px;
-			left: 185px;
 			.header-menu-button {
 				display: none;
 			}
