@@ -40,3 +40,7 @@ function mainBannerImageSet() {
     document.getElementById("main-banner-image").src = "img/mobile/bookshelf.png";
   } else document.getElementById("main-banner-image").src = "img/bookshelf.png";
 }
+
+function slide() {
+  document.getElementById('ddd').style.marginLeft = '-400px';
+}
