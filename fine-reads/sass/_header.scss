@@ -21,6 +21,9 @@ header {
 			margin: 23px 0 0 21px;
 			float: left;
 		}
+		.header-menu-burger {
+			display: none;
+		}
 		ul {
 			list-style-type: none;
 			padding: 0;
@@ -199,6 +202,12 @@ header {
 	header {
 		.header-desktop {
 			width: 701px;
+			.header-menu-burger {
+				display: block;
+				float: left;
+				margin-top: 17px;
+				margin-left: 10px;
+			}
 			ul {
 				margin-left: 20px;
 				display: none;
@@ -208,7 +217,7 @@ header {
 				}
 			}
 			.header-search {
-				margin-left: 65px;
+				margin-left: 7px;
 				width: 267px;
 				form {
 					input {
@@ -217,36 +226,19 @@ header {
 				}
 			}
 		}
-		.header-mobile {
-			display: inline-block;
-			height: inherit;
-			.header-menu-button {
-				display: none;
-			}
-			img {
-				display: none;
-			}
-			.header-menu-burger {
-				display: block;
-			}
-		}
 	}
 }
 
 @media screen and (max-width:767px) {
 	header {
-		line-height: 52px;
 		height: 52px;
-		width: 522px;
-		margin: auto;
 		.header-desktop {
 			display: none;
 		}
 		.header-mobile {
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
+			width: 522px;
+			display: block;
+			margin: auto;
 			.header-logo {
 				margin: 7px 40px auto 21px;
 				float: left;
@@ -275,7 +267,8 @@ header {
 			width: 175px;
 			height: 53px;
 			margin: auto;
-			ul, .header-search, .cart-account {
+			border: none;
+			ul, .header-search, .cart-account, .header-menu-burger {
 				display: none;
 			}
 			.header-logo {
@@ -285,7 +278,6 @@ header {
 		}
 		.header-mobile {
 			border-top: 1px solid #cccdc0;
-			border-bottom: 1px solid #cccdc0;
 			height: 53px;
 			text-align: center;
 			width: 100%;

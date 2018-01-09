@@ -41,6 +41,9 @@ header .header-desktop .header-logo {
   margin: 23px 0 0 21px;
   float: left;
 }
+header .header-desktop .header-menu-burger {
+  display: none;
+}
 header .header-desktop ul {
   list-style-type: none;
   padding: 0;
@@ -203,6 +206,12 @@ header .header-desktop .cart-account .account-text {
   header .header-desktop {
     width: 701px;
   }
+  header .header-desktop .header-menu-burger {
+    display: block;
+    float: left;
+    margin-top: 17px;
+    margin-left: 10px;
+  }
   header .header-desktop ul {
     margin-left: 20px;
     display: none;
@@ -212,41 +221,24 @@ header .header-desktop .cart-account .account-text {
     font-size: .87em;
   }
   header .header-desktop .header-search {
-    margin-left: 65px;
+    margin-left: 7px;
     width: 267px;
   }
   header .header-desktop .header-search form input {
     width: 170px;
   }
-  header .header-mobile {
-    display: inline-block;
-    height: inherit;
-  }
-  header .header-mobile .header-menu-button {
-    display: none;
-  }
-  header .header-mobile img {
-    display: none;
-  }
-  header .header-mobile .header-menu-burger {
-    display: block;
-  }
 }
 @media screen and (max-width: 767px) {
   header {
-    line-height: 52px;
     height: 52px;
-    width: 522px;
-    margin: auto;
   }
   header .header-desktop {
     display: none;
   }
   header .header-mobile {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
+    width: 522px;
+    display: block;
+    margin: auto;
   }
   header .header-mobile .header-logo {
     margin: 7px 40px auto 21px;
@@ -274,8 +266,9 @@ header .header-desktop .cart-account .account-text {
     width: 175px;
     height: 53px;
     margin: auto;
+    border: none;
   }
-  header .header-desktop ul, header .header-desktop .header-search, header .header-desktop .cart-account {
+  header .header-desktop ul, header .header-desktop .header-search, header .header-desktop .cart-account, header .header-desktop .header-menu-burger {
     display: none;
   }
   header .header-desktop .header-logo {
@@ -284,7 +277,6 @@ header .header-desktop .cart-account .account-text {
   }
   header .header-mobile {
     border-top: 1px solid #cccdc0;
-    border-bottom: 1px solid #cccdc0;
     height: 53px;
     text-align: center;
     width: 100%;
@@ -398,6 +390,7 @@ section#main-banner-section img {
 @media screen and (max-width: 767px) {
   section#main-banner-section {
     text-align: center;
+    margin-top: 52px;
   }
   section#main-banner-section img {
     width: 380px;
@@ -429,6 +422,7 @@ section#main-banner-section img {
     line-height: 412px;
     text-align: center;
     border: none;
+    margin-top: 107px;
   }
   section#main-banner-section img {
     max-width: 319px;
