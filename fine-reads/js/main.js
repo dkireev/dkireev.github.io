@@ -161,3 +161,32 @@ $(document).ready(function() {
   	}
   });
 });
+
+// setup burger menu desktop button behavior
+
+$(document).ready(function(){
+  $('#burger-desktop').mouseenter(function() {
+    $('#menu').toggleClass('drop-down-menu');
+  });
+  $('#menu').mouseleave(function() {
+    $('#menu').removeClass('drop-down-menu');
+  });
+  $(document).click(function() {
+    $('#menu').removeClass('drop-down-menu');
+  });
+});
+
+// setup burger menu mobile button behavior
+
+$(document).ready(function(){
+  $('#burger-mobile').mouseenter(function() {
+    $('.header-desktop').css('display','block');
+    $('#menu').toggleClass('drop-down-menu');
+  });
+  $('#menu').mouseleave(function() {
+    $('#menu').removeClass('drop-down-menu');
+  });
+  $(document).click(function() {
+    $('#menu').removeClass('drop-down-menu');
+  });
+});
