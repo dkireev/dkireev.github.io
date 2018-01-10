@@ -1,14 +1,14 @@
-section#special-offer-section {
+#special-offer-section {
 	height: auto;
 	background-color: #fff;
 	padding-top: 70px;
 	padding-bottom: 42px;
-	img.special-offer-1 {
+	.special-offer-1 {
 		width: 100%;
 		max-width: 378px;
 		margin-bottom: 18px;
 	}
-	img.special-offer-2 {
+	.special-offer-2 {
 		width: 100%;
 		max-width: 774px;
 		margin-bottom: 18px;
@@ -21,13 +21,13 @@ section#special-offer-section {
 	}
 }
 @media screen and (max-width:575px) {
-	section#special-offer-section {
+	#special-offer-section {
 		padding-top: 20px;
 		padding-bottom: 20px;
 		.col-sm-4, .col-sm-8 {
 			text-align: center;
 		}
-		img.special-offer-1, img.special-offer-2 {
+		.special-offer-1, .special-offer-2 {
 			max-width: 320px;
 			width: 100%;
 		}

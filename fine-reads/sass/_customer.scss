@@ -1,4 +1,4 @@
-section#customer-section {
+#customer-section {
 	height: auto;
 	background-color: #fff;
 	text-align: center;
@@ -36,11 +36,11 @@ section#customer-section {
 			border-radius: 75px;
 			text-align: center;
 			padding-top: 25px;
-			span#total-score-number {
+			#total-score-number {
 				font-size: 3.44em;
 			}
 		}
-		span.total-score-out {
+		.total-score-out {
 			font-size: 1.41em;
 		}
 	}
@@ -54,7 +54,7 @@ section#customer-section {
 			font-size: 0.87em;
 			padding: 6px 40px 0 147px;
 			position: relative;
-			span#percentage {
+			#percentage {
 				position: absolute;
 				left: 30px;
 				top: 11px;
@@ -116,7 +116,7 @@ section#customer-section {
 			line-height: 16px;
 			margin-top: 10px;
 		}
-		img.customer-image {
+		.customer-image {
 			position: absolute;
 			left: 20px;
 			top: 20px;
@@ -128,7 +128,7 @@ section#customer-section {
 }
 
 @media screen and (max-width:1199px) {
-	section#customer-section {
+	#customer-section {
 		.total-score {
 			width: 180px;
 			.total-score-circle {
@@ -136,7 +136,7 @@ section#customer-section {
 				height: 120px;
 				border-radius: 60;
 				padding-top: 15px;
-				span#total-score-number {
+				#total-score-number {
 					font-size: 3em;
 				}
 			}
@@ -146,7 +146,7 @@ section#customer-section {
 			.detailed-score-title {
 				padding-right: 0;
 				padding-left: 130px;
-				span#percentage {
+				#percentage {
 					left: 20px;
 				}
 			}
@@ -165,7 +165,7 @@ section#customer-section {
 }
 
 @media screen and (max-width:991px) {
-	section#customer-section {
+	#customer-section {
 		p {
 			margin-bottom: 25px;
 		}
@@ -189,7 +189,7 @@ section#customer-section {
 }
 
 @media screen and (max-width:767px) {
-	section#customer-section {
+	#customer-section {
 		.total-score {
 			min-width: 110px;
 			width: 35%;
@@ -201,11 +201,11 @@ section#customer-section {
 				border-radius: 50px;
 				border: 5px solid #9e7715;
 				padding-top: 13px;
-				span#total-score-number {
+				#total-score-number {
 					font-size: 2.6em;
 				}
 			}
-			span.total-score-out {
+			.total-score-out {
 				font-size: 1.2em;
 			}
 		}
@@ -222,7 +222,7 @@ section#customer-section {
 }
 
 @media screen and (max-width:575px) {
-	section#customer-section {
+	#customer-section {
 		padding-top: 42px;
 		padding-bottom: 32px;
 		.container {
@@ -249,11 +249,11 @@ section#customer-section {
 				border: 3px solid #9e7715;
 				padding-top: 9px;
 				font-family: Karla-Regular;
-				span#total-score-number {
+				#total-score-number {
 					font-size: 1.31em;
 				}
 			}
-			span.total-score-out {
+			.total-score-out {
 				font-size: 1em;
 			}
 		}
@@ -265,7 +265,7 @@ section#customer-section {
 				padding: 0 0 0 65px;
 				height: 50px;
 				line-height: 1.1;
-				span#percentage {
+				#percentage {
 					font-size: 1.87em;
 					left: 11px;
 				}

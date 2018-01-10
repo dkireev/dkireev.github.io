@@ -1,4 +1,4 @@
-section#category-section {
+#category-section {
 	background-color: #ffffff;
 	.category-section-row {
 		height: 560px;
@@ -132,7 +132,7 @@ section#category-section {
 }
 
 @media screen and (max-width:1199px) {
-	section#category-section {
+	#category-section {
 		.category-section-row {
 			.category-items-wrapper {
 				.category-section-item {
@@ -145,7 +145,7 @@ section#category-section {
 }
 
 @media screen and (max-width:991px) {
-	section#category-section {
+	#category-section {
 		.category-section-row {
 			.category-items-wrapper {
 				.category-section-item {
@@ -158,7 +158,7 @@ section#category-section {
 }
 
 @media screen and (max-width:767px) {
-	section#category-section {
+	#category-section {
 		.category-section-row {
 			.category-items-wrapper {
 				.category-section-item {
@@ -170,7 +170,7 @@ section#category-section {
 }
 
 @media screen and (max-width:575px) {
-	section#category-section {
+	#category-section {
 		.category-section-row {
 			height: auto;
 			padding-bottom: 32px;

@@ -1,4 +1,4 @@
-section#main-banner-section {
+#main-banner-section {
 	height: 494px;
 	line-height: 494px;
 	background: #e5e6d2 url('../img/main-banner.jpg') no-repeat;
@@ -65,7 +65,7 @@ section#main-banner-section {
 }
 
 @media screen and (max-width:1369px) {
-	section#main-banner-section {
+	#main-banner-section {
 		.main-banner-vertical {
 			margin-left: 0;
 		}
@@ -73,7 +73,7 @@ section#main-banner-section {
 }
 
 @media screen and (max-width:1199px) {
-	section#main-banner-section {
+	#main-banner-section {
 		img {
 			width: 600px;
 			top: 111px;
@@ -83,7 +83,7 @@ section#main-banner-section {
 }
 
 @media screen and (max-width:991px) {
-    section#main-banner-section {
+    #main-banner-section {
         height: 430px;
         line-height: 430px;
         img {
@@ -105,7 +105,7 @@ section#main-banner-section {
 }
 
 @media screen and (max-width:767px) {
-	section#main-banner-section {
+	#main-banner-section {
 		text-align: center;
 		margin-top: 52px;
 		img {
@@ -137,7 +137,7 @@ section#main-banner-section {
 }
 
 @media screen and (max-width:575px) {
-	section#main-banner-section {
+	#main-banner-section {
 		height: 412px;
 		line-height: 412px;
 		text-align: center;

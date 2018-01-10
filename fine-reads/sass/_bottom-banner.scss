@@ -1,4 +1,4 @@
-section#bottom-banner-section {
+#bottom-banner-section {
 	height: 352px;
 	line-height: 352px;
 	background: #43cf9f url('../img/bottom-banner.jpg') no-repeat;
@@ -77,7 +77,7 @@ section#bottom-banner-section {
 }
 
 @media screen and (max-width:991px) {
-	section#bottom-banner-section {
+	#bottom-banner-section {
 		input {
 			width: 435px;
 		}
@@ -88,7 +88,7 @@ section#bottom-banner-section {
 }
 
 @media screen and (max-width:767px) {
-	section#bottom-banner-section {
+	#bottom-banner-section {
 		h3 {
 			font-size: 3.25em;
 		}
@@ -112,7 +112,7 @@ section#bottom-banner-section {
 }
 
 @media screen and (max-width:575px) {
-	section#bottom-banner-section {
+	#bottom-banner-section {
 		height: 285px;
 		line-height: 285px;
 		h3 {
