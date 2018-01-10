@@ -131,3 +131,13 @@ $(document).ready(function() {
     }
   });
 });
+
+// setup behavior of left arrow of Category section's first row
+
+$(document).ready(function() {
+  $('#category-first-left').click(function() {
+  	var a = getComputedStyle(document.getElementById('category-first-row'));
+  	var b = parseInt(a.marginLeft);
+  	console.log(b);
+  });
+});

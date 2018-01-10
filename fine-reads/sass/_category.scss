@@ -76,6 +76,7 @@ section#category-section {
 				.section-item-author {
 					color: #878787;
 					font-size: .87em;
+					line-height: 1;
 				}
 				.section-item-price {
 					color: #359d68;
@@ -201,6 +202,9 @@ section#category-section {
 					height: 350px;
 					.section-item-title {
 						line-height: 1;
+					}
+					.section-item-author {
+						font-size: .75em;
 					}
 				}
 			}
