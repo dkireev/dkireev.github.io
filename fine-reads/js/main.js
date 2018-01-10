@@ -166,13 +166,13 @@ $(document).ready(function() {
 
 $(document).ready(function(){
   $('#burger-desktop').mouseenter(function() {
-    $('#menu').toggleClass('drop-down-menu');
+    $('#menu-desktop').toggleClass('drop-down-menu');
   });
-  $('#menu').mouseleave(function() {
-    $('#menu').removeClass('drop-down-menu');
+  $('#menu-desktop').mouseleave(function() {
+    $('#menu-desktop').removeClass('drop-down-menu');
   });
   $(document).click(function() {
-    $('#menu').removeClass('drop-down-menu');
+    $('#menu-desktop').removeClass('drop-down-menu');
   });
 });
 
@@ -180,13 +180,12 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   $('#burger-mobile').mouseenter(function() {
-    $('.header-desktop').css('display','block');
-    $('#menu').toggleClass('drop-down-menu');
+    $('#menu-mobile').toggleClass('drop-down-menu');
   });
-  $('#menu').mouseleave(function() {
-    $('#menu').removeClass('drop-down-menu');
+  $('#menu-mobile').mouseleave(function() {
+    $('#menu-mobile').removeClass('drop-down-menu');
   });
   $(document).click(function() {
-    $('#menu').removeClass('drop-down-menu');
+    $('#menu-mobile').removeClass('drop-down-menu');
   });
 });
