@@ -1,13 +1,14 @@
 // variables block
 
 var categoryItemsCount = 20;
-var categorySlideItems = 5;
+var categorySlideItems = 0;
 var categoryFirstWidth = 0;
 var categoryItemWidth = 0;
 var categoryItemMargin = 0;
 var categoryFirstCount = 0;
 var categorySecondCount = 0;
 var categorySlideWidth = 0;
+var categorySlidesCount = 0;
 
 // functions call
 
@@ -15,6 +16,7 @@ articlesImageSet();
 mainBannerImageSet();
 specialOfferImageSet();
 categoryRowWidthSet();
+CategoryItemsInSlideSet();
 
 // setup path to Main Banner section's image for mobile and desktop versions
 
@@ -73,6 +75,27 @@ function categoryRowWidthSet() {
   document.getElementById('category-second-row').style.width = categoryFirstWidth + 'px';
 }
 
+// setup amount of category items in one slide
+
+function CategoryItemsInSlideSet() {
+  var a = document.getElementsByClassName('category-section-row');
+  var b = getComputedStyle(a[0]);
+  var c = parseInt(b.width);
+  if (c >= 942) {
+  	categorySlideItems = 5;
+  	categorySlidesCount = 3;
+  } else if (c >= 702) {
+    categorySlideItems = 4;
+  	categorySlidesCount = 4;
+  } else if (c >= 522) {
+    categorySlideItems = 3;
+  	categorySlidesCount = 6;
+  } else {
+  	categorySlideItems = 2;
+  	categorySlidesCount = 9;
+  }
+}
+
 // setup step of sliding for Category section
 
 categorySlideWidth = (categoryItemWidth + categoryItemMargin) * categorySlideItems;
@@ -81,7 +104,7 @@ categorySlideWidth = (categoryItemWidth + categoryItemMargin) * categorySlideIte
 
 $(document).ready(function() {
   $('#category-first-right').click(function() {
-  	if (categoryFirstCount < 3) {
+  	if (categoryFirstCount < categorySlidesCount) {
       $('#category-first-row').animate({ marginLeft: '-=' + categorySlideWidth + 'px' });
       categoryFirstCount++;
       $('#category-first-left').addClass('left-active');
@@ -97,7 +120,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $('#category-second-right').click(function() {
-  	if (categorySecondCount < 3) {
+  	if (categorySecondCount < categorySlidesCount) {
       $('#category-second-row').animate({ marginLeft: '-=' + categorySlideWidth + 'px' });
       categorySecondCount++;
       $('#category-second-left').addClass('left-active');
