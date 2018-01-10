@@ -136,8 +136,28 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $('#category-first-left').click(function() {
-  	var a = getComputedStyle(document.getElementById('category-first-row'));
-  	var b = parseInt(a.marginLeft);
-  	console.log(b);
+  	if (categoryFirstCount !== 0) {
+  	  $('#category-first-row').animate({ marginLeft: '+=' + categorySlideWidth + 'px' });
+  	  categoryFirstCount--;
+  	  $('#category-first-left').add('left-active');
+  	  if (categoryFirstCount == 0) {
+  	  	$('#category-first-left').removeClass('left-active');
+  	  }
+  	}
+  });
+});
+
+// setup behavior of left arrow of Category section's second row
+
+$(document).ready(function() {
+  $('#category-second-left').click(function() {
+  	if (categoryFirstCount !== 0) {
+  	  $('#category-second-row').animate({ marginLeft: '+=' + categorySlideWidth + 'px' });
+  	  categoryFirstCount--;
+  	  $('#category-second-left').add('left-active');
+  	  if (categoryFirstCount == 0) {
+  	  	$('#category-second-left').removeClass('left-active');
+  	  }
+  	}
   });
 });
