@@ -180,15 +180,15 @@ section#articles-section .articles-item:last-child { margin-right: 0; }
   section#articles-section form select { margin-left: 5px; } }
 @media screen and (max-width: 991px) { section#articles-section form { margin-left: 30px; width: 320px; }
   section#articles-section form input { width: 100%; }
-  section#articles-section form select { display: none; } }
+  section#articles-section form select { display: none; }
+  section#articles-section .articles-item h4 { font-size: 1.25em; } }
 @media screen and (max-width: 767px) { section#articles-section form { width: 100%; margin-left: -3px; margin-bottom: 14px; } }
 @media screen and (max-width: 575px) { section#articles-section { padding-top: 39px; padding-bottom: 25px; }
-  section#articles-section .container { max-width: 490px; margin: auto; overflow-x: hidden; }
+  section#articles-section .container { width: 100%; max-width: 338px; margin: auto; overflow-x: hidden; }
   section#articles-section h3 { font-size: 1.37em; margin-bottom: 10px; padding-top: 9px; }
   section#articles-section .articles-items-wrapper { max-width: 200px; height: auto; }
-  section#articles-section .articles-item { max-width: 302px; width: 100%; }
+  section#articles-section .articles-item { width: 100%; }
   section#articles-section .articles-item img { width: 100%; height: auto; }
-  section#articles-section .articles-item h4 { font-size: 1.25em; }
   section#articles-section .articles-arrows { right: 2px; } }
 section#customer-section { height: auto; background-color: #fff; text-align: center; padding-top: 62px; padding-bottom: 54px; }
 section#customer-section h4 { text-transform: uppercase; color: #2e2e2e; font-size: 1.87em; letter-spacing: -2px; font-family: Karla-Bold; margin-bottom: 14px; }

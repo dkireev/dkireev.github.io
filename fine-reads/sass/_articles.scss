@@ -151,6 +151,11 @@ section#articles-section {
 				display: none;
 			}
 		}
+		.articles-item {
+			h4 {
+				font-size: 1.25em;
+			}
+		}
 	}
 }
 
@@ -169,7 +174,8 @@ section#articles-section {
 		padding-top: 39px;
 		padding-bottom: 25px;
 		.container {
-			max-width: 490px;
+			width: 100%;
+			max-width: 338px;
 			margin: auto;
 			overflow-x: hidden;
 		}
@@ -183,14 +189,10 @@ section#articles-section {
 			height: auto;
 		}
 		.articles-item {
-			max-width: 302px;
 			width: 100%;
 			img {
 				width: 100%;
 				height: auto;
-			}
-			h4 {
-				font-size: 1.25em;
 			}
 		}
 		.articles-arrows {
