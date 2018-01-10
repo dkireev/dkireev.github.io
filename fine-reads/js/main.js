@@ -179,13 +179,17 @@ $(document).ready(function(){
 // setup burger menu mobile button behavior
 
 $(document).ready(function(){
-  $('#burger-mobile').mouseenter(function() {
+  $('#burger-mobile').click(function() {
     $('#menu-mobile').toggleClass('drop-down-menu');
+    $('.search-mobile-wrapper').hide();
   });
-  $('#menu-mobile').mouseleave(function() {
-    $('#menu-mobile').removeClass('drop-down-menu');
-  });
-  $(document).click(function() {
+});
+
+// setup search mobile button behavior
+
+$(document).ready(function() {
+  $('#search-mobile').click(function(){
+    $('.search-mobile-wrapper').toggle();
     $('#menu-mobile').removeClass('drop-down-menu');
   });
 });

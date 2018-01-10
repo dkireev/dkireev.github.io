@@ -51,13 +51,13 @@ header .header-desktop .cart-account .account-text { color: #57595b; text-transf
   header .header-desktop ul li { padding-right: 15px; font-size: .87em; }
   header .header-desktop .header-search { margin-left: 7px; width: 267px; }
   header .header-desktop .header-search form input { width: 170px; }
-  header .header-desktop .drop-down-menu { display: block; position: absolute; margin: auto; text-align: center; left: 198px; top: 63px; width: 300px; background-color: rgba(0, 0, 0, 0.6); }
-  header .header-desktop .drop-down-menu li { display: block; color: #fff; padding: 15px 0; }
-  header .header-desktop .drop-down-menu li:hover { background-color: rgba(0, 0, 0, 0.5); } }
+  header .header-desktop .drop-down-menu { display: block; position: absolute; margin: auto; text-align: center; left: 198px; top: 63px; width: 300px; background-color: rgba(255, 255, 255, 0.9); -webkit-box-shadow: 0 0 30px #57595b; box-shadow: 0 0 30px #57595b; }
+  header .header-desktop .drop-down-menu li { display: block; color: #57595b; padding: 15px 0; }
+  header .header-desktop .drop-down-menu li:hover { background-color: rgba(87, 89, 91, 0.9); color: #fff; } }
 @media screen and (max-width: 767px) { header { height: 52px; }
   header .header-desktop { display: none; }
   header .header-mobile { width: 522px; display: block; margin: auto; position: relative; }
-  header .header-mobile .header-logo { margin: 7px 40px auto 21px; float: left; }
+  header .header-mobile .header-logo { margin: 7px 40px auto 18px; float: left; }
   header .header-mobile img { margin: 0 5px; display: inline; }
   header .header-mobile .header-menu-button { display: inline; }
   header .header-mobile a:last-child .header-menu-button { margin-right: 0; }
@@ -65,9 +65,16 @@ header .header-desktop .cart-account .account-text { color: #57595b; text-transf
   header .header-mobile ul li { padding-right: 15px; font-size: .87em; }
   header .header-mobile .header-search { margin-left: 7px; width: 267px; }
   header .header-mobile .header-search form input { width: 170px; }
-  header .header-mobile .drop-down-menu { display: block; position: absolute; margin: auto; text-align: center; left: 62px; top: 52px; width: 400px; background-color: rgba(0, 0, 0, 0.7); }
-  header .header-mobile .drop-down-menu li { display: block; color: #fff; padding: 15px 0; }
-  header .header-mobile .drop-down-menu li:hover { background-color: rgba(0, 0, 0, 0.6); } }
+  header .header-mobile #search-mobile:hover { cursor: pointer; }
+  header .header-mobile .search-mobile-wrapper { position: absolute; width: 100%; top: 70px; padding: 0 20px; display: none; }
+  header .header-mobile .search-mobile-wrapper .header-search { display: block; max-width: 408px; width: 100%; height: 44px; border-radius: 22px; border: 1px solid #d2d2d2; margin: auto; padding: 8px 10px 5px 19px; background-color: #fff; -webkit-box-shadow: 0 0 30px #999; box-shadow: 0 0 30px #999; }
+  header .header-mobile .search-mobile-wrapper .header-search form input { border: none; outline: none; padding-left: 26px; background: #fff url("../img/search-icon.png") no-repeat; background-position: 0 2px; width: 310px; color: #888c89; font-size: .87em; border-right: 1px solid #d2d2d2; }
+  header .header-mobile .search-mobile-wrapper .header-search form button { border: none; outline: none; font-size: .87em; color: #6b716d; background-color: #fff; width: 60px; padding-left: 11px; }
+  header .header-mobile .search-mobile-wrapper .header-search form button:hover { cursor: pointer; }
+  header .header-mobile .search-mobile-wrapper .header-search form option { font-size: .87em; color: #6b716d; }
+  header .header-mobile .drop-down-menu { display: block; position: absolute; margin: auto; text-align: center; left: 62px; top: 52px; width: 400px; background-color: rgba(255, 255, 255, 0.9); -webkit-box-shadow: 0 0 30px #57595b; box-shadow: 0 0 30px #57595b; }
+  header .header-mobile .drop-down-menu li { display: block; color: #57595b; padding: 15px 0; }
+  header .header-mobile .drop-down-menu li:hover { background-color: rgba(87, 89, 91, 0.9); color: #fff; } }
 @media screen and (max-width: 575px) { header { height: auto; width: 100%; margin: 0; position: relative; }
   header .header-desktop { display: block; width: 175px; height: 53px; margin: auto; border: none; }
   header .header-desktop ul, header .header-desktop .header-search, header .header-desktop .cart-account, header .header-desktop .header-menu-burger { display: none; }
@@ -75,7 +82,9 @@ header .header-desktop .cart-account .account-text { color: #57595b; text-transf
   header .header-mobile { border-top: 1px solid #cccdc0; height: 53px; text-align: center; width: 100%; vertical-align: middle; position: relative; }
   header .header-mobile .header-logo { display: none; }
   header .header-mobile img { margin: 0 6px; }
-  header .header-mobile .drop-down-menu { left: 0; width: 100%; } }
+  header .header-mobile .drop-down-menu { left: 0; width: 100%; }
+  header .header-mobile .search-mobile-wrapper .header-search { max-width: 320px; }
+  header .header-mobile .search-mobile-wrapper .header-search form input { width: 185px; } }
 section#main-banner-section { height: 494px; line-height: 494px; background: #e5e6d2 url("../img/main-banner.jpg") no-repeat; background-size: cover; background-position: center center; position: relative; overflow: hidden; margin-top: 84px; }
 section#main-banner-section .main-banner-vertical { display: inline-block; vertical-align: middle; margin-left: -9px; line-height: 56px; padding-left: 0; }
 section#main-banner-section .main-banner-vertical h1 { font-size: 3.43em; letter-spacing: -3px; line-height: 1; margin-bottom: 0; color: #433a36; }

@@ -266,14 +266,16 @@ header {
 				left: 198px;
 				top: 63px;
 				width: 300px;
-				background-color: rgba(0,0,0,.6);
+				background-color: rgba(255,255,255,.9);
+				box-shadow: 0 0 30px #57595b;
 				li {
 					display: block;
-					color: #fff;
+					color: #57595b;
 					padding: 15px 0;
 				}
 				li:hover {
-					background-color: rgba(0,0,0,.5);
+					background-color: rgba(87,89,91,.9);
+					color: #fff;
 				}
 			}
 		}
@@ -292,7 +294,7 @@ header {
 			margin: auto;
 			position: relative;
 			.header-logo {
-				margin: 7px 40px auto 21px;
+				margin: 7px 40px auto 18px;
 				float: left;
 			}
 			img {
@@ -322,6 +324,57 @@ header {
 					}
 				}
 			}
+			#search-mobile:hover {
+				cursor: pointer;
+			}
+			.search-mobile-wrapper {
+				position: absolute;
+				width: 100%;
+				top: 70px;
+				padding: 0 20px;
+				display: none;
+				.header-search {
+					display: block;
+					max-width: 408px;
+					width: 100%;
+					height: 44px;
+					border-radius: 22px;
+					border: 1px solid #d2d2d2;
+					margin: auto;
+					padding: 8px 10px 5px 19px;
+					background-color: #fff;
+					box-shadow: 0 0 30px #999;
+					form {
+						input {
+							border: none;
+							outline: none;
+							padding-left: 26px;
+							background: #fff url('../img/search-icon.png') no-repeat;
+							background-position: 0 2px;
+							width: 310px;
+							color: #888c89;
+							font-size: .87em;
+							border-right: 1px solid #d2d2d2;
+						}
+						button {
+							border: none;
+							outline: none;
+							font-size: .87em;
+							color: #6b716d;
+							background-color: #fff;
+							width: 60px;
+							padding-left: 11px;
+						}
+						button:hover {
+							cursor: pointer;
+						}
+						option {
+							font-size: .87em;
+							color: #6b716d;
+						}
+					}
+				}
+			}
 			.drop-down-menu {
 				display: block;
 				position: absolute;
@@ -330,14 +383,16 @@ header {
 				left: 62px;
 				top: 52px;
 				width: 400px;
-				background-color: rgba(0,0,0,.7);
+				background-color: rgba(255,255,255,.9);
+				box-shadow: 0 0 30px #57595b;
 				li {
 					display: block;
-					color: #fff;
+					color: #57595b;
 					padding: 15px 0;
 				}
 				li:hover {
-					background-color: rgba(0,0,0,.6);
+					background-color: rgba(87,89,91,.9);
+					color: #fff;
 				}
 			}
 		}
@@ -380,6 +435,16 @@ header {
 			.drop-down-menu {
 				left: 0;
 				width: 100%;
+			}
+			.search-mobile-wrapper {
+				.header-search {
+					max-width: 320px;
+					form {
+						input {
+							width: 185px;
+						}
+					}
+				}
 			}
 		}
 	}
