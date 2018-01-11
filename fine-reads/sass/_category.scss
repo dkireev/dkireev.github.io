@@ -1,12 +1,10 @@
 #category-section {
 	background-color: #ffffff;
 	.category-section-row {
-		height: 560px;
 		box-sizing: border-box;
-		padding-bottom: 75px;
+		padding-bottom: 60px;
 		overflow: hidden;
 		.category-section-heading {
-			height: auto;
 			border-bottom: 1px solid #ded7d3;
 			margin-bottom: 25px;
 			padding-bottom: 20px;
@@ -56,14 +54,24 @@
 			width: 100%;
 			.category-section-item {
 				width: 208px;
+				min-height: 440px;
 				margin-right: 32px;
-				height: 416px;
 				position: relative;
 				display: inline-block;
 				float: left;
-				img {
+				padding-bottom: 85px;
+				a:first-child {
+					background-color: #eee;
+					display: inline-block;
 					width: 100%;
+				}
+				img {
+					width: auto;
 					height: auto;
+					max-height: 261px;
+					max-width: 208px;
+					display: block;
+					margin: 0 auto;
 				}
 				.section-item-title {
 					margin-top: 15px;
@@ -77,6 +85,9 @@
 					color: #878787;
 					font-size: .87em;
 					line-height: 1;
+				}
+				.section-item-author a {
+					color: inherit;
 				}
 				.section-item-price {
 					color: #359d68;
@@ -92,7 +103,7 @@
 					font-size: .75em;
 					position: absolute;
 					bottom: 54px;
-					left: 65px;
+					left: 70px;
 				}
 				.section-item-button {
 					display: block;
@@ -138,6 +149,11 @@
 				.category-section-item {
 					width: 174px;
 					margin-right: 17px;
+					min-height: 420px;
+					img {
+						max-height: 218px;
+						max-width: 174px;
+					}
 				}
 			}
 		}
@@ -151,6 +167,11 @@
 				.category-section-item {
 					width: 163px;
 					margin-right: 16px;
+					min-height: 410px;
+					img {
+						max-height: 205px;
+						max-width: 163px;
+					}
 				}
 			}
 		}
@@ -199,7 +220,11 @@
 				.category-section-item {
 					width: 145px;
 					margin-right: 15px;
-					height: 350px;
+					min-height: 375px;
+					img {
+						max-height: 182px;
+						max-width: 145px;
+					}
 					.section-item-title {
 						line-height: 1;
 					}

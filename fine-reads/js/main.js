@@ -26,7 +26,6 @@ mainBannerImageSet();
 specialOfferImageSet();
 categoryRowWidthSet();
 categoryItemsInSlideSet();
-
 articleRowWidthSet();
 articleItemsInSlideSet();
 
