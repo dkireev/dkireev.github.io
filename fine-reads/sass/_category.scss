@@ -65,7 +65,7 @@
 					display: inline-block;
 					width: 100%;
 					height: 261px;
-					line-height: 261px;
+					line-height: 258px;
 					text-align: center;
 				}
 				img {
@@ -82,11 +82,23 @@
 					font-family: Karla-Bold;
 					font-size: 1.25em;
 					letter-spacing: -0.8px;
+					display: -webkit-box;
+					-webkit-line-clamp: 2;
+					-webkit-box-orient: vertical;
+					overflow: hidden;
 				}
 				.section-item-author {
 					color: #878787;
 					font-size: .87em;
 					line-height: 1;
+					a {
+					background-color: none;
+					display: inline;
+					width: auto;
+					height: auto;
+					line-height: 1;
+					text-align: none;
+				}
 				}
 				.section-item-author a {
 					color: inherit;
@@ -154,7 +166,7 @@
 					min-height: 420px;
 					a:first-child {
 						height: 218px;
-						line-height: 218px;
+						line-height: 215px;
 					}
 					img {
 						max-height: 218px;
@@ -176,7 +188,7 @@
 					min-height: 410px;
 					a:first-child {
 						height: 205px;
-						line-height: 205px;
+						line-height: 202px;
 					}
 					img {
 						max-height: 205px;
@@ -233,7 +245,7 @@
 					min-height: 375px;
 					a:first-child {
 						height: 182px;
-						line-height: 182px;
+						line-height: 180px;
 					}
 					img {
 						max-height: 182px;
