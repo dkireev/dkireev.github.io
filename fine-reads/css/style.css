@@ -75,7 +75,7 @@ header .header-desktop .cart-account .account-text { color: #57595b; text-transf
   header .header-mobile .drop-down-menu { display: block; position: absolute; margin: auto; text-align: center; left: 62px; top: 52px; width: 400px; background-color: rgba(255, 255, 255, 0.9); -webkit-box-shadow: 0 0 30px #57595b; box-shadow: 0 0 30px #57595b; }
   header .header-mobile .drop-down-menu li { display: block; color: #57595b; padding: 15px 0; }
   header .header-mobile .drop-down-menu li:hover { background-color: rgba(87, 89, 91, 0.9); color: #fff; } }
-@media screen and (max-width: 575px) { header { height: auto; width: 100%; margin: 0; position: relative; }
+@media screen and (max-width: 575px) { header { height: auto; }
   header .header-desktop { display: block; width: 175px; height: 53px; margin: auto; border: none; }
   header .header-desktop ul, header .header-desktop .header-search, header .header-desktop .cart-account, header .header-desktop .header-menu-burger { display: none; }
   header .header-desktop .header-logo { margin: 8px auto 0 auto; display: inline; }
@@ -106,7 +106,7 @@ header .header-desktop .cart-account .account-text { color: #57595b; text-transf
   #main-banner-section .main-banner-vertical h2 { font-size: 2.25em; }
   #main-banner-section .main-banner-vertical .main-banner-button { width: 308px; height: 43px; line-height: 44px; font-size: 0.75em; margin: 30px auto; }
   #main-banner-section .main-banner-vertical .main-banner-button::after { right: 15px; } }
-@media screen and (max-width: 575px) { #main-banner-section { height: 412px; line-height: 412px; text-align: center; border: none; margin-top: 0; }
+@media screen and (max-width: 575px) { #main-banner-section { height: 412px; line-height: 412px; text-align: center; border: none; margin-top: 107px; }
   #main-banner-section img { max-width: 319px; width: 100%; top: initial; right: initial; position: relative; }
   #main-banner-section .main-banner-vertical { width: 100%; }
   #main-banner-section .main-banner-vertical .main-banner-button { margin-bottom: 23px; width: 100%; max-width: 308px; } }
