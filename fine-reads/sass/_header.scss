@@ -12,6 +12,9 @@ header {
 		.header-menu-burger:hover {
 			cursor: pointer;
 		}
+		#scroll-logo {
+			display: none;
+		}
 		ul {
 			list-style-type: none;
 			padding: 0;
@@ -442,6 +445,16 @@ header {
 						}
 					}
 				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width:380px) {
+	header {
+		.header-mobile {
+			img {
+				margin: 0 2px;
 			}
 		}
 	}

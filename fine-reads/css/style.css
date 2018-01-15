@@ -5,6 +5,7 @@ body { font-family: Karla-Regular; font-size: 16px; }
 header { height: 84px; width: 100%; background-color: #fff; position: fixed; top: 0; z-index: 100; border-bottom: 1px solid #cccdc0; -webkit-box-sizing: border-box; box-sizing: border-box; }
 header .header-mobile { display: none; }
 header .header-mobile .header-menu-burger:hover { cursor: pointer; }
+header .header-mobile #scroll-logo { display: none; }
 header .header-mobile ul { list-style-type: none; padding: 0; display: inline-block; margin-top: 30px; margin-left: 58px; float: left; }
 header .header-mobile ul li { display: inline-block; padding-right: 45px; text-transform: uppercase; color: #57595b; font-family: Karla-Bold; font-size: 0.94em; }
 header .header-mobile ul li:last-child { padding-right: 0; }
@@ -85,6 +86,7 @@ header .header-desktop .cart-account .account-text { color: #57595b; text-transf
   header .header-mobile .drop-down-menu { left: 0; width: 100%; }
   header .header-mobile .search-mobile-wrapper .header-search { max-width: 320px; }
   header .header-mobile .search-mobile-wrapper .header-search form input { width: 185px; } }
+@media screen and (max-width: 380px) { header .header-mobile img { margin: 0 2px; } }
 #main-banner-section { height: 494px; line-height: 494px; background: #e5e6d2 url("../img/main-banner.jpg") no-repeat; background-size: cover; background-position: center center; position: relative; overflow: hidden; margin-top: 84px; }
 #main-banner-section .main-banner-vertical { display: inline-block; vertical-align: middle; margin-left: -9px; line-height: 56px; padding-left: 0; }
 #main-banner-section .main-banner-vertical h1 { font-size: 3.43em; letter-spacing: -3px; line-height: 1; margin-bottom: 0; color: #433a36; }

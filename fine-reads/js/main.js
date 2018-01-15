@@ -20,6 +20,8 @@ var articleCount = 0;
 var articleSlideWidth = 0;
 var articleSlidesCount = 0;
 
+var screenWidth = document.documentElement.clientWidth;
+
 // functions call
 
 mainBannerImageSet();
@@ -32,7 +34,6 @@ articleItemsInSlideSet();
 // setup path to Main Banner section's image for mobile and desktop versions
 
 function mainBannerImageSet() {
-  var screenWidth = document.documentElement.clientWidth;
   if (screenWidth <= 558) {
     document.getElementById("main-banner-image").src = "img/mobile/bookshelf.png";
   } else document.getElementById("main-banner-image").src = "img/bookshelf.png";
@@ -41,7 +42,6 @@ function mainBannerImageSet() {
 // setup path to Special Offer section's images for mobile and desktop versions
 
 function specialOfferImageSet() {
-  var screenWidth = document.documentElement.clientWidth;
   var specialOffer;
   if (screenWidth <= 558) {
     specialOffer = document.getElementsByClassName("special-offer-images");
@@ -222,3 +222,19 @@ $(document).ready(function(){
     $('.search-mobile-wrapper').toggle();
   });
 });
+
+// setup mobile logo scroll behavior
+window.onscroll = function() {mobileLogoScroll()};
+function mobileLogoScroll() {
+  if (screenWidth <= 558) {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      document.getElementsByClassName('header-desktop')[0].style.display = 'none';
+      document.getElementsByClassName('header-mobile')[0].style.borderTopWidth = '0';
+      document.getElementById('scroll-logo').style.display = 'inline';
+    } else {
+      document.getElementsByClassName('header-desktop')[0].style.display = 'block';
+      document.getElementsByClassName('header-mobile')[0].style.borderTopWidth = '1px';
+      document.getElementById('scroll-logo').style.display = 'none';
+    }
+  }
+}
