@@ -91,16 +91,16 @@
 					color: #878787;
 					font-size: .87em;
 					line-height: 1;
-					a {
-					background-color: none;
+				}
+				.section-item-author>a:first-child {
+					background-color: inherit;
+					color: inherit;
 					display: inline;
 					width: auto;
 					height: auto;
 					line-height: 1;
-					text-align: none;
 				}
-				}
-				.section-item-author a {
+				.section-item-author>a {
 					color: inherit;
 				}
 				.section-item-price {
