@@ -12,12 +12,12 @@
 	color: #57595b;
 	font-size: .94em;
 	position: relative;
+	a {
+		color: $green;
+	}
 	h3 {
 		font-size: 1.25em;
 		margin-bottom: 10px;
-		a {
-			color: $green;
-		}
 	}
 	p {
 		color: $green;

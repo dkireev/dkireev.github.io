@@ -68,20 +68,25 @@
 		</div>
 	</header>
 
-	<section id="login">
+	<section id="register">
 		<div class="container">
 			<div class="row">
 				<div class="col">
 					<div class="login-wrapper">
-						<h3>LOGIN or <a href="register.html">REGISTER</a></h3>
+						<h3>REGISTER or <a href="login.html">LOGIN</a></h3>
 						<div class="divider"></div>
 						<form>
-							<input type="text" class="form-input-full" placeholder="Username/Email">
-							<input type="password" class="form-input-full" placeholder="Password">
-							<p><a href="">Forget Password?</a></p>
-							<input type="checkbox" id="forget-pass" class="form-checkbox">
-							<label for="forget-pass">Keep me logged in</label>
-							<button type="submit" class="form-button">LOGIN</button>
+							<input type="text" class="form-input-full" placeholder="Username" required>
+							<input type="email" class="form-input-full" placeholder="Email" required>
+							<input type="password" class="form-input-full" placeholder="Password" required>
+							<input type="password" class="form-input-full" placeholder="Password confirm" required>
+							<div class="form-validation-wrapper">
+								<input type="text" class="form-input-full" placeholder="Verification Code" required>
+								<img src="http://finereads.com/captcha/default?u5ZFwXxN" onclick="this.src='http://finereads.com/captcha/default?'+Math.random()" alt="Verification Code" id="captcha">
+							</div>
+							<input type="checkbox" id="keep-logged" class="form-checkbox" required>
+							<label for="keep-logged">I agree <a href="">the privacy</a></label>
+							<button type="submit" class="form-button">REGISTER</button>
 						</form>
 					</div>
 				</div>
