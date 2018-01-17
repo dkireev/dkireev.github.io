@@ -363,3 +363,11 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 @media screen and (max-width: 575px) { #register { margin-top: 107px; padding: 9px 0; }
   #register .form-validation-wrapper input { width: 100%; }
   #register .form-validation-wrapper img { position: relative; margin-bottom: 20px; } }
+#member { margin-top: 84px; padding: 60px 0 90px 0; }
+
+.member-heading { padding: 15px 0 15px 30px; background-color: #3dcc9b; background: url("../img/bottom-banner.jpg") no-repeat center; background-size: cover; }
+.member-heading .member-heading-avatar { width: 64px; height: 64px; border-radius: 32px; background: url("../img/member-avatar.jpg") no-repeat center; position: relative; }
+.member-heading p { display: inline; position: absolute; top: 35px; left: 135px; font-weight: bold; font-size: 1.12em; color: #fff; }
+
+@media screen and (max-width: 767px) { #member { margin-top: 52px; } }
+@media screen and (max-width: 575px) { #member { margin-top: 107px; padding: 9px 0; } }
