@@ -248,3 +248,14 @@ function mobileLogoScroll() {
     }
   }
 }
+
+memberTitleToggle();
+function memberTitleToggle() {
+  if (window.location.pathname == '/member.html') {
+    var a = document.getElementsByClassName('order-item')[0];
+    var b = a.getElementsByClassName('order-item-title');
+    for (var i = 0; i < b.length; i++) {
+      b[i].style.display = 'block';
+    }
+  }
+}
