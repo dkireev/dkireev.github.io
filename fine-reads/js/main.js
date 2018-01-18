@@ -34,9 +34,11 @@ articleItemsInSlideSet();
 // setup path to Main Banner section's image for mobile and desktop versions
 
 function mainBannerImageSet() {
-  if (screenWidth <= 558) {
-    document.getElementById("main-banner-image").src = "img/mobile/bookshelf.png";
-  } else document.getElementById("main-banner-image").src = "img/bookshelf.png";
+  if (window.location.pathname == '/index.html') {
+    if (screenWidth <= 558) {
+      document.getElementById("main-banner-image").src = "img/mobile/bookshelf.png";
+    } else document.getElementById("main-banner-image").src = "img/bookshelf.png";
+  }
 }
 
 // setup path to Special Offer section's images for mobile and desktop versions
@@ -59,33 +61,37 @@ function specialOfferImageSet() {
 // setup width of Category section's row of products
 
 function categoryRowWidthSet() {
-  var categoryItems = document.getElementsByClassName('category-section-item');
-  var categoryItemStyle = getComputedStyle(categoryItems[0]);
-  categoryItemWidth = parseInt(categoryItemStyle.width);
-  categoryItemMargin = parseInt(categoryItemStyle.marginRight);
-  categoryFirstWidth = (categoryFirstWidth + categoryItemWidth + categoryItemMargin) * categoryItemsCount - parseInt(categoryItemStyle.marginRight);
-  document.getElementById('category-first-row').style.width = categoryFirstWidth + 'px';
-  document.getElementById('category-second-row').style.width = categoryFirstWidth + 'px';
+  if (window.location.pathname == '/index.html') {
+    var categoryItems = document.getElementsByClassName('category-section-item');
+    var categoryItemStyle = getComputedStyle(categoryItems[0]);
+    categoryItemWidth = parseInt(categoryItemStyle.width);
+    categoryItemMargin = parseInt(categoryItemStyle.marginRight);
+    categoryFirstWidth = (categoryFirstWidth + categoryItemWidth + categoryItemMargin) * categoryItemsCount - parseInt(categoryItemStyle.marginRight);
+    document.getElementById('category-first-row').style.width = categoryFirstWidth + 'px';
+    document.getElementById('category-second-row').style.width = categoryFirstWidth + 'px';
+  }
 }
 
 // setup amount of category items in one slide
 
 function categoryItemsInSlideSet() {
-  var a = document.getElementsByClassName('category-section-row');
-  var b = getComputedStyle(a[0]);
-  var c = parseInt(b.width);
-  if (c >= 942) {
-    categorySlideItems = 5;
-    categorySlidesCount = (categoryItemsCount / categorySlideItems).toFixed(0) - 1;
-  } else if (c >= 702) {
-    categorySlideItems = 4;
-    categorySlidesCount = (categoryItemsCount / categorySlideItems).toFixed(0) - 1;
-  } else if (c >= 522) {
-    categorySlideItems = 3;
-    categorySlidesCount = (categoryItemsCount / categorySlideItems).toFixed(0) - 1;
-  } else {
-    categorySlideItems = 2;
-    categorySlidesCount = (categoryItemsCount / categorySlideItems).toFixed(0) - 1;
+  if (window.location.pathname == '/index.html') {
+    var a = document.getElementsByClassName('category-section-row');
+    var b = getComputedStyle(a[0]);
+    var c = parseInt(b.width);
+    if (c >= 942) {
+      categorySlideItems = 5;
+      categorySlidesCount = (categoryItemsCount / categorySlideItems).toFixed(0) - 1;
+    } else if (c >= 702) {
+      categorySlideItems = 4;
+      categorySlidesCount = (categoryItemsCount / categorySlideItems).toFixed(0) - 1;
+    } else if (c >= 522) {
+      categorySlideItems = 3;
+      categorySlidesCount = (categoryItemsCount / categorySlideItems).toFixed(0) - 1;
+    } else {
+      categorySlideItems = 2;
+      categorySlidesCount = (categoryItemsCount / categorySlideItems).toFixed(0) - 1;
+    }
   }
 }
 
@@ -148,29 +154,33 @@ $(document).ready(function() {
 // setup width of Article section's row of products
 
 function articleRowWidthSet() {
-  var articleItems = document.getElementsByClassName('articles-item');
-  var articleItemStyle = getComputedStyle(articleItems[0]);
-  articleItemWidth = parseInt(articleItemStyle.width);
-  articleItemMargin = parseInt(articleItemStyle.marginRight);
-  articleRowWidth = (articleItemWidth + articleItemMargin) * articleItemsCount - parseInt(articleItemStyle.marginRight);
-  document.getElementById('articles-items-wrapper').style.width = articleRowWidth + 'px';
+  if (window.location.pathname == '/index.html') {
+    var articleItems = document.getElementsByClassName('articles-item');
+    var articleItemStyle = getComputedStyle(articleItems[0]);
+    articleItemWidth = parseInt(articleItemStyle.width);
+    articleItemMargin = parseInt(articleItemStyle.marginRight);
+    articleRowWidth = (articleItemWidth + articleItemMargin) * articleItemsCount - parseInt(articleItemStyle.marginRight);
+    document.getElementById('articles-items-wrapper').style.width = articleRowWidth + 'px';
+  }
 }
 
 // setup amount of article items in one slide
 
 function articleItemsInSlideSet() {
-  var a = document.getElementById('articles-col-width');
-  var b = getComputedStyle(a);
-  var c = parseInt(b.width);
-  if (c >= 942) {
-    articleSlideItems = 3;
-    articleSlidesCount = (articleItemsCount / articleSlideItems).toFixed(0) - 1;
-  } else if (c >= 522) {
-    articleSlideItems = 2;
-    articleSlidesCount = (articleItemsCount / articleSlideItems).toFixed(0) - 1;
-  } else {
-    articleSlideItems = 1;
-    articleSlidesCount = (articleItemsCount / articleSlideItems).toFixed(0) - 1;
+  if (window.location.pathname == '/index.html') {
+    var a = document.getElementById('articles-col-width');
+    var b = getComputedStyle(a);
+    var c = parseInt(b.width);
+    if (c >= 942) {
+      articleSlideItems = 3;
+      articleSlidesCount = (articleItemsCount / articleSlideItems).toFixed(0) - 1;
+    } else if (c >= 522) {
+      articleSlideItems = 2;
+      articleSlidesCount = (articleItemsCount / articleSlideItems).toFixed(0) - 1;
+    } else {
+      articleSlideItems = 1;
+      articleSlidesCount = (articleItemsCount / articleSlideItems).toFixed(0) - 1;
+    }
   }
 }
 

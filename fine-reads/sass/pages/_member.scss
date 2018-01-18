@@ -1,7 +1,6 @@
 #member {
 	margin-top: 84px;
 	padding: 60px 0 90px 0;
-
 }
 .member-heading {
 	padding: 15px 0 15px 30px;
@@ -12,7 +11,7 @@
 		width: 64px;
 		height: 64px;
 		border-radius: 32px;
-		background: url('../img/member-avatar.jpg') no-repeat center;
+		background: #ededed url('../img/member-avatar.jpg') no-repeat center;
 		position: relative;
 	}
 	p {
@@ -23,6 +22,68 @@
 		font-weight: bold;
 		font-size: 1.12em;
 		color: #fff;
+	}
+}
+.member-menu {
+	padding: 15px 0 15px 30px;
+	border-bottom: 1px solid #e1e1dc;
+	margin-bottom: 50px;
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		display: inline;
+		font-size: 1.12em;
+		padding-right: 30px;
+	}
+	li:last-child {
+		padding-right: 0;
+	}
+	a {
+		color: #888c89;
+		text-decoration: none;
+		padding-bottom: 14px;
+	}
+	a:hover {
+		color: $green;
+	}
+	a.active {
+		color: $green;
+		border-bottom: 4px solid $yellow;
+	}
+}
+.order-item {
+	margin-left: 30px;
+	.order-item-left {
+		width: 320px;
+		float: left;
+	}
+	.order-item-right {
+		width: 520px;
+		float: left;
+	}
+	.order-item-title {
+		border-bottom: 1px solid #e1e1dc;
+		font-weight: bold;
+	}
+	.order-item-book {
+	
+	}
+	ul {
+		padding: 0;
+		list-style-type: none;
+		li {
+			display: inline;
+			padding-right: 70px;
+		}
+		li:nth-child(3) {
+			padding-right: 150px;
+		}
+		li:last-child {
+			padding-right: 0;
+		}
 	}
 }
 @media screen and (max-width:767px) {
