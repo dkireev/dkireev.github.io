@@ -38,7 +38,7 @@ window.onload = function() {
     articleItemsInSlideSet();
     articleSlideWidth = (articleItemWidth + articleItemMargin) * articleSlideItems;
   }
-  if (document.getElementById('member')) {
+  if (document.getElementsByClassName('order-item')) {
     memberTitleToggle();
   }
 }
