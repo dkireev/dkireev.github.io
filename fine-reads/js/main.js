@@ -52,27 +52,27 @@ function mainBannerImageSet() {
 
 // setup path to Special Offer section's images for mobile and desktop versions
 function specialOfferImageSet() {
-  var specialOffer;
+  var a;
   if (screenWidth <= 558) {
-    specialOffer = document.getElementsByClassName("special-offer-images");
-    for (var i = 1; i <= specialOffer.length; i++) {
-      specialOffer[i-1].src = "img/mobile/special-offer-"+[i]+".jpg";
+    a = document.getElementsByClassName("special-offer-images");
+    for (var i = 1; i <= a.length; i++) {
+      a[i-1].src = "img/mobile/special-offer-"+[i]+".jpg";
     }
   } else {
-    specialOffer = document.getElementsByClassName("special-offer-images");
-    for (var a = 1; a <= specialOffer.length; a++) {
-      specialOffer[a-1].src = "img/special-offer-"+[a]+".jpg";
+    a = document.getElementsByClassName("special-offer-images");
+    for (var a = 1; a <= a.length; a++) {
+      a[a-1].src = "img/special-offer-"+[a]+".jpg";
     }
   }
 }
 
 // setup width of Category section's row of products and amount of category items in one slide
 function categoryRowWidthSet() {
-  var categoryItems = document.getElementsByClassName('category-section-item');
-  var categoryItemStyle = getComputedStyle(categoryItems[0]);
-  categoryItemWidth = parseInt(categoryItemStyle.width);
-  categoryItemMargin = parseInt(categoryItemStyle.marginRight);
-  categoryFirstWidth = (categoryFirstWidth + categoryItemWidth + categoryItemMargin) * categoryItemsCount - parseInt(categoryItemStyle.marginRight);
+  var a = document.getElementsByClassName('category-section-item');
+  var b = getComputedStyle(a[0]);
+  categoryItemWidth = parseInt(b.width);
+  categoryItemMargin = parseInt(b.marginRight);
+  categoryFirstWidth = (categoryFirstWidth + categoryItemWidth + categoryItemMargin) * categoryItemsCount - parseInt(b.marginRight);
   document.getElementById('category-first-row').style.width = categoryFirstWidth + 'px';
   document.getElementById('category-second-row').style.width = categoryFirstWidth + 'px';
 }
@@ -147,11 +147,11 @@ $(document).ready(function() {
 
 // setup width of Article section's row of products and amount of article items in one slide
 function articleRowWidthSet() {
-  var articleItems = document.getElementsByClassName('articles-item');
-  var articleItemStyle = getComputedStyle(articleItems[0]);
-  articleItemWidth = parseInt(articleItemStyle.width);
-  articleItemMargin = parseInt(articleItemStyle.marginRight);
-  articleRowWidth = (articleItemWidth + articleItemMargin) * articleItemsCount - parseInt(articleItemStyle.marginRight);
+  var a = document.getElementsByClassName('articles-item');
+  var a = getComputedStyle(a[0]);
+  articleItemWidth = parseInt(a.width);
+  articleItemMargin = parseInt(a.marginRight);
+  articleRowWidth = (articleItemWidth + articleItemMargin) * articleItemsCount - parseInt(a.marginRight);
   document.getElementById('articles-items-wrapper').style.width = articleRowWidth + 'px';
 }
 function articleItemsInSlideSet() {
