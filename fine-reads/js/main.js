@@ -38,7 +38,7 @@ window.onload = function() {
     articleItemsInSlideSet();
     articleSlideWidth = (articleItemWidth + articleItemMargin) * articleSlideItems;
   }
-  if (document.getElementById('member')) {
+  if (document.getElementById('member') || document.getElementById('cart')) {
     memberTitleToggle();
   }
   if (document.getElementById('success')) {

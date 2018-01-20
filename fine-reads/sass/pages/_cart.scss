@@ -1,0 +1,47 @@
+#cart {
+	margin-top: 84px;
+	padding: 60px 0 90px 0;
+	h5 {
+		text-transform: uppercase;
+		font-size: 1em;
+		font-weight: bold;
+		margin-bottom: 30px;
+		margin-left: 164px;
+	}
+	.order-item {
+		form {
+			width: 50px;
+			input {
+				width: 100%;
+				outline: none;
+				padding-left: 10px;
+			}
+		}
+	}
+	button {
+		width: 95px;
+		height: 30px;
+		outline: none;
+		border: none;
+		background-color: #dbd9d9;
+		border-radius: 15px;
+		display: inline;
+		color: #57595b;
+		font-size: .87em;
+		cursor: pointer;
+	}
+	button:hover {
+		box-shadow: 0 3px 5px #aaa;
+	}
+}
+@media screen and (max-width:767px) {
+	#cart {
+		margin-top: 52px;
+	}
+}
+@media screen and (max-width:575px) {
+	#cart {
+		margin-top: 107px;
+		padding: 9px 0 15px 0;
+	}
+}
