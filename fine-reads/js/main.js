@@ -41,6 +41,9 @@ window.onload = function() {
   if (document.getElementById('member')) {
     memberTitleToggle();
   }
+  if (document.getElementById('success')) {
+    alignmentByHeight('success-item');
+  }
 }
 
 // setup path to Main Banner section's image for mobile and desktop versions
@@ -234,5 +237,24 @@ function memberTitleToggle() {
   var b = a.getElementsByClassName('order-item-title');
   for (var i = 0; i < b.length; i++) {
     b[i].style.display = 'block';
+  }
+}
+
+function alignmentByHeight(classname) {
+  if (screenWidth > 974) {
+    var divs = $("div ."+classname);
+    var a = document.getElementsByClassName('success-item-title');
+    var b = getComputedStyle(a[0]);
+    var c = parseInt(b.height);
+    var d = parseInt(b.marginTop);
+    var e = document.getElementsByClassName('success-item');
+    var f = getComputedStyle(a[0]);
+    var g = parseInt(b.marginTop);
+    var max = 0;
+    for(var i=0; i<divs.length; i++) {
+        max = Math.max(max, $(divs[i]).height());
+    }
+    max += c + d + g;
+    $(divs).css('min-height', max+'px');
   }
 }

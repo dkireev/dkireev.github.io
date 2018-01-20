@@ -567,6 +567,7 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
   .success-item table th:last-child, .success-item table td:last-child { padding-right: 15px; } }
 @media screen and (max-width: 767px) { #success { margin-top: 52px; }
   #success h5 { margin-left: 60px; }
+  #success .member-menu { margin-bottom: 30px; }
   .success-item-title { margin-left: 25px; }
   .success-item { padding: 20px 10px; } }
 @media screen and (max-width: 575px) { #success { margin-top: 107px; padding: 9px 0 15px 0; }
