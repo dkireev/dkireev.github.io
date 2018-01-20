@@ -86,6 +86,23 @@
                             <li><a href="order.html" class="active">Order</a></li>
                         </ul>
                     </div>
+                    <div class="order-status clearfix">
+                        <div class="order-status-stage order-status-active">
+                            <div>1</div>
+                            <p>Place order</p>
+                        </div>
+                        <div class="order-status-stage">
+                            <div>2</div>
+                            <p>Shipping</p></div>
+                        <div class="order-status-stage">
+                            <div>3</div>
+                            <p>Delivered</p>
+                        </div>
+                        <div class="order-status-stage last-stage">
+                            <div>4</div>
+                            <p>Completed</p>
+                        </div>
+                    </div>
                     <h5>Order ID: <span id="order-details-id">5</span></h5>
                     <div class="order-items-wrapper clearfix">
                         <div class="order-item clearfix">
@@ -161,8 +178,10 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="order-total-number">82.61</div>
-                        <div class="order-total-text">Total</div>
+                        <div class="order-total-wrapper clearfix">
+                            <div class="order-total-number">82.61</div>
+                            <div class="order-total-text">Total</div>
+                        </div>
                     </div>
                 </div>
             </div>
