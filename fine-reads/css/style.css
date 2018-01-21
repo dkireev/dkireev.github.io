@@ -341,7 +341,7 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 
 .form-button:hover { -webkit-box-shadow: 0 3px 5px #aaa; box-shadow: 0 3px 5px #aaa; cursor: pointer; }
 
-.form-checkbox:not(#foo) { opacity: 0; width: 25px; height: 25px; border: 1px solid red; }
+.form-checkbox:not(#foo) { opacity: 0; width: 25px; height: 25px; }
 
 .form-checkbox:not(#foo) + label { position: absolute; left: 55px; padding: 3px 7px 3px 39px; cursor: pointer; background: url(../img/checkbox-unchecked.png) left center no-repeat; }
 
@@ -633,3 +633,54 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
   #cart .order-total-wrapper { padding-right: 0; width: 100%; background-color: #2c3e50; border-top: none; }
   #cart .order-total-wrapper .order-total-text { width: 70%; padding-left: 15px; }
   #cart .order-total-wrapper .order-total-number { width: 30%; } }
+#checkout { margin-top: 84px; padding: 60px 0 110px 0; }
+#checkout h5 { text-transform: uppercase; font-size: 1em; font-weight: bold; margin-left: 164px; }
+#checkout .order-items-wrapper { margin-bottom: 40px; }
+#checkout .billing-wrapper { padding-top: 20px; }
+#checkout .order-items-wrapper:last-child { margin-bottom: 0; }
+#checkout .form-button { margin: 0 auto; }
+#checkout fieldset.left { width: 50%; float: left; position: relative; }
+#checkout fieldset.right { width: 50%; float: right; position: relative; padding-left: 15px; }
+#checkout fieldset.right label { left: 15px; }
+#checkout .checkout-input { height: 42px; width: 300px; font-size: .94em; margin-left: 100px; margin-bottom: 0; }
+#checkout label { font-size: .94em; position: absolute; left: 0; display: block; padding-top: 22px; color: #57595b; }
+#checkout select.checkout-input { -webkit-appearance: none; background: url(../img/select-arrow.png) no-repeat transparent; background-position: 256px center; }
+#checkout textarea.checkout-input { height: 160px; resize: none; padding-top: 15px; }
+#checkout .checkout-checkbox { margin-left: 0; width: 25px; height: 25px; }
+#checkout .checkout-checkbox + label { cursor: pointer; margin-top: 12px; margin-bottom: 17px; }
+#checkout .checkout-checkbox:not(checked) { position: absolute; opacity: 0; }
+#checkout .checkout-checkbox:not(checked) + label { position: relative; padding: 0 0 0 0; height: 25px; }
+#checkout .checkout-checkbox:not(checked) + label:before { content: ''; position: absolute; top: 0; left: 170px; width: 25px; height: 25px; background: url("../img/checkbox-unchecked.png") left center no-repeat; }
+#checkout .checkout-checkbox:checked + label:before { background: url("../img/checkbox-checked.png") left center no-repeat; }
+#checkout .cards-wrapper { margin-bottom: 10px; }
+#checkout .card-visa { background: url("../img/card-visa.png") center no-repeat; width: 41px; height: 25px; display: inline-block; margin-right: 5px; }
+#checkout .card-mastercard { background: url("../img/card-mastercard.png") center no-repeat; width: 41px; height: 25px; display: inline-block; margin-right: 5px; }
+#checkout .card-discover { background: url("../img/card-discover.png") center no-repeat; width: 34px; height: 25px; display: inline-block; margin-right: 5px; }
+#checkout .card-amex { background: url("../img/card-amex.png") center no-repeat; width: 33px; height: 25px; display: inline-block; }
+#checkout input.card { width: 280px; margin-left: 120px; }
+
+@media screen and (max-width: 1199px) { #checkout h5 { margin-left: 50px; } }
+@media screen and (max-width: 991px) { #checkout h5 { margin-left: 30px; }
+  #checkout .checkout-input { width: 216px; margin-left: 90px; }
+  #checkout select.checkout-input { background-position: 180px center; }
+  #checkout input.card { width: 185px; } }
+@media screen and (max-width: 767px) { #checkout { margin-top: 52px; }
+  #checkout .billing-wrapper { -webkit-box-shadow: 0 0 40px #e9e9e9; box-shadow: 0 0 40px #e9e9e9; padding: 20px 30px 30px 30px; }
+  #checkout fieldset.left { width: 100%; }
+  #checkout fieldset.right { width: 100%; padding-left: 0; }
+  #checkout fieldset.right label { left: 0; }
+  #checkout .checkout-input { width: 372px; }
+  #checkout select.checkout-input { background-position: 325px center; }
+  #checkout input.card { width: 342px; } }
+@media screen and (max-width: 575px) { #checkout { margin-top: 107px; padding: 9px 0 45px 0; }
+  #checkout .billing-wrapper { padding: 10px 15px 15px 15px; font-size: .87em; }
+  #checkout fieldset.left { width: 100%; }
+  #checkout fieldset.left label { position: relative; padding-top: 15px; }
+  #checkout fieldset.right { width: 100%; padding-left: 0; }
+  #checkout fieldset.right label { left: 0; position: relative; padding-top: 15px; }
+  #checkout .checkout-input { width: 100%; margin-left: 0; margin-top: 0; }
+  #checkout select.checkout-input { background-position: right center; }
+  #checkout input.card { width: 100%; margin-left: 0; }
+  #checkout .checkout-checkbox + label { cursor: pointer; margin-top: 6px; margin-bottom: 10px; }
+  #checkout .checkout-checkbox:not(checked) + label:before { top: 12px; }
+  #checkout .cards-wrapper { margin-top: 10px; } }
