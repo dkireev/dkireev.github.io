@@ -103,22 +103,21 @@
                                         <li>Price</li>
                                         <li>Quantity</li>
                                         <li>Subtotal</li>
-                                        <li>&nbsp;</li>
                                     </ul>
                                 </div>
                                 <div class="order-item-row">
                                     <ul>
                                         <li>7.20</li>
                                         <li>
-                                            <form action="">
-                                                <input type="number" min="1" value="1">
-                                            </form>
+                                            <div class="quantity-wrapper clearfix">
+                                                <button class="minus">-</button>
+                                                <div class="amount">1</div>
+                                                <button class="plus">+</button>
+                                            </div>
                                         </li>
                                         <li>7.20</li>
-                                        <li>
-                                            <button>DELETE</button>
-                                        </li>
                                     </ul>
+                                    <button class="delete">DELETE</button>
                                 </div>
                             </div>
                         </div>
@@ -138,18 +137,21 @@
                                         <li>Price</li>
                                         <li>Quantity</li>
                                         <li>Subtotal</li>
-                                        <li>&nbsp;</li>
                                     </ul>
                                 </div>
-                                <div class="order-item-row">
+                                <div class="order-item-row clearfix">
                                     <ul>
                                         <li>11.00</li>
-                                        <li>x2</li>
-                                        <li>22.00</li>
                                         <li>
-                                            <button>DELETE</button>
+                                            <div class="quantity-wrapper clearfix">
+                                                <button class="minus">-</button>
+                                                <div class="amount">1</div>
+                                                <button class="plus">+</button>
+                                            </div>
                                         </li>
+                                        <li>22.00</li>
                                     </ul>
+                                    <button class="delete">DELETE</button>
                                 </div>
                             </div>
                         </div>
@@ -158,6 +160,9 @@
                             <div class="order-total-text">Total</div>
                         </div>
                     </div>
+                    <button class="update">update</button>
+                    <button class="clear">clear</button>
+                    <button class="proceed">proceed to checkout</button>
                 </div>
             </div>
         </div>

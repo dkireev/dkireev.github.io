@@ -44,6 +44,9 @@ window.onload = function() {
   if (document.getElementById('success')) {
     alignmentByHeight('success-item');
   }
+  if (document.getElementById('cart')) {
+    itemQuantity(this);
+  }
 }
 
 // setup path to Main Banner section's image for mobile and desktop versions
@@ -257,4 +260,19 @@ function alignmentByHeight(classname) {
     max += c + d + g;
     $(divs).css('min-height', max+'px');
   }
+}
+
+function itemQuantity() {
+  $('.plus').click(function() {
+    var a = $(this).prev('.amount').html();
+    a++;
+    $(this).prev('.amount').html(a);
+  });
+  $('.minus').click(function() {
+    var a = $(this).next('.amount').html();
+    a--;
+    if (a > 0) {
+      $(this).next('.amount').html(a);
+    }
+  });
 }
