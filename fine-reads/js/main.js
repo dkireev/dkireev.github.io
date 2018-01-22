@@ -28,7 +28,7 @@ window.onload = function() {
   if (document.getElementById('special-offer-section')) {
     specialOfferImageSet();
   }
-  if (document.getElementById('category-section')) {
+  if (document.getElementById('category-section') || document.getElementById('book')) {
     categoryRowWidthSet();
     categoryItemsInSlideSet();
     categorySlideWidth = (categoryItemWidth + categoryItemMargin) * categorySlideItems;
