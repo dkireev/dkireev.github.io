@@ -38,7 +38,7 @@ window.onload = function() {
     articleItemsInSlideSet();
     articleSlideWidth = (articleItemWidth + articleItemMargin) * articleSlideItems;
   }
-  if (document.getElementById('member') || document.getElementById('cart')) {
+  if (document.getElementById('member') || document.getElementById('cart') || document.getElementById('checkout') || document.getElementById('details')) {
     memberTitleToggle();
   }
   if (document.getElementById('success')) {
@@ -265,6 +265,7 @@ function mobileLogoScroll() {
   }
 }
 
+// switch on and off titles for each row of cart items
 function memberTitleToggle() {
   var a = document.getElementsByClassName('order-item')[0];
   var b = a.getElementsByClassName('order-item-title');
@@ -273,6 +274,7 @@ function memberTitleToggle() {
   }
 }
 
+// setup height of - and + buttons in cart
 function alignmentByHeight(classname) {
   if (screenWidth > 974) {
     var divs = $("div ."+classname);
