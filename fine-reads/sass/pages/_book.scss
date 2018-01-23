@@ -167,6 +167,10 @@
 		color: #525252;
 		font-size: .94em;
 		margin-bottom: 30px;
+		cursor: pointer;
+	}
+	button:hover {
+	    box-shadow: 0 3px 5px #aaa;
 	}
 }
 .book-reviews > p {

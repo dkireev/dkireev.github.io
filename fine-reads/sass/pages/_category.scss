@@ -1,0 +1,15 @@
+#category {
+	margin-top: 84px;
+	padding: 60px 0 90px 0;
+}
+@media screen and (max-width:767px) {
+	#category {
+		margin-top: 52px;
+	}
+}
+@media screen and (max-width:575px) {
+	#category {
+		margin-top: 107px;
+		padding: 9px 0 15px 0;
+	}
+}
