@@ -795,19 +795,19 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
   .book-details { width: 470px; float: none; display: inline-block; vertical-align: top; }
   .book-details h3 { font-size: 1.37em; }
   .book-description { width: 412px; float: none; }
-  .buy-book { top: 341px; padding-left: 100px; padding-right: 100px; }
+  .buy-book { top: 341px; }
   .book-review-item { position: relative; }
   .book-review-item .book-review-text span { position: absolute; top: 10px; right: 0; } }
 @media screen and (max-width: 767px) { #book { margin-top: 52px; }
   #book .category-section-row h3 { font-size: 1.1em; }
   .book-details { width: 290px; }
   .book-details h3 { font-size: 1.12em; }
-  .buy-book { width: 100%; display: block; position: relative; top: 0; margin-bottom: 20px; }
+  .buy-book { width: 100%; display: block; position: relative; padding-left: 100px; padding-right: 100px; top: 0; margin-bottom: 20px; }
   .add-wishlist::before { left: 0; right: 142px; }
   .book-description { width: 100%; display: block; }
   .book-review-item { position: relative; padding-left: 0; }
   .book-review-item .book-review-text { width: 100%; } }
-@media screen and (max-width: 575px) { #book { margin-top: 107px; padding: 9px 0 15px 0; }
+@media screen and (max-width: 575px) { #book { margin-top: 107px; padding: 9px 0 30px 0; }
   .book-wrapper .book-cover { width: 120px; height: 151px; margin-right: 5%; }
   .book-wrapper .see-preview { left: 42px; top: 167px; }
   .book-details { width: 54%; }

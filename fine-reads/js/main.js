@@ -49,6 +49,34 @@ window.onload = function() {
   }
 }
 
+window.onresize = function() {
+  if (document.getElementById('main-banner-section')) {
+    mainBannerImageSet();
+  }
+  if (document.getElementById('special-offer-section')) {
+    specialOfferImageSet();
+  }
+  if (document.getElementById('category-section') || document.getElementById('book')) {
+    categoryRowWidthSet();
+    categoryItemsInSlideSet();
+    categorySlideWidth = (categoryItemWidth + categoryItemMargin) * categorySlideItems;
+  }
+  if (document.getElementById('articles-section')) {
+    articleRowWidthSet();
+    articleItemsInSlideSet();
+    articleSlideWidth = (articleItemWidth + articleItemMargin) * articleSlideItems;
+  }
+  if (document.getElementById('member') || document.getElementById('cart')) {
+    memberTitleToggle();
+  }
+  if (document.getElementById('success')) {
+    alignmentByHeight('success-item');
+  }
+  if (document.getElementById('cart')) {
+    itemQuantity(this);
+  }
+}
+
 // setup path to Main Banner section's image for mobile and desktop versions
 function mainBannerImageSet() {
     if (screenWidth <= 558) {
@@ -79,8 +107,10 @@ function categoryRowWidthSet() {
   categoryItemWidth = parseInt(b.width);
   categoryItemMargin = parseInt(b.marginRight);
   categoryFirstWidth = (categoryFirstWidth + categoryItemWidth + categoryItemMargin) * categoryItemsCount - parseInt(b.marginRight);
-  document.getElementById('category-first-row').style.width = categoryFirstWidth + 'px';
-  document.getElementById('category-second-row').style.width = categoryFirstWidth + 'px';
+  var c = document.getElementsByClassName('category-items-wrapper');
+  for (var i = 0; i < c.length; i++) {
+    c[i].style.width = categoryFirstWidth + 'px';
+  }
 }
 function categoryItemsInSlideSet() {
   var a = document.getElementsByClassName('category-section-row');
@@ -262,6 +292,7 @@ function alignmentByHeight(classname) {
   }
 }
 
+// setup behavior of - and + buttons in cart
 function itemQuantity() {
   $('.plus').click(function() {
     var a = $(this).prev('.amount').html();

@@ -272,8 +272,6 @@
 	}
 	.buy-book {
 		top: 341px;
-		padding-left: 100px;
-		padding-right: 100px;
 	}
 	.book-review-item {
 		position: relative;
@@ -305,6 +303,8 @@
 		width: 100%;
 		display: block;
 		position: relative;
+		padding-left: 100px;
+		padding-right: 100px;
 		top: 0;
 		margin-bottom: 20px;
 	}
@@ -327,7 +327,7 @@
 @media screen and (max-width:575px) {
 	#book {
 		margin-top: 107px;
-		padding: 9px 0 15px 0;
+		padding: 9px 0 30px 0;
 	}
 	.book-wrapper {
 		.book-cover {
