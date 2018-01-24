@@ -2925,7 +2925,8 @@ footer {
     padding-right: 5%; } }
 #category {
   margin-top: 84px;
-  padding: 60px 0 90px 0; }
+  padding: 60px 0 90px 0;
+  position: relative; }
   #category .category-section-item {
     margin: 30px 14px 0 14px; }
   #category .category-section-heading {
@@ -2944,6 +2945,7 @@ footer {
       color: #2e2e2e;
       font-size: 1.62em;
       font-family: Karla-Bold;
+      padding-top: 3px;
       margin-left: 40px;
       margin-bottom: 0;
       display: inline-block; }
@@ -2977,20 +2979,60 @@ footer {
           background-color: #eaeaea;
           border-color: #eaeaea; }
 
+#to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 100;
+  border-radius: 5px;
+  display: none; }
+
+#to-top:hover {
+  box-shadow: 0 3px 5px #aaa; }
+
 @media screen and (max-width: 1199px) {
   #category .category-section-item {
     margin: 30px 9px 0 9px; } }
 @media screen and (max-width: 991px) {
   #category .category-section-item {
-    margin: 30px 8px 0 8px; } }
+    margin: 30px 8px 0 8px; }
+  #category .category-section-heading {
+    padding-bottom: 0; }
+    #category .category-section-heading nav {
+      position: relative;
+      margin-top: 20px; } }
 @media screen and (max-width: 767px) {
   #category {
     margin-top: 52px; } }
 @media screen and (max-width: 575px) {
   #category {
     margin-top: 107px;
-    padding: 9px 0 30px 0; }
+    padding: 15px 0 30px 0; }
     #category .category-section-item {
-      margin: 30px 7px 0 7px; } }
+      margin: 30px 7px 0 7px; }
+    #category .category-section-heading {
+      padding-bottom: 15px; }
+      #category .category-section-heading h3 {
+        font-size: 1.25em;
+        padding-top: 5px; }
+      #category .category-section-heading nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 0; }
+        #category .category-section-heading nav ul li {
+          display: none; }
+        #category .category-section-heading nav ul li:first-child {
+          display: block;
+          margin-right: 0; }
+        #category .category-section-heading nav ul li:last-child {
+          display: block;
+          margin-left: 5px; }
+        #category .category-section-heading nav ul li.page-item a {
+          background: #9d705b;
+          color: #fff; }
+        #category .category-section-heading nav ul li.disabled a {
+          background-color: #eaeaea;
+          color: #888c89; } }
 
 /*# sourceMappingURL=style.css.map */

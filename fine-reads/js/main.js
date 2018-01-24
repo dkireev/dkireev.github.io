@@ -18,7 +18,6 @@ var articleItemMargin = 0;
 var articleCount = 0;
 var articleSlideWidth = 0;
 var articleSlidesCount = 0;
-
 var screenWidth = document.documentElement.clientWidth;
 
 window.onload = function() {
@@ -75,6 +74,13 @@ window.onresize = function() {
   if (document.getElementById('cart')) {
     itemQuantity(this);
   }
+}
+
+window.onscroll = function() {
+  if (document.getElementById('category')) {
+    toTopToggle();
+  }
+  mobileLogoScroll();
 }
 
 // setup path to Main Banner section's image for mobile and desktop versions
@@ -250,7 +256,6 @@ $(document).ready(function(){
 });
 
 // setup mobile logo scroll behavior
-window.onscroll = function() {mobileLogoScroll()};
 function mobileLogoScroll() {
   if (screenWidth <= 558) {
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
@@ -262,6 +267,15 @@ function mobileLogoScroll() {
       document.getElementsByClassName('header-mobile')[0].style.borderTopWidth = '1px';
       document.getElementById('scroll-logo').style.display = 'none';
     }
+  }
+}
+
+// setup mobile logo scroll behavior
+function toTopToggle() {
+  if (document.body.scrollTop > 1200 || document.documentElement.scrollTop > 1200) {
+    document.getElementById('to-top').style.display = 'block';
+  } else {
+    document.getElementById('to-top').style.display = 'none';
   }
 }
 
