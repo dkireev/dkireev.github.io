@@ -371,8 +371,8 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
   #register .form-validation-wrapper img { position: relative; margin-bottom: 20px; } }
 #member { margin-top: 84px; padding: 60px 0 90px 0; }
 
-.member-heading { padding: 15px 0 15px 30px; background-color: #3dcc9b; background: url("../img/bottom-banner.jpg") no-repeat center; background-size: cover; }
-.member-heading .member-heading-avatar { width: 64px; height: 64px; border-radius: 32px; background: #ededed url("../img/member-avatar.jpg") no-repeat center; position: relative; }
+.member-heading { padding: 15px 0 15px 30px; background-color: #3dcc9b; background: url("../img/bottom-banner.jpg") no-repeat center; background-size: cover; height: 93px; }
+.member-heading img { max-width: 63px; max-height: 63px; }
 .member-heading p { display: inline; position: absolute; top: 35px; left: 135px; font-weight: bold; font-size: 1.12em; color: #fff; }
 
 .member-menu { padding: 15px 0 15px 30px; border-bottom: 1px solid #e1e1dc; margin-bottom: 50px; }

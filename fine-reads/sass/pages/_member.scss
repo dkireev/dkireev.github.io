@@ -7,12 +7,10 @@
 	background-color: $green;
 	background: url('../img/bottom-banner.jpg') no-repeat center;
 	background-size: cover;
-	.member-heading-avatar {
-		width: 64px;
-		height: 64px;
-		border-radius: 32px;
-		background: #ededed url('../img/member-avatar.jpg') no-repeat center;
-		position: relative;
+	height: 93px;
+	img {
+		max-width: 63px;
+		max-height: 63px;
 	}
 	p {
 		display: inline;
