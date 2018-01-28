@@ -52,37 +52,13 @@ window.onload = function() {
   if (document.getElementById('book')) {
     bookCoverHeight();
   }
+  if (document.getElementById('authors')) {
+    authorsRow();
+  }
 }
 
 window.onresize = function() {
-  if (document.getElementById('main-banner-section')) {
-    mainBannerImageSet();
-  }
-  if (document.getElementById('special-offer-section')) {
-    specialOfferImageSet();
-  }
-  if (document.getElementById('category-section') || document.getElementById('book')) {
-    categoryRowWidthSet();
-    categoryItemsInSlideSet();
-    categorySlideWidth = (categoryItemWidth + categoryItemMargin) * categorySlideItems;
-  }
-  if (document.getElementById('articles-section')) {
-    articleRowWidthSet();
-    articleItemsInSlideSet();
-    articleSlideWidth = (articleItemWidth + articleItemMargin) * articleSlideItems;
-  }
-  if (document.getElementById('member') || document.getElementById('cart')) {
-    memberTitleToggle();
-  }
-  if (document.getElementById('success')) {
-    alignmentByHeight('success-item');
-  }
-  if (document.getElementById('cart')) {
-    itemQuantity(this);
-  }
-  if (document.getElementById('book')) {
-    bookCoverHeight();
-  }
+  location.reload();
 }
 
 window.onscroll = function() {
@@ -341,6 +317,7 @@ function bookCoverHeight() {
   document.getElementsByClassName('see-preview')[0].style.top = c + 'px';
 }
 
+//setup disabeling of BUY BUTTONS
 function disableBuyButton() { 
   var a = document.getElementsByClassName('sold-out');
   for (var i = 0; i < a.length; i++) {
@@ -349,4 +326,50 @@ function disableBuyButton() {
     a[i].style.border = 'none';
     a[i].innerHTML = 'Sold out';
   }
+}
+
+//setup behavior of authors' row
+function authorsRow() {
+  var a = document.getElementsByClassName('pop-authors-row')[0];
+  var b = a.getElementsByClassName('pop-authours-item');
+  var width = 0;
+  var margin = 0;
+  var totalWidth = 0;
+  var slideStep = 0;
+  var slideCounter = 0;
+  var slidesInRow = 0;
+  var c = 0;
+  var d = getComputedStyle(document.getElementsByClassName('pop-authors-wrapper')[0]);
+  var e = parseInt(d.width);
+  if (e > 303) {
+    slidesInRow = 3;
+  } else slidesInRow = 4;
+  for (var i = 0; i < b.length; i++) {
+    c = getComputedStyle(b[i]);
+    width += parseInt(c.width);
+    margin += parseInt(c.marginRight);
+  }
+  totalWidth = width + margin + 'px';
+  slideStep = width/5 + margin/4;
+  $('.pop-authors-row').css('width', totalWidth);
+  $('.category-section-right').click(function(){
+    slideCounter += 1;
+    if (slideCounter < slidesInRow) {
+      $('.pop-authors-row').animate({ marginLeft: '-=' + slideStep + 'px' });
+      $('.category-section-left').addClass('left-active');
+    } else {
+      $('.pop-authors-row').animate({ marginLeft: '0' });
+      $('.category-section-left').removeClass('left-active');
+      slideCounter = 0;
+    }
+  });
+  $('.category-section-left').click(function(){
+    if (slideCounter > 0) {
+      slideCounter -= 1;
+      $('.pop-authors-row').animate({ marginLeft: '+=' + slideStep + 'px' });
+    }
+    if (slideCounter == 0) {
+      $('.category-section-left').removeClass('left-active');
+    }
+  });
 }

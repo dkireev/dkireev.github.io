@@ -24,36 +24,40 @@
 			margin-bottom: 0;
 			display: inline-block;
 		}
-		.category-section-right {
-			width: 26px;
-			height: 26px;
-			border: none;
-			outline: none;
-			float: right;
-			background: transparent url('../img/category-right.png');
-			margin-left: 7px;
-		}
-		.right-active {
-			background: transparent url('../img/category-right-active.png');
-		}
-		.category-section-left {
-			width: 26px;
-			height: 26px;
-			border: none;
-			outline: none;
-			float: right;
-			background: transparent url('../img/category-left.png');
-		}
-		.left-active {
-			background: transparent url('../img/category-left-active.png');
-		}
-		.right-active:hover, .left-active:hover {
-			cursor: pointer;
-		}
 	}
 	.category-items-wrapper {
 		width: 100%;
 	}
+}
+.category-section-right {
+	width: 26px;
+	height: 26px;
+	border: none;
+	outline: none;
+	float: right;
+	background: transparent url('../img/category-right.png');
+	margin-left: 7px;
+}
+.right-active {
+	background: transparent url('../img/category-right-active.png');
+}
+.category-section-left {
+	width: 26px;
+	height: 26px;
+	border: none;
+	outline: none;
+	outline-width: 0;
+	float: right;
+	background: transparent url('../img/category-left.png');
+}
+.left-active {
+	background: transparent url('../img/category-left-active.png');
+}
+.right-active:hover, .left-active:hover {
+	cursor: pointer;
+}
+button:focus {
+	outline: none;
 }
 .category-section-item {
 	width: 208px;

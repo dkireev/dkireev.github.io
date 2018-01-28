@@ -1,0 +1,255 @@
+#authors {
+	padding: 60px 0 90px 0;
+	position: relative;
+	h3 {
+		color: #212529;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 1.25em;
+		margin-bottom: 15px;
+		margin-left: 30px;
+	}
+	.category-section-right {
+		position: absolute;
+		right: 24px;
+		top: 0;
+		display: none;
+	}
+	.category-section-left {
+		position: absolute;
+		right: 59px;
+		top: 0;
+		display: none;
+	}
+}
+.pop-authors-wrapper {
+	box-shadow: 0 0 40px #e9e9e9;
+	padding: 30px 30px 0 30px;
+	margin-bottom: 60px;
+	overflow: hidden;
+}
+.pop-authors-row {
+	padding-bottom: 30px;
+}
+.pop-authours-item {
+	text-align: center;
+	float: left;
+	margin-right: 88px;
+	p {
+		color: #321d14;
+		font-size: 1.12em;
+		font-weight: bold;
+		margin-top: 15px;
+		margin-bottom: 0;
+	}
+	a:hover {
+		text-decoration: none;
+	}
+}
+.pop-authours-item:last-child {
+	margin-right: 0;
+}
+.letters-wrapper {
+	padding: 0 30px;
+	.letters-quater {
+		float: left;
+		margin-left: 13px;
+	}
+	.letters-quater:first-child {
+		margin-left: 0;
+	}
+	button {
+		outline: none;
+		color: #57595b;
+		background-color: #fff;
+		border: 1px solid #57595b;
+		border-radius: 5px;
+		font-weight: bold;
+		font-size: 1.12em;
+		width: 30px;
+		margin-left: 13px;
+		margin-bottom: 13px;
+		cursor: pointer;
+		float: left;
+	}
+	button.first {
+		margin-left: 0;
+	}
+	button:hover, button.active {
+		background-color: $green;
+		color: #fff;
+		border: 1px solid $green;
+	}
+}
+.author-list-wrapper {
+	box-shadow: 0 0 40px #e9e9e9;
+	padding: 30px;
+	margin-top: 20px;
+	display: none;
+	.author-list-half {
+		width: 50%;
+		float: left;
+	}
+	.author-list-quarter {
+		width: 50%;
+		padding-right: 15px;
+		float: left;
+	}
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+		margin-bottom: 0;
+		color: #57595b;
+		font-size: .94em;
+	}
+	li:hover {
+		color: $green;
+		font-weight: bold;
+	}
+	a {
+		color: inherit;
+	}
+}
+.author-list-wrapper:first-child {
+	display: block;
+}
+@media screen and (max-width:1199px) {
+	.pop-authours-item {
+		margin-right: 33px;
+	}
+	.letters-wrapper {
+		padding: 0 5px;
+		.letters-quater {
+			margin-left: 8px;
+		}
+		button {
+			font-size: 1em;
+			width: 28px;
+			margin-left: 8px;
+		}
+	}
+}
+@media screen and (max-width:991px) {
+	#authors {
+		h3 {
+			margin-left: 15px;
+		}
+	}
+	.pop-authors-wrapper {
+		padding: 30px 15px 0 15px;
+	}
+	.pop-authours-item {
+		width: 126px;
+		margin-right: 10px;
+		img {
+			width: 100%;
+			height: auto;
+		}
+		p {
+			font-size: 1em;
+		}
+	}
+	.letters-wrapper {
+		padding: 0 5px;
+		.letters-quater {
+			margin-left: 5px;
+		}
+		.letters-quater:last-child {
+			margin-left: 264px;
+		}
+		button {
+			font-size: 1em;
+			width: 28px;
+			margin-left: 5px;
+		}
+	}
+	.author-list-wrapper {
+		.author-list-half {
+			width: 50%;
+		}
+		.author-list-quarter {
+			width: 100%;
+		}
+	}
+}
+@media screen and (max-width:767px) {
+	#authors {
+		.category-section-right {
+			display: block;
+		}
+		.category-section-left {
+			display: block;
+		}
+	}
+	.pop-authours-item {
+		margin-right: 57px;
+	}
+	.letters-wrapper {
+		padding: 0 6px;
+		.letters-quater {
+			margin-left: 9px;
+		}
+		.letters-quater:nth-child(3) {
+			margin-left: 37px;
+		}
+		.letters-quater:last-child {
+			margin-left: 9px;
+		}
+		button {
+			font-size: 1em;
+			width: 28px;
+			margin-left: 9px;
+		}
+	}
+}
+@media screen and (max-width:575px) {
+	#authors {
+		padding: 9px 0 15px 0;
+	}
+	.pop-authors-wrapper {
+		width: 303px;
+		margin: 0 auto 30px auto;
+	}
+	.pop-authours-item {
+		margin-right: 21px;
+	}
+	.letters-wrapper {
+		padding: 0 6px;
+		.letters-quater {
+			margin-left: 0;
+			float: none;
+			margin: auto;
+			width: 250px;
+		}
+		.letters-quater:nth-child(3) {
+			margin-left: 0;
+			float: none;
+			margin: auto;
+			width: 250px;
+		}
+		.letters-quater:first-child, {
+			margin-left: 0;
+			float: none;
+			margin: auto;
+			width: 250px;
+		}
+		.letters-quater:last-child, {
+			margin-left: 0;
+			float: none;
+			margin: auto;
+			width: 250px;
+			padding-left: 37px;
+		}
+		button {
+			font-size: 1em;
+			width: 28px;
+			margin-left: 9px;
+		}
+	}
+	.author-list-wrapper {
+		padding: 15px 30px;
+		.author-list-half {
+			width: 100%;
+		}
+	}
+}

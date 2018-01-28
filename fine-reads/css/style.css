@@ -128,12 +128,19 @@ header .header-desktop .cart-account .account-text { color: #57595b; text-transf
 .category-section-row .category-section-heading { border-bottom: 1px solid #ded7d3; margin-bottom: 25px; padding-bottom: 20px; position: relative; }
 .category-section-row .category-section-heading .section-heading-icon { position: absolute; top: 5px; left: 0; }
 .category-section-row .category-section-heading h3 { text-transform: uppercase; color: #2e2e2e; font-size: 1.62em; font-weight: bold; margin-left: 40px; margin-bottom: 0; display: inline-block; }
-.category-section-row .category-section-heading .category-section-right { width: 26px; height: 26px; border: none; outline: none; float: right; background: transparent url("../img/category-right.png"); margin-left: 7px; }
-.category-section-row .category-section-heading .right-active { background: transparent url("../img/category-right-active.png"); }
-.category-section-row .category-section-heading .category-section-left { width: 26px; height: 26px; border: none; outline: none; float: right; background: transparent url("../img/category-left.png"); }
-.category-section-row .category-section-heading .left-active { background: transparent url("../img/category-left-active.png"); }
-.category-section-row .category-section-heading .right-active:hover, .category-section-row .category-section-heading .left-active:hover { cursor: pointer; }
 .category-section-row .category-items-wrapper { width: 100%; }
+
+.category-section-right { width: 26px; height: 26px; border: none; outline: none; float: right; background: transparent url("../img/category-right.png"); margin-left: 7px; }
+
+.right-active { background: transparent url("../img/category-right-active.png"); }
+
+.category-section-left { width: 26px; height: 26px; border: none; outline: none; outline-width: 0; float: right; background: transparent url("../img/category-left.png"); }
+
+.left-active { background: transparent url("../img/category-left-active.png"); }
+
+.right-active:hover, .left-active:hover { cursor: pointer; }
+
+button:focus { outline: none; }
 
 .category-section-item { width: 208px; min-height: 440px; margin-right: 32px; position: relative; display: inline-block; float: left; padding-bottom: 85px; }
 .category-section-item a:first-child { background-color: #eee; display: inline-block; width: 100%; height: 261px; line-height: 258px; text-align: center; }
@@ -849,3 +856,68 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
   #category .category-section-heading nav ul li:last-child { display: block; margin-left: 5px; }
   #category .category-section-heading nav ul li.page-item a { background: #9d705b; color: #fff; }
   #category .category-section-heading nav ul li.disabled a { background-color: #eaeaea; color: #888c89; } }
+#authors { padding: 60px 0 90px 0; position: relative; }
+#authors h3 { color: #212529; text-transform: uppercase; font-weight: bold; font-size: 1.25em; margin-bottom: 15px; margin-left: 30px; }
+#authors .category-section-right { position: absolute; right: 24px; top: 0; display: none; }
+#authors .category-section-left { position: absolute; right: 59px; top: 0; display: none; }
+
+.pop-authors-wrapper { -webkit-box-shadow: 0 0 40px #e9e9e9; box-shadow: 0 0 40px #e9e9e9; padding: 30px 30px 0 30px; margin-bottom: 60px; overflow: hidden; }
+
+.pop-authors-row { padding-bottom: 30px; }
+
+.pop-authours-item { text-align: center; float: left; margin-right: 88px; }
+.pop-authours-item p { color: #321d14; font-size: 1.12em; font-weight: bold; margin-top: 15px; margin-bottom: 0; }
+.pop-authours-item a:hover { text-decoration: none; }
+
+.pop-authours-item:last-child { margin-right: 0; }
+
+.letters-wrapper { padding: 0 30px; }
+.letters-wrapper .letters-quater { float: left; margin-left: 13px; }
+.letters-wrapper .letters-quater:first-child { margin-left: 0; }
+.letters-wrapper button { outline: none; color: #57595b; background-color: #fff; border: 1px solid #57595b; border-radius: 5px; font-weight: bold; font-size: 1.12em; width: 30px; margin-left: 13px; margin-bottom: 13px; cursor: pointer; float: left; }
+.letters-wrapper button.first { margin-left: 0; }
+.letters-wrapper button:hover, .letters-wrapper button.active { background-color: #3dcc9b; color: #fff; border: 1px solid #3dcc9b; }
+
+.author-list-wrapper { -webkit-box-shadow: 0 0 40px #e9e9e9; box-shadow: 0 0 40px #e9e9e9; padding: 30px; margin-top: 20px; display: none; }
+.author-list-wrapper .author-list-half { width: 50%; float: left; }
+.author-list-wrapper .author-list-quarter { width: 50%; padding-right: 15px; float: left; }
+.author-list-wrapper ul { list-style-type: none; padding-left: 0; margin-bottom: 0; color: #57595b; font-size: .94em; }
+.author-list-wrapper li:hover { color: #3dcc9b; font-weight: bold; }
+.author-list-wrapper a { color: inherit; }
+
+.author-list-wrapper:first-child { display: block; }
+
+@media screen and (max-width: 1199px) { .pop-authours-item { margin-right: 33px; }
+  .letters-wrapper { padding: 0 5px; }
+  .letters-wrapper .letters-quater { margin-left: 8px; }
+  .letters-wrapper button { font-size: 1em; width: 28px; margin-left: 8px; } }
+@media screen and (max-width: 991px) { #authors h3 { margin-left: 15px; }
+  .pop-authors-wrapper { padding: 30px 15px 0 15px; }
+  .pop-authours-item { width: 126px; margin-right: 10px; }
+  .pop-authours-item img { width: 100%; height: auto; }
+  .pop-authours-item p { font-size: 1em; }
+  .letters-wrapper { padding: 0 5px; }
+  .letters-wrapper .letters-quater { margin-left: 5px; }
+  .letters-wrapper .letters-quater:last-child { margin-left: 264px; }
+  .letters-wrapper button { font-size: 1em; width: 28px; margin-left: 5px; }
+  .author-list-wrapper .author-list-half { width: 50%; }
+  .author-list-wrapper .author-list-quarter { width: 100%; } }
+@media screen and (max-width: 767px) { #authors .category-section-right { display: block; }
+  #authors .category-section-left { display: block; }
+  .pop-authours-item { margin-right: 57px; }
+  .letters-wrapper { padding: 0 6px; }
+  .letters-wrapper .letters-quater { margin-left: 9px; }
+  .letters-wrapper .letters-quater:nth-child(3) { margin-left: 37px; }
+  .letters-wrapper .letters-quater:last-child { margin-left: 9px; }
+  .letters-wrapper button { font-size: 1em; width: 28px; margin-left: 9px; } }
+@media screen and (max-width: 575px) { #authors { padding: 9px 0 15px 0; }
+  .pop-authors-wrapper { width: 303px; margin: 0 auto 30px auto; }
+  .pop-authours-item { margin-right: 21px; }
+  .letters-wrapper { padding: 0 6px; }
+  .letters-wrapper .letters-quater { margin-left: 0; float: none; margin: auto; width: 250px; }
+  .letters-wrapper .letters-quater:nth-child(3) { margin-left: 0; float: none; margin: auto; width: 250px; }
+  .letters-wrapper .letters-quater:first-child { margin-left: 0; float: none; margin: auto; width: 250px; }
+  .letters-wrapper .letters-quater:last-child { margin-left: 0; float: none; margin: auto; width: 250px; padding-left: 37px; }
+  .letters-wrapper button { font-size: 1em; width: 28px; margin-left: 9px; }
+  .author-list-wrapper { padding: 15px 30px; }
+  .author-list-wrapper .author-list-half { width: 100%; } }
