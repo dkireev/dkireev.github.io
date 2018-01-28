@@ -10,6 +10,7 @@
 		color: #2e2e2e;
 	}
 	.category-section-row {
+		margin-top: 40px;
 		padding-bottom: 0;
 		h3 {
 			text-transform: none;
@@ -25,9 +26,7 @@
 		float: left;
 		margin-right: 35px;
 		width: 208px;
-		height: 261px;
-		background: url('../img/book-1-1.jpg') left top no-repeat;
-		background-size: contain;
+		height: auto;
 		cursor: pointer;
 	}
 	.see-preview {
@@ -75,6 +74,14 @@
 	.book-type {
 		color: #525252;
 		font-size: .94em;
+		margin-bottom: 10px;
+	}
+	.book-categories {
+		color: #525252;
+		font-size: .94em;
+		a {
+			color: inherit;
+		}
 	}
 }
 .book-description {
@@ -150,7 +157,6 @@
 	content: url('../img/wishlist-hover.png');
 }
 .book-reviews {
-	margin-bottom: 40px;
 	h5 {
 		font-size: 1em;
 		color: #525252;
@@ -239,7 +245,7 @@
 		.reviews-number {
 			font-size: .81em;
 		}
-		.book-type {
+		.book-type, .book-categories {
 			font-size: .81em;
 		}
 	}

@@ -46,6 +46,9 @@ window.onload = function() {
   if (document.getElementById('cart')) {
     itemQuantity(this);
   }
+  if (document.getElementById('book')) {
+    bookCoverHeight();
+  }
 }
 
 window.onresize = function() {
@@ -74,13 +77,16 @@ window.onresize = function() {
   if (document.getElementById('cart')) {
     itemQuantity(this);
   }
+  if (document.getElementById('book')) {
+    bookCoverHeight();
+  }
 }
 
 window.onscroll = function() {
+  mobileLogoScroll();
   if (document.getElementById('category')) {
     toTopToggle();
   }
-  mobileLogoScroll();
 }
 
 // setup path to Main Banner section's image for mobile and desktop versions
@@ -322,4 +328,12 @@ function itemQuantity() {
       $(this).next('.amount').html(a);
     }
   });
+}
+
+//setup position of SEE PREVIEW text
+function bookCoverHeight() {
+  var a = document.getElementsByClassName('book-cover')[0];
+  var b = getComputedStyle(a);
+  var c = parseInt(b.height) + 10;
+  document.getElementsByClassName('see-preview')[0].style.top = c + 'px';
 }

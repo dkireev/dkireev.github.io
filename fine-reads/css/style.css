@@ -739,11 +739,11 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
   .author-biography table tr:last-child { display: none; } }
 #book { margin-top: 84px; padding: 60px 0 90px 0; }
 #book h4 { margin-left: 6px; margin-right: 6px; padding-bottom: 10px; border-bottom: 1px solid #ded7d3; font-weight: bold; color: #2e2e2e; }
-#book .category-section-row { padding-bottom: 0; }
+#book .category-section-row { margin-top: 40px; padding-bottom: 0; }
 #book .category-section-row h3 { text-transform: none; font-size: 1.5em; margin-left: 0; }
 
 .book-wrapper { margin: 0 auto 40px auto; position: relative; }
-.book-wrapper .book-cover { float: left; margin-right: 35px; width: 208px; height: 261px; background: url("../img/book-1-1.jpg") left top no-repeat; background-size: contain; cursor: pointer; }
+.book-wrapper .book-cover { float: left; margin-right: 35px; width: 208px; height: auto; cursor: pointer; }
 .book-wrapper .see-preview { position: absolute; left: 80px; top: 271px; font-size: .75em; color: #525252; cursor: pointer; }
 .book-wrapper .see-preview::before { content: url("../img/preview.png"); position: absolute; top: 1px; left: -25px; }
 .book-wrapper .see-preview:hover::before { content: url("../img/preview-hover.png"); }
@@ -753,7 +753,9 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 .book-details .book-by-author { font-size: 1em; color: #878787; margin-bottom: 5px; }
 .book-details img { -webkit-box-shadow: none; box-shadow: none; margin-right: 15px; }
 .book-details .reviews-number { color: #525252; font-size: .87em; padding-top: 5px; margin-bottom: 10px; }
-.book-details .book-type { color: #525252; font-size: .94em; }
+.book-details .book-type { color: #525252; font-size: .94em; margin-bottom: 10px; }
+.book-details .book-categories { color: #525252; font-size: .94em; }
+.book-details .book-categories a { color: inherit; }
 
 .book-description { float: left; width: 630px; font-size: .94em; }
 .book-description p:first-child { font-weight: bold; margin-bottom: 0; }
@@ -775,7 +777,6 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 
 .add-wishlist:hover::before { content: url("../img/wishlist-hover.png"); }
 
-.book-reviews { margin-bottom: 40px; }
 .book-reviews h5 { font-size: 1em; color: #525252; font-weight: bold; margin-bottom: 20px; }
 .book-reviews button { width: 130px; height: 28px; border-radius: 14px; outline: none; background: none; border: 1px solid #525252; color: #525252; font-size: .94em; margin-bottom: 30px; cursor: pointer; }
 .book-reviews button:hover { -webkit-box-shadow: 0 3px 5px #aaa; box-shadow: 0 3px 5px #aaa; }
@@ -797,7 +798,7 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
   .book-details .book-by-author { font-size: .81em; }
   .book-details img { -webkit-box-shadow: none; box-shadow: none; margin-right: 15px; width: 50%; max-width: 147px; height: auto; }
   .book-details .reviews-number { font-size: .81em; }
-  .book-details .book-type { font-size: .81em; }
+  .book-details .book-type, .book-details .book-categories { font-size: .81em; }
   .book-description { width: 422px; }
   .book-review-item { padding-left: 20px; }
   .book-review-item .book-review-name { margin-left: 20px; } }
