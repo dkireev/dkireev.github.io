@@ -122,10 +122,18 @@
 	font-size: .87em;
 	margin-top: 25px;
 }
+.sold-out {
+	background-color: #dadbdb;
+	cursor: default;
+}
 .book-buy-button:hover {
 	text-decoration: none;
 	color: inherit;
     box-shadow: 0 3px 5px #aaa;
+}
+.sold-out:hover {
+	box-shadow: none;
+	background-color: #dadbdb;
 }
 .book-buy-price {
 	color: #359d68;

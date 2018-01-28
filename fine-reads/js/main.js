@@ -47,6 +47,9 @@ window.onload = function() {
     itemQuantity(this);
   }
   if (document.getElementById('book')) {
+    disableBuyButton();
+  }
+  if (document.getElementsByClassName('sold-out')) {
     bookCoverHeight();
   }
 }
@@ -336,4 +339,15 @@ function bookCoverHeight() {
   var b = getComputedStyle(a);
   var c = parseInt(b.height) + 10;
   document.getElementsByClassName('see-preview')[0].style.top = c + 'px';
+}
+
+function disableBuyButton() { 
+  var a = document.getElementsByClassName('sold-out');
+  console.log(a);
+  for (var i = 0; i < a.length; i++) {
+    a[i].setAttribute('onclick','return false');
+    a[i].style.color = '#2a2e28';
+    a[i].style.border = 'none';
+    a[i].innerHTML = 'Sold out';
+  }
 }
