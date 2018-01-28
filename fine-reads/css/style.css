@@ -921,3 +921,81 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
   .letters-wrapper button { font-size: 1em; width: 28px; margin-left: 9px; }
   .author-list-wrapper { padding: 15px 30px; }
   .author-list-wrapper .author-list-half { width: 100%; } }
+#categories { padding: 60px 0 90px 0; position: relative; }
+#categories .col-lg-6 { position: relative; }
+#categories .categories-placeholder { position: absolute; left: 9px; top: 32px; }
+#categories h2 { color: #212529; font-size: 1.25em; text-transform: uppercase; font-weight: bold; margin-left: 284px; }
+#categories h3 { color: #212529; font-size: 1.25em; text-transform: uppercase; font-weight: bold; margin-top: 275px; margin-left: 30px; }
+#categories h4 { color: #212529; font-size: 1.25em; text-transform: uppercase; font-weight: bold; margin-left: 30px; }
+#categories .category-section-item { width: 152px; min-height: 282px; padding-bottom: 0; margin-right: 30px; margin-bottom: 30px; }
+#categories .category-section-item img { max-width: 152px; max-height: 191px; }
+#categories .category-section-item a:first-child { height: 191px; line-height: 190px; }
+#categories .category-section-item .section-item-author { top: 257px; }
+#categories .category-section-item .section-item-author a { line-height: 1.2; }
+#categories .category-section-item:last-child { margin-right: 0; }
+#categories .category-section-right { top: -5px; right: 39px; position: absolute; }
+#categories .category-section-left { top: -5px; right: 74px; position: absolute; }
+
+.pop-categories { width: 321px; height: 217px; background: url("../img/pop-categories.jpg") no-repeat center; background-size: cover; position: absolute; right: 9px; top: 32px; padding-top: 42px; }
+.pop-categories ul { list-style-type: none; padding-left: 30px; color: #57595b; font-weight: bold; font-size: 1.12em; }
+.pop-categories ul a { color: inherit; }
+
+.category-list-wrapper { background: url("../img/categories-list.jpg") no-repeat center; background-size: cover; padding: 43px 30px 30px 30px; }
+.category-list-wrapper .category-list-half { width: 50%; float: left; }
+.category-list-wrapper .category-list-half:first-child { padding-right: 15px; }
+.category-list-wrapper ul { color: #57595b; font-size: .94em; list-style-type: none; padding-left: 0; margin-bottom: 0; }
+.category-list-wrapper ul li { padding-bottom: 11px; }
+.category-list-wrapper ul a { color: inherit; }
+
+.categories-pop-books { -webkit-box-shadow: 0 0 40px #e9e9e9; box-shadow: 0 0 40px #e9e9e9; padding: 30px 30px 0 30px; overflow: hidden; }
+
+@media screen and (max-width: 1199px) { #categories h2 { margin-left: 30px; }
+  #categories h4 { margin-left: 15px; }
+  #categories .category-section-item { width: 130px; min-height: 254px; margin-right: 21px; }
+  #categories .category-section-item img { max-width: 130px; max-height: 163px; }
+  #categories .category-section-item a:first-child { height: 163px; line-height: 162px; }
+  #categories .category-section-item .section-item-author { top: 228px; }
+  #categories .category-section-item .section-item-author a { line-height: 1.2; }
+  #categories .category-section-right { right: 24px; }
+  #categories .category-section-left { right: 59px; }
+  .categories-placeholder { display: none; }
+  .pop-categories { width: 462px; float: none; }
+  .categories-pop-books { padding: 15px 15px 0 15px; }
+  .category-list-wrapper { padding-top: 25px; }
+  .category-list-wrapper ul li { padding-bottom: 11px; line-height: 1; } }
+@media screen and (max-width: 991px) { #categories { height: 2058px; }
+  #categories h3 { margin-top: 0; position: absolute; top: 1402px; }
+  #categories h4 { margin-top: 30px; margin-left: 30px; }
+  #categories .category-section-item { width: 180px; min-height: 315px; margin-right: 51px; }
+  #categories .category-section-item img { max-width: 180px; max-height: 226px; }
+  #categories .category-section-item a:first-child { height: 226px; line-height: 224px; }
+  #categories .category-section-item .section-item-author { top: 290px; }
+  #categories .category-section-item .section-item-author a { line-height: 1.2; }
+  #categories .category-section-right { top: 23px; right: 39px; }
+  #categories .category-section-left { top: 23px; right: 74px; }
+  .pop-categories { width: 100%; position: relative; top: 0; right: 0; }
+  .category-list-wrapper { position: absolute; top: 1434px; width: 702px; padding-top: 30px; }
+  .category-list-wrapper ul li { padding-bottom: 8px; line-height: 1; }
+  .categories-pop-books { padding: 30px 30px 0 30px; } }
+@media screen and (max-width: 767px) { #categories { height: 1892px; }
+  #categories h3 { top: 1220px; }
+  #categories .category-section-item { width: 134px; min-height: 254px; padding-bottom: 0; margin-right: 30px; margin-bottom: 30px; }
+  #categories .category-section-item img { max-width: 134px; max-height: 168px; }
+  #categories .category-section-item a:first-child { height: 168px; line-height: 166px; }
+  #categories .category-section-item .section-item-author { top: 232px; }
+  #categories .category-section-item .section-item-author a { line-height: 1.2; }
+  .category-list-wrapper { top: 1252px; width: 522px; }
+  .category-list-wrapper ul li { padding-bottom: 8px; line-height: 1; }
+  .categories-pop-books { padding: 30px 30px 0 30px; } }
+@media screen and (max-width: 575px) { #categories { padding: 9px 0 15px 0; height: 2100px; }
+  #categories h2, #categories h3, #categories h4 { margin-left: 15px; }
+  #categories h3 { top: 1165px; }
+  #categories .category-section-right { top: 23px; right: 24px; }
+  #categories .category-section-left { top: 23px; right: 59px; }
+  #categories .category-section-item { margin-right: 15px; }
+  .pop-categories { height: 177px; padding-top: 22px; }
+  .pop-categories ul { padding-left: 15px; }
+  .categories-pop-books { padding: 15px 10px 0 10px; width: 303px; margin: auto; }
+  .category-list-wrapper { top: 1198px; min-width: 303px; width: 97%; padding: 20px 15px 15px 15px; }
+  .category-list-wrapper .category-list-half { width: 100%; } }
+@media screen and (max-width: 425px) { .category-list-wrapper { width: 95%; } }

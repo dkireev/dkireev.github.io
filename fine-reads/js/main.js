@@ -55,6 +55,9 @@ window.onload = function() {
   if (document.getElementById('authors')) {
     authorsRow();
   }
+  if (document.getElementById('categories')) {
+    popularBooksRow();
+  }
 }
 
 window.onresize = function() {
@@ -367,6 +370,52 @@ function authorsRow() {
     if (slideCounter > 0) {
       slideCounter -= 1;
       $('.pop-authors-row').animate({ marginLeft: '+=' + slideStep + 'px' });
+    }
+    if (slideCounter == 0) {
+      $('.category-section-left').removeClass('left-active');
+    }
+  });
+}
+
+//setup behavior of popular books' row
+function popularBooksRow() {
+  var a = document.getElementsByClassName('categories-books-row')[0];
+  var b = a.getElementsByClassName('category-section-item');
+  var width = 0;
+  var margin = 0;
+  var totalWidth = 0;
+  var slideStep = 0;
+  var slideCounter = 0;
+  var slidesInRow = 0;
+  var c = 0;
+  var d = getComputedStyle(document.getElementsByClassName('categories-pop-books')[0]);
+  var e = parseInt(d.width);
+  if (e > 303) {
+    slidesInRow = 3;
+  } else slidesInRow = 4;
+  for (var i = 0; i < b.length; i++) {
+    c = getComputedStyle(b[i]);
+    width += parseInt(c.width);
+    margin += parseInt(c.marginRight);
+  }
+  totalWidth = width + margin + 'px';
+  slideStep = width/5 + margin/4;
+  $('.categories-books-row').css('width', totalWidth);
+  $('.category-section-right').click(function(){
+    slideCounter += 1;
+    if (slideCounter < slidesInRow) {
+      $('.categories-books-row').animate({ marginLeft: '-=' + slideStep + 'px' });
+      $('.category-section-left').addClass('left-active');
+    } else {
+      $('.categories-books-row').animate({ marginLeft: '0' });
+      $('.category-section-left').removeClass('left-active');
+      slideCounter = 0;
+    }
+  });
+  $('.category-section-left').click(function(){
+    if (slideCounter > 0) {
+      slideCounter -= 1;
+      $('.categories-books-row').animate({ marginLeft: '+=' + slideStep + 'px' });
     }
     if (slideCounter == 0) {
       $('.category-section-left').removeClass('left-active');
