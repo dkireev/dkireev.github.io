@@ -829,7 +829,7 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 #category .category-section-heading h3 { text-transform: uppercase; color: #2e2e2e; font-size: 1.62em; font-weight: bold; padding-top: 3px; margin-left: 40px; margin-bottom: 0; display: inline-block; }
 #category .category-section-heading nav { position: absolute; right: 0; top: 0; }
 #category .category-section-heading nav a { color: inherit; }
-#category .category-section-heading nav ul li { width: 30px; text-align: center; margin: 0 2px; }
+#category .category-section-heading nav ul li { min-width: 30px; text-align: center; margin: 0 2px; }
 #category .category-section-heading nav ul li a { font-size: 0.94em; border-radius: 5px; border-color: #888c89; color: #888c89; }
 #category .category-section-heading nav ul li.active a { border-color: #3dcc9b; background-color: #3dcc9b; color: #fff; }
 #category .category-section-heading nav ul li:first-child { margin-right: 20px; }
