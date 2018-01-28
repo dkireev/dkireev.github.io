@@ -11,6 +11,19 @@
 body {
 	font-family: Karla-Regular;
 	font-size: 16px;
+	padding-top: 84px;
+}
+
+@media screen and (max-width:767px) {
+	body {
+		padding-top: 52px;
+	}
+}
+
+@media screen and (max-width:575px) {
+	body {
+		padding-top: 107px;
+	}
 }
 
 $green: #3dcc9b;

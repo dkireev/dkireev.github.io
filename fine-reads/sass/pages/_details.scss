@@ -1,5 +1,4 @@
 #details {
-	margin-top: 84px;
 	padding: 60px 0 90px 0;
 	h5 {
 		font-size: 1em;
@@ -223,9 +222,6 @@
 	}
 }
 @media screen and (max-width:767px) {
-	#details {
-		margin-top: 52px;
-	}
 	.order-status {
 		width: 96%;
 		.order-status-stage {
@@ -310,7 +306,6 @@
 }
 @media screen and (max-width:575px) {
 	#details {
-		margin-top: 107px;
 		padding: 9px 0 15px 0;
 		h5 {
 			margin-left: 15px;

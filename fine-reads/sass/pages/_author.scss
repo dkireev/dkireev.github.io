@@ -1,5 +1,4 @@
 #author {
-	margin-top: 84px;
 	padding: 60px 0 90px 0;
 	h4 {
 		margin-left: 6px;
@@ -85,16 +84,12 @@
 	}
 }
 @media screen and (max-width:767px) {
-	#author {
-		margin-top: 52px;
-	}
 	.author-biography {
 		width: 288px;
 	}
 }
 @media screen and (max-width:575px) {
 	#author {
-		margin-top: 107px;
 		padding: 9px 0 15px 0;
 		.category-section-item {
 			margin: 30px 7px 0 7px;

@@ -1,5 +1,4 @@
 #register {
-	margin-top: 84px;
 	padding: 60px 0 90px 0;
 	.form-validation-wrapper {
 		position: relative;
@@ -16,7 +15,6 @@
 }
 @media screen and (max-width:767px) {
 	#register {
-		margin-top: 52px;
 		.form-validation-wrapper {
 			input {
 				width: 226px;
@@ -26,7 +24,6 @@
 }
 @media screen and (max-width:575px) {
 	#register {
-		margin-top: 107px;
 		padding: 9px 0;
 		.form-validation-wrapper {
 			input {

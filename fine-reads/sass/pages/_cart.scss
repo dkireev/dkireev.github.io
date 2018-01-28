@@ -1,5 +1,4 @@
 #cart {
-	margin-top: 84px;
 	padding: 60px 0 90px 0;
 	h5 {
 		text-transform: uppercase;
@@ -175,7 +174,6 @@
 }
 @media screen and (max-width:767px) {
 	#cart {
-		margin-top: 52px;
 		button.update {
 			margin-left: 30px;
 			width: 225px;
@@ -222,7 +220,6 @@
 }
 @media screen and (max-width:575px) {
 	#cart {
-		margin-top: 107px;
 		padding: 9px 0 15px 0;
 		h5 {
 			margin-left: 15px;

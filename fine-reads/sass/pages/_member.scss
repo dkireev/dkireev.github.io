@@ -1,5 +1,4 @@
 #member {
-	margin-top: 84px;
 	padding: 60px 0 90px 0;
 }
 .member-heading {
@@ -139,9 +138,6 @@
 	}
 }
 @media screen and (max-width:767px) {
-	#member {
-		margin-top: 52px;
-	}
 	.member-menu {
 		margin-bottom: 20px;
 	}
@@ -182,7 +178,6 @@
 }
 @media screen and (max-width:575px) {
 	#member {
-		margin-top: 107px;
 		padding: 9px 0 15px 0;
 	}
 	.member-heading {

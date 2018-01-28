@@ -7,7 +7,6 @@
 	background-position: center center;
 	position: relative;
 	overflow: hidden;
-	margin-top: 84px;
 	.main-banner-vertical {
 		display: inline-block;
 		vertical-align: middle;
@@ -107,7 +106,6 @@
 @media screen and (max-width:767px) {
 	#main-banner-section {
 		text-align: center;
-		margin-top: 52px;
 		img {
 			width: 380px;
 			top: initial;
@@ -142,7 +140,6 @@
 		line-height: 412px;
 		text-align: center;
 		border: none;
-		margin-top: 107px;
 		img {
 			max-width: 319px;
 			width: 100%;

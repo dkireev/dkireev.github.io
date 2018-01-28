@@ -1,5 +1,4 @@
 #login {
-	margin-top: 84px;
 	padding: 60px 0 90px 0;
 }
 .login-wrapper {
@@ -82,15 +81,8 @@
 	background-color: #d2d2d2;
 }
 
-@media screen and (max-width:767px) {
-	#login {
-		margin-top: 52px;
-	}
-}
-
 @media screen and (max-width:575px) {
 	#login {
-		margin-top: 107px;
 		padding: 9px 0;
 	}
 	.login-wrapper {

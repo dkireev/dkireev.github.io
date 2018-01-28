@@ -46,10 +46,10 @@ window.onload = function() {
   if (document.getElementById('cart')) {
     itemQuantity(this);
   }
-  if (document.getElementById('book')) {
+  if (document.getElementsByClassName('sold-out')) {
     disableBuyButton();
   }
-  if (document.getElementsByClassName('sold-out')) {
+  if (document.getElementById('book')) {
     bookCoverHeight();
   }
 }
@@ -343,7 +343,6 @@ function bookCoverHeight() {
 
 function disableBuyButton() { 
   var a = document.getElementsByClassName('sold-out');
-  console.log(a);
   for (var i = 0; i < a.length; i++) {
     a[i].setAttribute('onclick','return false');
     a[i].style.color = '#2a2e28';
