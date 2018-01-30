@@ -1004,30 +1004,45 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 #books a img:hover { -webkit-box-shadow: 0 3px 5px #aaa; box-shadow: 0 3px 5px #aaa; }
 #books a:hover { color: #3dcc9b; font-weight: bold; }
 #books .order-items-wrapper { -webkit-box-shadow: none; box-shadow: none; max-width: 100%; }
-#books .order-items-row { position: relative; }
 #books .order-item-left { width: 400px; }
-#books .order-item-right { width: 705px; }
-#books .order-item button { position: absolute; outline: none; border: none; background: #fff url("../img/close.png") no-repeat center; width: 20px; height: 20px; cursor: pointer; right: 0; top: 0; }
+#books .order-item-left p { padding-right: 5px; }
+#books .order-item-center { width: 200px; float: left; }
+#books .order-item-center p { padding-left: 5px; padding-right: 5px; }
+#books .order-item-right { width: 505px; }
+#books .order-item { position: relative; }
+#books button { position: absolute; outline: none; border: none; background: #fff url("../img/close.png") no-repeat center; width: 20px; height: 20px; cursor: pointer; right: 0; top: 0; }
+#books .order-item:first-child button { top: 64px; }
 #books .order-item ul { display: table; height: 100%; }
-#books .order-item li { display: table-cell; vertical-align: middle; }
-#books .order-item ul li:first-child { width: 200px; }
-#books .order-item ul li:nth-child(2) { width: 200px; }
-#books .order-item ul li:nth-child(2) img { display: inline; margin-bottom: 4px; margin-right: 10px; }
-#books .order-item ul li:nth-child(3) { width: 164px; }
-#books .order-item ul li:nth-child(3) a:hover { font-weight: normal; }
+#books .order-item li { display: table-cell; vertical-align: middle; padding-left: 5px; padding-right: 5px; }
+#books .order-item ul li:first-child { width: 190px; }
+#books .order-item ul li:first-child img { display: inline; margin-bottom: 4px; margin-right: 10px; }
+#books .order-item ul li:nth-child(2) { width: 175px; }
+#books .order-item ul li:nth-child(2) a:hover { font-weight: normal; }
 #books .order-item ul li:last-child { width: 140px; }
+#books .hidden-author { font-weight: bold; margin-right: 50px; display: none; }
 
 @media screen and (max-width: 1199px) { #books .order-item-left { width: 350px; }
-  #books .order-item-right { width: 532px; }
+  #books .order-item-center { width: 150px; }
+  #books .order-item-right { width: 382px; }
   #books .order-item ul li:first-child { width: 150px; }
-  #books .order-item ul li:nth-child(2) { width: 150px; }
-  #books .order-item ul li:nth-child(3) { width: 120px; }
+  #books .order-item ul li:nth-child(2) { width: 120px; }
   #books .order-item ul li:last-child { width: 112px; } }
 @media screen and (max-width: 991px) { #books .order-item-left { width: 240px; font-size: .87em; }
-  #books .order-item-right { width: 392px; font-size: .87em; }
-  #books .order-item ul li:first-child { width: 113px; padding-right: 5px; padding-left: 5px; }
-  #books .order-item ul li:nth-child(2) { width: 90px; padding-right: 5px; padding-left: 5px; }
-  #books .order-item ul li:nth-child(2) img { display: block; margin-right: 0; }
-  #books .order-item ul li:nth-child(3) { width: 100px; padding-right: 5px; padding-left: 5px; }
-  #books .order-item ul li:last-child { width: 90px; padding-right: 5px; padding-left: 5px; } }
+  #books .order-item-center { width: 113px; font-size: .87em; }
+  #books .order-item-right { width: 279px; font-size: .87em; }
+  #books .order-item ul li:first-child { width: 90px; }
+  #books .order-item ul li:first-child img { display: block; margin-right: 0; }
+  #books .order-item ul li:nth-child(2) { width: 90px; }
+  #books .order-item ul li:last-child { width: 100px; } }
+@media screen and (max-width: 767px) { #books .order-item-left { width: 100%; padding-bottom: 10px; }
+  #books .order-item-center { width: 100%; margin-top: 10px; border-bottom: 1px solid #e1e1dc; border-top: 1px solid #e1e1dc; padding-bottom: 20px; padding-top: 20px; }
+  #books .order-item-center .order-item-row { height: auto; }
+  #books .order-item-center .order-item-title { display: none !important; }
+  #books .order-item-right { width: 100%; }
+  #books .order-item ul li:first-child { width: 154px; }
+  #books .order-item ul li:first-child img { display: inline; margin-bottom: 4px; margin-right: 10px; }
+  #books .order-item ul li:nth-child(2) { width: 154px; }
+  #books .order-item ul li:last-child { width: 154px; }
+  #books .hidden-author { display: inline; }
+  #books .order-item:first-child button, #books .order-item button { top: 13px; right: 25px; } }
 @media screen and (max-width: 575px) { #books { padding: 9px 0 15px 0; } }
