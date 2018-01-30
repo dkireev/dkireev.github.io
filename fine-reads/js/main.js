@@ -474,3 +474,20 @@ function textClamping() {
     }
   }
 }
+
+$(document).ready(function(){
+  $('.section-item-title').click(function(){
+    var text = $(this).html();
+    var parent = $(this).parent();
+    var hidden = parent.children('.hovered-title');
+    hidden.html(text);
+    $(this).hide();
+    hidden.show();
+  });
+  $('.hovered-title').mouseleave(function(){
+    var parent = $(this).parent();
+    var visible = parent.children('.section-item-title');
+    $(this).hide();
+    visible.show();
+  });
+});

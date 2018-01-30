@@ -82,15 +82,19 @@ button:focus {
 		max-width: 208px;
 		vertical-align: middle;
 	}
-	.section-item-title {
+	.section-item-title, .hovered-title {
 		margin-top: 15px;
 		margin-bottom: 0;
 		color: #321d14;
 		font-weight: bold;
 		font-size: 1.1em;
 		position: absolute;
-		z-index: 20;
+		z-index: 30;
 		background-color: #fff;
+		cursor: default;
+	}
+	.hovered-title {
+		display: none;
 	}
 	.section-item-author {
 		color: #878787;
@@ -99,7 +103,7 @@ button:focus {
 		left: 0;
 		top: 330px;
 		background-color: #fff;
-		z-index: 30;
+		z-index: 20;
 	}
 	.section-item-author>a:first-child {
 		background-color: inherit;
