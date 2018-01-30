@@ -872,6 +872,8 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 .pop-authours-item { text-align: center; float: left; margin-right: 88px; }
 .pop-authours-item p { color: #321d14; font-size: 1.12em; font-weight: bold; margin-top: 15px; margin-bottom: 0; }
 .pop-authours-item a:hover { text-decoration: none; }
+.pop-authours-item img { border-radius: 75px; }
+.pop-authours-item img:hover { -webkit-box-shadow: 0 3px 5px #aaa; box-shadow: 0 3px 5px #aaa; }
 
 .pop-authours-item:last-child { margin-right: 0; }
 
@@ -898,7 +900,7 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 @media screen and (max-width: 991px) { #authors h3 { margin-left: 15px; }
   .pop-authors-wrapper { padding: 30px 15px 0 15px; }
   .pop-authours-item { width: 126px; margin-right: 10px; }
-  .pop-authours-item img { width: 100%; height: auto; }
+  .pop-authours-item img { width: 100%; height: auto; border-radius: 63px; }
   .pop-authours-item p { font-size: 1em; }
   .letters-wrapper { padding: 0 5px; }
   .letters-wrapper .letters-quater { margin-left: 5px; }

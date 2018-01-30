@@ -45,6 +45,12 @@
 	a:hover {
 		text-decoration: none;
 	}
+	img {
+		border-radius: 75px;
+	}
+	img:hover {
+	    box-shadow: 0 3px 5px #aaa;
+	}
 }
 .pop-authours-item:last-child {
 	margin-right: 0;
@@ -144,6 +150,7 @@
 		img {
 			width: 100%;
 			height: auto;
+			border-radius: 63px;
 		}
 		p {
 			font-size: 1em;
