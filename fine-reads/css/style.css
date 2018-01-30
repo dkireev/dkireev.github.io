@@ -1000,11 +1000,21 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
   .category-list-wrapper .category-list-half { width: 100%; } }
 @media screen and (max-width: 425px) { .category-list-wrapper { width: 95%; } }
 #books { padding: 60px 0 90px 0; }
+#books a { color: inherit; text-decoration: none; }
+#books a img:hover { -webkit-box-shadow: 0 3px 5px #aaa; box-shadow: 0 3px 5px #aaa; }
+#books a:hover { color: #3dcc9b; font-weight: bold; }
 #books .order-items-wrapper { -webkit-box-shadow: none; box-shadow: none; max-width: 100%; }
+#books .order-items-row { position: relative; }
 #books .order-item-left { width: 400px; }
 #books .order-item-right { width: 710px; }
+#books .order-item button { position: absolute; outline: none; border: none; background: #fff url("../img/close.png") no-repeat center; width: 20px; height: 20px; cursor: pointer; right: 0; top: 0; }
+#books .order-item ul { display: table; height: 100%; }
+#books .order-item li { display: table-cell; vertical-align: middle; }
 #books .order-item ul li:first-child { width: 200px; }
 #books .order-item ul li:nth-child(2) { width: 200px; }
-#books .order-item ul li:nth-child(3) { width: 150px; }
+#books .order-item ul li:nth-child(2) img { display: inline; margin-bottom: 4px; margin-right: 10px; }
+#books .order-item ul li:nth-child(3) { width: 170px; }
+#books .order-item ul li:nth-child(3) a:hover { font-weight: normal; }
+#books .order-item ul li:last-child { width: 140px; }
 
 @media screen and (max-width: 575px) { #books { padding: 9px 0 15px 0; } }
