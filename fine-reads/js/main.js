@@ -37,7 +37,7 @@ window.onload = function() {
     articleItemsInSlideSet();
     articleSlideWidth = (articleItemWidth + articleItemMargin) * articleSlideItems;
   }
-  if (document.getElementById('member') || document.getElementById('cart') || document.getElementById('checkout') || document.getElementById('details')) {
+  if (document.getElementById('member') || document.getElementById('cart') || document.getElementById('checkout') || document.getElementById('details') || document.getElementById('books')) {
     memberTitleToggle();
   }
   if (document.getElementById('success')) {

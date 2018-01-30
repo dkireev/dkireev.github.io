@@ -999,3 +999,12 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
   .category-list-wrapper { top: 1198px; min-width: 303px; width: 97%; padding: 20px 15px 15px 15px; }
   .category-list-wrapper .category-list-half { width: 100%; } }
 @media screen and (max-width: 425px) { .category-list-wrapper { width: 95%; } }
+#books { padding: 60px 0 90px 0; }
+#books .order-items-wrapper { -webkit-box-shadow: none; box-shadow: none; max-width: 100%; }
+#books .order-item-left { width: 400px; }
+#books .order-item-right { width: 710px; }
+#books .order-item ul li:first-child { width: 200px; }
+#books .order-item ul li:nth-child(2) { width: 200px; }
+#books .order-item ul li:nth-child(3) { width: 150px; }
+
+@media screen and (max-width: 575px) { #books { padding: 9px 0 15px 0; } }

@@ -1,0 +1,28 @@
+#books {
+	padding: 60px 0 90px 0;
+	.order-items-wrapper {
+		box-shadow: none;
+		max-width: 100%;
+	}
+	.order-item-left {
+		width: 400px;
+	}
+	.order-item-right {
+		width: 710px;
+	}
+	.order-item ul li:first-child {
+		width: 200px;
+	}
+	.order-item ul li:nth-child(2) {
+		width: 200px;
+	}
+	.order-item ul li:nth-child(3) {
+		width: 150px;
+	}
+}
+
+@media screen and (max-width:575px) {
+	#books {
+		padding: 9px 0 15px 0;
+	}
+}
