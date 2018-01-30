@@ -254,16 +254,17 @@
 				ul {
 					width: 100%;
 					li:first-child {
-						min-width: 70px;
-						width: 20%;
+						min-width: 75px;
+						width: 27%;
 					}
 					li:nth-child(2) {
-						min-width: 130px;
+						min-width: 114px;
 						width: 40%;
 					}
 					li:last-child {
-						min-width: 65px;
-						width: 20%;
+						min-width: 76px;
+						width: 28%;
+						padding-left: 5px;
 					}
 				}
 			}

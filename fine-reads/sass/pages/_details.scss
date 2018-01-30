@@ -319,13 +319,20 @@
 	.order-items-wrapper {
 		.order-item {
 			li:first-child {
-				width: 55px;
+				min-width: 50px;
+				width: 20%;
 			}
 			li:nth-child(2) {
-				width: 80px;
+				min-width: 70px;
+				width: 22%;
 			}
 			li:nth-child(3) {
-				width: 80px;
+				min-width: 70px;
+				width: 28%;
+			}
+			li:last-child {
+				min-width: 60px;
+				width: 22%;
 			}
 		}
 		.order-shipping {
