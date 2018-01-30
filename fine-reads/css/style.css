@@ -1051,4 +1051,5 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
   #books .order-item ul li:first-child img { display: block; width: 50px; height: auto; }
   #books .order-item ul li:nth-child(2) { min-width: 91px; width: 154px; font-size: 1.07em; }
   #books .order-item ul li:last-child { min-width: 91px; width: 154px; font-size: 1.07em; }
-  #books .order-item:first-child button, #books .order-item button { right: 10px; } }
+  #books .order-item:first-child button, #books .order-item button { right: 10px; }
+  #books .hidden-author { display: block; } }
