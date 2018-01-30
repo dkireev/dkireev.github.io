@@ -88,32 +88,18 @@ button:focus {
 		color: #321d14;
 		font-weight: bold;
 		font-size: 1.1em;
-		display: -webkit-box;
-		-webkit-line-clamp: 2;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
-	}
-	.section-item-title:hover {
-		display: inherit;
-		background-color: #fff;
 		position: absolute;
-		z-index: 200;
+		z-index: 20;
+		background-color: #fff;
 	}
 	.section-item-author {
 		color: #878787;
 		font-size: .87em;
-		display: -webkit-box;
-		-webkit-line-clamp: 1;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
 		position: absolute;
 		left: 0;
 		top: 330px;
-	}
-	.section-item-author:hover {
-		display: inherit;
 		background-color: #fff;
-		z-index: 200;
+		z-index: 30;
 	}
 	.section-item-author>a:first-child {
 		background-color: inherit;

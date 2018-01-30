@@ -51,12 +51,19 @@ window.onload = function() {
   }
   if (document.getElementById('book')) {
     bookCoverHeight();
+    textClamping();
+  }
+  if (document.getElementById('author')) {
+    textClamping();
   }
   if (document.getElementById('authors')) {
     authorsRow();
   }
   if (document.getElementById('categories')) {
     popularBooksRow();
+  }
+  if (document.getElementsByClassName('category-section-item')) {
+    textClamping();
   }
 }
 
@@ -421,4 +428,49 @@ function popularBooksRow() {
       $('.category-section-left').removeClass('left-active');
     }
   });
+}
+
+//clamping all spare texts
+function textClamping() {
+  var ua = window.navigator.userAgent;
+  var ms_ie = !!ua.match(/MSIE|Trident|Edge/);
+  if (document.getElementsByClassName('category-section-item')) {
+    var bookTitle = document.getElementsByClassName('section-item-title');
+    for (var i = 0; i < bookTitle.length; i++) {
+      $clamp(bookTitle[i], {clamp: 2});
+    }
+    var bookAuthor = document.getElementsByClassName('section-item-author');
+    for (var i = 0; i < bookAuthor.length; i++) {
+      if (ms_ie) {
+        $clamp(bookAuthor[i], {clamp: 2});
+      } else {
+        $clamp(bookAuthor[i], {clamp: 1});
+      }
+    }
+  }
+  if (document.getElementById('book')) {
+    var bookDescription = document.getElementsByClassName('book-description-text')[0];
+    var bookComment = document.getElementsByClassName('book-review-feedback');
+    for (var i = 0; i < bookComment.length; i++) {
+      if (ms_ie) {
+        $clamp(bookComment[i], {clamp: 7});
+      } else {
+        $clamp(bookComment[i], {clamp: 6});
+      }
+    }
+    if (ms_ie) {
+      $clamp(bookDescription, {clamp: 11});
+    } else {
+      $clamp(bookDescription, {clamp: 10});
+    }
+  }
+  if (document.getElementById('author')) {
+    var authorDescription = document.getElementsByClassName('author-description-text')[0];
+    console.log(authorDescription);
+    if (ms_ie) {
+      $clamp(authorDescription, {clamp: 11});
+    } else {
+      $clamp(authorDescription, {clamp: 10});
+    }
+  }
 }

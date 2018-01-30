@@ -145,10 +145,8 @@ button:focus { outline: none; }
 .category-section-item { width: 208px; min-height: 440px; margin-right: 32px; position: relative; display: inline-block; float: left; padding-bottom: 85px; }
 .category-section-item a:first-child { background-color: #eee; display: inline-block; width: 100%; height: 261px; line-height: 258px; text-align: center; }
 .category-section-item img { width: auto; height: auto; max-height: 261px; max-width: 208px; vertical-align: middle; }
-.category-section-item .section-item-title { margin-top: 15px; margin-bottom: 0; color: #321d14; font-weight: bold; font-size: 1.1em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.category-section-item .section-item-title:hover { display: inherit; background-color: #fff; position: absolute; z-index: 200; }
-.category-section-item .section-item-author { color: #878787; font-size: .87em; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; position: absolute; left: 0; top: 330px; }
-.category-section-item .section-item-author:hover { display: inherit; background-color: #fff; z-index: 200; }
+.category-section-item .section-item-title { margin-top: 15px; margin-bottom: 0; color: #321d14; font-weight: bold; font-size: 1.1em; position: absolute; z-index: 20; background-color: #fff; }
+.category-section-item .section-item-author { color: #878787; font-size: .87em; position: absolute; left: 0; top: 330px; background-color: #fff; z-index: 30; }
 .category-section-item .section-item-author > a:first-child { background-color: inherit; color: inherit; display: inline; width: auto; height: auto; line-height: 1; }
 .category-section-item .section-item-author > a { color: inherit; }
 .category-section-item img:hover { text-decoration: none; -webkit-box-shadow: 0 3px 5px #aaa; box-shadow: 0 3px 5px #aaa; }
