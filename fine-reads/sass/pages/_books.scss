@@ -22,7 +22,7 @@
 		width: 400px;
 	}
 	.order-item-right {
-		width: 710px;
+		width: 705px;
 	}
 	.order-item {
 		button {
@@ -57,13 +57,73 @@
 		}
 	}
 	.order-item ul li:nth-child(3) {
-		width: 170px;
+		width: 164px;
 		a:hover {
 			font-weight: normal;
 		}
 	}
 	.order-item ul li:last-child {
 		width: 140px;
+	}
+}
+
+@media screen and (max-width:1199px) {
+	#books {
+		.order-item-left {
+			width: 350px;
+		}
+		.order-item-right {
+			width: 532px;
+		}
+		.order-item ul li:first-child {
+			width: 150px;
+		}
+		.order-item ul li:nth-child(2) {
+			width: 150px;
+		}
+		.order-item ul li:nth-child(3) {
+			width: 120px;
+		}
+		.order-item ul li:last-child {
+			width: 112px;
+		}
+	}
+}
+
+@media screen and (max-width:991px) {
+	#books {
+		.order-item-left {
+			width: 240px;
+			font-size: .87em;
+		}
+		.order-item-right {
+			width: 392px;
+			font-size: .87em;
+		}
+		.order-item ul li:first-child {
+			width: 113px;
+			padding-right: 5px;
+			padding-left: 5px;
+		}
+		.order-item ul li:nth-child(2) {
+			width: 90px;
+			padding-right: 5px;
+			padding-left: 5px;
+			img {
+				display: block;
+				margin-right: 0;
+			}
+		}
+		.order-item ul li:nth-child(3) {
+			width: 100px;
+			padding-right: 5px;
+			padding-left: 5px;
+		}
+		.order-item ul li:last-child {
+			width: 90px;
+			padding-right: 5px;
+			padding-left: 5px;
+		}
 	}
 }
 

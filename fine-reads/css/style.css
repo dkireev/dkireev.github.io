@@ -1006,15 +1006,28 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 #books .order-items-wrapper { -webkit-box-shadow: none; box-shadow: none; max-width: 100%; }
 #books .order-items-row { position: relative; }
 #books .order-item-left { width: 400px; }
-#books .order-item-right { width: 710px; }
+#books .order-item-right { width: 705px; }
 #books .order-item button { position: absolute; outline: none; border: none; background: #fff url("../img/close.png") no-repeat center; width: 20px; height: 20px; cursor: pointer; right: 0; top: 0; }
 #books .order-item ul { display: table; height: 100%; }
 #books .order-item li { display: table-cell; vertical-align: middle; }
 #books .order-item ul li:first-child { width: 200px; }
 #books .order-item ul li:nth-child(2) { width: 200px; }
 #books .order-item ul li:nth-child(2) img { display: inline; margin-bottom: 4px; margin-right: 10px; }
-#books .order-item ul li:nth-child(3) { width: 170px; }
+#books .order-item ul li:nth-child(3) { width: 164px; }
 #books .order-item ul li:nth-child(3) a:hover { font-weight: normal; }
 #books .order-item ul li:last-child { width: 140px; }
 
+@media screen and (max-width: 1199px) { #books .order-item-left { width: 350px; }
+  #books .order-item-right { width: 532px; }
+  #books .order-item ul li:first-child { width: 150px; }
+  #books .order-item ul li:nth-child(2) { width: 150px; }
+  #books .order-item ul li:nth-child(3) { width: 120px; }
+  #books .order-item ul li:last-child { width: 112px; } }
+@media screen and (max-width: 991px) { #books .order-item-left { width: 240px; font-size: .87em; }
+  #books .order-item-right { width: 392px; font-size: .87em; }
+  #books .order-item ul li:first-child { width: 113px; padding-right: 5px; padding-left: 5px; }
+  #books .order-item ul li:nth-child(2) { width: 90px; padding-right: 5px; padding-left: 5px; }
+  #books .order-item ul li:nth-child(2) img { display: block; margin-right: 0; }
+  #books .order-item ul li:nth-child(3) { width: 100px; padding-right: 5px; padding-left: 5px; }
+  #books .order-item ul li:last-child { width: 90px; padding-right: 5px; padding-left: 5px; } }
 @media screen and (max-width: 575px) { #books { padding: 9px 0 15px 0; } }
