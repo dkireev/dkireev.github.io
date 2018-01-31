@@ -63,7 +63,7 @@ window.onload = function() {
     popularBooksRow();
   }
   if (document.getElementsByClassName('category-section-item')) {
-   // textClamping();
+   setTimeout(toggleShortenTexts, 2000);
   }
 }
 
@@ -475,23 +475,28 @@ function textClampings() {
   }
 }
 
-var ellipsisText = function (e) {
+function toggleShortenTexts() {
+  bookItemEllipsisText();
+}
+
+function bookItemEllipsisText() {
+  var ellipsisText = function (e) {
     var wordArray = e.innerHTML.split(" ");
     while (e.scrollHeight > e.offsetHeight) {
         wordArray.pop();
         e.innerHTML = wordArray.join(" ") + ("...");
     }
-};
-
-$(".section-item-title").ready(function(){
-  var a = document.getElementsByClassName('section-item-title');
-  for (var i = 0; i < a.length; i++) {
-    ellipsisText(a[i]);
-  }
-});
-$(".section-item-author").ready(function(){
-  var a = document.getElementsByClassName('section-item-author');
-  for (var i = 0; i < a.length; i++) {
-    ellipsisText(a[i]);
-  }
-});
+  };
+  $(".section-item-title").ready(function(){
+    var a = document.getElementsByClassName('section-item-title');
+    for (var i = 0; i < a.length; i++) {
+      ellipsisText(a[i]);
+    }
+  });
+  $(".section-item-author").ready(function(){
+    var a = document.getElementsByClassName('section-item-author');
+    for (var i = 0; i < a.length; i++) {
+      ellipsisText(a[i]);
+    }
+  });
+}
