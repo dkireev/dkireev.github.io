@@ -145,7 +145,7 @@ button:focus { outline: none; }
 .category-section-item { width: 208px; min-height: 440px; margin-right: 32px; position: relative; display: inline-block; float: left; padding-bottom: 85px; }
 .category-section-item a:first-child { background-color: #eee; display: inline-block; width: 100%; height: 261px; line-height: 258px; text-align: center; }
 .category-section-item img { width: auto; height: auto; max-height: 261px; max-width: 208px; vertical-align: middle; }
-.category-section-item .section-item-title { margin-top: 15px; margin-bottom: 0; color: #321d14; font-weight: bold; font-size: 1.1em; line-height: 1.4em; max-height: 2.8em; position: absolute; z-index: 30; background-color: #fff; cursor: default; }
+.category-section-item .section-item-title, .category-section-item .section-item-title-hidden { margin-top: 15px; margin-bottom: 0; color: #321d14; font-weight: bold; font-size: 1.1em; line-height: 1.4em; max-height: 2.8em; position: absolute; z-index: 30; background-color: #fff; cursor: default; }
 .category-section-item .hovered-title { margin-top: 15px; margin-bottom: 0; color: #321d14; font-weight: bold; font-size: 1.1em; line-height: 1.4em; max-height: 2.8em; position: absolute; z-index: 30; background-color: #fff; cursor: default; }
 .category-section-item .section-item-author { color: #878787; font-size: .87em; position: absolute; left: 0; top: 330px; background-color: #fff; z-index: 20; line-height: 1.4em; max-height: 1.4em; }
 .category-section-item .section-item-author > a:first-child { background-color: inherit; color: inherit; display: inline; width: auto; height: auto; line-height: 1; }

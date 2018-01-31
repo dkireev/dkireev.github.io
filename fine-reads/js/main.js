@@ -63,7 +63,7 @@ window.onload = function() {
     popularBooksRow();
   }
   if (document.getElementsByClassName('category-section-item')) {
-   setTimeout(toggleShortenTexts, 2000);
+   toggleShortenTexts();
   }
 }
 
@@ -474,6 +474,23 @@ function textClampings() {
     }
   }
 }
+
+// $(".section-item-title").ready(function(){
+//   var a = document.getElementsByClassName('section-item-title');
+//   for (var i = Things.length - 1; i >= 0; i--) {
+    
+//   }
+//   //console.log(a);
+// });
+$(".section-item-title").each(function () {
+  $(this).parent().append('<h5 class="section-item-title-hidden">' + $(this).text() + '</h5>');
+});
+$(".section-item-title-hidden").hide();
+$(".section-item-title").click(function(){
+  $(this).hide();
+  $(this).siblings(".section-item-title-hidden").show();
+});
+
 
 function toggleShortenTexts() {
   bookItemEllipsisText();
