@@ -51,10 +51,10 @@ window.onload = function() {
   }
   if (document.getElementById('book')) {
     bookCoverHeight();
-    textClamping();
+   // textClamping();
   }
   if (document.getElementById('author')) {
-    textClamping();
+   // textClamping();
   }
   if (document.getElementById('authors')) {
     authorsRow();
@@ -63,7 +63,7 @@ window.onload = function() {
     popularBooksRow();
   }
   if (document.getElementsByClassName('category-section-item')) {
-    textClamping();
+   // textClamping();
   }
 }
 
@@ -431,7 +431,7 @@ function popularBooksRow() {
 }
 
 //clamping all spare texts
-function textClamping() {
+function textClampings() {
   var ua = window.navigator.userAgent;
   var ms_ie = !!ua.match(/MSIE|Trident|Edge/);
   if (document.getElementsByClassName('category-section-item')) {
@@ -475,19 +475,23 @@ function textClamping() {
   }
 }
 
-$(document).ready(function(){
-  $('.section-item-title').click(function(){
-    var text = $(this).html();
-    var parent = $(this).parent();
-    var hidden = parent.children('.hovered-title');
-    hidden.html(text);
-    $(this).hide();
-    hidden.show();
-  });
-  $('.hovered-title').mouseleave(function(){
-    var parent = $(this).parent();
-    var visible = parent.children('.section-item-title');
-    $(this).hide();
-    visible.show();
-  });
+var ellipsisText = function (e) {
+    var wordArray = e.innerHTML.split(" ");
+    while (e.scrollHeight > e.offsetHeight) {
+        wordArray.pop();
+        e.innerHTML = wordArray.join(" ") + ("...");
+    }
+};
+
+$(".section-item-title").ready(function(){
+  var a = document.getElementsByClassName('section-item-title');
+  for (var i = 0; i < a.length; i++) {
+    ellipsisText(a[i]);
+  }
+});
+$(".section-item-author").ready(function(){
+  var a = document.getElementsByClassName('section-item-author');
+  for (var i = 0; i < a.length; i++) {
+    ellipsisText(a[i]);
+  }
 });

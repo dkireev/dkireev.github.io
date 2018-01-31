@@ -82,19 +82,31 @@ button:focus {
 		max-width: 208px;
 		vertical-align: middle;
 	}
-	.section-item-title, .hovered-title {
+	.section-item-title {
 		margin-top: 15px;
 		margin-bottom: 0;
 		color: #321d14;
 		font-weight: bold;
 		font-size: 1.1em;
+		line-height: 1.4em;
+		max-height: 2.8em;
 		position: absolute;
 		z-index: 30;
 		background-color: #fff;
 		cursor: default;
 	}
 	.hovered-title {
-		display: none;
+		margin-top: 15px;
+		margin-bottom: 0;
+		color: #321d14;
+		font-weight: bold;
+		font-size: 1.1em;
+		line-height: 1.4em;
+		max-height: 2.8em;
+		position: absolute;
+		z-index: 30;
+		background-color: #fff;
+		cursor: default;
 	}
 	.section-item-author {
 		color: #878787;
@@ -104,6 +116,8 @@ button:focus {
 		top: 330px;
 		background-color: #fff;
 		z-index: 20;
+		line-height: 1.4em;
+		max-height: 1.4em;
 	}
 	.section-item-author>a:first-child {
 		background-color: inherit;
