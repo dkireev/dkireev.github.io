@@ -87,23 +87,47 @@
                         </ul>
                     </div>
                     <div class="member-form-wrapper">
-                        <form>
+                        <form class="needs-validation" novalidate>
                             <label for="address-first">First Name</label>
-                            <input type="text" id="address-first" class="form-input-full info-input" placeholder="First Name">
+                            <input type="text" id="address-first" class="form-control form-input-full info-input" placeholder="First Name" required>
+                            <div class="invalid-feedback">
+                                Please enter your first name
+                            </div>
                             <label for="address-last">Last Name</label>
-                            <input type="text" id="address-last" class="form-input-full info-input" placeholder="Last Name">
+                            <input type="text" id="address-last" class="form-control form-input-full info-input" placeholder="Last Name" required>
+                            <div class="invalid-feedback">
+                                Please enter your last name
+                            </div>
                             <label for="address-phone">Phone</label>
-                            <input type="text" id="address-phone" class="form-input-full info-input" placeholder="Phone">
+                            <input type="text" id="address-phone" class="form-control form-input-full info-input" placeholder="Phone" required>
+                            <div class="invalid-feedback">
+                                Please enter your phone
+                            </div>
                             <label for="address-zipcode">Zipcode</label>
-                            <input type="text" id="address-zipcode" class="form-input-full info-input" placeholder="Zipcode">
+                            <input type="text" id="address-zipcode" class="form-control form-input-full info-input" placeholder="Zipcode" required>
+                            <div class="invalid-feedback">
+                                Please provide a zip
+                            </div>
                             <label for="address-state">State</label>
-                            <input type="text" id="address-state" class="form-input-full info-input" placeholder="State">
+                            <input type="text" id="address-state" class="form-control form-input-full info-input" placeholder="State" required>
+                            <div class="invalid-feedback">
+                                Please select a state
+                            </div>
                             <label for="address-city">City</label>
-                            <input type="text" id="address-city" class="form-input-full info-input" placeholder="City">
+                            <input type="text" id="address-city" class="form-control form-input-full info-input" placeholder="City" required>
+                            <div class="invalid-feedback">
+                                Please enter a city
+                            </div>
                             <label for="address-address1">Address 1</label>
-                            <input type="text" id="address-address1" class="form-input-full info-input" placeholder="Address 1">
+                            <input type="text" id="address-address1" class="form-control form-input-full info-input" placeholder="Address 1" required>
+                            <div class="invalid-feedback">
+                                Please provide your address
+                            </div>
                             <label for="address-address2">Address 2</label>
-                            <input type="text" id="address-address2" class="form-input-full info-input" placeholder="Address 2">
+                            <input type="text" id="address-address2" class="form-control form-input-full info-input" placeholder="Address 2" required>
+                            <div class="invalid-feedback">
+                                Please provide your additional address
+                            </div>
                             <button type="submit" class="form-button info-button">SAVE</button>
                         </form>
                     </div>

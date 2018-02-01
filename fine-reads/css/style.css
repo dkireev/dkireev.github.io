@@ -375,7 +375,7 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 @media screen and (max-width: 767px) { #register .form-validation-wrapper input { width: 226px; } }
 @media screen and (max-width: 575px) { #register { padding: 9px 0; }
   #register .form-validation-wrapper input { width: 100%; }
-  #register .form-validation-wrapper img { position: relative; margin-bottom: 20px; } }
+  #register .form-validation-wrapper img { position: relative; margin-bottom: 20px; margin-top: 10px; } }
 #member { padding: 60px 0 90px 0; }
 
 .member-heading { padding: 15px 0 15px 30px; background-color: #3dcc9b; background: url("../img/bottom-banner.jpg") no-repeat center; background-size: cover; height: 93px; }
@@ -436,6 +436,7 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
   .order-item ul li:nth-child(3) { min-width: 70px; width: 28%; }
   .order-item ul li:last-child { min-width: 60px; width: 22%; } }
 #info { padding: 60px 0 110px 0; }
+#info .invalid-feedback { position: absolute; margin-top: -25px; margin-left: 100px; }
 
 .member-form-wrapper { padding-left: 30px; padding-top: 35px; }
 .member-form-wrapper label { position: absolute; padding-top: 14px; font-size: .94em; }
@@ -446,6 +447,7 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 
 @media screen and (max-width: 767px) { .info-input { width: 391px; } }
 @media screen and (max-width: 575px) { #info { padding: 9px 0 40px 0; }
+  #info .invalid-feedback { margin-left: 0; }
   .member-form-wrapper { padding-left: 0; padding-top: 10px; }
   .member-form-wrapper label { position: relative; padding-top: 0; padding-left: 26px; }
   .info-input { width: 100%; margin-left: 0; margin-top: 0; }
@@ -453,6 +455,7 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 #password { padding: 60px 0 110px 0; }
 #password .member-form-wrapper { padding-top: 0; }
 #password .member-form-wrapper h5 { text-transform: uppercase; font-size: 1em; font-weight: bold; margin-bottom: 30px; }
+#password .invalid-feedback { position: absolute; margin-top: -25px; margin-left: 125px; }
 
 .label-two-lines { line-height: 1; padding-top: 9px; width: 110px; }
 
@@ -460,13 +463,16 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 
 @media screen and (max-width: 767px) { input.password-input { width: 366px; } }
 @media screen and (max-width: 575px) { #password { padding: 9px 0 45px 0; }
+  #password .invalid-feedback { margin-left: 0; }
   .password-input { width: 100%; margin-left: 0; margin-top: 0; }
   input.password-input { width: 100%; }
   .label-two-lines { width: 100%; } }
 #address { padding: 60px 0 110px 0; }
 #address .member-form-wrapper { padding-top: 0; }
+#address .invalid-feedback { position: absolute; margin-top: -25px; margin-left: 100px; }
 
-@media screen and (max-width: 575px) { #address { padding: 9px 0 45px 0; } }
+@media screen and (max-width: 575px) { #address { padding: 9px 0 45px 0; }
+  #address .invalid-feedback { margin-left: 0; } }
 #order { padding: 60px 0 110px 0; }
 #order .member-menu { margin-bottom: 35px; }
 

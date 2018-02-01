@@ -75,9 +75,15 @@
 					<div class="login-wrapper">
 						<h3>LOGIN or <a href="register.html">REGISTER</a></h3>
 						<div class="divider"></div>
-						<form>
-							<input type="text" class="form-input-full" placeholder="Username/Email">
-							<input type="password" class="form-input-full" placeholder="Password">
+						<form class="needs-validation" novalidate>
+							<input type="text" class="form-control form-input-full" placeholder="Username/Email" required>
+							<div class="invalid-feedback">
+					        	Please enter your username or email
+					        </div>
+							<input type="password" class="form-control form-input-full" placeholder="Password" required>
+							<div class="invalid-feedback">
+					        	Please enter your password
+					        </div>
 							<p><a href="">Forget Password?</a></p>
 							<input type="checkbox" id="forget-pass" class="form-checkbox" checked>
 							<label for="forget-pass">Keep me logged in</label>

@@ -1,5 +1,10 @@
 #info {
 	padding: 60px 0 110px 0;
+	.invalid-feedback {
+		position: absolute;
+		margin-top: -25px;
+		margin-left: 100px;
+	}
 }
 .member-form-wrapper {
 	padding-left: 30px;
@@ -28,6 +33,9 @@
 @media screen and (max-width:575px) {
 	#info {
 		padding: 9px 0 40px 0;
+		.invalid-feedback {
+			margin-left: 0;
+		}
 	}
 	.member-form-wrapper {
 		padding-left: 0;
