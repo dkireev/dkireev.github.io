@@ -61,9 +61,11 @@
 .author-description-text {
 	line-height: 1.4em;
 	max-height: 14em;
+	cursor: default;
 }
 .author-description-text-hidden {
 	line-height: 1.4em;
+	cursor: default;
 }
 @media screen and (max-width:1199px) {
 	#author {

@@ -725,9 +725,9 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 
 .author-description { float: right; width: 576px; font-size: .94em; }
 
-.author-description-text { line-height: 1.4em; max-height: 14em; }
+.author-description-text { line-height: 1.4em; max-height: 14em; cursor: default; }
 
-.author-description-text-hidden { line-height: 1.4em; }
+.author-description-text-hidden { line-height: 1.4em; cursor: default; }
 
 @media screen and (max-width: 1199px) { #author .category-section-item { margin: 30px 9px 0 9px; } }
 @media screen and (max-width: 991px) { #author .category-section-item { margin: 30px 8px 0 8px; }
@@ -772,9 +772,9 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 .book-description { float: left; width: 630px; font-size: .94em; }
 .book-description p:first-child { font-weight: bold; margin-bottom: 0; }
 
-.book-description-text { line-height: 1.4em; max-height: 14em; }
+.book-description-text { line-height: 1.4em; max-height: 14em; cursor: default; }
 
-.book-description-text-hidden { line-height: 1.4em; }
+.book-description-text-hidden { line-height: 1.4em; cursor: default; }
 
 .buy-book { width: 271px; border: 1px solid #dadbdb; position: absolute; right: 0; top: 0; padding: 20px; }
 .buy-book p:first-child { color: #525252; font-size: .94em; margin-bottom: 10px; }
@@ -813,9 +813,9 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 .book-review-item .book-review-text span { color: #878787; }
 .book-review-item .book-review-text p { margin-top: 10px; }
 
-.book-review-feedback { line-height: 1.4em; max-height: 7em; }
+.book-review-feedback { line-height: 1.4em; max-height: 7em; cursor: default; }
 
-.book-review-feedback-hidden { line-height: 1.4em; }
+.book-review-feedback-hidden { line-height: 1.4em; cursor: default; }
 
 @media screen and (max-width: 1199px) { .book-wrapper .book-cover { margin-right: 20px; }
   .book-details { width: 422px; }

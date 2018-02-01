@@ -95,9 +95,11 @@
 .book-description-text {
 	line-height: 1.4em;
 	max-height: 14em;
+	cursor: default;
 }
 .book-description-text-hidden {
 	line-height: 1.4em;
+	cursor: default;
 }
 .buy-book {
 	width: 271px;
@@ -241,9 +243,11 @@
 .book-review-feedback {
 	line-height: 1.4em;
 	max-height: 7em;
+	cursor: default;
 }
 .book-review-feedback-hidden {
 	line-height: 1.4em;
+	cursor: default;
 }
 @media screen and (max-width:1199px) {
 	.book-wrapper {
