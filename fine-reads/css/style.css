@@ -665,6 +665,8 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
   #cart .order-total-wrapper .order-total-text { width: 70%; padding-left: 15px; }
   #cart .order-total-wrapper .order-total-number { width: 30%; } }
 #checkout { padding: 60px 0 110px 0; }
+#checkout .invalid-feedback { margin-left: 100px; }
+#checkout .card-details { margin-left: 120px; }
 #checkout h5 { text-transform: uppercase; font-size: 1em; font-weight: bold; margin-left: 164px; }
 #checkout .order-items-wrapper { margin-bottom: 40px; }
 #checkout .billing-wrapper { padding-top: 20px; }
@@ -691,7 +693,9 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 #checkout input.card { width: 280px; margin-left: 120px; }
 
 @media screen and (max-width: 1199px) { #checkout h5 { margin-left: 50px; } }
-@media screen and (max-width: 991px) { #checkout h5 { margin-left: 30px; }
+@media screen and (max-width: 991px) { #checkout .invalid-feedback { margin-left: 90px; }
+  #checkout .card-details { margin-left: 120px; }
+  #checkout h5 { margin-left: 30px; }
   #checkout .checkout-input { width: 216px; margin-left: 90px; }
   #checkout select.checkout-input { background-position: 180px center; }
   #checkout input.card { width: 185px; } }
@@ -703,6 +707,8 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
   #checkout select.checkout-input { background-position: 325px center; }
   #checkout input.card { width: 342px; } }
 @media screen and (max-width: 575px) { #checkout { padding: 9px 0 45px 0; }
+  #checkout .invalid-feedback { margin-left: 0; }
+  #checkout .card-details { margin-left: 0; }
   #checkout .billing-wrapper { padding: 10px 15px 15px 15px; font-size: .87em; }
   #checkout fieldset.left { width: 100%; }
   #checkout fieldset.left label { position: relative; padding-top: 15px; }

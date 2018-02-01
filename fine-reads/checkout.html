@@ -165,35 +165,59 @@
                             <div class="order-total-text">Total</div>
                         </div>
                     </div>
-                    <form action="">
+                    <form action="" class="needs-validation" novalidate>
                         <h5>Shipping info</h5>
                         <div class="order-items-wrapper billing-wrapper clearfix">
                             <fieldset class="left">
                                 <label for="shipping-first">First Name</label>
-                                <input type="text" id="shipping-first" class="form-input-full checkout-input" placeholder="First Name">
+                                <input type="text" id="shipping-first" class="form-control form-input-full checkout-input" placeholder="First Name" required>
+                                <div class="invalid-feedback">
+                                    Please enter your first name
+                                </div>
                                 <label for="shipping-last">Last Name</label>
-                                <input type="text" id="shipping-last" class="form-input-full checkout-input" placeholder="Last Name">
+                                <input type="text" id="shipping-last" class="form-control form-input-full checkout-input" placeholder="Last Name" required>
+                                <div class="invalid-feedback">
+                                    Please enter your last name
+                                </div>
                                 <label for="shipping-phone">Phone</label>
-                                <input type="text" id="shipping-phone" class="form-input-full checkout-input" placeholder="Phone">
+                                <input type="tel" id="shipping-phone" class="form-control form-input-full checkout-input" placeholder="Phone" required>
+                                <div class="invalid-feedback">
+                                    Please provide your phone
+                                </div>
                                 <label for="shipping-address1">Address 1</label>
-                                <input type="text" id="shipping-address1" class="form-input-full checkout-input" placeholder="Address 1">
+                                <input type="text" id="shipping-address1" class="form-control form-input-full checkout-input" placeholder="Address 1" required>
+                                <div class="invalid-feedback">
+                                    Please provide an address
+                                </div>
                                 <label for="shipping-address2">Address 2</label>
-                                <input type="text" id="shipping-address2" class="form-input-full checkout-input" placeholder="Address 2">
+                                <input type="text" id="shipping-address2" class="form-control form-input-full checkout-input" placeholder="Address 2" required>
+                                <div class="invalid-feedback">
+                                    Please provide an additional address
+                                </div>
                                 <label for="shipping-city">City</label>
-                                <input type="text" id="shipping-city" class="form-input-full checkout-input" placeholder="City">
+                                <input type="text" id="shipping-city" class="form-control form-input-full checkout-input" placeholder="City" required>
+                                <div class="invalid-feedback">
+                                    Please enter a city
+                                </div>
                             </fieldset>
                             <fieldset class="right">
                                 <label for="shipping-state">State</label>
-                                <select id="shipping-state" class="form-input-full checkout-input">
+                                <select id="shipping-state" class="form-control form-input-full checkout-input" required>
                                     <option value="Alabama">Alabama</option>
                                     <option value="Alaska">Alaska</option>
                                     <option value="Arizona">Arizona</option>
                                     <option value="CaArkansaslifornia">Arkansas</option>
-                                    <option value="California" selected="">California</option>
+                                    <option value="California" selected>California</option>
                                     <option value="Colorado">Colorado</option>
                                 </select>
+                                <div class="invalid-feedback">
+                                    Please select a state
+                                </div>
                                 <label for="shipping-zipcode">Zipcode</label>
-                                <input type="text" id="shipping-zipcode" class="form-input-full checkout-input" placeholder="Zipcode">
+                                <input type="text" id="shipping-zipcode" class="form-control form-input-full checkout-input" placeholder="Zipcode" required>
+                                <div class="invalid-feedback">
+                                    Please enter a zipcode
+                                </div>
                                 <label for="shipping-memo">Memo</label>
                                 <textarea id="shipping-memo" class="form-input-full checkout-input"></textarea>
                             </fieldset>
@@ -204,28 +228,49 @@
                                 <input type="checkbox" id="same-address" class="form-input-full checkout-input checkout-checkbox">
                                 <label for="same-address" class="checkout-label">Same as Shipping Info</label>
                                 <label for="shipping-first">First Name</label>
-                                <input type="text" id="shipping-first" class="form-input-full checkout-input" placeholder="First Name">
+                                <input type="text" id="shipping-first" class="form-control form-input-full checkout-input" placeholder="First Name" required>
+                                <div class="invalid-feedback">
+                                    Please enter your first name
+                                </div>
                                 <label for="shipping-last">Last Name</label>
-                                <input type="text" id="shipping-last" class="form-input-full checkout-input" placeholder="Last Name">
+                                <input type="text" id="shipping-last" class="form-control form-input-full checkout-input" placeholder="Last Name" required>
+                                <div class="invalid-feedback">
+                                    Please enter your last name
+                                </div>
                                 <label for="shipping-address1">Address 1</label>
-                                <input type="text" id="shipping-address1" class="form-input-full checkout-input" placeholder="Address 1">
+                                <input type="text" id="shipping-address1" class="form-control form-input-full checkout-input" placeholder="Address 1" required>
+                                <div class="invalid-feedback">
+                                    Please provide an address
+                                </div>
                             </fieldset>  
                             <fieldset class="right">
                                 <label for="shipping-address2">Address 2</label>
-                                <input type="text" id="shipping-address2" class="form-input-full checkout-input" placeholder="Address 2">
+                                <input type="text" id="shipping-address2" class="form-control form-input-full checkout-input" placeholder="Address 2" required>
+                                <div class="invalid-feedback">
+                                    Please provide an additional address
+                                </div>
                                 <label for="shipping-city">City</label>
-                                <input type="text" id="shipping-city" class="form-input-full checkout-input" placeholder="City">
+                                <input type="text" id="shipping-city" class="form-control form-input-full checkout-input" placeholder="City" required>
+                                <div class="invalid-feedback">
+                                    Please enter a city
+                                </div>
                                 <label for="shipping-state">State</label>
-                                <select id="shipping-state" class="form-input-full checkout-input">
+                                <select id="shipping-state" class="form-control form-input-full checkout-input" required>
                                     <option value="Alabama">Alabama</option>
                                     <option value="Alaska">Alaska</option>
                                     <option value="Arizona">Arizona</option>
                                     <option value="CaArkansaslifornia">Arkansas</option>
-                                    <option value="California" selected="">California</option>
+                                    <option value="California" selected>California</option>
                                     <option value="Colorado">Colorado</option>
                                 </select>
+                                <div class="invalid-feedback">
+                                    Please select a state
+                                </div>
                                 <label for="shipping-zipcode">Zipcode</label>
-                                <input type="text" id="shipping-zipcode" class="form-input-full checkout-input" placeholder="Zipcode">
+                                <input type="text" id="shipping-zipcode" class="form-control form-input-full checkout-input" placeholder="Zipcode" required>
+                                <div class="invalid-feedback">
+                                    Please enter a zipcode
+                                </div>
                             </fieldset>                       
                         </div>
                         <h5>Card</h5>
@@ -238,13 +283,22 @@
                             </div>
                             <fieldset class="left">
                                 <label for="card-number">Card Number*</label>
-                                <input type="text" id="card-number" class="form-input-full checkout-input card" placeholder="Card Number" required>
+                                <input type="text" id="card-number" class="form-control form-input-full checkout-input card" placeholder="Card Number" required>
+                                <div class="invalid-feedback card-details">
+                                    Please enter a card number
+                                </div>
                                 <label for="card-expiry">Expiry (MM/YY)*</label>
-                                <input type="text" id="card-expiry" class="form-input-full checkout-input card" placeholder="Expiry (MM/YY)" required>
+                                <input type="text" id="card-expiry" class="form-control form-input-full checkout-input card" placeholder="Expiry (MM/YY)" required>
+                                <div class="invalid-feedback card-details">
+                                    Please enter an expiry date
+                                </div>
                             </fieldset>
                             <fieldset class="right">
                                 <label for="card-expiry">Card Code*</label>
-                                <input type="text" id="card-code" class="form-input-full checkout-input" placeholder="Card Code" required>
+                                <input type="text" id="card-code" class="form-control form-input-full checkout-input" placeholder="Card Code" required>
+                                <div class="invalid-feedback">
+                                    Please enter card code
+                                </div>
                             </fieldset>
                         </div>
                         <button type="submit" class="form-button">SAVE</button>
