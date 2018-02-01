@@ -82,7 +82,7 @@ button:focus {
 		max-width: 208px;
 		vertical-align: middle;
 	}
-	.section-item-title, .section-item-title-hidden {
+	.section-item-title {
 		margin-top: 15px;
 		margin-bottom: 0;
 		color: #321d14;
@@ -91,18 +91,16 @@ button:focus {
 		line-height: 1.4em;
 		max-height: 2.8em;
 		position: absolute;
-		z-index: 30;
 		background-color: #fff;
 		cursor: default;
 	}
-	.hovered-title {
+	.section-item-title-hidden {
 		margin-top: 15px;
 		margin-bottom: 0;
 		color: #321d14;
 		font-weight: bold;
 		font-size: 1.1em;
 		line-height: 1.4em;
-		max-height: 2.8em;
 		position: absolute;
 		z-index: 30;
 		background-color: #fff;
@@ -111,15 +109,26 @@ button:focus {
 	.section-item-author {
 		color: #878787;
 		font-size: .87em;
+		line-height: 1.4em;
+		max-height: 1.4em;
 		position: absolute;
 		left: 0;
 		top: 330px;
 		background-color: #fff;
-		z-index: 20;
-		line-height: 1.4em;
-		max-height: 1.4em;
+		cursor: default;
 	}
-	.section-item-author>a:first-child {
+	.section-item-author-hidden {
+		color: #878787;
+		font-size: .87em;
+		line-height: 1.4em;
+		position: absolute;
+		z-index: 20;
+		left: 0;
+		top: 330px;
+		background-color: #fff;
+		cursor: default;
+	}
+	.section-item-author>a:first-child, .section-item-author-hidden>a:first-child {
 		background-color: inherit;
 		color: inherit;
 		display: inline;
@@ -127,7 +136,7 @@ button:focus {
 		height: auto;
 		line-height: 1;
 	}
-	.section-item-author>a {
+	.section-item-author>a, .section-item-author-hidden>a {
 		color: inherit;
 	}
 	img:hover {
@@ -193,7 +202,7 @@ button:focus {
 			max-height: 218px;
 			max-width: 174px;
 		}
-		.section-item-author {
+		.section-item-author, .section-item-author-hidden {
 			top: 290px;
 		}
 	}
@@ -212,7 +221,7 @@ button:focus {
 			max-height: 205px;
 			max-width: 163px;
 		}
-		.section-item-author {
+		.section-item-author, .section-item-author-hidden {
 			top: 276px;
 		}
 	}
@@ -262,10 +271,11 @@ button:focus {
 			max-height: 182px;
 			max-width: 145px;
 		}
-		.section-item-title {
-			line-height: 1;
+		.section-item-title, .section-item-title-hidden {
+			font-size: .94em;
+			top: 180px;
 		}
-		.section-item-author {
+		.section-item-author, .section-item-author-hidden {
 			font-size: .75em;
 			top: 245px;
 		}

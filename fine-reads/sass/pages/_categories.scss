@@ -45,7 +45,7 @@
 			height: 191px;
 			line-height: 190px;
 		}
-		.section-item-author {
+		.section-item-author, .section-item-author-hidden {
 			top: 257px;
 			a {
 				line-height: 1.2;
@@ -137,7 +137,7 @@
 				height: 163px;
 				line-height: 162px;
 			}
-			.section-item-author {
+			.section-item-author, .section-item-author-hidden {
 				top: 228px;
 				a {
 					line-height: 1.2;
@@ -195,7 +195,10 @@
 				height: 226px;
 				line-height: 224px;
 			}
-			.section-item-author {
+			.section-item-title, .section-item-title-hidden {
+				top: 220px;
+			}
+			.section-item-author, .section-item-author-hidden {
 				top: 290px;
 				a {
 					line-height: 1.2;
@@ -253,7 +256,12 @@
 				height: 168px;
 				line-height: 166px;
 			}
-			.section-item-author {
+			.section-item-title, .section-item-title-hidden {
+				top: 165px;
+				font-size: 1em;
+				line-height: 1.4em;
+			}
+			.section-item-author, .section-item-author-hidden {
 				top: 232px;
 				a {
 					line-height: 1.2;

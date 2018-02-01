@@ -49,13 +49,6 @@ window.onload = function() {
   if (document.getElementsByClassName('sold-out')) {
     disableBuyButton();
   }
-  if (document.getElementById('book')) {
-    bookCoverHeight();
-   // textClamping();
-  }
-  if (document.getElementById('author')) {
-   // textClamping();
-  }
   if (document.getElementById('authors')) {
     authorsRow();
   }
@@ -63,7 +56,9 @@ window.onload = function() {
     popularBooksRow();
   }
   if (document.getElementsByClassName('category-section-item')) {
-   toggleShortenTexts();
+    toggleShortenTitles();
+    toggleShortenAuthors();
+    bookItemEllipsisText();
   }
 }
 
@@ -430,75 +425,39 @@ function popularBooksRow() {
   });
 }
 
-//clamping all spare texts
-function textClampings() {
-  var ua = window.navigator.userAgent;
-  var ms_ie = !!ua.match(/MSIE|Trident|Edge/);
-  if (document.getElementsByClassName('category-section-item')) {
-    var bookTitle = document.getElementsByClassName('section-item-title');
-    for (var i = 0; i < bookTitle.length; i++) {
-      $clamp(bookTitle[i], {clamp: 2});
-    }
-    var bookAuthor = document.getElementsByClassName('section-item-author');
-    for (var i = 0; i < bookAuthor.length; i++) {
-      if (ms_ie) {
-        $clamp(bookAuthor[i], {clamp: 2});
-      } else {
-        $clamp(bookAuthor[i], {clamp: 1});
-      }
-    }
-  }
-  if (document.getElementById('book')) {
-    var bookDescription = document.getElementsByClassName('book-description-text')[0];
-    var bookComment = document.getElementsByClassName('book-review-feedback');
-    for (var i = 0; i < bookComment.length; i++) {
-      if (ms_ie) {
-        $clamp(bookComment[i], {clamp: 7});
-      } else {
-        $clamp(bookComment[i], {clamp: 6});
-      }
-    }
-    if (ms_ie) {
-      $clamp(bookDescription, {clamp: 11});
-    } else {
-      $clamp(bookDescription, {clamp: 10});
-    }
-  }
-  if (document.getElementById('author')) {
-    var authorDescription = document.getElementsByClassName('author-description-text')[0];
-    console.log(authorDescription);
-    if (ms_ie) {
-      $clamp(authorDescription, {clamp: 11});
-    } else {
-      $clamp(authorDescription, {clamp: 10});
-    }
-  }
+//Toggling titles and authors in each book item
+function toggleShortenTitles() {
+  $(".section-item-title").each(function () {
+    $(this).parent().append('<h5 class="section-item-title-hidden">' + $(this).text() + '</h5>');
+  });
+  $(".section-item-title-hidden").hide();
+  $(".section-item-title").hover(function(){
+    $(this).hide();
+    $(this).siblings(".section-item-title-hidden").show();
+  });
+  $(".section-item-title-hidden").mouseout(function(){
+    $(this).hide();
+    $(this).siblings(".section-item-title").show();
+  });
 }
-
-// $(".section-item-title").ready(function(){
-//   var a = document.getElementsByClassName('section-item-title');
-//   for (var i = Things.length - 1; i >= 0; i--) {
-    
-//   }
-//   //console.log(a);
-// });
-$(".section-item-title").each(function () {
-  $(this).parent().append('<h5 class="section-item-title-hidden">' + $(this).text() + '</h5>');
-});
-$(".section-item-title-hidden").hide();
-$(".section-item-title").click(function(){
-  $(this).hide();
-  $(this).siblings(".section-item-title-hidden").show();
-});
-
-
-function toggleShortenTexts() {
-  bookItemEllipsisText();
+function toggleShortenAuthors() {
+  $(".section-item-author").each(function () {
+    $(this).parent().append('<span class="section-item-author-hidden">' + $(this).text() + '</span>');
+  });
+  $(".section-item-author-hidden").hide();
+  $(".section-item-author").hover(function(){
+    $(this).hide();
+    $(this).siblings(".section-item-author-hidden").show();
+  });
+  $(".section-item-author-hidden").mouseout(function(){
+    $(this).hide();
+    $(this).siblings(".section-item-author").show();
+  });
 }
-
 function bookItemEllipsisText() {
   var ellipsisText = function (e) {
     var wordArray = e.innerHTML.split(" ");
+    console.log(e);
     while (e.scrollHeight > e.offsetHeight) {
         wordArray.pop();
         e.innerHTML = wordArray.join(" ") + ("...");
