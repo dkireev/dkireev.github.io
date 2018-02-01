@@ -772,7 +772,7 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 .book-description { float: left; width: 630px; font-size: .94em; }
 .book-description p:first-child { font-weight: bold; margin-bottom: 0; }
 
-.book-description-text { line-height: 1.4em; max-height: 7em; }
+.book-description-text { line-height: 1.4em; max-height: 14em; }
 
 .book-description-text-hidden { line-height: 1.4em; }
 
@@ -812,6 +812,10 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 .book-review-item .book-review-text { width: 630px; display: inline-block; float: left; font-size: .94em; }
 .book-review-item .book-review-text span { color: #878787; }
 .book-review-item .book-review-text p { margin-top: 10px; }
+
+.book-review-feedback { line-height: 1.4em; max-height: 7em; }
+
+.book-review-feedback-hidden { line-height: 1.4em; }
 
 @media screen and (max-width: 1199px) { .book-wrapper .book-cover { margin-right: 20px; }
   .book-details { width: 422px; }

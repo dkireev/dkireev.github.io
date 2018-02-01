@@ -31,6 +31,9 @@ window.onload = function() {
     categoryRowWidthSet();
     categoryItemsInSlideSet();
     categorySlideWidth = (categoryItemWidth + categoryItemMargin) * categorySlideItems;
+    toggleShortenBookText();
+    toggleShortenBookReview();
+    bookItemEllipsisText();
   }
   if (document.getElementById('articles-section')) {
     articleRowWidthSet();
@@ -472,10 +475,37 @@ function toggleShortenAuthorText() {
     $(this).siblings(".author-description-text").show();
   });
 }
+function toggleShortenBookText() {
+  $(".book-description-text").each(function () {
+    $(this).parent().append('<p class="book-description-text-hidden">' + $(this).text() + '</p>');
+  });
+  $(".book-description-text-hidden").hide();
+  $(".book-description-text").hover(function(){
+    $(this).hide();
+    $(this).siblings(".book-description-text-hidden").show();
+  });
+  $(".book-description-text-hidden").mouseout(function(){
+    $(this).hide();
+    $(this).siblings(".book-description-text").show();
+  });
+}
+function toggleShortenBookReview() {
+  $(".book-review-feedback").each(function () {
+    $(this).parent().append('<p class="book-review-feedback-hidden">' + $(this).text() + '</p>');
+  });
+  $(".book-review-feedback-hidden").hide();
+  $(".book-review-feedback").hover(function(){
+    $(this).hide();
+    $(this).siblings(".book-review-feedback-hidden").show();
+  });
+  $(".book-review-feedback-hidden").mouseout(function(){
+    $(this).hide();
+    $(this).siblings(".book-review-feedback").show();
+  });
+}
 function bookItemEllipsisText() {
   var ellipsisText = function (e) {
     var wordArray = e.innerHTML.split(" ");
-    console.log(e);
     while (e.scrollHeight > e.offsetHeight) {
         wordArray.pop();
         e.innerHTML = wordArray.join(" ") + ("...");
@@ -495,6 +525,18 @@ function bookItemEllipsisText() {
   });
   $(".author-description-text").ready(function(){
     var a = document.getElementsByClassName('author-description-text');
+    for (var i = 0; i < a.length; i++) {
+      ellipsisText(a[i]);
+    }
+  });
+  $(".book-description-text").ready(function(){
+    var a = document.getElementsByClassName('book-description-text');
+    for (var i = 0; i < a.length; i++) {
+      ellipsisText(a[i]);
+    }
+  });
+  $(".book-review-feedback").ready(function(){
+    var a = document.getElementsByClassName('book-review-feedback');
     for (var i = 0; i < a.length; i++) {
       ellipsisText(a[i]);
     }

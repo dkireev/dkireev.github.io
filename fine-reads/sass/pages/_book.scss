@@ -94,7 +94,7 @@
 }
 .book-description-text {
 	line-height: 1.4em;
-	max-height: 7em;
+	max-height: 14em;
 }
 .book-description-text-hidden {
 	line-height: 1.4em;
@@ -237,6 +237,13 @@
 			margin-top: 10px;
 		}
 	}
+}
+.book-review-feedback {
+	line-height: 1.4em;
+	max-height: 7em;
+}
+.book-review-feedback-hidden {
+	line-height: 1.4em;
 }
 @media screen and (max-width:1199px) {
 	.book-wrapper {
