@@ -370,7 +370,7 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 #register { padding: 60px 0 90px 0; }
 #register .form-validation-wrapper { position: relative; margin-bottom: 20px; }
 #register .form-validation-wrapper input { width: 363px; }
-#register .form-validation-wrapper img { position: absolute; top: 13px; right: 0; }
+#register .form-validation-wrapper img { position: absolute; top: 2px; right: 0; }
 
 @media screen and (max-width: 767px) { #register .form-validation-wrapper input { width: 226px; } }
 @media screen and (max-width: 575px) { #register { padding: 9px 0; }

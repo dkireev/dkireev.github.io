@@ -75,13 +75,28 @@
 					<div class="login-wrapper">
 						<h3>REGISTER or <a href="login.html">LOGIN</a></h3>
 						<div class="divider"></div>
-						<form>
-							<input type="text" class="form-input-full" placeholder="Username" required>
-							<input type="email" class="form-input-full" placeholder="Email" required>
-							<input type="password" class="form-input-full" placeholder="Password" required>
-							<input type="password" class="form-input-full" placeholder="Password confirm" required>
+						<form class="needs-validation" novalidate>
+							<input type="text" class="form-control form-input-full" placeholder="Username" required>
+							<div class="invalid-feedback">
+					        	Please choose a username
+					        </div>
+							<input type="email" class="form-control form-input-full" placeholder="Email" required>
+							<div class="invalid-feedback">
+					        	Please provide a valid email
+					        </div>
+							<input type="password" class="form-control form-input-full" placeholder="Password" required>
+							<div class="invalid-feedback">
+					        	Please enter a password
+					        </div>
+							<input type="password" class="form-control form-input-full" placeholder="Password confirm" required>
+							<div class="invalid-feedback">
+					        	Please confirm a password 
+					        </div>
 							<div class="form-validation-wrapper">
-								<input type="text" class="form-input-full" placeholder="Verification Code" required>
+								<input type="text" class="form-control form-input-full" placeholder="Verification Code" required>
+								<div class="invalid-feedback">
+						        	Please enter the captcha
+						        </div>
 								<img src="http://finereads.com/captcha/default?u5ZFwXxN" onclick="this.src='http://finereads.com/captcha/default?'+Math.random()" alt="Verification Code" id="captcha">
 							</div>
 							<input type="checkbox" id="keep-logged" class="form-checkbox" required checked>
