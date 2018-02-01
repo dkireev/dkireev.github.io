@@ -609,7 +609,7 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 #cart .order-item li:nth-child(2) { width: 170px; position: relative; }
 #cart .order-item li:nth-child(2) .quantity-wrapper { position: absolute; top: -24px; }
 #cart .order-item li:nth-child(3) { width: 105px; }
-#cart .amount { display: inline-block; width: 38px; height: 38px; border-top: 1px solid #2c3e50; border-bottom: 1px solid #2c3e50; background: none; float: left; font-size: .94em; line-height: 38px; text-align: center; color: #57595b; }
+#cart .amount { display: inline-block; width: 38px; height: 38px; border-top: 1px solid #2c3e50; border-bottom: 1px solid #2c3e50; border-left: none; border-right: none; outline: none; background: none; float: left; font-size: .94em; line-height: 38px; text-align: center; color: #57595b; }
 #cart button.minus { width: 38px; height: 38px; border: 1px solid #2c3e50; background: none; outline: none; cursor: pointer; font-size: 1.25em; color: #2c3e50; float: left; }
 #cart button.plus { width: 38px; height: 38px; background: #2c3e50; border: none; outline: none; cursor: pointer; font-size: 1.25em; color: #fff; float: left; }
 #cart button.delete { width: 95px; height: 30px; outline: none; border: none; background-color: #dbd9d9; border-radius: 15px; display: inline; color: #57595b; font-size: .87em; cursor: pointer; margin-top: 30px; }
@@ -725,6 +725,10 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 
 .author-description { float: right; width: 576px; font-size: .94em; }
 
+.author-description-text { line-height: 1.4em; max-height: 14em; }
+
+.author-description-text-hidden { line-height: 1.4em; }
+
 @media screen and (max-width: 1199px) { #author .category-section-item { margin: 30px 9px 0 9px; } }
 @media screen and (max-width: 991px) { #author .category-section-item { margin: 30px 8px 0 8px; }
   .author-wrapper { width: 100%; }
@@ -767,6 +771,10 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 
 .book-description { float: left; width: 630px; font-size: .94em; }
 .book-description p:first-child { font-weight: bold; margin-bottom: 0; }
+
+.book-description-text { line-height: 1.4em; max-height: 7em; }
+
+.book-description-text-hidden { line-height: 1.4em; }
 
 .buy-book { width: 271px; border: 1px solid #dadbdb; position: absolute; right: 0; top: 0; padding: 20px; }
 .buy-book p:first-child { color: #525252; font-size: .94em; margin-bottom: 10px; }

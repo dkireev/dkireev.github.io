@@ -60,6 +60,10 @@ window.onload = function() {
     toggleShortenAuthors();
     bookItemEllipsisText();
   }
+  if (document.getElementsByClassName('author-description-text')) {
+    toggleShortenAuthorText();
+    bookItemEllipsisText();
+  }
 }
 
 window.onresize = function() {
@@ -454,6 +458,20 @@ function toggleShortenAuthors() {
     $(this).siblings(".section-item-author").show();
   });
 }
+function toggleShortenAuthorText() {
+  $(".author-description-text").each(function () {
+    $(this).parent().append('<p class="author-description-text-hidden">' + $(this).text() + '</p>');
+  });
+  $(".author-description-text-hidden").hide();
+  $(".author-description-text").hover(function(){
+    $(this).hide();
+    $(this).siblings(".author-description-text-hidden").show();
+  });
+  $(".author-description-text-hidden").mouseout(function(){
+    $(this).hide();
+    $(this).siblings(".author-description-text").show();
+  });
+}
 function bookItemEllipsisText() {
   var ellipsisText = function (e) {
     var wordArray = e.innerHTML.split(" ");
@@ -471,6 +489,12 @@ function bookItemEllipsisText() {
   });
   $(".section-item-author").ready(function(){
     var a = document.getElementsByClassName('section-item-author');
+    for (var i = 0; i < a.length; i++) {
+      ellipsisText(a[i]);
+    }
+  });
+  $(".author-description-text").ready(function(){
+    var a = document.getElementsByClassName('author-description-text');
     for (var i = 0; i < a.length; i++) {
       ellipsisText(a[i]);
     }
