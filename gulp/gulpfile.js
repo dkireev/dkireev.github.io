@@ -3,11 +3,11 @@ var concat = require('gulp-concat');
 var replace = require('gulp-replace');
 
 var width = 650;
-var currency = 'en-US';
+var currency = 'en-IE';
 var previewText = 'Today is the Day to SAVE BIG';
 var altText = 'Corel Deals. Save up to 40% &lt;Shop Now&gt;';
 var imagePathLeft = 'http://edm.coreldm.com/2018/';
-var imagePathCampaign = '/02-20-hzl-eoq-sale/b/';
+var imagePathCampaign = '/02-20-hzl-eoq-sale/';
 
 var macAfee = 'corel';
 var facebook = 'https://www.facebook.com/Corel';
@@ -65,6 +65,11 @@ if (currency == 'en-US') {
 	imageFolder = 'jpn';
 	siteLocation = 'jp';
 	edmLocation = 'ja';
+} else if (currency == 'zh-TW') {
+	htmlLang = 'zh';
+	imageFolder = 'twn';
+	siteLocation = 'tw';
+	edmLocation = 'tw';
 }
 
 var imagePath = imagePathLeft + imageFolder + imagePathCampaign;
