@@ -27,7 +27,7 @@ window.onload = function() {
   if (document.getElementById('special-offer-section')) {
     specialOfferImageSet();
   }
-  if (document.getElementById('category-section') || document.getElementById('book')) {
+  if (document.getElementById('category-section') || document.getElementById('book') || document.getElementById('member')) {
     categoryRowWidthSet();
     categoryItemsInSlideSet();
     categorySlideWidth = (categoryItemWidth + categoryItemMargin) * categorySlideItems;
@@ -40,7 +40,7 @@ window.onload = function() {
     articleItemsInSlideSet();
     articleSlideWidth = (articleItemWidth + articleItemMargin) * articleSlideItems;
   }
-  if (document.getElementById('member') || document.getElementById('cart') || document.getElementById('checkout') || document.getElementById('details') || document.getElementById('books')) {
+  if (document.getElementById('cart') || document.getElementById('checkout') || document.getElementById('details') || document.getElementById('books')) {
     memberTitleToggle();
   }
   if (document.getElementById('success')) {
