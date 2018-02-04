@@ -900,11 +900,11 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 
 .pop-authors-row { padding-bottom: 30px; }
 
-.pop-authours-item { text-align: center; float: left; margin-right: 88px; }
-.pop-authours-item p { color: #321d14; font-size: 1.12em; font-weight: bold; margin-top: 15px; margin-bottom: 0; }
-.pop-authours-item a:hover { text-decoration: none; }
-.pop-authours-item img { border-radius: 75px; }
-.pop-authours-item img:hover { -webkit-box-shadow: 0 3px 5px #aaa; box-shadow: 0 3px 5px #aaa; }
+.pop-authours-item { text-align: center; float: left; margin-right: 88px; width: 150px; }
+.pop-authours-item a { color: #321d14; font-size: 1.12em; font-weight: bold; margin-top: 15px; margin-bottom: 0; display: block; }
+.pop-authours-item .pop-authors-image { margin-top: 0; background-color: #eee; text-align: center; width: 100%; height: 150px; line-height: 148px; }
+.pop-authours-item .pop-authors-image img { width: auto; height: auto; max-height: 150px; max-width: 150px; vertical-align: middle; }
+.pop-authours-item .pop-authors-image img:hover { -webkit-box-shadow: 0 3px 5px #aaa; box-shadow: 0 3px 5px #aaa; }
 
 .pop-authours-item:last-child { margin-right: 0; }
 
@@ -931,8 +931,9 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 @media screen and (max-width: 991px) { #authors h3 { margin-left: 15px; }
   .pop-authors-wrapper { padding: 30px 15px 0 15px; }
   .pop-authours-item { width: 126px; margin-right: 10px; }
-  .pop-authours-item img { width: 100%; height: auto; border-radius: 63px; }
-  .pop-authours-item p { font-size: 1em; }
+  .pop-authours-item a { font-size: 1em; }
+  .pop-authours-item .pop-authors-image { height: 126px; line-height: 124px; }
+  .pop-authours-item .pop-authors-image img { max-height: 126px; max-width: 126px; }
   .letters-wrapper { padding: 0 5px; }
   .letters-wrapper .letters-quater { margin-left: 5px; }
   .letters-wrapper .letters-quater:last-child { margin-left: 264px; }
