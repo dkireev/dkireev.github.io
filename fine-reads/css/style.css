@@ -37,7 +37,7 @@ header nav { max-width: 1330px; width: 100%; margin: auto; height: inherit; }
 
 .account-text { color: #57595b; text-transform: uppercase; font-weight: bold; font-size: 0.81em; padding-top: 22px; line-height: 1.4; display: inline-block; float: left; }
 
-.mobile-cart, .header-account-mobile, .header-search-mobile { display: none; }
+.mobile-cart, .header-account-mobile, .header-search-mobile, .header-burger-divider, .header-search-divider, .header-account-divider, .horizontal-divider { display: none; }
 
 @media screen and (max-width: 1370px) { header nav { max-width: 1170px; width: 100%; }
   .header-menu { margin-left: 30px; }
@@ -61,120 +61,24 @@ header nav { max-width: 1330px; width: 100%; margin: auto; height: inherit; }
   .header-search, .header-cart, .header-cart-items, .header-account, .header-divider { display: none; }
   .header-account-mobile { display: block; position: absolute; right: 75px; }
   .header-search-mobile { display: block; cursor: pointer; position: absolute; right: 150px; margin-top: 1px; }
-  .header-logo { margin-top: 8px; } }
+  .header-logo { margin-top: 8px; }
+  .header-burger-divider { display: block; position: absolute; right: 210px; }
+  .header-search-divider { display: block; position: absolute; right: 137px; }
+  .header-account-divider { display: block; position: absolute; right: 62px; }
+  .header-search { position: absolute; top: 70px; left: 50%; right: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); max-width: 408px; width: 100%; margin: auto; background-color: #fff; -webkit-box-shadow: 0 0 30px #999; box-shadow: 0 0 30px #999; }
+  .header-search form input { width: 310px; } }
+@media screen and (max-width: 575px) { header { height: auto; height: 107px; }
+  header nav { max-width: 302px; padding-top: 10px; }
+  header nav a:first-child { background-color: red; }
+  .header-logo { float: none; display: block; margin: 0 auto 12px auto; }
+  .header-menu-burger { right: inherit; margin-left: 0; left: 0; }
+  .header-search-mobile { right: 167px; }
+  .header-account-mobile { right: 85px; }
+  .header-burger-divider { right: 233px; }
+  .header-search-divider { right: 150px; }
+  .header-account-divider { right: 67px; }
+  .horizontal-divider { display: block; width: 100%; height: 1px; background-color: #cccdc0; position: absolute; top: 54px; } }
 /*
-@media screen and (max-width:767px) {
-	header {
-		.header-desktop {
-			.header-logo {
-				margin: 7px 40px auto 18px;
-				float: left;
-			}
-			img {
-				margin: 0 5px;
-				display: inline;
-			}
-			.header-menu-button {
-				display: inline;
-			}
-			a:last-child .header-menu-button {
-				margin-right: 0;
-			}
-			ul {
-				margin-left: 20px;
-				display: none;
-				li {
-					padding-right: 15px;
-					font-size: .87em;
-				}
-			}
-			.header-search {
-				margin-left: 7px;
-				width: 267px;
-				form {
-					input {
-						width: 170px;
-					}
-				}
-			}
-			#search-mobile:hover {
-				cursor: pointer;
-			}
-			.search-mobile-wrapper {
-				position: absolute;
-				width: 100%;
-				top: 70px;
-				padding: 0 20px;
-				display: none;
-				.header-search {
-					display: block;
-					max-width: 408px;
-					width: 100%;
-					height: 44px;
-					border-radius: 22px;
-					border: 1px solid #d2d2d2;
-					margin: auto;
-					padding: 8px 10px 5px 19px;
-					background-color: #fff;
-					box-shadow: 0 0 30px #999;
-					form {
-						input {
-							border: none;
-							outline: none;
-							padding-left: 26px;
-							background: #fff url('../img/search-icon.png') no-repeat;
-							background-position: 0 2px;
-							width: 310px;
-							color: #888c89;
-							font-size: .87em;
-							border-right: 1px solid #d2d2d2;
-						}
-						button {
-							border: none;
-							outline: none;
-							font-size: .87em;
-							color: #6b716d;
-							background-color: #fff;
-							width: 60px;
-							padding-left: 11px;
-						}
-						button:hover {
-							cursor: pointer;
-						}
-						option {
-							font-size: .87em;
-							color: #6b716d;
-						}
-					}
-				}
-			}
-			.drop-down-menu {
-				display: block;
-				position: absolute;
-				margin: auto;
-				text-align: center;
-				left: 62px;
-				top: 52px;
-				width: 400px;
-				background-color: rgba(255,255,255,.9);
-				box-shadow: 0 0 30px #57595b;
-				li {
-					display: block;
-					color: #57595b;
-					padding: 15px 0;
-				}
-				li:hover {
-					background-color: rgba(87,89,91,.9);
-					color: #fff;
-				}
-			}
-		}
-	}
-}
-.header-logo-abbr {
-	display: none;
-}
-
 @media screen and (max-width:575px) {
 	header {
 		height: auto;
