@@ -228,27 +228,19 @@ $(document).ready(function() {
   });
 });
 
-// setup burger-menu-desktop, burger-menu-mobile and search-mobile buttons behavior
+// setup burger-menu and search buttons behavior
 $(document).ready(function(){
-  $('#burger-desktop').click(function() {
-    $('#menu-desktop').toggleClass('drop-down-menu');
+  $('.header-search-mobile').click(function() {
+    $('.header-search').toggle();
   });
-  $('#menu-desktop').mouseleave(function() {
-    $('#menu-desktop').toggleClass('drop-down-menu');
+  $('.header-search').mouseleave(function() {
+    $('.header-search').hide();
   });
-  $('#burger-mobile').click(function() {
-    $('#menu-mobile').toggleClass('drop-down-menu');
-    $('.search-mobile-wrapper').hide();
+  $('.header-menu-burger').click(function() {
+    $('.header-menu').toggle();
   });
-  $('#menu-mobile').mouseleave(function() {
-    $('#menu-mobile').toggleClass('drop-down-menu');
-  });
-  $('#search-mobile').click(function(){
-    $('.search-mobile-wrapper').toggle();
-    $('#menu-mobile').removeClass('drop-down-menu');
-  });
-  $('.search-mobile-wrapper').mouseleave(function() {
-    $('.search-mobile-wrapper').toggle();
+  $('.header-menu').mouseleave(function() {
+    $('.header-menu').hide();
   });
 });
 
