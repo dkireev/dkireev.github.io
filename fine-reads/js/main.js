@@ -255,14 +255,36 @@ $(document).ready(function(){
 // setup mobile logo scroll behavior
 function mobileLogoScroll() {
   if (screenWidth <= 558) {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      document.getElementsByClassName('header-desktop')[0].style.display = 'none';
-      document.getElementsByClassName('header-mobile')[0].style.borderTopWidth = '0';
-      document.getElementById('scroll-logo').style.display = 'inline';
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+      $('.header-logo').hide();
+      $('.header-logo-abbr').show();
+      $('body').css('padding-top','52px');
+      $('header').css('height','52px');
+      $('nav').css('padding-top',0);
+      $('.horizontal-divider').hide();
+      $('.header-account-divider').css('right','57px');
+      $('.header-account-mobile').css('right','65px');
+      $('.header-search-divider').css('right','120px');
+      $('.header-search-mobile').css('right','127px');
+      $('.header-burger-divider').css('right','183px');
+      $('.header-menu-burger').css('left','62px');
+      $('.header-menu').css('top','72px');
+      $('.header-search').css('top','72px');
     } else {
-      document.getElementsByClassName('header-desktop')[0].style.display = 'block';
-      document.getElementsByClassName('header-mobile')[0].style.borderTopWidth = '1px';
-      document.getElementById('scroll-logo').style.display = 'none';
+      $('.header-logo').show();
+      $('.header-logo-abbr').hide();
+      $('body').removeAttr('style');
+      $('header').removeAttr('style');
+      $('nav').removeAttr('style');
+      $('.horizontal-divider').show();
+      $('.header-account-divider').removeAttr('style');
+      $('.header-account-mobile').removeAttr('style');
+      $('.header-search-divider').removeAttr('style');
+      $('.header-search-mobile').removeAttr('style');
+      $('.header-burger-divider').removeAttr('style');
+      $('.header-menu-burger').removeAttr('style');
+      $('.header-menu').removeAttr('style');
+      $('.header-search').removeAttr('style');
     }
   }
 }
