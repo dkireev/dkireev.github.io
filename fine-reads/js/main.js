@@ -230,17 +230,25 @@ $(document).ready(function() {
 
 // setup burger-menu and search buttons behavior
 $(document).ready(function(){
+  if (screenWidth < 975) {
+    $('.header-menu').addClass('header-menu-toggle');
+  }
+  if (screenWidth < 751) {
+    $('.header-search').addClass('header-search-toggle');
+  }
   $('.header-search-mobile').click(function() {
-    $('.header-search').toggle();
+    $('.header-search-toggle').toggle();
+    $('.header-menu-toggle').hide();
   });
-  $('.header-search').mouseleave(function() {
-    $('.header-search').hide();
+  $('.header-search-toggle').mouseleave(function() {
+    $('.header-search-toggle').hide();
   });
   $('.header-menu-burger').click(function() {
-    $('.header-menu').toggle();
+    $('.header-menu-toggle').toggle();
+    $('.header-search-toggle').hide();
   });
-  $('.header-menu').mouseleave(function() {
-    $('.header-menu').hide();
+  $('.header-menu-toggle').mouseleave(function() {
+    $('.header-menu-toggle').hide();
   });
 });
 

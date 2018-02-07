@@ -52,11 +52,15 @@ header nav { max-width: 1330px; width: 100%; margin: auto; height: inherit; }
   .header-cart { margin-left: 10px; } }
 @media screen and (max-width: 991px) { header nav { max-width: 702px; position: relative; }
   .header-menu-burger { display: block; float: left; margin-top: 18px; margin-left: 10px; cursor: pointer; }
-  .header-menu { display: none; }
+  .header-menu { display: none; position: absolute; margin: auto; text-align: center; left: 50%; right: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); top: 102px; width: 100%; background-color: rgba(255, 255, 255, 0.95); -webkit-box-shadow: 0 0 30px #57595b; box-shadow: 0 0 30px #57595b; }
+  .header-menu li { display: block; color: #57595b; padding: 15px 0; }
+  .header-menu li a { display: block; width: 100%; }
+  .header-menu li:hover { background-color: rgba(87, 89, 91, 0.9); color: #fff; }
   .header-search { margin-left: 10px; } }
 @media screen and (max-width: 767px) { header { height: 52px; }
   header nav { max-width: 522px; }
   .header-menu-burger { margin-top: 1px; margin-left: 10px; float: none; display: block; position: absolute; right: 225px; }
+  .header-menu { top: 70px; }
   .mobile-cart { display: inline-block; position: absolute; right: 0; margin-top: 1px; }
   .header-search, .header-cart, .header-cart-items, .header-account, .header-divider { display: none; }
   .header-account-mobile { display: block; position: absolute; right: 75px; }
@@ -69,9 +73,11 @@ header nav { max-width: 1330px; width: 100%; margin: auto; height: inherit; }
   .header-search form input { width: 310px; } }
 @media screen and (max-width: 575px) { header { height: auto; height: 107px; }
   header nav { max-width: 302px; padding-top: 10px; }
-  header nav a:first-child { background-color: red; }
   .header-logo { float: none; display: block; margin: 0 auto 12px auto; }
   .header-menu-burger { right: inherit; margin-left: 0; left: 0; }
+  .header-menu { top: 127px; }
+  .header-search { top: 127px; }
+  .header-search form input { width: 206px; }
   .header-search-mobile { right: 167px; }
   .header-account-mobile { right: 85px; }
   .header-burger-divider { right: 233px; }

@@ -205,6 +205,29 @@ header {
 	}
 	.header-menu {
 		display: none;
+	    position: absolute;
+	    margin: auto;
+	    text-align: center;
+	    left: 50%;
+		right: 50%;
+		transform: translateX(-50%);
+	    top: 102px;
+	    width: 100%;
+	    background-color: rgba(255, 255, 255, 0.95);
+	    box-shadow: 0 0 30px #57595b;
+	    li {
+	    	display: block;
+		    color: #57595b;
+		    padding: 15px 0;
+		    a {
+		    	display: block;
+		    	width: 100%;
+		    }
+	    }
+	    li:hover {
+	    	background-color: rgba(87, 89, 91, 0.9);
+		    color: #fff;
+	    }
 	}
 	.header-search {
 		margin-left: 10px;
@@ -224,6 +247,9 @@ header {
 		display: block;
 		position: absolute;
 		right: 225px;
+	}
+	.header-menu {
+		top: 70px;
 	}
 	.mobile-cart {
 		display: inline-block;
@@ -289,9 +315,6 @@ header {
 		nav {
 			max-width: 302px;
 			padding-top: 10px;
-			a:first-child {
-				background-color: red;
-			}
 		}
 	}
 	.header-logo {
@@ -303,6 +326,17 @@ header {
 		right: inherit;
 		margin-left: 0;
 		left: 0;
+	}
+	.header-menu {
+		top: 127px;
+	}
+	.header-search {
+		top: 127px;
+		form {
+			input {
+				width: 206px;
+			}
+		}
 	}
 	.header-search-mobile {
 		right: 167px;
