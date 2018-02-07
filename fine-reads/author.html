@@ -11,61 +11,44 @@
 <body>
 
 	<header>
-		<div class="header-desktop">
-			<a href="index.html"><img src="img/logo.png" class="header-logo" id="header-desktop-logo" alt=""></a>
-			<img src="img/mobile/menu-button.png" class="header-menu-burger" id="burger-desktop" alt="">
-			<ul id="menu-desktop">
+		<nav style="clearfix">
+			<a href="index.html"><img src="img/mobile/abbr-logo.png" class="header-logo-abbr" alt=""><img src="img/logo.png" class="header-logo" alt=""></a>
+			<img src="img/mobile/menu-button.png" class="header-menu-burger" alt="">
+			<img src="img/mobile/menu-divider.png" class="header-burger-divider" alt="">
+			<ul class="header-menu">
 				<li><a href="">Categories</a></li>
 				<li><a href="">Books</a></li>
 				<li><a href="">Authors</a></li>
 			</ul>
+			<img src="img/mobile/search-icon.png" class="header-search-mobile" alt="">
+			<img src="img/mobile/menu-divider.png" class="header-search-divider" alt="">
 			<div class="header-search">
 				<form>
 					<input type="text" placeholder="Search ...">
 					<button type="submit">GO</button>
 				</form>
 			</div>
-			<div class="cart-account">
-				<a href=""><img src="img/cart-icon.png" class="header-cart" alt=""></a>
+			<div class="cart-account clearfix">
+				<a href="cart.html"><img src="img/cart-icon.png" class="header-cart" alt=""></a>
 				<div class="header-cart-items">
 					<p id="cart-items-number">0</p>
 				</div>
+				<img src="img/header-divider.png" class="header-divider" alt="">
+				<a href="register.html">
+					<img src="img/account-icon.png" class="header-account" alt="">
+					<img src="img/mobile/account-icon.png" class="header-account-mobile" alt="">
+					<img src="img/mobile/menu-divider.png" class="header-account-divider" alt="">
+					<p class="account-text">Create<br>Account</p>
+				</a>
 				<img src="img/header-divider.png" class="header-divider" alt="">
 				<a href="login.html">
 					<img src="img/login-icon.png" class="header-account" alt="">
 					<p class="account-text">Member<br>Login</p>
 				</a>
-				<img src="img/header-divider.png" class="header-divider" alt="">
-				<a href="register.html">
-					<img src="img/account-icon.png" class="header-account" alt="">
-					<p class="account-text">Create<br>Account</p>
-				</a>
 			</div>
-		</div>
-		<div class="header-mobile">
-			<a href="index.html"><img src="img/logo.png" class="header-logo" alt=""></a>
-			<a href="index.html"><img src="img/mobile/abbr-logo.png" class="header-menu-button" id="scroll-logo" alt=""></a>
-			<img src="img/mobile/menu-button.png" class="header-menu-button header-menu-burger" id="burger-mobile" alt="">
-			<ul id="menu-mobile">
-				<li><a href="">Categories</a></li>
-				<li><a href="">Books</a></li>
-				<li><a href="">Authors</a></li>
-			</ul>
-			<img src="img/mobile/menu-divider.png" alt="">
-			<img src="img/mobile/search-icon.png" class="header-menu-button" id="search-mobile" alt="">
-			<div class="search-mobile-wrapper">
-				<div class="header-search" id="mobile-search">
-					<form>
-						<input type="text" placeholder="Search ...">
-						<button type="submit">GO</button>
-					</form>
-				</div>
-			</div>
-			<img src="img/mobile/menu-divider.png" alt="">
-			<a href="login.html"><img src="img/mobile/account-icon.png" class="header-menu-button" alt=""></a>
-			<img src="img/mobile/menu-divider.png" alt="">
-			<a href=""><img src="img/mobile/cart-icon.png" class="header-menu-button" alt=""></a>
-		</div>
+			<a href="cart.html"><img src="img/mobile/cart-icon.png" class="mobile-cart" alt=""></a>
+		</nav>
+		<div class="horizontal-divider"></div>
 	</header>
 
 	<section id="author">
