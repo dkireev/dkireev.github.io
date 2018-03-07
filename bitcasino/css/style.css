@@ -28,9 +28,22 @@ p, hr, h1 {
 	left: 360px;
 }
 .main-banner h1 {
+	width: 529px;
 	color: #fff;
 	font-size: 2.625em;
 	font-weight: normal;
+	padding-left: 237px;
+	padding-top: 136px;
+}
+.main-banner h2 {
+	width: 347px;
+	color: #fff;
+	font-size: 1.5em;
+	opacity: 0.5;
+	font-weight: normal;
+	padding-left: 237px;
+	padding-top: 10px;
+	line-height: 1.58;
 }
 .fire {
 	position: absolute;
