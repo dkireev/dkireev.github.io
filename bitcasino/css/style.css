@@ -10,7 +10,7 @@ p, hr, h1 {
 .wrapper {
 	width: 100%;
 	max-width: 1160px;
-	margin:  auto;
+	margin:  0 auto;
 	position:  relative;
 }
 .logo {
