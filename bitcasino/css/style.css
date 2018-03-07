@@ -1,0 +1,62 @@
+body {
+	font-family: Lato;
+	font-size: 16px;
+	overflow-x: hidden
+}
+p, hr, h1 {
+	margin: 0;
+	padding:  0;
+}
+.wrapper {
+	width: 100%;
+	max-width: 1160px;
+	margin:  auto;
+	position:  relative;
+}
+.logo {
+	position: absolute;
+	left: 0;
+	top: 42px;
+	width: 210px;
+	height: auto;
+}
+.main-banner {
+	width: 1172px;
+	height: 954px;
+	background: linear-gradient(307deg, #241750, #612b65);
+	position: relative;
+	left: 360px;
+}
+.main-banner h1 {
+	color: #fff;
+	font-size: 2.625em;
+	font-weight: normal;
+}
+.fire {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.roulette {
+	position: absolute;
+	bottom: 128px;
+	left: -41px;
+}
+.chip {
+	position: absolute;
+	top: 339px;
+	left: 56px;
+}
+footer {
+	height: 243px;
+	background: linear-gradient(349deg, #612b65, #24194a);
+}
+hr {
+	color: #fff;
+	opacity: 0.2;
+	margin-bottom: 25px;
+}
+footer p {
+	font-size: 0.75em;
+	color: rgba(255, 255, 255, 0.4);
+}
