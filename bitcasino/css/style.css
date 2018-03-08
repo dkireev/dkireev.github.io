@@ -25,7 +25,7 @@ body>.wrapper {
 }
 .singin {
 	width: 340px;
-	height: 423px;
+	height: 438px;
 	border-radius: 3px;
 	background-color: #fff;
 	position: absolute;
@@ -33,7 +33,10 @@ body>.wrapper {
 	left: 0;
 	z-index: 1;
 	box-shadow: 0 10px 43px 0 rgba(0, 0, 0, 0.08), 0 10px 43px 0 rgba(0, 0, 0, 0.08);
-	padding: 50px 60px;
+	padding: 35px 60px 50px 60px;
+}
+.singin-title {
+	font-size: 1.875em;
 }
 .main-banner {
 	width: 1172px;
@@ -50,6 +53,7 @@ body>.wrapper {
 	font-weight: normal;
 	padding-left: 237px;
 	padding-top: 136px;
+	letter-spacing: 0.25px;
 }
 .main-banner h2 {
 	width: 347px;
@@ -59,6 +63,7 @@ body>.wrapper {
 	font-weight: normal;
 	padding-left: 237px;
 	line-height: 1.58;
+	letter-spacing: 0.1px;
 }
 .fire {
 	position: absolute;
@@ -104,6 +109,14 @@ body>.wrapper {
 	letter-spacing: 0.5px;
 	position: relative;
 	top: 265px;
+}
+.submit {
+	padding-left: 105px;
+	margin-top: 7px;
+}
+.submit span {
+	font-size: 1.5em;
+	font-weight: bold;
 }
 footer {
 	height: 243px;
