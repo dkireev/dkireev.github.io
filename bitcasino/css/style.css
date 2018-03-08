@@ -80,10 +80,30 @@ body>.wrapper {
 	width: 761px;
 	height: 491px;
 	border-radius: 3px;
-	background: linear-gradient(320deg, #612b65, #241750);
-	position: absolute;
-	top: 889px;
+	background: linear-gradient(140deg, #612b65, #241750);
+	position: relative;
+	top: -65px;
 	left: 0;
+	text-align: center;
+	color: #fff;
+}
+.video p {
+	position: relative;
+	font-size: 1.5em;
+	top: 40px;
+}
+.video img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.video span {
+	text-transform: uppercase;
+	font-size: 0.625em;
+	letter-spacing: 0.5px;
+	position: relative;
+	top: 265px;
 }
 footer {
 	height: 243px;
