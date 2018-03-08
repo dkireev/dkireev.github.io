@@ -10,8 +10,8 @@ p, hr, h1 {
 .wrapper {
 	width: 100%;
 	max-width: 1160px;
-	margin:  0 auto;
-	position:  relative;
+	margin: 0 auto;
+	position: relative;
 }
 .logo {
 	position: absolute;
@@ -19,6 +19,18 @@ p, hr, h1 {
 	top: 42px;
 	width: 210px;
 	height: auto;
+}
+.singin {
+	width: 340px;
+	height: 423px;
+	border-radius: 3px;
+	background-color: #fff;
+	position: absolute;
+	top: 147px;
+	left: 0;
+	z-index: 1;
+	box-shadow: 0 10px 43px 0 rgba(0, 0, 0, 0.08), 0 10px 43px 0 rgba(0, 0, 0, 0.08);
+	padding: 50px 60px;
 }
 .main-banner {
 	width: 1172px;
@@ -31,6 +43,7 @@ p, hr, h1 {
 	width: 529px;
 	color: #fff;
 	font-size: 2.625em;
+	line-height: 1.25;
 	font-weight: normal;
 	padding-left: 237px;
 	padding-top: 136px;
@@ -42,7 +55,6 @@ p, hr, h1 {
 	opacity: 0.5;
 	font-weight: normal;
 	padding-left: 237px;
-	padding-top: 10px;
 	line-height: 1.58;
 }
 .fire {
@@ -58,11 +70,16 @@ p, hr, h1 {
 .chip {
 	position: absolute;
 	top: 339px;
-	left: 56px;
+	left: 72px;
+	z-index: 3;
 }
 footer {
 	height: 243px;
 	background: linear-gradient(349deg, #612b65, #24194a);
+}
+.footer-logos img {
+	display: inline-block;
+	vertical-align: middle;
 }
 hr {
 	color: #fff;
