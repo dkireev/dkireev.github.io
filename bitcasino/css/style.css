@@ -110,6 +110,70 @@ body>.wrapper {
 	position: relative;
 	top: 265px;
 }
+.features {
+	position: absolute;
+	width: 360px;
+	height: 368px;
+	right: 0;
+	top: 985px;
+	background-color: rgba(51, 51, 51, 0.1);
+}
+.features p {
+	position: absolute;
+	bottom: 25px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 0.875em;
+	line-height: 1.43;
+}
+.feature-1 {
+	width: 50%;
+	height: 50%;
+	box-sizing: border-box;
+	display: inline-block;
+	float: left;
+	padding-left: 25px;
+	padding-top: 62px;
+	position: relative;
+	border-right: 1px solid rgba(51, 51, 51, 0.1);
+	border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+	background-color: #fff;
+}
+.feature-2 {
+	width: 50%;
+	height: 50%;
+	box-sizing: border-box;
+	display: inline-block;
+	float: left;
+	padding-left: 25px;
+	padding-top: 62px;
+	position: relative;
+	border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+	background-color: #fff;
+}
+.feature-3 {
+	width: 50%;
+	height: 50%;
+	box-sizing: border-box;
+	display: inline-block;
+	float: left;
+	padding-left: 25px;
+	padding-top: 62px;
+	position: relative;
+	border-right: 1px solid rgba(51, 51, 51, 0.1);
+	background-color: #fff;
+}
+.feature-4 {
+	width: 50%;
+	height: 50%;
+	box-sizing: border-box;
+	display: inline-block;
+	float: left;
+	padding-left: 25px;
+	padding-top: 62px;
+	position: relative;
+	background-color: #fff;
+}
 .submit {
 	padding-left: 105px;
 	margin-top: 7px;
