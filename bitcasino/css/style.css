@@ -13,6 +13,9 @@ p, hr, h1 {
 	margin: 0 auto;
 	position: relative;
 }
+body>.wrapper {
+	height: 1594px;
+}
 .logo {
 	position: absolute;
 	left: 0;
@@ -73,13 +76,26 @@ p, hr, h1 {
 	left: 72px;
 	z-index: 3;
 }
+.video {
+	width: 761px;
+	height: 491px;
+	border-radius: 3px;
+	background: linear-gradient(320deg, #612b65, #241750);
+	position: absolute;
+	top: 889px;
+	left: 0;
+}
 footer {
 	height: 243px;
 	background: linear-gradient(349deg, #612b65, #24194a);
 }
-.footer-logos img {
+footer img {
 	display: inline-block;
 	vertical-align: middle;
+	padding: 44px 36px 29px 36px;
+}
+footer img:first-child {
+	padding-left: 75px;
 }
 hr {
 	color: #fff;
@@ -88,5 +104,7 @@ hr {
 }
 footer p {
 	font-size: 0.75em;
+	line-height: 1.4;
+	letter-spacing: 0.2px;
 	color: rgba(255, 255, 255, 0.4);
 }
