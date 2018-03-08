@@ -118,6 +118,10 @@ body>.wrapper {
 	top: 985px;
 	background-color: rgba(51, 51, 51, 0.1);
 }
+.features img {
+	z-index: 2;
+	position: relative;
+}
 .features p {
 	position: absolute;
 	bottom: 25px;
@@ -125,58 +129,50 @@ body>.wrapper {
 	font-weight: bold;
 	font-size: 0.875em;
 	line-height: 1.43;
+	z-index: 2;
 }
-.feature-1 {
+.features-item {
 	width: 50%;
 	height: 50%;
 	box-sizing: border-box;
 	display: inline-block;
 	float: left;
+	position: relative;
+	background-color: #fff;
 	padding-left: 25px;
 	padding-top: 62px;
-	position: relative;
+}
+#feature-1 {
 	border-right: 1px solid rgba(51, 51, 51, 0.1);
 	border-bottom: 1px solid rgba(51, 51, 51, 0.1);
-	background-color: #fff;
 }
-.feature-2 {
-	width: 50%;
-	height: 50%;
-	box-sizing: border-box;
-	display: inline-block;
-	float: left;
-	padding-left: 25px;
-	padding-top: 62px;
-	position: relative;
+#feature-2 {
 	border-bottom: 1px solid rgba(51, 51, 51, 0.1);
-	background-color: #fff;
 }
-.feature-3 {
-	width: 50%;
-	height: 50%;
-	box-sizing: border-box;
-	display: inline-block;
-	float: left;
-	padding-left: 25px;
-	padding-top: 62px;
-	position: relative;
+#feature-3 {
 	border-right: 1px solid rgba(51, 51, 51, 0.1);
-	background-color: #fff;
 }
-.feature-4 {
-	width: 50%;
-	height: 50%;
-	box-sizing: border-box;
-	display: inline-block;
-	float: left;
-	padding-left: 25px;
-	padding-top: 62px;
-	position: relative;
-	background-color: #fff;
-}
-.feature-1:hover {
-	left: 9px;
+.feature-hover {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
 	top: -9px;
+	left: 9px;
+	background: linear-gradient(127deg, #612b65, #241750);
+	z-index: 1;
+}
+.features-item:hover .feature-hover {
+	display: block;
+}
+.features-item:hover {
+	color: #fff;
+	background-color: rgba(200, 200, 200, 0.1);
+	padding-left: 34px;
+	padding-top: 53px;
+}
+.features-item:hover p {
+	bottom: 34px;
 }
 .submit {
 	padding-left: 105px;
@@ -185,6 +181,38 @@ body>.wrapper {
 .submit span {
 	font-size: 1.5em;
 	font-weight: bold;
+}
+.submit form {
+	display: inline-block;
+	margin-left: 36px;
+}
+.submit input[type='email'] {
+	outline: none;
+	width: 595px;
+	height: 50px;
+	line-height: 50px;
+	box-sizing: border-box;
+	padding-left: 27px;
+	border-radius: 3px;
+	border: 1px solid #d8d8d8;
+	color: #888;
+	font-size: 1.063em;
+}
+.submit input[type='submit'] {
+	width: 134px;
+	height: 50px;
+	border-radius: 3px;
+	background-color: #ff5111;
+	border: none;
+	outline: none;
+	color: #fff;
+	font-size: 1.125em;
+	margin-left: -18px;
+	position: relative;
+	top: 1px;
+}
+.submit input[type='submit']:hover {
+	cursor: pointer;
 }
 footer {
 	height: 243px;
