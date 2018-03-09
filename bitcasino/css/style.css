@@ -14,7 +14,7 @@ p, hr, h1 {
 	position: relative;
 }
 body>.wrapper {
-	height: 1594px;
+	height: 1566px;
 }
 .logo {
 	position: absolute;
@@ -158,12 +158,12 @@ body>.wrapper {
 	z-index: 3;
 }
 .video {
-	width: 761px;
-	height: 491px;
-	border-radius: 3px;
+	width: 769px;
+	height: 433px;
+	border-radius: 4px;
 	background: linear-gradient(140deg, #612b65, #241750);
 	position: relative;
-	top: -65px;
+	top: -34px;
 	left: 0;
 	text-align: center;
 	color: #fff;
@@ -193,9 +193,10 @@ body>.wrapper {
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	top: -16px;
+	top: 0;
 	left: 0;
 	display: none;
+	border-radius: 3px;
 }
 .features {
 	position: absolute;
@@ -263,7 +264,7 @@ body>.wrapper {
 }
 .submit {
 	padding-left: 105px;
-	margin-top: 7px;
+	margin-top: 37px;
 }
 .submit span {
 	font-size: 1.5em;
@@ -436,6 +437,10 @@ footer p {
 	}
 	.video {
 		width: 100%;
+		height: 399px;
+	}
+	#watch-text {
+		top: 248px;
 	}
 	.features {
 		width: 100%;
