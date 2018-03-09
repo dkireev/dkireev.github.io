@@ -693,6 +693,15 @@ footer p {
 	#watch-text {
 		top: 112px;
 	}
+	.features {
+		height: 300px;
+	}
+	.features-item {
+		padding-top: 35px;
+	}
+	.features-item:hover {
+		padding-top: 30px;
+	}
 	.features p {
 		font-size: 0.813em;
 	}
