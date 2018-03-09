@@ -1,6 +1,7 @@
 body {
 	font-family: Lato;
 	font-size: 16px;
+	position: relative;
 	overflow-x: hidden;
 }
 p, hr, h1 {
