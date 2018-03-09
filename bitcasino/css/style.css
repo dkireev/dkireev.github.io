@@ -328,18 +328,75 @@ footer p {
 
 @media screen and (max-width:1199px) {
 	.wrapper {
-		width: 1199px;
+		padding-left: 20px;
+		padding-right: 20px;
+		width: 952px;
+	}
+	body>.wrapper {
+		height: auto;
+	}
+	.logo {
+		left: 20px;
+	}
+	.signin {
+		left: 20px;
+		width: 320px;
+	}
+	.checkbox:not(#foo) + label {
+		left: -62px;
 	}
 	.main-banner {
 		width: 815px;
 	}
-}
-
-@media screen and (max-width:991px) {
-	.wrapper {
-		width: 1199px;
+	.main-banner h1 {
+		padding-left: 195px;
+		font-size: 2.1em;
+		width: 445px;
 	}
-	.main-banner {
-		width: 815px;
+	.main-banner h2 {
+		padding-left: 195px;
+	}
+	.chip {
+		left: 52px;
+	}
+	.submit {
+		padding-left: 95px;
+		margin-bottom: 90px;
+		margin-top: 75px;
+	}
+	.submit span {
+		font-size: 1.25em;
+	}
+	.submit input[type='email'] {
+		width: 436px;
+		font-size: 1em;
+	}
+	.video {
+		margin: 0 auto;
+	}
+	.features {
+		position: relative;
+		top: 5px;
+		margin: auto;
+		width: 761px;
+		height: 184px;
+	}
+	.features-item {
+		width: 25%;
+		height: 100%;
+	}
+	#feature-1 {
+		border-bottom: none;
+	}
+	#feature-2 {
+		border-bottom: none;
+		border-right: 1px solid rgba(51, 51, 51, 0.1);
+	}
+	.img-wrapper {
+		width: 859px;
+	}
+	footer img {
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 }
