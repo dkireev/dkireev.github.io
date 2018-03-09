@@ -454,7 +454,6 @@ footer p {
 	}
 	.submit input[type='email'] {
 		width: 587px;
-		font-size: 1em;
 	}
 	footer img {
 		padding-left: 0;
@@ -463,4 +462,16 @@ footer p {
 	footer img:last-child {
 		padding-right: 0;
 	}
- }
+}
+@media screen and (max-width:767px) {
+	.wrapper {
+		width: 516px;
+	}
+	.submit input[type='email'] {
+		width: 395px;
+	}
+	footer {
+		height: auto;
+		padding-bottom: 20px;
+	}
+}
