@@ -1,4 +1,4 @@
-//setting feature 1 images
+//setting-up feature-1 images
 document.getElementById('feature-1').onmouseover = function() {
 	this.getElementsByTagName('img')[0].setAttribute("src", "img/feature-1-active.png");
 }
@@ -6,7 +6,7 @@ document.getElementById('feature-1').onmouseleave = function() {
 	this.getElementsByTagName('img')[0].setAttribute("src", "img/feature-1.png");
 }
 
-//setting feature 2 images
+//setting-up feature-2 images
 document.getElementById('feature-2').onmouseover = function() {
 	this.getElementsByTagName('img')[0].setAttribute("src", "img/feature-2-active.png");
 }
@@ -14,7 +14,7 @@ document.getElementById('feature-2').onmouseleave = function() {
 	this.getElementsByTagName('img')[0].setAttribute("src", "img/feature-2.png");
 }
 
-//setting feature 3 images
+//setting-up feature-3 images
 document.getElementById('feature-3').onmouseover = function() {
 	this.getElementsByTagName('img')[0].setAttribute("src", "img/feature-3-active.png");
 }
@@ -22,10 +22,20 @@ document.getElementById('feature-3').onmouseleave = function() {
 	this.getElementsByTagName('img')[0].setAttribute("src", "img/feature-3.png");
 }
 
-//setting feature 4 images
+//setting up feature-4 images
 document.getElementById('feature-4').onmouseover = function() {
 	this.getElementsByTagName('img')[0].setAttribute("src", "img/feature-4-active.png");
 }
 document.getElementById('feature-4').onmouseleave = function() {
 	this.getElementsByTagName('img')[0].setAttribute("src", "img/feature-4.png");
+}
+
+//setting up video playback
+document.getElementById('play-video').onclick = function() {
+	document.getElementById('promo-video').style.display = 'block';
+	document.getElementById('promo-video').play();
+}
+document.getElementById('watch-text').onclick = function() {
+	document.getElementById('promo-video').style.display = 'block';
+	document.getElementById('promo-video').play();
 }

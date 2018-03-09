@@ -12,17 +12,19 @@
 <body>
 	<div class="wrapper">
 		<img src="img/logo.svg" class="logo" alt="">
-		<div class="singin">
-			<p class="singin-title">Sign In</p>
-			<form action="" method="" id="singin-form">
-				<input type="text">
-				<input type="password">
-				<input type="checkbox" value="googleAuthenticator">
+		<div class="signin">
+			<p class="signin-title">Sign In</p>
+			<form action="" method="" id="signin-form">
+				<input type="text" placeholder="Username" required>
+				<input type="password" placeholder="Password" required>
+				<a href="" class="forgot-pass">Forgot?</a>
+				<input type="checkbox" value="googleAuthenticator" id="google-true" class="checkbox">
+				<label for="google-true">I use Google Authenticator</label>
 				<input type="submit" value="Sign In">
-				<p>By singing in an account, I hereby confirm that I am above 18 years old and accept the Terms &amp; Conditions.</p>
-				<p>Don't have an account?</p>
-				<a href="">Create account</a>
 			</form>
+			<p class="signin-text">By signing in an account, I hereby confirm that I am above 18 years old and accept the Terms &amp; Conditions.</p>
+			<p class="signin-donthave">Don't have an account?</p>
+			<a href="" class="create-account">Create account</a>
 		</div>
 		<div class="main-banner">
 			<h1>Win a mind-blowing Singapore F1 premium package!</h1>
@@ -33,8 +35,9 @@
 		</div>
 		<div class="video">
 			<p>Advantages of Bitcoin Gaming</p>
-			<img class="play-video" src="img/play-button.png" alt="">
-			<span>Watch video</span>
+			<img id="play-video" src="img/play-button.png" alt="">
+			<span id="watch-text">Watch video</span>
+			<video id="promo-video" controls><source src="https://s3.amazonaws.com/cdn.coingaming.io/bitcasino/videos/topfive-en.mp4" type="video/mp4"></video>
 		</div>
 		<div class="features">
 			<div class="features-item" id="feature-1">
@@ -69,13 +72,15 @@
 	</div>
 	<footer>
 		<div class="wrapper">
-			<img src="img/egr-2017.png" alt="">
-			<img src="img/egr-2016.png" alt="">
-			<img src="img/askgamblers.png" alt="">
-			<img src="img/bitcoin-foundation.png" alt="">
-			<img src="img/bitcoin-accepted.png" alt="">
-			<img src="img/ceg-seal.png" alt="">
-			<img src="img/18-plus.png" alt="">
+			<div class="img-wrapper">
+				<img src="img/egr-2017.png" alt="">
+				<img src="img/egr-2016.png" alt="">
+				<img src="img/askgamblers.png" alt="">
+				<img src="img/bitcoin-foundation.png" alt="">
+				<img src="img/bitcoin-accepted.png" alt="">
+				<img src="img/ceg-seal.png" alt="">
+				<img src="img/18-plus.png" alt="">
+			</div>
 			<hr>
 			<p>Bitcasino.io is owned and operated by Luckbox Ent. Ltd. The provision and regulation of the casino games offered on Bitcasino.io are through mBet Solutions NV who are licensed and regulated by the Government of Curacao under the license no.1668/JAZ. NetEnt games are operated in cooperation with Elec Games N.V. who are licensed and regulated by the Government of Curacao under the same license no. 1668/JAZ.</p>
 		</div>
