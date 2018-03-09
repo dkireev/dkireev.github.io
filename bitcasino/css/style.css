@@ -330,7 +330,7 @@ footer p {
 	.wrapper {
 		padding-left: 20px;
 		padding-right: 20px;
-		width: 952px;
+		width: 932px;
 	}
 	body>.wrapper {
 		height: auto;
@@ -400,3 +400,67 @@ footer p {
 		padding-right: 20px;
 	}
 }
+
+@media screen and (max-width:991px) {
+	.wrapper {
+		width: 708px;
+	}
+	.main-banner {
+		left: 280px;
+		width: 575px;
+	}
+	.main-banner h1 {
+		padding-left: 100px;
+	}
+	.main-banner h2 {
+		padding-left: 100px;
+	}
+	.chip {
+		top: 390px;
+	}
+	.signin {
+		width: 280px;
+		padding: 35px 35px 50px 35px;
+	}
+	.signin input[type="text"] {
+		font-size: 1em;
+	}
+	.signin input[type="password"] {
+		font-size: 1em;
+	}
+	.forgot-pass {
+		right: 65px;
+	}
+	.checkbox:not(#foo) + label {
+		left: -42px;
+	}
+	.video {
+		width: 100%;
+	}
+	.features {
+		width: 100%;
+	}
+	.submit {
+		padding-left: 0;
+		text-align: center;
+	}
+	.submit span {
+		font-size: 1.25em;
+		margin-bottom: 20px;
+		display: block;
+	}
+	.submit form {
+		margin-left: 0;
+	}
+	.submit input[type='email'] {
+		width: 587px;
+		font-size: 1em;
+	}
+	footer img {
+		padding-left: 0;
+		padding-right: 21px;
+	}
+	footer img:last-child {
+		padding-right: 0;
+	}
+ }
