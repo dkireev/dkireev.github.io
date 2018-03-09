@@ -1,7 +1,7 @@
 body {
 	font-family: Lato;
 	font-size: 16px;
-	overflow-x: hidden
+	overflow-x: hidden;
 }
 p, hr, h1 {
 	margin: 0;
@@ -123,6 +123,7 @@ body>.wrapper {
 	background: linear-gradient(307deg, #241750, #612b65);
 	position: relative;
 	left: 360px;
+	overflow-x: hidden;
 }
 .main-banner h1 {
 	width: 529px;
@@ -511,6 +512,7 @@ footer p {
 		width: 100%;
 		height: 1190px;
 		background: linear-gradient(307deg, #241750, #612b65);
+		overflow-x: hidden;
 	}
 	.fire-mobile, .roulette-mobile, .chip-mobile {
 		display: block;
@@ -616,5 +618,104 @@ footer p {
 	.img-wrapper img:last-child {
 		width: 23px;
 		height: auto;
+	}
+}
+
+@media screen and (max-width:575px) {
+	.wrapper {
+		width: 300px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.logo {
+		left: 10px;
+	}
+	.main-banner {
+		width: 100%;
+	}
+	.main-banner h1 {
+		font-size: 1.85em;
+		width: 100%;
+	}
+	.main-banner h2 {
+		top: 255px;
+	}
+	.mobile-banner {
+		height: 1050px;
+	}
+	.signin {
+		left: 10px;
+		width: 260px;
+		padding: 20px 20px 30px 20px;
+		height: auto;
+	}
+	.signin-title {
+		font-size: 1.5em;
+	}
+	.signin input[type="text"], .signin input[type="password"] {
+		margin-top: 25px;
+	}
+	.forgot-pass {
+		top: 134px;
+		right: 35px;
+	}
+	.checkbox:not(#foo) {
+		margin-bottom: 54px;
+	}
+	.checkbox:not(#foo) + label {
+	    left: -32px;
+	    top: 22px;
+	}
+	.signin-text {
+		margin-bottom: 20px;
+	}
+	.roulette-mobile {
+		width: 323px;
+		left: auto;
+		right: 2px;
+	}
+	.chip-mobile {
+		width: 60px;
+		bottom: 180px;
+		left: auto;
+		right: 230px;
+	}
+	.video {
+		height: 169px;
+		margin-top: 175px;
+	}
+	.video p {
+		font-size: 1.25em;
+		top: 17px;
+	}
+	#watch-text {
+		top: 112px;
+	}
+	.features p {
+		font-size: 0.813em;
+	}
+	.feature-hover {
+		top: -5px;
+		left: 5px;
+	}
+	.submit {
+		margin-bottom: 50px;
+		margin-top: 50px;
+	}
+	.submit form {
+		width: 100%;
+	}
+	.submit input[type='email'] {
+		width: 100%;
+		padding-left: 15px;
+		font-size: 0.813em;
+		margin-bottom: 10px;
+	}
+	.submit input[type='submit'] {
+		width: 100%;
+		margin-left: 0;
+	}
+	footer img {
+		padding-right: 0;
 	}
 }
