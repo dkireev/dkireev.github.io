@@ -39,3 +39,19 @@ document.getElementById('watch-text').onclick = function() {
 	document.getElementById('promo-video').style.display = 'block';
 	document.getElementById('promo-video').play();
 }
+
+// setting up logo switching on mobiles
+window.onload = function() {
+  logoSwith();
+}
+window.onresize = function() {
+  logoSwith();
+}
+function logoSwith() {
+	var a = document.getElementsByClassName('mobile-banner')[0];
+	var b = getComputedStyle(a);
+	var c = b.display;
+	if (c == "block") {
+		document.getElementById('logo').setAttribute('src', 'img/logo-light.png');
+	} else document.getElementById('logo').setAttribute('src', 'img/logo.svg');
+}
