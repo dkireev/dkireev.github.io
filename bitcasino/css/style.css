@@ -123,7 +123,6 @@ body>.wrapper {
 	background: linear-gradient(307deg, #241750, #612b65);
 	position: relative;
 	left: 360px;
-	overflow-x: hidden;
 }
 .main-banner h1 {
 	width: 529px;
