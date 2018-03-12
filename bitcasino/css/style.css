@@ -736,9 +736,11 @@ footer p {
 	}
 	.features-item {
 		padding-top: 35px;
+		padding-left: 25px;
 	}
 	.features-item:hover {
 		padding-top: 30px;
+		padding-left: 25px;
 	}
 	.features p {
 		font-size: 0.813em;
