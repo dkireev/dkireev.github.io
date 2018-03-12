@@ -666,6 +666,7 @@ footer p {
 	}
 	.logo {
 		left: 7px;
+		top: 20px;
 	}
 	.main-banner {
 		width: 100%;
@@ -673,18 +674,20 @@ footer p {
 	.main-banner h1 {
 		font-size: 1.85em;
 		width: 100%;
+		padding-top: 110px;
 	}
 	.main-banner h2 {
-		top: 255px;
+		top: 230px;
 	}
 	.mobile-banner {
-		height: 1050px;
+		height: 1025px;
 	}
 	.signin {
 		left: 7px;
 		width: 266px;
 		padding: 20px 20px 30px 20px;
 		height: auto;
+		top: 365px;
 	}
 	.signin-title {
 		font-size: 1.5em;
@@ -719,7 +722,7 @@ footer p {
 	}
 	.video {
 		height: 169px;
-		margin-top: 175px;
+		margin-top: 150px;
 	}
 	.video p {
 		font-size: 1.25em;
