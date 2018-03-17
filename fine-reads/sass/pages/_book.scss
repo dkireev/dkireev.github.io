@@ -8,14 +8,60 @@
 		font-weight: bold;
 		color: #2e2e2e;
 	}
+	h3 {
+		text-transform: none;
+		font-size: 1.5em;
+		margin-left: 0;
+		margin-bottom: 20px;
+		font-weight: bold;
+	}
 	.category-section-row {
 		margin-top: 40px;
 		padding-bottom: 0;
-		h3 {
-			text-transform: none;
-			font-size: 1.5em;
+	}
+	.available-conditions {
+		margin-bottom: 50px;
+		.order-item {
 			margin-left: 0;
+			width: 100%;
+			p {
+				padding-left: 0;
+				padding-right: 20px;
+			}
+			.order-item-row {
+				height: 40px;
+			}
 		}
+		.order-item-left {
+			width: 40%;
+		}
+		.order-item-center {
+			width: 20%;
+			float: left;
+		}
+		.order-item-right {
+			width: auto;
+		}
+		.order-item ul {
+			display: table;
+			height: 100%;
+
+		}
+		.order-item li {
+			display: table-cell;
+			vertical-align: middle;
+			padding-left: 0;
+			padding-right: 5px;
+			position: relative;
+		}
+		.order-item li:first-child {
+			width: 200px;
+		}
+		.order-item li:last-child {
+			width: 145px;
+		}
+		.section-item-button {
+			display: inline-block;		}
 	}
 }
 .book-wrapper {
@@ -250,6 +296,16 @@
 	cursor: default;
 }
 @media screen and (max-width:1199px) {
+	#book {
+		.available-conditions {
+			.order-item-left {
+				width: 35%;
+			}
+			.order-item li:first-child {
+				width: 157px;
+			}
+		}
+	}
 	.book-wrapper {
 		.book-cover {
 			margin-right: 20px;
@@ -285,6 +341,19 @@
 	}
 }
 @media screen and (max-width:991px) {
+	#book {
+		.available-conditions {
+			.order-item-left {
+				width: 30%;
+			}
+			.order-item-center {
+				width: 15%;
+			}
+			.order-item li:first-child {
+				width: 130px;
+			}
+		}
+	}
 	.book-wrapper {
 		.book-cover {
 			float: none;
@@ -326,6 +395,17 @@
 				font-size: 1.1em;
 			}
 		}
+		.available-conditions {
+			.order-item-left {
+				width: 60%;
+			}
+			.order-item-center {
+				width: 40%;
+			}
+			.order-item li:first-child {
+				width: 187px;
+			}
+		}
 	}
 	.book-details {
 		width: 290px;
@@ -361,6 +441,36 @@
 @media screen and (max-width:575px) {
 	#book {
 		padding: 9px 0 30px 0;
+		.available-conditions {
+			.order-item-title {
+				p {
+					margin-bottom: 0.5rem;
+				}
+			}
+			.order-item-left {
+				width: 60%;
+			}
+			.order-item-center {
+				width: 40%;
+			}
+			.order-item-right {
+				width: 100%;
+			}
+			.order-item ul {
+				width: 100%;
+				margin-bottom: 0.5rem;
+			}
+			.order-item li:first-child {
+				width: 40%;
+			}
+			.order-item li:nth-child(2) {
+				width: 33%;
+			}
+			.order-item li:last-child {
+				width: 27%;
+				min-width: 100px;
+			}
+		}
 	}
 	.book-wrapper {
 		.book-cover {

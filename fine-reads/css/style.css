@@ -504,6 +504,8 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 
 .order-items-wrapper { margin: 0 auto; max-width: 900px; width: 100%; padding: 30px; -webkit-box-shadow: 0 0 40px #e9e9e9; box-shadow: 0 0 40px #e9e9e9; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .order-items-wrapper .order-item { margin-left: 0; }
+.order-items-wrapper .order-item-row a { color: inherit; }
+.order-items-wrapper .order-item-row p { padding-right: 5px; }
 .order-items-wrapper .order-shipping, .order-items-wrapper .order-billing { width: 250px; float: left; color: #57595b; margin-bottom: 15px; }
 .order-items-wrapper .order-shipping h6, .order-items-wrapper .order-shipping p, .order-items-wrapper .order-billing h6, .order-items-wrapper .order-billing p { margin-bottom: 0; line-height: 1.6; font-size: .94em; }
 .order-items-wrapper .order-shipping h6, .order-items-wrapper .order-billing h6 { font-weight: bold; }
@@ -612,6 +614,8 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 #cart .order-item li:nth-child(2) { width: 170px; position: relative; }
 #cart .order-item li:nth-child(2) .quantity-wrapper { position: absolute; top: -24px; }
 #cart .order-item li:nth-child(3) { width: 105px; }
+#cart .order-item-row a { color: inherit; }
+#cart .order-item-row p { padding-right: 5px; }
 #cart .amount { display: inline-block; width: 38px; height: 38px; border-top: 1px solid #2c3e50; border-bottom: 1px solid #2c3e50; border-left: none; border-right: none; outline: none; background: none; float: left; font-size: .94em; line-height: 38px; text-align: center; color: #57595b; }
 #cart button.minus { width: 38px; height: 38px; border: 1px solid #2c3e50; background: none; outline: none; cursor: pointer; font-size: 1.25em; color: #2c3e50; float: left; }
 #cart button.plus { width: 38px; height: 38px; background: #2c3e50; border: none; outline: none; cursor: pointer; font-size: 1.25em; color: #fff; float: left; }
@@ -662,6 +666,8 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
   #cart .order-total-wrapper .order-total-text { width: 70%; padding-left: 15px; }
   #cart .order-total-wrapper .order-total-number { width: 30%; } }
 #checkout { padding: 60px 0 110px 0; }
+#checkout .order-item-row a { color: inherit; }
+#checkout .order-item-row p { padding-right: 5px; }
 #checkout .invalid-feedback { margin-left: 100px; }
 #checkout .card-details { margin-left: 120px; }
 #checkout h5 { text-transform: uppercase; font-size: 1em; font-weight: bold; margin-left: 164px; }
@@ -760,8 +766,20 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
   .author-biography table tr:last-child { display: none; } }
 #book { padding: 60px 0 90px 0; }
 #book h4 { margin-left: 6px; margin-right: 6px; padding-bottom: 10px; border-bottom: 1px solid #ded7d3; font-weight: bold; color: #2e2e2e; }
+#book h3 { text-transform: none; font-size: 1.5em; margin-left: 0; margin-bottom: 20px; font-weight: bold; }
 #book .category-section-row { margin-top: 40px; padding-bottom: 0; }
-#book .category-section-row h3 { text-transform: none; font-size: 1.5em; margin-left: 0; }
+#book .available-conditions { margin-bottom: 50px; }
+#book .available-conditions .order-item { margin-left: 0; width: 100%; }
+#book .available-conditions .order-item p { padding-left: 0; padding-right: 20px; }
+#book .available-conditions .order-item .order-item-row { height: 40px; }
+#book .available-conditions .order-item-left { width: 40%; }
+#book .available-conditions .order-item-center { width: 20%; float: left; }
+#book .available-conditions .order-item-right { width: auto; }
+#book .available-conditions .order-item ul { display: table; height: 100%; }
+#book .available-conditions .order-item li { display: table-cell; vertical-align: middle; padding-left: 0; padding-right: 5px; position: relative; }
+#book .available-conditions .order-item li:first-child { width: 200px; }
+#book .available-conditions .order-item li:last-child { width: 145px; }
+#book .available-conditions .section-item-button { display: inline-block; }
 
 .book-wrapper { margin: 0 auto 40px auto; position: relative; }
 .book-wrapper .book-cover { float: left; margin-right: 35px; width: 208px; height: auto; cursor: pointer; }
@@ -826,7 +844,9 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 
 .book-review-feedback-hidden { line-height: 1.4em; cursor: default; }
 
-@media screen and (max-width: 1199px) { .book-wrapper .book-cover { margin-right: 20px; }
+@media screen and (max-width: 1199px) { #book .available-conditions .order-item-left { width: 35%; }
+  #book .available-conditions .order-item li:first-child { width: 157px; }
+  .book-wrapper .book-cover { margin-right: 20px; }
   .book-details { width: 422px; }
   .book-details .book-by-author { font-size: .81em; }
   .book-details img { -webkit-box-shadow: none; box-shadow: none; margin-right: 15px; width: 50%; max-width: 147px; height: auto; }
@@ -835,7 +855,10 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
   .book-description { width: 422px; }
   .book-review-item { padding-left: 20px; }
   .book-review-item .book-review-name { margin-left: 20px; } }
-@media screen and (max-width: 991px) { .book-wrapper .book-cover { float: none; display: inline-block; margin-bottom: 45px; }
+@media screen and (max-width: 991px) { #book .available-conditions .order-item-left { width: 30%; }
+  #book .available-conditions .order-item-center { width: 15%; }
+  #book .available-conditions .order-item li:first-child { width: 130px; }
+  .book-wrapper .book-cover { float: none; display: inline-block; margin-bottom: 45px; }
   .book-details { width: 470px; float: none; display: inline-block; vertical-align: top; }
   .book-details h3 { font-size: 1.37em; }
   .book-description { width: 412px; float: none; }
@@ -843,6 +866,9 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
   .book-review-item { position: relative; }
   .book-review-item .book-review-text span { position: absolute; top: 10px; right: 0; } }
 @media screen and (max-width: 767px) { #book .category-section-row h3 { font-size: 1.1em; }
+  #book .available-conditions .order-item-left { width: 60%; }
+  #book .available-conditions .order-item-center { width: 40%; }
+  #book .available-conditions .order-item li:first-child { width: 187px; }
   .book-details { width: 290px; }
   .book-details h3 { font-size: 1.12em; }
   .buy-book { width: 100%; display: block; position: relative; padding-left: 100px; padding-right: 100px; top: 0; margin-bottom: 20px; }
@@ -851,6 +877,14 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
   .book-review-item { position: relative; padding-left: 0; }
   .book-review-item .book-review-text { width: 100%; } }
 @media screen and (max-width: 575px) { #book { padding: 9px 0 30px 0; }
+  #book .available-conditions .order-item-title p { margin-bottom: 0.5rem; }
+  #book .available-conditions .order-item-left { width: 60%; }
+  #book .available-conditions .order-item-center { width: 40%; }
+  #book .available-conditions .order-item-right { width: 100%; }
+  #book .available-conditions .order-item ul { width: 100%; margin-bottom: 0.5rem; }
+  #book .available-conditions .order-item li:first-child { width: 40%; }
+  #book .available-conditions .order-item li:nth-child(2) { width: 33%; }
+  #book .available-conditions .order-item li:last-child { width: 27%; min-width: 100px; }
   .book-wrapper .book-cover { width: 120px; height: 151px; margin-right: 5%; }
   .book-wrapper .see-preview { left: 42px; top: 167px; }
   .book-details { width: 54%; }

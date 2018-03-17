@@ -1,5 +1,13 @@
 #checkout {
     padding: 60px 0 110px 0;
+    .order-item-row {
+        a {
+            color: inherit;
+        }
+        p {
+            padding-right: 5px;
+        }
+    }
     .invalid-feedback {
         margin-left: 100px;
     }

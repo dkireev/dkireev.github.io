@@ -40,7 +40,7 @@ window.onload = function() {
     articleItemsInSlideSet();
     articleSlideWidth = (articleItemWidth + articleItemMargin) * articleSlideItems;
   }
-  if (document.getElementById('cart') || document.getElementById('checkout') || document.getElementById('details') || document.getElementById('books')) {
+  if (document.getElementById('cart') || document.getElementById('checkout') || document.getElementById('details') || document.getElementById('books') || document.getElementById('book')) {
     memberTitleToggle();
   }
   if (document.getElementById('success')) {

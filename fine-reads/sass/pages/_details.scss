@@ -89,6 +89,14 @@
 	.order-item {
 		margin-left: 0;
 	}
+	.order-item-row {
+        a {
+            color: inherit;
+        }
+        p {
+            padding-right: 5px;
+        }
+    }
 	.order-shipping, .order-billing {
 		width: 250px;
 		float: left;

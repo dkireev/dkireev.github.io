@@ -26,6 +26,14 @@
 			width: 105px;
 		}
 	}
+	.order-item-row {
+        a {
+            color: inherit;
+        }
+        p {
+            padding-right: 5px;
+        }
+    }
 	.amount {
 		display: inline-block;
 		width: 38px;
