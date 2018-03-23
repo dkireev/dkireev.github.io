@@ -97,23 +97,6 @@
 			width: 210px;
 		}
 	}
-	button.update {
-		width: 150px;
-		height: 50px;
-		border-radius: 25px;
-		outline: none;
-		border: none;
-		background: $green;
-		text-transform: uppercase;
-		color: #fff;
-		font-weight: bold;
-		font-size: .87em;
-		cursor: pointer;
-		margin-left: 164px;
-	}
-	button.update:hover, button.clear:hover, button.proceed:hover {
-		box-shadow: 0 3px 5px #aaa;
-	}
 	button.clear {
 		width: 150px;
 		height: 50px;
@@ -126,7 +109,7 @@
 		font-weight: bold;
 		font-size: .87em;
 		cursor: pointer;
-		margin-left: 10px;
+		margin-left: 164px;
 	}
 	button.proceed {
 		width: 225px;
@@ -140,7 +123,7 @@
 		font-weight: bold;
 		font-size: .87em;
 		cursor: pointer;
-		margin-left: 298px;
+		margin-left: 463px;
 	}
 }
 @media screen and (max-width:1199px) {
@@ -148,7 +131,7 @@
 		h5 {
 			margin-left: 50px;
 		}
-		button.update {
+		button.clear {
 			margin-left: 50px;
 		}
 	}
@@ -158,11 +141,11 @@
 		h5 {
 			margin-left: 30px;
 		}
-		button.update {
+		button.clear {
 			margin-left: 30px;
 		}
 		button.proceed {
-			margin-left: 99px;
+			margin-left: 263px;
 		}
 		.order-item {
 			li:first-child {
@@ -185,17 +168,14 @@
 }
 @media screen and (max-width:767px) {
 	#cart {
-		button.update {
-			margin-left: 30px;
-			width: 225px;
-		}
 		button.clear {
-			width: 225px;
+			margin-left: 30px;
+			width: 462px;
 		}
 		button.proceed {
 			margin-left: 30px;
 			width: 462px;
-			margin-top: 30px;
+			margin-top: 15px;
 		}
 		button.delete {
 			margin-top: 0;
@@ -235,13 +215,9 @@
 		h5 {
 			margin-left: 15px;
 		}
-		button.update {
-			margin-left: 0;
-			width: 47%;
-		}
 		button.clear {
-			width: 47%;
-			margin-left: 4%;
+			margin-left: 0;
+			width: 100%;
 		}
 		button.proceed {
 			margin-left: 0;
