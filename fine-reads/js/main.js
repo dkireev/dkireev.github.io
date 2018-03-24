@@ -583,3 +583,17 @@ function bookItemEllipsisText() {
     });
   }, false);
 })();
+
+// Switching heart color when added to wishlist
+$(document).ready(function() {
+  $('.add-wishlist').click(function() {
+    $(this).toggleClass('added-wishlist');
+      if ($(this).text() == 'Add to wishlist') {
+        $(this).text('Added to wishlist');
+        $(this).css('padding-left', '28px');
+      } else {
+        $(this).text('Add to wishlist');
+        $(this).css('padding-left', '10px');
+      }
+  });
+});

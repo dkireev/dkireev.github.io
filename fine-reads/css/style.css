@@ -818,7 +818,11 @@ footer .wrapper ul:last-child { padding-top: 0; font-size: 0.87em; }
 
 .add-wishlist::before { content: url("../img/wishlist.png"); position: absolute; top: 2px; left: 36px; }
 
+.added-wishlist::before { content: url("../img/wishlist-added.png"); position: absolute; top: 2px; left: 36px; }
+
 .add-wishlist:hover::before { content: url("../img/wishlist-hover.png"); }
+
+.added-wishlist:hover::before { content: url("../img/wishlist-added.png"); }
 
 .book-reviews h5 { font-size: 1em; color: #525252; font-weight: bold; margin-bottom: 20px; }
 .book-reviews button { width: 130px; height: 28px; border-radius: 14px; outline: none; background: none; border: 1px solid #525252; color: #525252; font-size: .94em; margin-bottom: 30px; cursor: pointer; }
