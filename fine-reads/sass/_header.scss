@@ -35,8 +35,10 @@ header {
 		padding-right: 45px;
 		text-transform: uppercase;
 		color: #57595b;
-		font-weight: bold;
+		font-family: 'Karla-Bold';
+		font-weight: normal;
 		font-size: 0.94em;
+		position: relative;
 	}
 	li:last-child {
 		padding-right: 0;
@@ -51,7 +53,7 @@ header {
 }
 .header-search {
 	display: inline-block;
-	width: 389px;
+	width: 383px;
 	height: 44px;
 	border-radius: 22px;
 	border: 1px solid #d2d2d2;
@@ -66,7 +68,7 @@ header {
 			padding-left: 26px;
 			background: #fff url('../img/search-icon.png') no-repeat;
 			background-position: 0 2px;
-			width: 292px;
+			width: 286px;
 			color: #888c89;
 			font-size: .87em;
 			border-right: 1px solid #d2d2d2;
@@ -106,7 +108,8 @@ header {
 	margin-top: 15px;
 	margin-left: -15px;
 	color: $green;
-	font-weight: bold;
+	font-family: 'Karla-Bold';
+	font-weight: normal;
 	font-size: 0.81em;
 	text-align: center;
 	background: #fff;
@@ -120,18 +123,18 @@ header {
 	height: 18px;
 	border-radius: 9px;
 	border: 1px solid #57595b;
-	display: inline-block;
 	margin-top: -29px;
-	margin-left: 70px;
+	margin-left: 75px;
 	color: #57595b;
-	font-weight: bold;
+	font-weight: normal;
 	font-size: 0.8em;
 	text-align: center;
 	background: #fff;
 	float: right;
 	position: absolute;
-	p {
-		margin-top: -1px;
+	span {
+		position: relative;
+		top: -1px;
 	}
 }
 .header-divider {
@@ -146,7 +149,8 @@ header {
 .account-text {
 	color: #57595b;
 	text-transform: uppercase;
-	font-weight: bold;
+	font-family: 'Karla-Bold';
+	font-weight: normal;
 	font-size: 0.81em;
 	padding-top: 22px;
 	line-height: 1.4;
@@ -172,15 +176,15 @@ header {
 		}
 	}
 	.wishlist-items {
-		margin-left: 65px;
+		margin-left: 70px;
 		font-size: 0.865em;
 	}
 	.header-search {
 		margin-left: 50px;
-		width: 322px;
+		width: 315px;
 		form {
 			input {
-				width: 225px;
+				width: 218px;
 			}
 		}
 	}
@@ -199,10 +203,10 @@ header {
 	}
 	.header-search {
 		margin-left: 40px;
-		width: 258px;
+		width: 254px;
 		form {
 			input {
-				width: 172px;
+				width: 168px;
 			}
 			button {
 				width: 50px;
@@ -267,7 +271,7 @@ header {
 	    }
 	}
 	.wishlist-items {
-		margin-left: 35px;
+		margin-left: 390px;
 		font-size: 0.865em;
 	}
 	.header-search {
@@ -331,6 +335,9 @@ header {
 		position: absolute;
 		right: 62px;
 	}
+	.wishlist-items {
+		margin-left: 300px;
+	}
 	.header-search {
 		position: absolute;
 		top: 70px;
@@ -370,6 +377,9 @@ header {
 	}
 	.header-menu {
 		top: 127px;
+	}
+	.wishlist-items {
+		margin-left: 190px;
 	}
 	.header-search {
 		top: 127px;

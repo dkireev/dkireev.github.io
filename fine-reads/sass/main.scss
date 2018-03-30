@@ -1,15 +1,24 @@
 @font-face {
-  font-family: 'Karla-Regular';
-  src: url('../fonts/karla-regular/Karla-Regular.eot?#iefix') format('embedded-opentype'), 
-  	url('../fonts/karla-regular/Karla-Regular.woff') format('woff'),
-  	url('../fonts/karla-regular/Karla-Regular.ttf') format('truetype'),
-  	url('../fonts/karla-regular/Karla-Regular.svg#Karla-Regular') format('svg');
+  font-family: 'Karla-Bold';
+  src: url('../fonts/Karla-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Karla-Bold.woff') format('woff'),
+  url('../fonts/Karla-Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Karla-Regular';
+  src: url('../fonts/Karla-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Karla-Regular.woff') format('woff'),
+  url('../fonts/Karla-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 body {
-	font-family: Karla-Regular;
+	font-family: 'Karla-Regular';
 	font-size: 16px;
 	padding-top: 84px;
 }
