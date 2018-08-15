@@ -67,13 +67,14 @@ button:focus {
 	display: inline-block;
 	float: left;
 	padding-bottom: 85px;
-	a:first-child {
+	.section-item-img-link {
 		background-color: #eee;
 		display: inline-block;
 		width: 100%;
 		height: 261px;
 		line-height: 258px;
 		text-align: center;
+		cursor: pointer;
 	}
 	img {
 		width: auto;
@@ -194,7 +195,7 @@ button:focus {
 		width: 174px;
 		margin-right: 17px;
 		min-height: 400px;
-		a:first-child {
+		.section-item-img-link {
 			height: 218px;
 			line-height: 215px;
 		}
@@ -213,7 +214,7 @@ button:focus {
 		width: 163px;
 		margin-right: 16px;
 		min-height: 390px;
-		a:first-child {
+		.section-item-img-link {
 			height: 205px;
 			line-height: 202px;
 		}
@@ -263,7 +264,7 @@ button:focus {
 		width: 145px;
 		margin-right: 15px;
 		min-height: 355px;
-		a:first-child {
+		.section-item-img-link {
 			height: 182px;
 			line-height: 180px;
 		}
