@@ -23,8 +23,8 @@ export default class BurgerIngredient extends React.PureComponent {
       case ('cheese'):
         ingredient = <div className={classes.Cheese}></div>;
         break;
-      case ('beacon'):
-        ingredient = <div className={classes.Beacon}></div>;
+      case ('bacon'):
+        ingredient = <div className={classes.Bacon}></div>;
         break;
       case ('salad'):
         ingredient = <div className={classes.Salad}></div>;
@@ -35,6 +35,6 @@ export default class BurgerIngredient extends React.PureComponent {
     return ingredient;
   }
 };
-BurgerIngredient.PropTypes = {
+BurgerIngredient.propTypes = {
   type: PropTypes.string.isRequired
 };
