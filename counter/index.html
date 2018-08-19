@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet">
+	<title>Counter 0.1</title>
+	<style>
+		body {display: grid; align-content: center; justify-content: center; height: 100vh; margin: 0; font-family: 'Open Sans', sans-serif;}
+		h1 {text-align: center; margin: 0; font-weight: 600; line-height: 2;}
+		#capital {font-weight: 300;}
+	</style>
+</head>
+<body>
+	<h1>
+		Capital<br>
+		<span id="capital"></span>
+	</h1>
+	<script>
+		let capital = 63200.00 + 19163.90;
+		const interestMonth = 0.73;
+		const interest = interestMonth / 30.42 / 60 / 60 / 60 / 100; /* Milisecond */
+		setInterval(
+			function(){
+				capital += interest;
+				document.getElementById('capital').innerHTML = capital.toFixed(7);
+			},
+			10
+		);
+	</script>
+</body>
+</html>
