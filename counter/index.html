@@ -4,11 +4,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet">
-	<title>Counter 0.2</title>
+	<title>Counter 0.3</title>
 	<style>
 		body {display: grid; align-content: center; justify-content: center; height: 100vh; margin: 0; font-family: 'Open Sans', sans-serif;}
-		h1 {text-align: center; margin: 0; font-weight: 600; line-height: 2;}
+		h1 {text-align: center; margin: 0; font-weight: 600; line-height: 2; font-size: 32px;}
+		h2 {text-align: center; margin: 50px 0 0 0; font-weight: 300; line-height: 2; font-size: 16px;}
 		#capital {font-weight: 300;}
+		#goal {font-size: 24px;}
+		#completion, #percent {font-size: 32px;}
 	</style>
 </head>
 <body>
@@ -16,20 +19,33 @@
 		Capital<br>
 		<span id="capital"></span>
 	</h1>
+	<h2>
+		The next GOAL in <span id="goal"></span><br>
+		<span id="colmleted">is completed by</span><br>
+		<span id="completion"></span><span id="percent"> %</span>
+	</h2>
 	<script>
-		var startDate = Date.parse("Aug 1, 2018");
-		var startCapital = 82363.9;
-		var interestRate = 0.0073;
-		var millisecondsInMonth = 1000 * 60 * 60 * 24 * 30.42;
-		var interestInMillisecond = startCapital * (interestRate / millisecondsInMonth);
-		var currentTime = new Date().getTime();
-		var deltaTime = currentTime - startDate;
-		var currentCapital = startCapital + (interestInMillisecond * deltaTime);
-		console.log(currentCapital);
+		const startDate = Date.parse("Aug 1, 2018");
+		const nextGoal = 100000;
+		const startCapital1 = 63200;
+		const startCapital2 = 19163.9;
+		const interestRate1 = 0.0064;
+		const interestRate2 = 0.0103;
+		const millisecondsInMonth = 1000 * 60 * 60 * 24 * 30.42;
+		const interestInMillisecond1 = startCapital1 * (interestRate1 / millisecondsInMonth);
+		const interestInMillisecond2 = startCapital2 * (interestRate2 / millisecondsInMonth);
+		const currentTime = new Date().getTime();
+		const deltaTime = currentTime - startDate;
+		let currentCapital = startCapital1 + startCapital2 + ((interestInMillisecond1 +interestInMillisecond2) * deltaTime);
+		let reachingGoal = 0;
+		let completion = 0;
+		document.getElementById('goal').innerHTML = nextGoal;
 		setInterval(
 			function(){
-				currentCapital += interestInMillisecond * 100;
+				currentCapital += (interestInMillisecond1 + interestInMillisecond2) * 100;
 				document.getElementById('capital').innerHTML = currentCapital.toFixed(4);
+				completion = currentCapital * 100 / nextGoal;
+				document.getElementById('completion').innerHTML = completion.toFixed(4);
 			},
 			100
 		);
