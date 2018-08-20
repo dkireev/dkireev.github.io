@@ -1,0 +1,13 @@
+{
+    "startDate1": "Aug 13, 2018",
+    "startCapital1": 63200,
+    "interestRate1": 0.0064,
+
+    "startDate2": "Aug 13, 2018",
+    "startCapital2": 63200,
+    "interestRate2": 0.0064,
+
+    "startDate3": "Aug 13, 2018",
+    "startCapital3": 63200,
+    "interestRate3": 0.0064
+}

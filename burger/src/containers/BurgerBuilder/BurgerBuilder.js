@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Aux from '../../hoc/Aux';
+import Aux from '../../hoc/ReactAux';
 import Burger from '../../components/Burger/Burger';
 
 export default class BurgerBuilder extends React.PureComponent {
