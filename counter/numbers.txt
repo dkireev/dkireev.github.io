@@ -9,5 +9,7 @@
 
     "startDate3": "Aug 21, 2018",
     "startCapital3": 3541.9,
-    "interestRate3": 0.0103
+    "interestRate3": 0.0103,
+
+    "nextGoal": 100000
 }
