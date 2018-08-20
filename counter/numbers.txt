@@ -3,11 +3,11 @@
     "startCapital1": 63200,
     "interestRate1": 0.0064,
 
-    "startDate2": "Aug 13, 2018",
-    "startCapital2": 63200,
-    "interestRate2": 0.0064,
+    "startDate2": "Aug 3, 2018",
+    "startCapital2": 15622,
+    "interestRate2": 0.0103,
 
-    "startDate3": "Aug 13, 2018",
-    "startCapital3": 63200,
-    "interestRate3": 0.0064
+    "startDate3": "Aug 21, 2018",
+    "startCapital3": 3541.9,
+    "interestRate3": 0.0103
 }
