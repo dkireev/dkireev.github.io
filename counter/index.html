@@ -1,58 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet">
-	<title>Counter 0.3</title>
-	<style>
-		body {display: grid; grid-auto-flow: row; grid-row-gap: 45px; align-content: center; justify-content: center; height: 100vh; margin: 0; font-family: 'Open Sans', sans-serif;}
-		h1 {position: relative; z-index: 1; text-align: center; margin: 0; font-weight: 600; line-height: 2; font-size: 32px; color: #85bb65;}
-		h2 {position: relative; z-index: 1; text-align: center; margin: 0; font-weight: 300; line-height: 2; font-size: 16px; color: #111;}
-		#capital {font-weight: 300;}
-		#goal {font-weight: 600;}
-		#completion, #percent {font-size: 32px;}
-		#background {position: absolute; z-index: 0; opacity: .05; width: 90%; max-width: 320px; height: auto; top: 50%; left: 50%; transform: translate(-50% , -50%);}
-	</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <title>Counter 0.4</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <style>
+    body {display: -ms-grid; display: grid; grid-auto-flow: row; -ms-flex-line-pack: center; align-content: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; height: 100vh; margin: 0; font-family: 'Open Sans', sans-serif;}
+    h1 {position: relative; z-index: 1; text-align: center; margin: 0; font-weight: 600; line-height: 2; font-size: 32px; color: #85bb65;}
+    h2 {position: relative; z-index: 1; text-align: center; margin: 40px 0 0 0; font-weight: 300; line-height: 2; font-size: 16px; color: #111;}
+    #capital {font-weight: 300;}
+    #goal {font-weight: 600;}
+    #completion, #percent {font-size: 32px;}
+    #background {position: absolute; z-index: 0; opacity: .05; width: 90%; max-width: 320px; height: auto; top: 50%; left: 50%; -webkit-transform: translate(-50% , -50%); -ms-transform: translate(-50% , -50%); transform: translate(-50% , -50%);}
+  </style>
 </head>
 <body>
-	<h1>
-		Capital<br>
-		<span id="capital"></span>
-	</h1>
-	<h2>
-		The next GOAL in <span id="goal"></span><br>
-		<span id="colmleted">is completed by</span><br>
-		<span id="completion"></span><span id="percent"> %</span>
-	</h2>
-	<svg id="background" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
-		<path fill="#85bb65" d="M313.453,143.25c7.563,0,13.688,6.125,13.688,13.719c0,7.563-6.125,13.719-13.688,13.719H176.266  c-7.563,0-13.703-6.156-13.703-13.719c0-7.594,6.141-13.719,13.703-13.719H313.453z M168.359,129.531h153  c0,0,60.625-52.906,33.219-76.031c-27.438-23.156-88.313,25.688-109.719,24c-21.406,1.688-82.297-47.156-109.703-24  C107.719,76.625,168.359,129.531,168.359,129.531z M288.297,406.125v-32c0-12.875-8.813-15.813-16-16h-16v64h16  C279.484,421.938,288.297,419,288.297,406.125z M321.359,184.375h-153C100.406,233.938,52.859,339,52.859,405.656  c0,88.094,82.844,80.531,186.172,80.219c-8.188-0.688-14.734-7.375-14.734-15.75v-16h-48c-8.813,0-16-7.188-16-16s7.188-16,16-16h48  v-64h-16c-19.313,0-48-12.781-48-48v-32c0-35.219,28.688-48,48-48h16v-16c0-8.813,7.188-16,16-16s16,7.188,16,16v16h48  c8.813,0,16,7.188,16,16s-7.188,16-16,16h-48v64h16c19.313,0,48,12.781,48,48v32c0,35.219-28.688,48-48,48h-16v16  c0,8.344-6.516,15.031-14.688,15.719c1.094,0,2.156,0,3.25,0c106.063,0,192,9.563,192-80.188  C436.859,339,389.297,233.938,321.359,184.375z M192.297,278.125v32c0,12.875,8.813,15.813,16,16h16v-64h-16  C201.109,262.313,192.297,265.25,192.297,278.125z M103.141,104.375c-6.313,0-11.406,5.125-11.406,11.438  s5.094,11.438,11.406,11.438h18.75c-5.578-6.875-10.953-14.625-15.422-22.875H103.141z M388.578,92.969h27.469  c0,0,50.531-44.094,27.688-63.375c-14.125-11.906-38.844-0.938-59.906,8.844c6.281,8.625,9.781,18.875,9.875,29.906  C393.766,76.656,391.703,84.938,388.578,92.969z M420.859,115.813c0-6.313-5.094-11.438-11.406-11.438h-26.219  c-4.469,8.25-9.844,16-15.406,22.875h41.625C415.766,127.25,420.859,122.125,420.859,115.813z M416.047,138.688h-58.25  c-0.594,0.625-1.219,1.344-1.813,1.938c1.969,5.094,3.156,10.563,3.156,16.344c0,5.406-1.094,10.5-2.844,15.281  c62.781,54.906,103.438,144.375,111,211.688c27.813-7.594,45-24.313,45-60.875C512.297,267.5,472.672,179.969,416.047,138.688z   M96.547,92.969h4.609c-3.141-8.031-5.203-16.281-5.125-24.625c0.109-14.344,6.016-27.281,16.297-37.031  c-16.438-6.594-32.922-10.625-43.469-1.719C46.016,48.875,96.547,92.969,96.547,92.969z M133.391,172.281  c-1.719-4.813-2.828-9.906-2.828-15.313c0-5.781,1.188-11.25,3.156-16.344c-0.578-0.625-1.203-1.313-1.813-1.938H96.547  C39.922,179.969,0.297,267.5,0.297,323.063c0,25.719,8.625,41.5,23.344,51.344C33.797,308.375,73.594,224.563,133.391,172.281z" />
-	</svg>
-	<script>
-		const startDate = Date.parse("Aug 1, 2018");
-		const nextGoal = 100000;
-		const startCapital1 = 63200;
-		const startCapital2 = 19163.9;
-		const interestRate1 = 0.0064;
-		const interestRate2 = 0.0103;
-		const millisecondsInMonth = 1000 * 60 * 60 * 24 * 30.42;
-		const interestInMillisecond1 = startCapital1 * (interestRate1 / millisecondsInMonth);
-		const interestInMillisecond2 = startCapital2 * (interestRate2 / millisecondsInMonth);
-		const currentTime = new Date().getTime();
-		const deltaTime = currentTime - startDate;
-		let currentCapital = startCapital1 + startCapital2 + ((interestInMillisecond1 +interestInMillisecond2) * deltaTime);
-		let reachingGoal = 0;
-		let completion = 0;
-		document.getElementById('goal').innerHTML = nextGoal;
-		setInterval(
-			function(){
-				currentCapital += (interestInMillisecond1 + interestInMillisecond2) * 100;
-				document.getElementById('capital').innerHTML = currentCapital.toFixed(4);
-				completion = currentCapital * 100 / nextGoal;
-				document.getElementById('completion').innerHTML = completion.toFixed(4);
-			},
-			100
-		);
-	</script>
+  <h1>
+    Capital<br>
+    <span id="capital"></span>
+  </h1>
+  <h2>
+    The next GOAL in <span id="goal"></span><br>
+    <span id="colmleted">is completed by</span><br>
+    <span id="completion"></span><span id="percent"> %</span>
+  </h2>
+  <svg id="background" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+    <path fill="#85bb65" d="M313.453,143.25c7.563,0,13.688,6.125,13.688,13.719c0,7.563-6.125,13.719-13.688,13.719H176.266  c-7.563,0-13.703-6.156-13.703-13.719c0-7.594,6.141-13.719,13.703-13.719H313.453z M168.359,129.531h153  c0,0,60.625-52.906,33.219-76.031c-27.438-23.156-88.313,25.688-109.719,24c-21.406,1.688-82.297-47.156-109.703-24  C107.719,76.625,168.359,129.531,168.359,129.531z M288.297,406.125v-32c0-12.875-8.813-15.813-16-16h-16v64h16  C279.484,421.938,288.297,419,288.297,406.125z M321.359,184.375h-153C100.406,233.938,52.859,339,52.859,405.656  c0,88.094,82.844,80.531,186.172,80.219c-8.188-0.688-14.734-7.375-14.734-15.75v-16h-48c-8.813,0-16-7.188-16-16s7.188-16,16-16h48  v-64h-16c-19.313,0-48-12.781-48-48v-32c0-35.219,28.688-48,48-48h16v-16c0-8.813,7.188-16,16-16s16,7.188,16,16v16h48  c8.813,0,16,7.188,16,16s-7.188,16-16,16h-48v64h16c19.313,0,48,12.781,48,48v32c0,35.219-28.688,48-48,48h-16v16  c0,8.344-6.516,15.031-14.688,15.719c1.094,0,2.156,0,3.25,0c106.063,0,192,9.563,192-80.188  C436.859,339,389.297,233.938,321.359,184.375z M192.297,278.125v32c0,12.875,8.813,15.813,16,16h16v-64h-16  C201.109,262.313,192.297,265.25,192.297,278.125z M103.141,104.375c-6.313,0-11.406,5.125-11.406,11.438  s5.094,11.438,11.406,11.438h18.75c-5.578-6.875-10.953-14.625-15.422-22.875H103.141z M388.578,92.969h27.469  c0,0,50.531-44.094,27.688-63.375c-14.125-11.906-38.844-0.938-59.906,8.844c6.281,8.625,9.781,18.875,9.875,29.906  C393.766,76.656,391.703,84.938,388.578,92.969z M420.859,115.813c0-6.313-5.094-11.438-11.406-11.438h-26.219  c-4.469,8.25-9.844,16-15.406,22.875h41.625C415.766,127.25,420.859,122.125,420.859,115.813z M416.047,138.688h-58.25  c-0.594,0.625-1.219,1.344-1.813,1.938c1.969,5.094,3.156,10.563,3.156,16.344c0,5.406-1.094,10.5-2.844,15.281  c62.781,54.906,103.438,144.375,111,211.688c27.813-7.594,45-24.313,45-60.875C512.297,267.5,472.672,179.969,416.047,138.688z   M96.547,92.969h4.609c-3.141-8.031-5.203-16.281-5.125-24.625c0.109-14.344,6.016-27.281,16.297-37.031  c-16.438-6.594-32.922-10.625-43.469-1.719C46.016,48.875,96.547,92.969,96.547,92.969z M133.391,172.281  c-1.719-4.813-2.828-9.906-2.828-15.313c0-5.781,1.188-11.25,3.156-16.344c-0.578-0.625-1.203-1.313-1.813-1.938H96.547  C39.922,179.969,0.297,267.5,0.297,323.063c0,25.719,8.625,41.5,23.344,51.344C33.797,308.375,73.594,224.563,133.391,172.281z" />
+  </svg>
+  <script>
+    const startDate = Date.parse("Aug 1, 2018");
+    const nextGoal = 100000;
+    const startCapital1 = 63200;
+    const startCapital2 = 19163.9;
+    const interestRate1 = 0.0064;
+    const interestRate2 = 0.0103;
+    const millisecondsInMonth = 1000 * 60 * 60 * 24 * 30.42;
+    const interestInMillisecond1 = startCapital1 *
+      (interestRate1 / millisecondsInMonth);
+    const interestInMillisecond2 = startCapital2 *
+      (interestRate2 / millisecondsInMonth);
+    const currentTime = new Date().getTime();
+    const deltaTime = currentTime - startDate;
+    let currentCapital = startCapital1 + startCapital2 +
+      ((interestInMillisecond1 +interestInMillisecond2) * deltaTime);
+    let completion = 0;
+    document.getElementById('goal').innerHTML = nextGoal;
+    setInterval(
+      function(){
+        currentCapital += (interestInMillisecond1 + interestInMillisecond2) *
+          100;
+        document.getElementById('capital').innerHTML =
+          currentCapital.toFixed(4);
+        completion = currentCapital * 100 / nextGoal;
+        document.getElementById('completion').innerHTML =
+          completion.toFixed(4);
+      },
+      100
+    );
+  </script>
 </body>
 </html>
