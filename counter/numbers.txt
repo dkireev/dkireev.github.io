@@ -7,7 +7,7 @@
     "startCapital2": 15622,
     "interestRate2": 0.0103,
 
-    "startDate3": "Aug 21, 2018",
+    "startDate3": "Jul 21, 2018",
     "startCapital3": 3541.9,
     "interestRate3": 0.0103,
 
