@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" type="image/png" href="favicon.png">
-  <title>Counter 1.0</title>
+  <title>Counter 1.1</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet">
   <style>
     body {display: -ms-grid; display: grid; grid-auto-flow: row; -ms-flex-line-pack: center; align-content: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; height: 100vh; margin: 0; font-family: 'Open Sans', sans-serif; -webkit-font-smoothing: antialiased;}
@@ -69,7 +69,7 @@
               currentCapital.toFixed(4);
             completion = currentCapital * 100 / nextGoal;
             document.getElementById('completion').innerHTML =
-              completion.toFixed(4);
+              completion.toFixed(2);
           },
           100
         );
