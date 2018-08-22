@@ -66,7 +66,7 @@
         const cashflow = (startCapital1 * interestRate1) +
           (startCapital2 * interestRate2) + (startCapital3 * interestRate3);
         document.getElementById('goal').innerHTML = nextGoal;
-        document.getElementById('cashflow').innerHTML = cashflow;
+        document.getElementById('cashflow').innerHTML = cashflow.toFixed(2);
         setInterval(
           function(){
             currentCapital += (interestInMillisecond1 + interestInMillisecond2 +
