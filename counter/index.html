@@ -26,7 +26,7 @@
     <span id="cashflow"></span>
   </h1>
   <h2>
-    The next GOAL in <span id="goal"></span><span id="colmleted">is completed by</span><br>
+    The next GOAL in <span id="goal"></span><span id="colmleted"> is completed by</span><br>
     <span id="completion"></span><span id="percent"> %</span>
   </h2>
   <svg id="background" enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +54,6 @@
           (interestRate2 / millisecondsInMonth);
         const interestInMillisecond3 = startCapital3 *
           (interestRate3 / millisecondsInMonth);
-        console.log(startCapital1*interestRate1+startCapital2*interestRate2+startCapital3*interestRate3);
         const currentTime = new Date().getTime();
         const deltaTime1 = currentTime - startDate1;
         const deltaTime2 = currentTime - startDate2;
@@ -64,7 +63,10 @@
           (interestInMillisecond2 * deltaTime2) +
           (interestInMillisecond3 * deltaTime3);
         let completion = 0;
+        const cashflow = (startCapital1 * interestRate1) +
+          (startCapital2 * interestRate2) + (startCapital3 * interestRate3);
         document.getElementById('goal').innerHTML = nextGoal;
+        document.getElementById('cashflow').innerHTML = cashflow;
         setInterval(
           function(){
             currentCapital += (interestInMillisecond1 + interestInMillisecond2 +
