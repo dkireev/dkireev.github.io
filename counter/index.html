@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" type="image/png" href="favicon.png">
-  <title>Counter 1.1</title>
+  <title>Counter 1.2</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet">
   <style>
     body {display: -ms-grid; display: grid; grid-auto-flow: row; -ms-flex-line-pack: center; align-content: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; height: 100vh; margin: 0; font-family: 'Open Sans', sans-serif; -webkit-font-smoothing: antialiased;}
-    h1 {position: relative; z-index: 1; text-align: center; margin: 0; font-weight: 600; line-height: 2; font-size: 32px; color: #85bb65;}
-    h2 {position: relative; z-index: 1; text-align: center; margin: 40px 0 0 0; font-weight: 300; line-height: 2; font-size: 16px; color: #111;}
-    #capital {font-weight: 300;}
+    h1 {position: relative; z-index: 1; text-align: center; margin: 0 0 40px 0; font-weight: 600; line-height: 2; font-size: 30px; color: #85bb65;}
+    h2 {position: relative; z-index: 1; text-align: center; margin: 0; font-weight: 300; line-height: 2; font-size: 15px; color: #111;}
+    #capital, #cashflow {font-weight: 300;}
     #goal {font-weight: 600;}
-    #completion, #percent {font-size: 32px;}
+    #completion, #percent {font-size: 30px;}
     #background {position: absolute; z-index: 0; opacity: .08; width: 90%; max-width: 320px; height: auto; top: 50%; left: 50%; -webkit-transform: translate(-50% , -50%); -ms-transform: translate(-50% , -50%); transform: translate(-50% , -50%);}
   </style>
 </head>
@@ -21,9 +21,12 @@
     Capital<br>
     <span id="capital"></span>
   </h1>
+  <h1>
+    Monthly cashflow<br>
+    <span id="cashflow"></span>
+  </h1>
   <h2>
-    The next GOAL in <span id="goal"></span><br>
-    <span id="colmleted">is completed by</span><br>
+    The next GOAL in <span id="goal"></span><span id="colmleted">is completed by</span><br>
     <span id="completion"></span><span id="percent"> %</span>
   </h2>
   <svg id="background" enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
@@ -51,6 +54,7 @@
           (interestRate2 / millisecondsInMonth);
         const interestInMillisecond3 = startCapital3 *
           (interestRate3 / millisecondsInMonth);
+        console.log(startCapital1*interestRate1+startCapital2*interestRate2+startCapital3*interestRate3);
         const currentTime = new Date().getTime();
         const deltaTime1 = currentTime - startDate1;
         const deltaTime2 = currentTime - startDate2;
