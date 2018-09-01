@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" type="image/png" href="favicon.png">
-  <title>Counter 1.2</title>
+  <title>Counter 1.3</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet">
   <style>
     body {display: -ms-grid; display: grid; grid-auto-flow: row; -ms-flex-line-pack: center; align-content: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; min-height: 100vh; margin: 0; font-family: 'Open Sans', sans-serif; -webkit-font-smoothing: antialiased;}
@@ -46,6 +46,9 @@
         const startDate3 = Date.parse(myObj.startDate3); /* Privatbank 2 */
         const startCapital3 = myObj.startCapital3;
         const interestRate3 = myObj.interestRate3;
+        const startDate4 = Date.parse(myObj.startDate4); /* Privatbank 3 */
+        const startCapital4 = myObj.startCapital4;
+        const interestRate4 = myObj.interestRate4;
         const nextGoal = myObj.nextGoal;
         const millisecondsInMonth = 1000 * 60 * 60 * 24 * 30.42;
         const interestInMillisecond1 = startCapital1 *
@@ -54,23 +57,28 @@
           (interestRate2 / millisecondsInMonth);
         const interestInMillisecond3 = startCapital3 *
           (interestRate3 / millisecondsInMonth);
+        const interestInMillisecond4 = startCapital4 *
+          (interestRate4 / millisecondsInMonth);
         const currentTime = new Date().getTime();
         const deltaTime1 = currentTime - startDate1;
         const deltaTime2 = currentTime - startDate2;
         const deltaTime3 = currentTime - startDate3;
-        let currentCapital = startCapital1 + startCapital2 + startCapital3 +
+        const deltaTime4 = currentTime - startDate4;
+        let currentCapital = startCapital1 + startCapital2 + startCapital3 + startCapital4 +
           (interestInMillisecond1 * deltaTime1) +
           (interestInMillisecond2 * deltaTime2) +
-          (interestInMillisecond3 * deltaTime3);
+          (interestInMillisecond3 * deltaTime3) +
+          (interestInMillisecond4 * deltaTime4);
         let completion = 0;
         const cashflow = (startCapital1 * interestRate1) +
-          (startCapital2 * interestRate2) + (startCapital3 * interestRate3);
+          (startCapital2 * interestRate2) + (startCapital3 * interestRate3) + (startCapital4 * interestRate4);
         document.getElementById('goal').innerHTML = nextGoal;
         document.getElementById('cashflow').innerHTML = cashflow.toFixed(2);
         setInterval(
           function(){
             currentCapital += (interestInMillisecond1 + interestInMillisecond2 +
-              interestInMillisecond3) * 100;
+              interestInMillisecond3 +
+              interestInMillisecond4) * 100;
             document.getElementById('capital').innerHTML =
               currentCapital.toFixed(4);
             completion = currentCapital * 100 / nextGoal;
