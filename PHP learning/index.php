@@ -79,4 +79,48 @@
 		echo $family[$i],"<br>";
 		$i++;
 	}
+
+	/* GET variables */
+	print_r($_GET);
+	echo "Hi there".$_GET["name"]."!";
+	if ($_GET) {
+		$i = 2;
+		$isPrime = true;
+		while ($i <= $_GET['number']) {
+			if ($_GET['number']%$i == 0) {
+				// Number is not prime!
+				$isPrime = false;
+			}
+			$i++;
+		}
+		if ($isPrime) {
+			echo "<p>".$i." is a prime number!</p>";
+		} else {
+			echo "<p>".$i." is not prime.</p>";
+		}
+	}
+
+	/* POST variables */
+	print_r($_POST);
+	if ($_POST) {
+		$family = array("Dima", "Ehor", "Olia");
+		$isKnown = false;
+		foreach ($family as $value) {
+			if ($value == $_POST['name']) {
+				$isKnown = true;
+			}
+		}
+		if ($isKnown) {
+			echo "Hi there".$_POST['name']."!";
+		} else {
+			echo "I don't know you";
+		}
+	}
 ?>
+
+<p>Please enter a whole number</p>
+
+<form action="" method="post">
+	<input type="text" name="name">
+	<input type="submit" value="Go!">
+</form>
