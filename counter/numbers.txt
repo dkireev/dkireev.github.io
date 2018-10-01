@@ -1,6 +1,6 @@
 {
-    "startDate1": "Aug 30, 2018",
-    "startCapital1": 63200,
+    "startDate1": "Oct 1, 2018",
+    "startCapital1": 63813.30,
     "interestRate1": 0.0098,
 
     "startDate2": "Sep 4, 2018",
