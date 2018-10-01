@@ -15,5 +15,5 @@
     "startCapital4": 2016,
     "interestRate4": 0.0103,
 
-    "nextGoal": 100000
+    "nextGoal": 200000
 }
