@@ -1,27 +1,17 @@
 <?php
 	$weather = "";
 	$error = "";
-	if (array_key_exists('city, $_GET')) {
-		$city = str_replace(' ', '', $_GET['city']);
-		$file_headers = @get_headers("https://www.weather-forecast.com/locations/".$_GET['city']."/forecasts/latest");
-		if ($file_headers[0] == ' HTTP/1.1 404 Not Found') {
-			$error = "That city could not be found";
-		} else {
-			$forecastPage = file_get_contents("https://www.weather-forecast.com/locations/".$_GET['city']."/forecasts/latest");
-			$pageArray = explode ('</h2>(1&ndash;3 days)</span><p class="b-forecast__table-description-content"><span class="phrase">', $forecastPage);
-			if (sizeof($pageArray) > 1) {
-				$secondPageArray = explode('</span></p></td><td class="b-forecast__table-description-cell--js" colspan="9">', $pageArray);
-				if (sizeof($secondPageArray) > 1) {
-					$weather = $secondPageArray[0];
-				} else {
-					$error = "That city could not be found";
-				}
-				$weather = secondPageArray[0];
-			} else {
-				$error = "That city could not be found";
-			}
-		}
-	}
+	if ($_GET['city']) {
+    $urlContents = file_get_contents("https://samples.openweathermap.org/data/2.5/weather?q=".urlencode($_GET['city']).",uk&appid=b6907d289e10d714a6e88b30761fae22");
+    $weatherArray = json_decode($urlContents, true);
+    if ($weatherArray['cod'] == 200) {
+      $weather = "The weather in ".$_GET['city']." is currently'".$weatherArray['weather'][0]['description']."'. ";
+      $temperatureInCelcius = intval($weatherArray['main']['temp'] - 273);
+      $weather .= " The temperature is ".$temperatureInCelcius."&deg;C and the wind speed is ".$weatherArray['wind']['speed']."m/s.";
+    } else {
+      echo "Can't find city - please try again";
+    }
+  }
 ?>
   <!doctype html>
   <html lang="en">
