@@ -78,7 +78,7 @@
           function(){
             currentCapital += (interestInMillisecond1 + interestInMillisecond2 +
               interestInMillisecond3 +
-              interestInMillisecond4) * 100;
+              interestInMillisecond4).toFixed(2) * 100;
             document.getElementById('capital').innerHTML =
               currentCapital;
             completion = currentCapital * 100 / nextGoal;
