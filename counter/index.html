@@ -51,13 +51,13 @@
         const interestRate4 = myObj.interestRate4;
         const nextGoal = myObj.nextGoal;
         const millisecondsInMonth = 1000 * 60 * 60 * 24 * 30.4375;
-        const interestInMillisecond1 = (startCapital1 *
+        const interestInMillisecond1 = parseFloat(startCapital1 *
           (interestRate1 / millisecondsInMonth)).toFixed(2);
-        const interestInMillisecond2 = (startCapital2 *
+        const interestInMillisecond2 = parseFloat(startCapital2 *
           (interestRate2 / millisecondsInMonth)).toFixed(2);
-        const interestInMillisecond3 = (startCapital3 *
+        const interestInMillisecond3 = parseFloat(startCapital3 *
           (interestRate3 / millisecondsInMonth)).toFixed(2);
-        const interestInMillisecond4 = (startCapital4 *
+        const interestInMillisecond4 = parseFloat(startCapital4 *
           (interestRate4 / millisecondsInMonth)).toFixed(2);
         const currentTime = new Date().getTime();
         const deltaTime1 = currentTime - startDate1;
