@@ -78,14 +78,14 @@
           function(){
             currentCapital += (interestInMillisecond1 + interestInMillisecond2 +
               interestInMillisecond3 +
-              interestInMillisecond4) * 1000;
+              interestInMillisecond4) * 100;
             document.getElementById('capital').innerHTML =
-              currentCapital.toFixed(5);
-            completion = currentCapital * 1000 / nextGoal;
+              currentCapital.toFixed(2);
+            completion = currentCapital * 100 / nextGoal;
             document.getElementById('completion').innerHTML =
               completion.toFixed(2);
           },
-          1000
+          100
         );
       }
     };
