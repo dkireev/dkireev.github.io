@@ -1,19 +1,19 @@
 {
     "startDate1": "Oct 1, 2018",
-    "startCapital1": 63813.30,
-    "interestRate1": 0.0098,
+    "startAmount1": 63813.30,
+    "interestInMonth1": 0.0098,
 
     "startDate2": "Oct 4, 2018",
-    "startCapital2": 31552.68,
-    "interestRate2": 0.0103,
+    "startAmount2": 31552.68,
+    "interestInMonth2": 0.0103,
 
     "startDate3": "Oct 1, 2018",
-    "startCapital3": 5341.03,
-    "interestRate3": 0.0103,
+    "startAmount3": 5341.03,
+    "interestInMonth3": 0.0103,
 
     "startDate4": "Oct 2, 2018",
-    "startCapital4": 2025.67,
-    "interestRate4": 0.0103,
+    "startAmount4": 2025.67,
+    "interestInMonth4": 0.0103,
 
     "nextGoal": 200000
 }
