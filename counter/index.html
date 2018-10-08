@@ -76,9 +76,9 @@
         document.getElementById('cashflow').innerHTML = cashflow.toFixed(2);
         setInterval(
           function(){
-            currentCapital += ((interestInMillisecond1 + interestInMillisecond2 +
+            currentCapital += (interestInMillisecond1 + interestInMillisecond2 +
               interestInMillisecond3 +
-              interestInMillisecond4) * 100).toFixed(2);
+              interestInMillisecond4) * 100;
             document.getElementById('capital').innerHTML =
               currentCapital;
             completion = currentCapital * 100 / nextGoal;
