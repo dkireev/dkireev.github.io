@@ -76,11 +76,11 @@
         document.getElementById('cashflow').innerHTML = cashflow.toFixed(2);
         setInterval(
           function(){
-            currentCapital += (interestInMillisecond1 + interestInMillisecond2 +
+            currentCapital += ((interestInMillisecond1 + interestInMillisecond2 +
               interestInMillisecond3 +
-              interestInMillisecond4) * 100;
+              interestInMillisecond4) * 100).toFixed(2);
             document.getElementById('capital').innerHTML =
-              currentCapital.toFixed(2).substr(0, 3) + " " + currentCapital.toFixed(2).substr(3, 5);
+              currentCapital;
             completion = currentCapital * 100 / nextGoal;
             document.getElementById('completion').innerHTML =
               completion.toFixed(2);
