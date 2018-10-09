@@ -96,7 +96,12 @@
         return a.toString().replace(/(\d)(?=(\d{3})+(\D|$))/g, "$1 ");
       }
       function DecimalExtractor(b) {
-        return Math.floor(b % 1 * 100);
+        const a = Math.floor(b % 1 * 100);
+        if (a.toString().length() == 2) {
+          console.log('yes')
+        } else {
+          console.log('no')
+        }
       }
 
       document.getElementById("goal").innerHTML = SpaceAdder(nextGoal);
