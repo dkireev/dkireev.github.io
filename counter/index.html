@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" type="image/png" href="favicon.png">
-  <title>Counter 1.6</title>
+  <title>Counter 1.7</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet">
   <style>
     body {display: -ms-grid; display: grid; grid-auto-flow: row; -ms-flex-line-pack: center; align-content: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; min-height: 100vh; margin: 0; font-family: 'Open Sans', sans-serif; -webkit-font-smoothing: antialiased; overflow: hidden;}
     h1 {position: relative; z-index: 1; text-align: center; margin: 0 0 30px 0; font-weight: 600; line-height: 1.4; font-size: 28px; color: #85bb65;}
     h2 {position: relative; z-index: 1; text-align: center; margin: 0 0 20px 0; font-weight: 600; line-height: 1.4; font-size: 28px; color: #85bb65;}
     h3 {position: relative; z-index: 1; text-align: center; margin: 0; font-weight: 300; line-height: 1.4; font-size: 14px; color: #111;}
-    #capital {font-size: 56px;}
-    #capital, #cashflow {font-weight: 300;}
+    #capitalInteger {font-size: 56px;}
+    #capitalInteger, #capitalDecimal, #cashflow {font-weight: 300;}
     #goal {font-weight: 600;}
     #completion, #percent {font-size: 28px;}
     #background {position: absolute; z-index: 0; opacity: .08; width: 90%; max-width: 320px; height: auto; top: 50%; left: 50%; -webkit-transform: translate(-50% , -50%); -ms-transform: translate(-50% , -50%); transform: translate(-50% , -50%);}
@@ -21,7 +21,7 @@
 <body>
   <h1>
     Capital<br>
-    <span id="capital"></span>
+    <span id="capitalInteger"></span><span id="capitalDecimal"></span>
   </h1>
   <h2>
     Cashflow<br>
@@ -67,32 +67,37 @@
       (interestInMonth4 / secondsInMonth);
     const deltaTime4 = (currentTime - startDate4) / 1000;
 
-    let currentCapital = parseFloat((
+    let currentCapital =
       startAmount1 + startAmount2 + startAmount3 + startAmount4 +
       (interestInSecond1 * deltaTime1) +
       (interestInSecond2 * deltaTime2) +
       (interestInSecond3 * deltaTime3) +
-      (interestInSecond4 * deltaTime4)).toFixed(2));
+      (interestInSecond4 * deltaTime4);
 
     const deltaCapital = interestInSecond1 + interestInSecond2 +
           interestInSecond3 + interestInSecond4;
 
     let completionOfNextGoal = 0;
-
     let cashflowInMonth = 0;
+    let currentCapitalInteger = 0;
+    let currentCapitalDecimal = 0;
 
     document.getElementById('goal').innerHTML =
       nextGoal.toString().replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
 
     setInterval(
       function(){
-        currentCapital = parseFloat((currentCapital + deltaCapital).toFixed(2));
-        document.getElementById('capital').innerHTML =
-          currentCapital.toString().replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
+        currentCapital += deltaCapital;
+        currentCapitalInteger = Math.floor(currentCapital);
+        currentCapitalDecimal = Math.floor((currentCapital % 1) * 100);
+        document.getElementById('capitalInteger').innerHTML =
+          currentCapitalInteger.toString().replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
+        document.getElementById('capitalDecimal').innerHTML =
+          "." + currentCapitalDecimal;
         cashflowInMonth = (deltaCapital *
           secondsInMonth).toFixed(2);
         document.getElementById('cashflow').innerHTML =
-          cashflowInMonth.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
+          cashflowInMonth;
         completionOfNextGoal = parseFloat((currentCapital * 100 /
           nextGoal).toFixed(2));
         document.getElementById('completion').innerHTML = completionOfNextGoal;
