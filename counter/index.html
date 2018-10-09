@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" type="image/png" href="favicon.png">
-  <title>Counter 1.7</title>
+  <title>Counter 1.8</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet">
   <style>
     body {display: -ms-grid; display: grid; grid-auto-flow: row; -ms-flex-line-pack: center; align-content: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; min-height: 100vh; margin: 0; font-family: 'Open Sans', sans-serif; -webkit-font-smoothing: antialiased; overflow: hidden;}
@@ -86,8 +86,12 @@
       let currentCapitalInteger = 0;
       let currentCapitalDecimal = 0;
 
+      const SpaceAdder = function(a) {
+        return a.toString().replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
+      };
+
       document.getElementById('goal').innerHTML =
-        nextGoal.toString().replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
+        SpaceAdder(nextGoal);
 
       setInterval(
         function(){
@@ -95,8 +99,7 @@
           currentCapitalInteger = Math.floor(currentCapital);
           currentCapitalDecimal = Math.floor((currentCapital % 1) * 100);
           document.getElementById('capitalInteger').innerHTML =
-            currentCapitalInteger.toString().replace
-              (/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
+            SpaceAdder(currentCapitalInteger);
           document.getElementById('capitalDecimal').innerHTML =
             "." + currentCapitalDecimal;
 
@@ -105,8 +108,7 @@
           cashflowInMonthInteger = Math.floor(cashflowInMonth);
           cashflowInMonthDecimal = Math.floor((cashflowInMonth % 1) * 100);
           document.getElementById('cashflowInteger').innerHTML =
-            cashflowInMonthInteger.toString().replace
-              (/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
+            SpaceAdder(cashflowInMonthInteger);
           document.getElementById('cashflowDecimal').innerHTML =
             "." + cashflowInMonthDecimal;
 
