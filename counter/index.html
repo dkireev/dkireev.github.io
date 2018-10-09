@@ -37,31 +37,31 @@
   </svg>
   <script>
     function Counter() {
-      const nextGoal = 200000;
+      const nextGoal = myObj.nextGoal;
       const secondsInMonth = 1 * 60 * 60 * 24 * 30.4375;
       const currentTime = Date.now();
 
-      const startDate1 = Date.parse("Oct 1, 2018"); /* Oschadbank */
-      const startAmount1 = 63813.3;
-      const interestInMonth1 = 0.0098;
+      const startDate1 = Date.parse(myObj.startDate1); /* Oschadbank */
+      const startAmount1 = myObj.startAmount1;
+      const interestInMonth1 = myObj.interestInMonth1;
       const interestInSecond1 = startAmount1 * (interestInMonth1 / secondsInMonth);
       const deltaTime1 = (currentTime - startDate1) / 1000;
 
-      const startDate2 = Date.parse("Oct 4, 2018"); /* Privatbank 1 */
-      const startAmount2 = 31552.68;
-      const interestInMonth2 = 0.0103;
+      const startDate2 = Date.parse(myObj.startDate2); /* Privatbank 1 */
+      const startAmount2 = myObj.startAmount2;
+      const interestInMonth2 = myObj.interestInMonth2;
       const interestInSecond2 = startAmount2 * (interestInMonth2 / secondsInMonth);
       const deltaTime2 = (currentTime - startDate2) / 1000;
 
-      const startDate3 = Date.parse("Oct 1, 2018"); /* Privatbank 2 */
-      const startAmount3 = 5341.03;
-      const interestInMonth3 = 0.0103;
+      const startDate3 = Date.parse(myObj.startDate3); /* Privatbank 2 */
+      const startAmount3 = myObj.startAmount3;
+      const interestInMonth3 = myObj.interestInMonth3;
       const interestInSecond3 = startAmount3 * (interestInMonth3 / secondsInMonth);
       const deltaTime3 = (currentTime - startDate3) / 1000;
 
-      const startDate4 = Date.parse("Oct 2, 2018"); /* Privatbank 3 */
-      const startAmount4 = 2025.67;
-      const interestInMonth4 = 0.0103;
+      const startDate4 = Date.parse(myObj.startDate4); /* Privatbank 3 */
+      const startAmount4 = myObj.startAmount4;
+      const interestInMonth4 = myObj.interestInMonth4;
       const interestInSecond4 = startAmount4 * (interestInMonth4 / secondsInMonth);
       const deltaTime4 = (currentTime - startDate4) / 1000;
 
@@ -124,7 +124,8 @@
     const xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        Counter();
+        const myObj = JSON.parse(this.responseText);
+        Counter(myObj);
       }
     };
     xmlhttp.open("GET", "numbers.txt", true);
