@@ -91,13 +91,16 @@
       function SpaceAdder(a) {
         return a.toString().replace(/(\d)(?=(\d{3})+(\D|$))/g, "$1 ");
       }
+      function DecimalExtractor(a) {
+        return Math.floor((a % 1) * 100);
+      }
 
       document.getElementById("goal").innerHTML = SpaceAdder(nextGoal);
 
       setInterval(function() {
         currentCapital += deltaCapital;
         currentCapitalInteger = Math.floor(currentCapital);
-        currentCapitalDecimal = Math.floor((currentCapital % 1) * 100);
+        currentCapitalDecimal = DecimalExtractor(currentCapital);
         document.getElementById("capitalInteger").innerHTML = SpaceAdder(
           currentCapitalInteger
         );
@@ -106,7 +109,7 @@
 
         cashflowInMonth = (deltaCapital * secondsInMonth).toFixed(2);
         cashflowInMonthInteger = Math.floor(cashflowInMonth);
-        cashflowInMonthDecimal = Math.floor((cashflowInMonth % 1) * 100);
+        cashflowInMonthDecimal = DecimalExtractor(cashflowInMonth);
         document.getElementById("cashflowInteger").innerHTML = SpaceAdder(
           cashflowInMonthInteger
         );
