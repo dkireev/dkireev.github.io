@@ -95,8 +95,8 @@
       function SpaceAdder(a) {
         return a.toString().replace(/(\d)(?=(\d{3})+(\D|$))/g, "$1 ");
       }
-      function DecimalExtractor(a) {
-        return Math.floor((a % 1) * 100);
+      function DecimalExtractor(b) {
+        return Math.floor(b % 1 * 100);
       }
 
       document.getElementById("goal").innerHTML = SpaceAdder(nextGoal);
