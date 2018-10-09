@@ -99,9 +99,9 @@
         const a = Math.floor(b % 1 * 100);
         const length = (a).toString().length;
         if (length == 2) {
-          console.log('yes')
+          return a;
         } else {
-          console.log('no')
+          return ('0' + a);
         }
       }
 
