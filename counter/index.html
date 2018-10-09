@@ -97,7 +97,7 @@
       }
       function DecimalExtractor(b) {
         const a = Math.floor(b % 1 * 100);
-        const length = a.toString().length;
+        const length = (a).toString().length;
         if (length == 2) {
           console.log('yes')
         } else {
