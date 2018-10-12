@@ -89,16 +89,21 @@
       setInterval(function() {
         currentTime = Date.now();
 
-        currentAmount1 = startAmount1 + startAmount1 * interestInMonth1 / millisecondsInMonth * (currentTime - startDate1);
+        currentAmount1 = startAmount1 + startAmount1 * interestInMonth1 /
+          millisecondsInMonth * (currentTime - startDate1);
         cashflow1 = currentAmount1 * interestInMonth1;
-        currentAmount2 = startAmount2 + startAmount2 * interestInMonth2 / millisecondsInMonth * (currentTime - startDate2);
+        currentAmount2 = startAmount2 + startAmount2 * interestInMonth2 /
+          millisecondsInMonth * (currentTime - startDate2);
         cashflow2 = currentAmount2 * interestInMonth2;
-        currentAmount3 = startAmount3 + startAmount3 * interestInMonth3 / millisecondsInMonth * (currentTime - startDate3);
+        currentAmount3 = startAmount3 + startAmount3 * interestInMonth3 /
+          millisecondsInMonth * (currentTime - startDate3);
         cashflow3 = currentAmount3 * interestInMonth3;
-        currentAmount4 = startAmount4 + startAmount4 * interestInMonth4 / millisecondsInMonth * (currentTime - startDate4);
+        currentAmount4 = startAmount4 + startAmount4 * interestInMonth4 /
+          millisecondsInMonth * (currentTime - startDate4);
         cashflow4 = currentAmount4 * interestInMonth4;
 
-        capital = (currentAmount1 + currentAmount2 + currentAmount3 + currentAmount4).toFixed(2);
+        capital = (currentAmount1 + currentAmount2 + currentAmount3 +
+          currentAmount4).toFixed(2);
         capitalInteger = Math.floor(capital);
         capitalDecimal = DecimalExtractor(capital);
         document.getElementById("capitalInteger").innerHTML = SpaceAdder(
