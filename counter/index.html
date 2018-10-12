@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" type="image/png" href="favicon.png">
-  <title>Counter 1.8</title>
+  <title>Counter 1.9</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet">
   <style>
     body {display: -ms-grid; display: grid; grid-auto-flow: row; -ms-flex-line-pack: center; align-content: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; min-height: 100vh; margin: 0; font-family: 'Open Sans', sans-serif; -webkit-font-smoothing: antialiased; overflow: hidden;}
@@ -38,59 +38,40 @@
   <script>
     function Counter(myObj) {
       const nextGoal = myObj.nextGoal;
-      const secondsInMonth = 1 * 60 * 60 * 24 * 30.4375;
-      const currentTime = Date.now();
+      const millisecondsInMonth = 1 * 60 * 60 * 24 * 30.4375 * 1000;
 
-      const startDate1 = Date.parse(myObj.startDate1); /* Oschadbank */
+      const startDate1 = Date.parse(myObj.startDate1);
       const startAmount1 = myObj.startAmount1;
       const interestInMonth1 = myObj.interestInMonth1;
-      const interestInSecond1 = startAmount1 *
-        (interestInMonth1 / secondsInMonth);
-      const deltaTime1 = (currentTime - startDate1) / 1000;
 
-      const startDate2 = Date.parse(myObj.startDate2); /* Privatbank 1 */
+      const startDate2 = Date.parse(myObj.startDate2);
       const startAmount2 = myObj.startAmount2;
       const interestInMonth2 = myObj.interestInMonth2;
-      const interestInSecond2 = startAmount2 *
-        (interestInMonth2 / secondsInMonth);
-      const deltaTime2 = (currentTime - startDate2) / 1000;
 
-      const startDate3 = Date.parse(myObj.startDate3); /* Privatbank 2 */
+      const startDate3 = Date.parse(myObj.startDate3);
       const startAmount3 = myObj.startAmount3;
       const interestInMonth3 = myObj.interestInMonth3;
-      const interestInSecond3 = startAmount3 *
-        (interestInMonth3 / secondsInMonth);
-      const deltaTime3 = (currentTime - startDate3) / 1000;
 
-      const startDate4 = Date.parse(myObj.startDate4); /* Privatbank 3 */
+      const startDate4 = Date.parse(myObj.startDate4);
       const startAmount4 = myObj.startAmount4;
       const interestInMonth4 = myObj.interestInMonth4;
-      const interestInSecond4 = startAmount4 *
-        (interestInMonth4 / secondsInMonth);
-      const deltaTime4 = (currentTime - startDate4) / 1000;
 
-      let currentCapital =
-        startAmount1 +
-        startAmount2 +
-        startAmount3 +
-        startAmount4 +
-        interestInSecond1 * deltaTime1 +
-        interestInSecond2 * deltaTime2 +
-        interestInSecond3 * deltaTime3 +
-        interestInSecond4 * deltaTime4;
-
-      const deltaCapital =
-        interestInSecond1 +
-        interestInSecond2 +
-        interestInSecond3 +
-        interestInSecond4;
-
-      let completionOfNextGoal = 0;
-      let cashflowInMonth = 0;
-      let cashflowInMonthInteger = 0;
-      let cashflowInMonthDecimal = 0;
-      let currentCapitalInteger = 0;
-      let currentCapitalDecimal = 0;
+      let currentAmount1 = 0;
+      let cashflow1 = 0;
+      let currentAmount2 = 0;
+      let cashflow2 = 0;
+      let currentAmount3 = 0;
+      let cashflow3 = 0;
+      let currentAmount4 = 0;
+      let cashflow4 = 0;
+      let currentTime = 0;
+      let capital = 0;
+      let cashflow = 0;
+      let goalCompletion = 0;
+      let capitalInteger = 0;
+      let capitalDecimal = 0;
+      let cashflowInteger = 0;
+      let cashflowDecimal = 0;
 
       function SpaceAdder(a) {
         return a.toString().replace(/(\d)(?=(\d{3})+(\D|$))/g, "$1 ");
@@ -105,29 +86,38 @@
         }
       }
 
-      document.getElementById("goal").innerHTML = SpaceAdder(nextGoal);
-
       setInterval(function() {
-        currentCapital += deltaCapital;
-        currentCapitalInteger = Math.floor(currentCapital);
-        currentCapitalDecimal = DecimalExtractor(currentCapital);
+        currentTime = Date.now();
+
+        currentAmount1 = startAmount1 + startAmount1 * interestInMonth1 / millisecondsInMonth * (currentTime - startDate1);
+        cashflow1 = currentAmount1 * interestInMonth1;
+        currentAmount2 = startAmount2 + startAmount2 * interestInMonth2 / millisecondsInMonth * (currentTime - startDate2);
+        cashflow2 = currentAmount2 * interestInMonth2;
+        currentAmount3 = startAmount3 + startAmount3 * interestInMonth3 / millisecondsInMonth * (currentTime - startDate3);
+        cashflow3 = currentAmount3 * interestInMonth3;
+        currentAmount4 = startAmount4 + startAmount4 * interestInMonth4 / millisecondsInMonth * (currentTime - startDate4);
+        cashflow4 = currentAmount4 * interestInMonth4;
+
+        capital = (currentAmount1 + currentAmount2 + currentAmount3 + currentAmount4).toFixed(2);
+        capitalInteger = Math.floor(capital);
+        capitalDecimal = DecimalExtractor(capital);
         document.getElementById("capitalInteger").innerHTML = SpaceAdder(
-          currentCapitalInteger
+          capitalInteger
         );
         document.getElementById("capitalDecimal").innerHTML =
-          "." + currentCapitalDecimal;
+          "." + capitalDecimal;
 
-        cashflowInMonth = (deltaCapital * secondsInMonth).toFixed(2);
-        cashflowInMonthInteger = Math.floor(cashflowInMonth);
-        cashflowInMonthDecimal = DecimalExtractor(cashflowInMonth);
+        cashflow = (cashflow1 + cashflow2 + cashflow3 + cashflow4).toFixed(2);
+        cashflowInteger = Math.floor(cashflow);
+        cashflowDecimal = DecimalExtractor(cashflow);
         document.getElementById("cashflowInteger").innerHTML = SpaceAdder(
-          cashflowInMonthInteger
+          cashflowInteger
         );
         document.getElementById("cashflowDecimal").innerHTML =
-          "." + cashflowInMonthDecimal;
+          "." + cashflowDecimal;
 
-        completionOfNextGoal = ((currentCapital * 100) / nextGoal).toFixed(2);
-        document.getElementById("completion").innerHTML = completionOfNextGoal;
+        goalCompletion = ((capital * 100) / nextGoal).toFixed(2);
+        document.getElementById("completion").innerHTML = goalCompletion;
       }, 1000);
     }
 
