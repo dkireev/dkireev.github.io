@@ -7,8 +7,8 @@
     "startAmount2": 31552.68,
     "interestInMonth2": 0.0103,
 
-    "startDate3": "Oct 1, 2018",
-    "startAmount3": 5341.03,
+    "startDate3": "Oct 22, 2018",
+    "startAmount3": 6390.58,
     "interestInMonth3": 0.0103,
 
     "startDate4": "Oct 2, 2018",
