@@ -14,7 +14,7 @@
     #capitalInteger {font-size: 56px;}
     #cashflowDecimal {font-size: 14px;}
     #capitalInteger, #capitalDecimal, #cashflowInteger, #cashflowDecimal {font-weight: 300;}
-    #goal, #completion, #grow, #reach {font-weight: 600;}
+    #goal, #completion, #grow {font-weight: 600;}
     #background {position: absolute; z-index: 0; opacity: .08; width: 90%; max-width: 320px; height: auto; top: 50%; left: 50%; -webkit-transform: translate(-50% , -50%); -ms-transform: translate(-50% , -50%); transform: translate(-50% , -50%);}
   </style>
 </head>
@@ -29,9 +29,6 @@
   </h2>
   <h3>
     Goal in <span id="goal"></span> is completed by <span id="completion"></span>
-  </h3>
-  <h3>
-    Goal will be reached in <span id="reach"></span>
   </h3>
   <h3>
     Capital grows by 1 UAH every <span id="grow"></span>
@@ -78,7 +75,6 @@
       let cashflowInteger = 0;
       let cashflowDecimal = 0;
       let capitalGrow = 0;
-      let timeToReach = 0;
 
       function SpaceAdder(a) {
         return a.toString().replace(/(\d)(?=(\d{3})+(\D|$))/g, "$1 ");
@@ -150,31 +146,6 @@
             break;
           case (capitalGrow > 60 * 60 * 24 * 30.4375):
             document.getElementById("grow").innerHTML = SpaceAdder(Math.round(capitalGrow / (60 * 24 * 30.4375 * 12))) + ' years';
-            break;
-          default:
-            break;
-        };
-
-        timeToReach = (nextGoal - parseInt(capital)) * capitalGrow;
-        console.log(typeof(nextGoal));
-        console.log(typeof(capital));
-        console.log(typeof(capitalGrow));
-        console.log(typeof(timeToReach));
-        switch (true) {
-          case (timeToReach <= 60):
-            document.getElementById("reach").innerHTML = SpaceAdder(timeToReach) + ' seconds';
-            break;
-          case (timeToReach > 60 && timeToReach <= 60 * 60):
-            document.getElementById("reach").innerHTML = SpaceAdder(Math.round(timeToReach / 60)) + ' minutes';
-            break;
-          case (timeToReach > 60 * 60 && timeToReach <= 60 * 60 * 24):
-            document.getElementById("reach").innerHTML = SpaceAdder(Math.round(timeToReach / (60 * 24))) + ' days';
-            break;
-          case (timeToReach > 60 * 60 * 24 && timeToReach <= 60 * 60 * 24 * 30.4375):
-            document.getElementById("reach").innerHTML = SpaceAdder(Math.round(timeToReach / (60 * 24 * 30.4375))) + ' months';
-            break;
-          case (timeToReach > 60 * 60 * 24 * 30.4375):
-            document.getElementById("reach").innerHTML = SpaceAdder(Math.round(timeToReach / (60 * 24 * 30.4375 * 12))) + ' years';
             break;
           default:
             break;
