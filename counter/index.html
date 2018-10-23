@@ -41,7 +41,7 @@
   </svg>
   <script>
     function Counter(myObj) {
-      const nextGoal = parseInt(myObj.nextGoal);
+      const nextGoal = myObj.nextGoal;
       const millisecondsInMonth = 60 * 60 * 24 * 30.4375 * 1000;
       const secondsInMonth = millisecondsInMonth / 1000;
 
@@ -131,7 +131,7 @@
         document.getElementById("cashflowDecimal").innerHTML =
           ". " + cashflowDecimal;
 
-        goalCompletion = ((capital * 100) / nextGoal).toFixed(2);
+        goalCompletion = ((parseInt(capital) * 100) / nextGoal).toFixed(2);
         document.getElementById("completion").innerHTML = goalCompletion + ' %';
 
         capitalGrow = Math.round(secondsInMonth / Math.floor(cashflow));
@@ -155,7 +155,7 @@
             break;
         };
 
-        timeToReach = (nextGoal - capital) * capitalGrow;
+        timeToReach = (nextGoal - parseInt(capital)) * capitalGrow;
         console.log(typeof(nextGoal));
         console.log(typeof(capital));
         console.log(typeof(capitalGrow));
