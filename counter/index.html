@@ -156,10 +156,10 @@
         };
 
         timeToReach = (nextGoal - capital) * capitalGrow;
-        console.log(nextGoal);
-        console.log(capital);
-        console.log(capitalGrow);
-        console.log(timeToReach);
+        console.log(typeof(nextGoal));
+        console.log(typeof(capital));
+        console.log(typeof(capitalGrow));
+        console.log(typeof(timeToReach));
         switch (true) {
           case (timeToReach <= 60):
             document.getElementById("reach").innerHTML = SpaceAdder(timeToReach) + ' seconds';
