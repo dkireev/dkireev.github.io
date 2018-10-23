@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" type="image/png" href="favicon.png">
-  <title>Counter 2.0</title>
+  <title>Counter 2.1</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet">
   <style>
     body {display: -ms-grid; display: grid; grid-auto-flow: row; -ms-flex-line-pack: center; align-content: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; min-height: 100vh; margin: 0; font-family: 'Open Sans', sans-serif; -webkit-font-smoothing: antialiased; overflow: hidden;}
@@ -31,7 +31,7 @@
     Goal in <span id="goal"></span> is completed by <span id="completion"></span>
   </h3>
   <h3>
-    Capital grows by 1 UAH every <span id="grow"></span> seconds
+    Capital grows by 1 UAH every <span id="grow"></span>
   </h3>
   <svg id="background" enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
     <path fill="#85bb65" d="m313.45 143.25c7.563 0 13.688 6.125 13.688 13.719 0 7.563-6.125 13.719-13.688 13.719h-137.19c-7.563 0-13.703-6.156-13.703-13.719 0-7.594 6.141-13.719 13.703-13.719h137.19zm-145.09-13.719h153s60.625-52.906 33.219-76.031c-27.438-23.156-88.313 25.688-109.72 24-21.406 1.688-82.297-47.156-109.7-24-27.437 23.125 33.203 76.031 33.203 76.031zm119.94 276.59v-32c0-12.875-8.813-15.813-16-16h-16v64h16c7.187-0.187 16-3.125 16-16zm33.062-221.75h-153c-67.953 49.563-115.5 154.62-115.5 221.28 0 88.094 82.844 80.531 186.17 80.219-8.188-0.688-14.734-7.375-14.734-15.75v-16h-48c-8.813 0-16-7.188-16-16s7.188-16 16-16h48v-64h-16c-19.313 0-48-12.781-48-48v-32c0-35.219 28.688-48 48-48h16v-16c0-8.813 7.188-16 16-16s16 7.188 16 16v16h48c8.813 0 16 7.188 16 16s-7.188 16-16 16h-48v64h16c19.313 0 48 12.781 48 48v32c0 35.219-28.688 48-48 48h-16v16c0 8.344-6.516 15.031-14.688 15.719h3.25c106.06 0 192 9.563 192-80.188 0-66.656-47.562-171.72-115.5-221.28zm-129.06 93.75v32c0 12.875 8.813 15.813 16 16h16v-64h-16c-7.188 0.188-16 3.125-16 16zm-89.156-173.75c-6.313 0-11.406 5.125-11.406 11.438s5.094 11.438 11.406 11.438h18.75c-5.578-6.875-10.953-14.625-15.422-22.875h-3.328zm285.44-11.406h27.469s50.531-44.094 27.688-63.375c-14.125-11.906-38.844-0.938-59.906 8.844 6.281 8.625 9.781 18.875 9.875 29.906 0.062 8.312-2.001 16.594-5.126 24.625zm32.281 22.844c0-6.313-5.094-11.438-11.406-11.438h-26.219c-4.469 8.25-9.844 16-15.406 22.875h41.625c6.313 0 11.406-5.125 11.406-11.437zm-4.812 22.875h-58.25c-0.594 0.625-1.219 1.344-1.813 1.938 1.969 5.094 3.156 10.563 3.156 16.344 0 5.406-1.094 10.5-2.844 15.281 62.781 54.906 103.44 144.38 111 211.69 27.813-7.594 45-24.313 45-60.875 1e-3 -55.564-39.624-143.1-96.249-184.38zm-319.5-45.719h4.609c-3.141-8.031-5.203-16.281-5.125-24.625 0.109-14.344 6.016-27.281 16.297-37.031-16.438-6.594-32.922-10.625-43.469-1.719-22.843 19.281 27.688 63.375 27.688 63.375zm36.844 79.312c-1.719-4.813-2.828-9.906-2.828-15.313 0-5.781 1.188-11.25 3.156-16.344-0.578-0.625-1.203-1.313-1.813-1.938h-35.359c-56.625 41.283-96.25 128.81-96.25 184.38 0 25.719 8.625 41.5 23.344 51.344 10.156-66.032 49.953-149.84 109.75-202.13z"/>
@@ -39,7 +39,7 @@
   <script>
     function Counter(myObj) {
       const nextGoal = myObj.nextGoal;
-      const millisecondsInMonth = 1 * 60 * 60 * 24 * 30.4375 * 1000;
+      const millisecondsInMonth = 60 * 60 * 24 * 30.4375 * 1000;
       const secondsInMonth = millisecondsInMonth / 1000;
 
       const startDate1 = Date.parse(myObj.startDate1);
@@ -131,7 +131,22 @@
         document.getElementById("completion").innerHTML = goalCompletion + ' %';
 
         capitalGrow = Math.round(secondsInMonth / Math.floor(cashflow));
-        document.getElementById("grow").innerHTML = SpaceAdder(capitalGrow);
+        switch (true) {
+          case (capitalGrow <= 60):
+            document.getElementById("grow").innerHTML = SpaceAdder(capitalGrow) + ' seconds';
+            break;
+          case (capitalGrow > 60 && capitalGrow <= 60 * 60):
+            document.getElementById("grow").innerHTML = SpaceAdder(capitalGrow / 60) + ' minutes';
+            break;
+          case (capitalGrow > 60 * 60 && capitalGrow <= 60 * 60 * 24):
+            document.getElementById("grow").innerHTML = SpaceAdder(capitalGrow / (60 * 24)) + ' days';
+            break;
+          case (capitalGrow > 60 * 60 * 24 && capitalGrow <= 60 * 60 * 24 * 30.4375):
+            document.getElementById("grow").innerHTML = SpaceAdder(capitalGrow / (60 * 24 * 30.4375)) + ' months';
+            break;
+          default:
+            break;
+        }
       }, 1000);
     }
 
