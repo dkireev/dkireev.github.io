@@ -116,7 +116,7 @@
           capitalInteger
         );
         document.getElementById("capitalDecimal").innerHTML =
-          " ." + capitalDecimal;
+          ". " + capitalDecimal;
 
         cashflow = (cashflow1 + cashflow2 + cashflow3 + cashflow4).toFixed(2);
         cashflowInteger = Math.floor(cashflow);
@@ -125,7 +125,7 @@
           cashflowInteger
         );
         document.getElementById("cashflowDecimal").innerHTML =
-          " ." + cashflowDecimal;
+          ". " + cashflowDecimal;
 
         goalCompletion = ((capital * 100) / nextGoal).toFixed(2);
         document.getElementById("completion").innerHTML = goalCompletion + ' %';
