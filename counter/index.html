@@ -28,7 +28,7 @@
     <span id="cashflowInteger"></span> <span id="cashflowDecimal"></span>
   </h2>
   <h3>
-    Goal in <span id="goal"></span> is completed by <span id="completion"></span> %
+    Goal in <span id="goal"></span> is completed by <span id="completion"></span>
   </h3>
   <h3>
     Capital grows by 1 UAH every <span id="grow"></span> seconds
@@ -128,9 +128,9 @@
           "." + cashflowDecimal;
 
         goalCompletion = ((capital * 100) / nextGoal).toFixed(2);
-        document.getElementById("completion").innerHTML = goalCompletion;
+        document.getElementById("completion").innerHTML = goalCompletion + ' %';
 
-        capitalGrow = secondsInMonth / Math.floor(cashflow);
+        capitalGrow = Math.round(secondsInMonth / Math.floor(cashflow));
         document.getElementById("grow").innerHTML = SpaceAdder(capitalGrow);
       }, 1000);
     }
