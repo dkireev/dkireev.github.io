@@ -148,7 +148,7 @@
           case (capitalGrow > 60 * 60 * 24 && capitalGrow <= 60 * 60 * 24 * 30.4375):
             document.getElementById("grow").innerHTML = SpaceAdder(Math.round(capitalGrow / (60 * 24 * 30.4375))) + ' months';
             break;
-          case (capitalGrow > 60 * 60 * 24 * 30.4375 && capitalGrow <= 60 * 60 * 24 * 30.4375 * 12):
+          case (capitalGrow > 60 * 60 * 24 * 30.4375):
             document.getElementById("grow").innerHTML = SpaceAdder(Math.round(capitalGrow / (60 * 24 * 30.4375 * 12))) + ' years';
             break;
           default:
@@ -173,7 +173,7 @@
           case (timeToReach > 60 * 60 * 24 && timeToReach <= 60 * 60 * 24 * 30.4375):
             document.getElementById("reach").innerHTML = SpaceAdder(Math.round(timeToReach / (60 * 24 * 30.4375))) + ' months';
             break;
-          case (timeToReach > 60 * 60 * 24 * 30.4375 && timeToReach <= 60 * 60 * 24 * 30.4375 * 12):
+          case (timeToReach > 60 * 60 * 24 * 30.4375):
             document.getElementById("reach").innerHTML = SpaceAdder(Math.round(timeToReach / (60 * 24 * 30.4375 * 12))) + ' years';
             break;
           default:
