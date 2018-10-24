@@ -51,8 +51,6 @@ function Counter(myObj) {
     }
   }
 
-  document.getElementById("goal").innerHTML = SpaceAdder(nextGoal) + " &#8372;";
-
   setInterval(function() {
     currentTime = Date.now();
 
