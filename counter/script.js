@@ -87,7 +87,7 @@ function Counter(myObj) {
       ". " + cashflowDecimal + " &#8372;";
 
     goalCompletion = ((parseInt(capital) * 100) / nextGoal).toFixed(2);
-    document.getElementById("completion").innerHTML = goalCompletion + ' %';
+    document.getElementById("completion").innerHTML = goalCompletion;
 
     capitalGrow = Math.round(secondsInMonth / Math.floor(cashflow));
     document.getElementById("grow").innerHTML = SpaceAdder(Math.round(capitalGrow / 60));

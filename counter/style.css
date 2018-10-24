@@ -17,7 +17,7 @@ h1, h2 {
 	font-weight: 500;
 }
 .appContainer {
-	height: calc(100vh - 2em);
+	height: 80vh;
 	display: grid;
 	grid-template-rows: 1fr 2fr;
 	grid-row-gap: 12px;
@@ -60,5 +60,8 @@ h1, h2 {
 		grid-template-rows: none;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-column-gap: 12px;
+	}
+	.appContainer {
+		height: calc(100vh - 2em);
 	}
 }
