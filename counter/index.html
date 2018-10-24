@@ -138,14 +138,8 @@
           case (capitalGrow > 60 && capitalGrow <= 60 * 60):
             document.getElementById("grow").innerHTML = SpaceAdder(Math.round(capitalGrow / 60)) + ' minutes';
             break;
-          case (capitalGrow > 60 * 60 && capitalGrow <= 60 * 60 * 24):
-            document.getElementById("grow").innerHTML = SpaceAdder(Math.round(capitalGrow / (60 * 24))) + ' days';
-            break;
-          case (capitalGrow > 60 * 60 * 24 && capitalGrow <= 60 * 60 * 24 * 30.4375):
-            document.getElementById("grow").innerHTML = SpaceAdder(Math.round(capitalGrow / (60 * 24 * 30.4375))) + ' months';
-            break;
-          case (capitalGrow > 60 * 60 * 24 * 30.4375):
-            document.getElementById("grow").innerHTML = SpaceAdder(Math.round(capitalGrow / (60 * 24 * 30.4375 * 12))) + ' years';
+          case (capitalGrow > 60 * 60 && capitalGrow <= 60 * 60 * 60):
+            document.getElementById("grow").innerHTML = SpaceAdder(Math.round(capitalGrow / (60 * 60))) + ' hours';
             break;
           default:
             break;
