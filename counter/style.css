@@ -6,6 +6,8 @@ body {
   font-weight: 300;
   min-height: 100vh;
   color: #fff;
+  display: grid;
+  align-items: center;
 }
 
 p, h1, h2 {
