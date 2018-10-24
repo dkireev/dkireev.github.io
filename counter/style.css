@@ -63,5 +63,6 @@ h1, h2 {
 	}
 	.appContainer {
 		height: calc(100vh - 2em);
+		grid-template-rows: 1fr 1fr;
 	}
 }
