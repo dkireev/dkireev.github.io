@@ -49,7 +49,7 @@ h1, h2 {
 #capitalInteger {
 	font-size: 3em;
 }
-#cashflowInteger, #completion, #grow {
+#cashflowInteger, #completionInteger, #grow {
 	font-size: 2em;
 }
 .detailsContainer {
