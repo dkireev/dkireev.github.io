@@ -36,6 +36,8 @@ function Counter(myObj) {
   let cashflowInteger = 0;
   let cashflowDecimal = 0;
   let capitalGrow = 0;
+  let goalCompletionInteger = 0;
+  let goalCompletionDecimal = 0;
 
   function SpaceAdder(a) {
     return a.toString().replace(/(\d)(?=(\d{3})+(\D|$))/g, "$1 ");
@@ -87,7 +89,13 @@ function Counter(myObj) {
       ". " + cashflowDecimal + " &#8372;";
 
     goalCompletion = ((parseInt(capital) * 100) / nextGoal).toFixed(2);
-    document.getElementById("completion").innerHTML = goalCompletion;
+    goalCompletionInteger = Math.floor(goalCompletion);
+    goalCompletionDecimal = DecimalExtractor(goalCompletion);
+    document.getElementById("goalCompletionInteger").innerHTML = SpaceAdder(
+      goalCompletionInteger
+    );
+    document.getElementById("goalCompletionDecimal").innerHTML =
+      ". " + goalCompletionDecimal + " %";
 
     capitalGrow = Math.round(secondsInMonth / Math.floor(cashflow));
     document.getElementById("grow").innerHTML = SpaceAdder(Math.round(capitalGrow / 60));
