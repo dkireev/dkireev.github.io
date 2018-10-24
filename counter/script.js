@@ -91,10 +91,10 @@ function Counter(myObj) {
     goalCompletion = ((parseInt(capital) * 100) / nextGoal).toFixed(2);
     goalCompletionInteger = Math.floor(goalCompletion);
     goalCompletionDecimal = DecimalExtractor(goalCompletion);
-    document.getElementById("goalCompletionInteger").innerHTML = SpaceAdder(
+    document.getElementById("completionInteger").innerHTML = SpaceAdder(
       goalCompletionInteger
     );
-    document.getElementById("goalCompletionDecimal").innerHTML =
+    document.getElementById("completionDecimal").innerHTML =
       ". " + goalCompletionDecimal + " %";
 
     capitalGrow = Math.round(secondsInMonth / Math.floor(cashflow));
