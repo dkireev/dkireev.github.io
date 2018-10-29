@@ -1,6 +1,6 @@
 {
-    "startDate1": "Oct 1, 2018",
-    "startAmount1": 63813.30,
+    "startDate1": "Oct 29, 2018",
+    "startAmount1": 64355.14,
     "interestInMonth1": 0.0098,
 
     "startDate2": "Oct 4, 2018",
