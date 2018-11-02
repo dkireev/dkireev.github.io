@@ -11,8 +11,8 @@
     "startAmount3": 6390.58,
     "interestInMonth3": 0.0103,
 
-    "startDate4": "Nov 1, 2018",
-    "startAmount4": 3033.67,
+    "startDate4": "Nov 2, 2018",
+    "startAmount4": 3053.75,
     "interestInMonth4": 0.0103,
 
     "nextGoal": 200000
