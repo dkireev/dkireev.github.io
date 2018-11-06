@@ -1,0 +1,7 @@
+{
+    "startDate": "Oct 27, 2018",
+    "startAmount": 79864.78,
+    "interestInMonth": 0.0107,
+
+    "nextGoal": 200000
+}
