@@ -11,7 +11,6 @@ function Counter(myObj) {
   let cashflow = 0;
   let currentTime = 0;
   let capital = 0;
-  let cashflow = 0;
   let goalCompletion = 0;
   let capitalInteger = 0;
   let capitalDecimal = 0;
