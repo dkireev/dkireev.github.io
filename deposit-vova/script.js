@@ -40,7 +40,7 @@ function Counter(myObj) {
 
     currentAmount = startAmount + startAmount * interestInMonth /
       millisecondsInMonth * (currentTime - startDate);
-    cashflow = currentAmount * interestInMonth;
+    cashflow = (currentAmount * interestInMonth).toFixed(2);
 
     capital = currentAmount.toFixed(2);
     capitalInteger = Math.floor(capital);
@@ -51,7 +51,6 @@ function Counter(myObj) {
     document.getElementById("capitalDecimal").innerHTML =
       ". " + capitalDecimal + " &#8372;";
 
-    cashflow = cashflow.toFixed(2);
     cashflowInteger = Math.floor(cashflow);
     cashflowDecimal = DecimalExtractor(cashflow);
     document.getElementById("cashflowInteger").innerHTML = SpaceAdder(
