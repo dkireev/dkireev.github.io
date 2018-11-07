@@ -13,7 +13,7 @@ function openPopup() {
 }
 
 function counter(myObj) {
-    /*
+    
     localStorage.setItem('startDate1', 'Oct 29, 2018');
     localStorage.setItem('startAmount1', '64355.14');
     localStorage.setItem('interestInMonth1', '0.0098');
@@ -28,7 +28,7 @@ function counter(myObj) {
 
     localStorage.setItem('startDate4', 'Nov 2, 2018');
     localStorage.setItem('startAmount4', '3053.75');
-    localStorage.setItem('interestInMonth4', '0.0103');*/
+    localStorage.setItem('interestInMonth4', '0.0103');
 
     const nextGoal = parseInt(localStorage.getItem('nextGoal'));
     const millisecondsInMonth = 60 * 60 * 24 * 30.4375 * 1000;
