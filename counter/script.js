@@ -12,8 +12,7 @@ function openPopup() {
     document.getElementById('popup').style.left = 0;
 }
 
-function counter(myObj) {
-    
+function counter(myObj) {    
     localStorage.setItem('startDate1', 'Oct 29, 2018');
     localStorage.setItem('startAmount1', '64355.14');
     localStorage.setItem('interestInMonth1', '0.0098');
