@@ -127,7 +127,7 @@ input, button {
     appearance: none;
     border: none;
     outline: none;
-    width: 50%;
+    width: calc(100% - 32px);
     max-width: 500px;
     height: 40px;
     box-sizing: border-box;
