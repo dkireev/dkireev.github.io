@@ -24,6 +24,13 @@
             <div class="infoContainer goalContainer">
                 <h2>Goal completion</h2>
                 <p><span id="completionInteger"></span><span id="completionDecimal"></span></p>
+                <div class="edit" onclick="openPopup()">
+                    <img src="edit.png" alt="">
+                </div>
+                <div id="popup">
+                    <input type="number" id="number" placeholder="Enter new goal">
+                    <button type="submit" onclick="updateGoalFunction(document.getElementById('number').value)">Save</button>
+                </div>
             </div>
             <div class="infoContainer growContainer">
                 <h2>1 &#8372; gains every</h2>
