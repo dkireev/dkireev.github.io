@@ -169,6 +169,7 @@ button {
     color: #fff;
     margin-top: 20px;
     letter-spacing: 1px;
+    cursor: pointer;
 }
 
 input[type=number]::-webkit-inner-spin-button,
