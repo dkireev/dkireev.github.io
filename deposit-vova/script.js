@@ -15,8 +15,8 @@ function openPopup() {
 }
 
 function counter(myObj) {
-    localStorage.setItem("startDate", "Oct 27, 2018");
-    localStorage.setItem("startAmount", "79864.78");
+    localStorage.setItem("startDate", "Nov 8, 2018");
+    localStorage.setItem("startAmount", "85064");
     localStorage.setItem("interestInMonth", "0.0107");
 
     const nextGoal = parseInt(localStorage.getItem("nextGoal"));
