@@ -141,6 +141,15 @@ h2 {
     transition: left ease-in-out 0.3s;
 }
 
+#closePopup {
+    width: 16px;
+    height: 16px;
+    position: fixed;
+    top: 10px;
+    right: -100vw;
+    transition: right ease-in-out 0.3s;
+}
+
 input,
 button {
     -webkit-appearance: none;
@@ -160,6 +169,8 @@ button {
 
 input {
     padding: 0 16px;
+
+    text-align: center;
 }
 
 button {

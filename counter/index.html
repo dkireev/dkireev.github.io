@@ -24,6 +24,8 @@
                     <img src="edit.png" alt="">
                 </div>
                 <div id="popup">
+                    <img id="closePopup" src="close.png" onclick="closePopup()" alt="">
+                    <p>Current goal is: <span id="popupCurrentGoal"></span>  &#8372;</p>
                     <input type="number" id="number" placeholder="Enter new goal">
                     <button type="submit" onclick="updateGoalFunction(document.getElementById('number').value)">Save</button>
                 </div>
