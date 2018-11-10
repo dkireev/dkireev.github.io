@@ -7,14 +7,14 @@ let startDate = 0;
 let startAmount = 0;
 let interestInMonth = 0;
 
+let currentAmount0 = 0;
+let cashflow0 = 0;
 let currentAmount1 = 0;
 let cashflow1 = 0;
 let currentAmount2 = 0;
 let cashflow2 = 0;
 let currentAmount3 = 0;
 let cashflow3 = 0;
-let currentAmount4 = 0;
-let cashflow4 = 0;
 let currentTime = 0;
 let capital = 0;
 let cashflow = 0;
@@ -62,74 +62,89 @@ function decimalExtractor(b) {
 }
 
 function setStartDate(i) {
-    let a = JSON.parse(localStorage.getItem("deposit" + i));
+    let a = JSON.parse(localStorage.getItem("deposit"));
     return (
-        Date.parse(a.startDate)
+        Date.parse(a[i].startDate)
     )
 }
 
 function setStartAmount(i) {
-    let a = JSON.parse(localStorage.getItem("deposit" + i));
+    let a = JSON.parse(localStorage.getItem("deposit"));
     return (
-        parseFloat(a.startAmount)
+        parseFloat(a[i].startAmount)
     )
 }
 
 function setInterestInMonth(i) {
-    let a = JSON.parse(localStorage.getItem("deposit" + i));
+    let a = JSON.parse(localStorage.getItem("deposit"));
     return (
-        parseFloat(a.interestInMonth)
+        parseFloat(a[i].interestInMonth)
     )
 }
 
 function counter() {
-    const deposit1 = {
+    const deposit = [
+      {
         "startDate": "Oct 29, 2018",
         "startAmount": "64355.14",
         "interestInMonth": "0.0098"
-    }
-    const deposit2 = {
+      },
+      {
         "startDate": "Nov 4, 2018",
         "startAmount": "39094.46",
         "interestInMonth": "0.0103"
-    }
-    const deposit3 = {
+      },
+      {
         "startDate": "Oct 22, 2018",
         "startAmount": "6390.58",
         "interestInMonth": "0.0103"
-    }
-    const deposit4 = {
+      },
+      {
         "startDate": "Nov 2, 2018",
         "startAmount": "3053.75",
         "interestInMonth": "0.0103"
-    }
+      }
+    ];
 
-    localStorage.setItem("deposit1", JSON.stringify(deposit1));
-    localStorage.setItem("deposit2", JSON.stringify(deposit2));
-    localStorage.setItem("deposit3", JSON.stringify(deposit3));
-    localStorage.setItem("deposit4", JSON.stringify(deposit4));
+    if (!localStorage.getItem("deposit")) {
+      localStorage.setItem("deposit", JSON.stringify(deposit));
+    }
 
     const nextGoal = parseInt(localStorage.getItem("nextGoal"));
 
+    for (var i = 0; i < JSON.parse(localStorage.getItem("deposit")).length; i++) {
+      console.log(JSON.parse(localStorage.getItem("deposit"))[i]);
+    }
+
+    const startDate0 = setStartDate(0);
     const startDate1 = setStartDate(1);
     const startDate2 = setStartDate(2);
     const startDate3 = setStartDate(3);
-    const startDate4 = setStartDate(4);
+    const startAmount0 = setStartAmount(0);
     const startAmount1 = setStartAmount(1);
     const startAmount2 = setStartAmount(2);
     const startAmount3 = setStartAmount(3);
-    const startAmount4 = setStartAmount(4);
+    const interestInMonth0 = setInterestInMonth(0);
     const interestInMonth1 = setInterestInMonth(1);
     const interestInMonth2 = setInterestInMonth(2);
     const interestInMonth3 = setInterestInMonth(3);
-    const interestInMonth4 = setInterestInMonth(4);
 
-    document.getElementById("popupCurrentGoal").innerHTML =
-        spaceAdder(localStorage.getItem("nextGoal"));
+    if (localStorage.getItem("nextGoal")) {
+        document.getElementById("popupCurrentGoal").innerHTML =
+            "Current goal is " +
+            spaceAdder(localStorage.getItem("nextGoal")) +
+            " &#8372;";
+    } else {
+        document.getElementById("popupCurrentGoal").innerHTML =
+            "Goal isn't set yet";
+    }
 
     setInterval(function() {
         currentTime = Date.now();
 
+        currentAmount0 = startAmount0 + startAmount0 * interestInMonth0 /
+            millisecondsInMonth * (currentTime - startDate0);
+        cashflow0 = currentAmount0 * interestInMonth0;
         currentAmount1 = startAmount1 + startAmount1 * interestInMonth1 /
             millisecondsInMonth * (currentTime - startDate1);
         cashflow1 = currentAmount1 * interestInMonth1;
@@ -139,12 +154,9 @@ function counter() {
         currentAmount3 = startAmount3 + startAmount3 * interestInMonth3 /
             millisecondsInMonth * (currentTime - startDate3);
         cashflow3 = currentAmount3 * interestInMonth3;
-        currentAmount4 = startAmount4 + startAmount4 * interestInMonth4 /
-            millisecondsInMonth * (currentTime - startDate4);
-        cashflow4 = currentAmount4 * interestInMonth4;
 
-        capital = currentAmount1 + currentAmount2 + currentAmount3 +
-            currentAmount4;
+        capital = currentAmount0 + currentAmount1 + currentAmount2 +
+            currentAmount3;
         capitalInteger = Math.floor(capital.toFixed(2));
         capitalDecimal = decimalExtractor(capital);
         document.getElementById("capitalInteger").innerHTML = spaceAdder(
@@ -153,7 +165,7 @@ function counter() {
         document.getElementById("capitalDecimal").innerHTML =
             ". " + capitalDecimal + " &#8372;";
 
-        cashflow = cashflow1 + cashflow2 + cashflow3 + cashflow4;
+        cashflow = cashflow0 + cashflow1 + cashflow2 + cashflow3;
         cashflowInteger = Math.floor(cashflow.toFixed(2));
         cashflowDecimal = decimalExtractor(cashflow);
         document.getElementById("cashflowInteger").innerHTML = spaceAdder(
