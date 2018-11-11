@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" type="image/png" href="../counter/favicon.png">
-    <title>Депозит 2.4</title>
+    <title>Депозит 2.5</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500" rel="stylesheet">
     <link rel="stylesheet" href="../counter/style.css">
 </head>
 
-<body>
+<body onload="counter()">
     <div class="appContainer">
         <div class="infoContainer capitalContainer">
             <h1>Капитал</h1>
@@ -24,6 +24,8 @@
                     <img src="../counter/edit.png" alt="">
                 </div>
                 <div id="popup">
+                    <img id="closePopup" src="../counter/close.png" onclick="closePopup()" alt="">
+                    <p id="popupCurrentGoal"></p>
                     <input type="number" id="number" placeholder="Введите новую цель">
                     <button type="submit" onclick="updateGoalFunction(document.getElementById('number').value)">Сохранить</button>
                 </div>

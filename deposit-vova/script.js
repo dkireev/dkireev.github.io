@@ -1,4 +1,12 @@
-counter();
+function openPopup() {
+    document.getElementById("popup").style.left = 0;
+    document.getElementById("closePopup").style.right = '10px';
+}
+
+function closePopup() {
+    document.getElementById("popup").style.left = '100vw';
+    document.getElementById("closePopup").style.right = '-100vw';
+}
 
 function updateGoalFunction(value) {
     if (value) {
@@ -10,28 +18,17 @@ function updateGoalFunction(value) {
     }
 }
 
-function openPopup() {
-    document.getElementById("popup").style.left = 0;
-}
-
-function counter(myObj) {
-    localStorage.setItem("startDate", "Nov 8, 2018");
-    localStorage.setItem("startAmount", "85064");
-    localStorage.setItem("interestInMonth", "0.0107");
-
-    const nextGoal = parseInt(localStorage.getItem("nextGoal"));
+function counter() {
     const millisecondsInMonth = 60 * 60 * 24 * 30.4375 * 1000;
     const secondsInMonth = millisecondsInMonth / 1000;
-
-    const startDate = Date.parse(localStorage.getItem("startDate"));
-    const startAmount = parseFloat(localStorage.getItem("startAmount"));
-    const interestInMonth =
-        parseFloat(localStorage.getItem("interestInMonth"));
-
-    let currentAmount = 0;
+    let startDate = [];
+    let startAmount = [];
+    let interestInMonth = [];
+    let currentAmount = [];
+    let cashflowArray = [];
+    let cashflow = 0;
     let currentTime = 0;
     let capital = 0;
-    let cashflow = 0;
     let goalCompletion = 0;
     let capitalInteger = 0;
     let capitalDecimal = 0;
@@ -41,11 +38,11 @@ function counter(myObj) {
     let goalCompletionInteger = 0;
     let goalCompletionDecimal = 0;
 
-    function SpaceAdder(a) {
+    function spaceAdder(a) {
         return a.toString().replace(/(\d)(?=(\d{3})+(\D|$))/g, "$1 ");
     }
 
-    function DecimalExtractor(b) {
+    function decimalExtractor(b) {
         const a = Math.floor(b % 1 * 100);
         const length = (a).toString().length;
         if (length == 2) {
@@ -55,25 +52,81 @@ function counter(myObj) {
         }
     }
 
+    function setStartDate(i) {
+        let a = JSON.parse(localStorage.getItem("deposit"));
+        return (
+            Date.parse(a[i].startDate)
+        )
+    }
+
+    function setStartAmount(i) {
+        let a = JSON.parse(localStorage.getItem("deposit"));
+        return (
+            parseFloat(a[i].startAmount)
+        )
+    }
+
+    function setInterestInMonth(i) {
+        let a = JSON.parse(localStorage.getItem("deposit"));
+        return (
+            parseFloat(a[i].interestInMonth)
+        )
+    }
+    const deposit = [{
+            "startDate": "Nov 8, 2018",
+            "startAmount": "85064",
+            "interestInMonth": "0.0107"
+        }
+    ];
+
+    if (!localStorage.getItem("deposit")) {
+        localStorage.setItem("deposit", JSON.stringify(deposit));
+    }
+
+    const nextGoal = parseInt(localStorage.getItem("nextGoal"));
+
+    for (var i = 0; i < JSON.parse(localStorage.getItem("deposit")).length; i++) {
+        startDate[i] = setStartDate(i);
+        startAmount[i] = setStartAmount(i);
+        interestInMonth[i] = setInterestInMonth(i);
+    }
+
+    if (localStorage.getItem("nextGoal")) {
+        document.getElementById("popupCurrentGoal").innerHTML =
+            "Ваша цель: " +
+            spaceAdder(localStorage.getItem("nextGoal")) +
+            " &#8372;";
+    } else {
+        document.getElementById("popupCurrentGoal").innerHTML =
+            "Цель еще не установлена";
+    }
+
     setInterval(function() {
         currentTime = Date.now();
+        let currentAmountSum = 0;
+        let cashflowSum = 0;
 
-        currentAmount = startAmount + startAmount * interestInMonth /
-            millisecondsInMonth * (currentTime - startDate);
-        cashflow = currentAmount * interestInMonth;
+        for (var i = 0; i < JSON.parse(localStorage.getItem("deposit")).length; i++) {
+            currentAmount[i] = startAmount[i] + startAmount[i] * interestInMonth[i] /
+                millisecondsInMonth * (currentTime - startDate[i]);
+            cashflowArray[i] = currentAmount[i] * interestInMonth[i];
+            currentAmountSum += currentAmount[i];
+            cashflowSum += cashflowArray[i];
+        }
+        capital = currentAmountSum;
+        cashflow = cashflowSum;
 
-        capital = currentAmount;
         capitalInteger = Math.floor(capital.toFixed(2));
-        capitalDecimal = DecimalExtractor(capital);
-        document.getElementById("capitalInteger").innerHTML = SpaceAdder(
+        capitalDecimal = decimalExtractor(capital);
+        document.getElementById("capitalInteger").innerHTML = spaceAdder(
             capitalInteger
         );
         document.getElementById("capitalDecimal").innerHTML =
             ". " + capitalDecimal + " &#8372;";
 
         cashflowInteger = Math.floor(cashflow.toFixed(2));
-        cashflowDecimal = DecimalExtractor(cashflow);
-        document.getElementById("cashflowInteger").innerHTML = SpaceAdder(
+        cashflowDecimal = decimalExtractor(cashflow);
+        document.getElementById("cashflowInteger").innerHTML = spaceAdder(
             cashflowInteger
         );
         document.getElementById("cashflowDecimal").innerHTML =
@@ -81,8 +134,8 @@ function counter(myObj) {
 
         goalCompletion = (parseInt(capital) * 100) / nextGoal;
         goalCompletionInteger = Math.floor(goalCompletion.toFixed(2));
-        goalCompletionDecimal = DecimalExtractor(goalCompletion);
-        document.getElementById("completionInteger").innerHTML = SpaceAdder(
+        goalCompletionDecimal = decimalExtractor(goalCompletion);
+        document.getElementById("completionInteger").innerHTML = spaceAdder(
             goalCompletionInteger
         );
         document.getElementById("completionDecimal").innerHTML =
@@ -90,6 +143,6 @@ function counter(myObj) {
 
         capitalGrow = Math.round(secondsInMonth / Math.floor(cashflow));
         document.getElementById("grow").innerHTML =
-            SpaceAdder(Math.round(capitalGrow / 60));
+            spaceAdder(Math.round(capitalGrow / 60));
     }, 1000);
 }
