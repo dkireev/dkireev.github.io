@@ -58,7 +58,7 @@ body {
     display: grid;
     -ms-grid-rows: 1fr 2fr;
     grid-template-rows: 1fr 2fr;
-    grid-row-gap: 16px;
+    grid-row-gap: 8px;
     padding: 16px;
 }
 
@@ -70,7 +70,7 @@ body {
     display: grid;
     -ms-grid-rows: 16px auto;
     grid-template-rows: 16px auto;
-    grid-row-gap: 16px;
+    grid-row-gap: 8px;
     align-items: center;
     position: relative;
 }
@@ -143,13 +143,14 @@ body {
     display: grid;
     -ms-grid-rows: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-row-gap: 16px;
+    grid-row-gap: 8px;
 }
 
 .popup {
     position: fixed;
     background-color: var(--white);
-    color: var(--black);
+    color: var(--color-dark);
+    font-size: 16px;
     top: 0;
     left: 100vw;
     width: 100%;
@@ -186,36 +187,37 @@ button {
 
 input {
     padding: 0 16px;
-    border: 1px solid var(--gray);
+    border: 1px solid var(--color-light);
     text-align: center;
     font-size: 16px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     border-radius: 3px;
+    color: var(--color-dark);
 }
 
 input:focus {
-    border-color: var(--black);
+    border-color: var(--color-dark);
 }
 
 :-moz-placeholder {
-    color: var(--gray);
+    color: var(--color-light);
     font-size: 14px;
 }
 
 ::-webkit-input-placeholder {
-    color: var(--gray);
+    color: var(--color-light);
     font-size: 14px;
 }
 
 ::-moz-placeholder {
-    color: var(--gray);
+    color: var(--color-light);
     font-size: 14px;
 }
 
 :-ms-input-placeholder {
-    color: var(--gray);
+    color: var(--color-light);
     font-size: 14px;
 }
 
@@ -250,7 +252,7 @@ input[type=number]::-webkit-outer-spin-button {
         grid-template-rows: none;
         -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: 16px;
+        grid-column-gap: 8px;
     }
 
     .appContainer {
