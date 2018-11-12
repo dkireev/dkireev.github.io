@@ -2,14 +2,16 @@
     --white: #fff;
     --black: #1a1a1a;
     --gray: #808080;
+    --color-dark: #40495b;
+    --color-light: #5f818f;
 }
 
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
     min-height: 100vh;
     color: var(--white);
     display: -ms-grid;
@@ -26,8 +28,8 @@ h2 {
 
 h1,
 h2 {
-    font-size: 1em;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 body {
@@ -105,22 +107,24 @@ body {
     opacity: 1;
 }
 
-.capitalContainer, .goalContainer {
-    background-color: #40495b;
+.capitalContainer,
+.goalContainer {
+    background-color: var(--color-dark);
 }
 
-.cashflowContainer, .growContainer {
-    background-color: #5f818f;
+.cashflowContainer,
+.growContainer {
+    background-color: var(--color-light);
 }
 
 #capitalInteger {
-    font-size: 3em;
+    font-size: 48px;
 }
 
 #cashflowInteger,
 #completionInteger,
 #grow {
-    font-size: 2em;
+    font-size: 24px;
 }
 
 .detailsContainer {
@@ -160,16 +164,12 @@ body {
 
 input,
 button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     outline: none;
     width: calc(100% - 32px);
     max-width: 500px;
     height: 40px;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
     border-radius: 3px;
 }
 
@@ -177,28 +177,41 @@ input {
     padding: 0 16px;
     border: 1px solid var(--gray);
     text-align: center;
+    font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
+
 input:focus {
     border-color: var(--black);
 }
 
 :-moz-placeholder {
-  color: var(--gray);
+    color: var(--gray);
+    font-size: 14px;
 }
+
 ::-webkit-input-placeholder {
-  color: var(--gray);
+    color: var(--gray);
+    font-size: 14px;
 }
+
 ::-moz-placeholder {
-  color: var(--gray);
+    color: var(--gray);
+    font-size: 14px;
 }
+
 :-ms-input-placeholder {
-  color: var(--gray);
+    color: var(--gray);
+    font-size: 14px;
 }
 
 button {
     text-transform: uppercase;
+    font-size: 14px;
     font-weight: 500;
-    background-color: #85bb65;
+    background-color: var(--color-dark);
     color: var(--white);
     margin-top: 20px;
     letter-spacing: 1px;
@@ -227,5 +240,15 @@ input[type=number]::-webkit-outer-spin-button {
         height: calc(100vh - 2em);
         -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    }
+
+    .goalContainer {
+        background-color: var(--color-light);
+    }
+
+    .goalContainer,
+    .cashflowContainer,
+    .growContainer {
+        padding-top: 32px;
     }
 }

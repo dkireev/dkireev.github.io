@@ -1,26 +1,69 @@
+let capitalText = "Capital";
+let goalCompletionText = "Goal completion";
+let cashflowText = "Cashflow";
+let gainsEveryText = "1 &#8372; gains every";
+let minutesText = "min";
+let goalNotSetText = "Goal isn't set yet";
+let enterGoalText = "Enter new goal";
+let saveText = "Save";
+let currentGoalText = "Current goal is ";
+
+function languageSelect() {
+    if (!localStorage.getItem("language")) {
+        document.getElementById("settingsContainer").style.display = "grid";
+        document.getElementById("settingsContainer").onclick = function() {
+            if (confirm('Переключиться на русский язык?')) {
+                localStorage.setItem("language", "ru");
+                setTimeout(function() { location.reload(); }, 500);
+
+            } else {
+                localStorage.setItem("language", "en");
+                setTimeout(function() { location.reload(); }, 500);
+            }
+        }
+    }
+    if (localStorage.getItem("language") === "ru") {
+        capitalText = "Капитал";
+        goalCompletionText = "Достижение цели";
+        cashflowText = "Месячный доход";
+        gainsEveryText = "1 &#8372; приростает каждые";
+        minutesText = "мин";
+        goalNotSetText = "Цель еще не установлена";
+        enterGoalText = "Введите новую цель";
+        saveText = "Сохранить";
+        currentGoalText = "Текущая цель: ";
+    }
+    document.getElementById("capitalText").innerHTML = capitalText;
+    document.getElementById("goalCompletionText").innerHTML = goalCompletionText;
+    document.getElementById("cashflowText").innerHTML = cashflowText;
+    document.getElementById("gainsEveryText").innerHTML = gainsEveryText;
+    document.getElementById("submitButton").innerHTML = saveText;
+    document.getElementById("number").placeholder = enterGoalText;
+    document.getElementById("minutesText").innerHTML = minutesText;
+}
+
 function openPopup() {
-    document.getElementById("popup").style.left = 0;
-    document.getElementById("closePopup").style.right = '10px';
+    document.getElementById("popupGoal").style.left = 0;
+    document.getElementById("closePopup").style.right = '16px';
 }
 
 function closePopup() {
-    document.getElementById("popup").style.left = '100vw';
+    document.getElementById("popupGoal").style.left = '100vw';
     document.getElementById("closePopup").style.right = '-100vw';
 }
 
 function updateGoalFunction(value) {
     if (value) {
         localStorage.setItem("nextGoal", value);
-        document.getElementById("popup").style.left = "100vw";
+        document.getElementById("popupGoal").style.left = "100vw";
         setTimeout(function() { location.reload(); }, 500);
-    } else {
-        console.log("Wrong value");
     }
 }
 
 function counter() {
+    languageSelect();
+
     const millisecondsInMonth = 60 * 60 * 24 * 30.4375 * 1000;
-    const secondsInMonth = millisecondsInMonth / 1000;
     let startDate = [];
     let startAmount = [];
     let interestInMonth = [];
@@ -73,11 +116,10 @@ function counter() {
         )
     }
     const deposit = [{
-            "startDate": "Nov 8, 2018",
-            "startAmount": "85064",
-            "interestInMonth": "0.0107"
-        }
-    ];
+        "startDate": "Nov 8, 2018",
+        "startAmount": "85064",
+        "interestInMonth": "0.0107"
+    }];
 
     if (!localStorage.getItem("deposit")) {
         localStorage.setItem("deposit", JSON.stringify(deposit));
@@ -93,12 +135,12 @@ function counter() {
 
     if (localStorage.getItem("nextGoal")) {
         document.getElementById("popupCurrentGoal").innerHTML =
-            "Ваша цель: " +
+            currentGoalText +
             spaceAdder(localStorage.getItem("nextGoal")) +
             " &#8372;";
     } else {
         document.getElementById("popupCurrentGoal").innerHTML =
-            "Цель еще не установлена";
+            goalNotSetText;
     }
 
     setInterval(function() {
@@ -141,7 +183,7 @@ function counter() {
         document.getElementById("completionDecimal").innerHTML =
             ". " + goalCompletionDecimal + " %";
 
-        capitalGrow = Math.round(secondsInMonth / Math.floor(cashflow));
+        capitalGrow = Math.round(millisecondsInMonth / (Math.floor(cashflow) * 1000));
         document.getElementById("grow").innerHTML =
             spaceAdder(Math.round(capitalGrow / 60));
     }, 1000);

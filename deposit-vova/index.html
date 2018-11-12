@@ -5,40 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" type="image/png" href="../counter/favicon.png">
-    <title>Депозит 2.5</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500" rel="stylesheet">
+    <title>Counter 2.5</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
     <link rel="stylesheet" href="../counter/style.css">
 </head>
 
 <body onload="counter()">
+    <div id="settingsContainer">
+        <img id="settings" src="../counter/settings.png" alt="">
+    </div>
     <div class="appContainer">
         <div class="infoContainer capitalContainer">
-            <h1>Капитал</h1>
+            <h1 id="capitalText"></h1>
             <p><span id="capitalInteger"></span><span id="capitalDecimal"></span></p>
         </div>
         <div class="detailsContainer">
             <div class="infoContainer goalContainer">
-                <h2>Достижение цели</h2>
+                <h2 id="goalCompletionText"></h2>
                 <p><span id="completionInteger"></span><span id="completionDecimal"></span></p>
                 <div class="edit" onclick="openPopup()">
                     <img src="../counter/edit.png" alt="">
                 </div>
-                <div id="popup">
-                    <img id="closePopup" src="../counter/close.png" onclick="closePopup()" alt="">
-                    <p id="popupCurrentGoal"></p>
-                    <input type="number" id="number" placeholder="Введите новую цель">
-                    <button type="submit" onclick="updateGoalFunction(document.getElementById('number').value)">Сохранить</button>
-                </div>
             </div>
             <div class="infoContainer cashflowContainer">
-                <h2>Месячный доход</h2>
+                <h2 id="cashflowText"></h2>
                 <p><span id="cashflowInteger"></span><span id="cashflowDecimal"></span></p>
             </div>
             <div class="infoContainer growContainer">
-                <h2>1 &#8372; приростает каждые</h2>
-                <p><span id="grow"></span> мин</p>
+                <h2 id="gainsEveryText"></h2>
+                <p><span id="grow"></span> <span id="minutesText"></span></p>
             </div>
         </div>
+    </div>
+    <div class="popup" id="popupGoal">
+        <img id="closePopup" src="../counter/close.png" onclick="closePopup()" alt="">
+        <p id="popupCurrentGoal"></p>
+        <input type="number" id="number">
+        <button id="submitButton" type="submit" onclick="updateGoalFunction(document.getElementById('number').value)"></button>
     </div>
     <script async src="script.js"></script>
 </body>
