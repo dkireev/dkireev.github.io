@@ -58,7 +58,7 @@ body {
     display: grid;
     -ms-grid-rows: 1fr 2fr;
     grid-template-rows: 1fr 2fr;
-    grid-row-gap: 12px;
+    grid-row-gap: 16px;
     padding: 16px;
 }
 
@@ -70,9 +70,18 @@ body {
     display: grid;
     -ms-grid-rows: 16px auto;
     grid-template-rows: 16px auto;
-    grid-row-gap: 12px;
+    grid-row-gap: 16px;
     align-items: center;
     position: relative;
+    z-index: 1;
+}
+.infoContainer::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: 90%;
+    height: 100%;
+    box-shadow: 0 5px 10px rgba(128, 128, 128, 1);
 }
 
 .edit {
@@ -132,7 +141,7 @@ body {
     display: grid;
     -ms-grid-rows: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-row-gap: 12px;
+    grid-row-gap: 16px;
 }
 
 .popup {
@@ -233,7 +242,7 @@ input[type=number]::-webkit-outer-spin-button {
         grid-template-rows: none;
         -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: 12px;
+        grid-column-gap: 16px;
     }
 
     .appContainer {
