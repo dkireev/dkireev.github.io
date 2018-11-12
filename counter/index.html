@@ -11,14 +11,17 @@
 </head>
 
 <body onload="counter()">
+    <div id="settingsContainer">
+        <img id="settings" src="settings.png" alt="">
+    </div>
     <div class="appContainer">
         <div class="infoContainer capitalContainer">
-            <h1>Capital</h1>
+            <h1 id="capitalText"></h1>
             <p><span id="capitalInteger"></span><span id="capitalDecimal"></span></p>
         </div>
         <div class="detailsContainer">
             <div class="infoContainer goalContainer">
-                <h2>Goal completion</h2>
+                <h2 id="goalCompletionText"></h2>
                 <p><span id="completionInteger"></span><span id="completionDecimal"></span></p>
                 <div class="edit" onclick="openPopup()">
                     <img src="edit.png" alt="">
@@ -26,16 +29,16 @@
                 <div id="popup">
                     <img id="closePopup" src="close.png" onclick="closePopup()" alt="">
                     <p id="popupCurrentGoal"></p>
-                    <input type="number" id="number" placeholder="Enter new goal">
-                    <button type="submit" onclick="updateGoalFunction(document.getElementById('number').value)">Save</button>
+                    <input type="number" id="number">
+                    <button id="submitButton" type="submit" onclick="updateGoalFunction(document.getElementById('number').value)"></button>
                 </div>
             </div>
             <div class="infoContainer cashflowContainer">
-                <h2>Cashflow</h2>
+                <h2 id="cashflowText"></h2>
                 <p><span id="cashflowInteger"></span><span id="cashflowDecimal"></span></p>
             </div>
             <div class="infoContainer growContainer">
-                <h2>1 &#8372; gains every</h2>
+                <h2 id="gainsEveryText"></h2>
                 <p><span id="grow"></span> min</p>
             </div>
         </div>

@@ -8,8 +8,6 @@ body {
     color: #fff;
     display: -ms-grid;
     display: grid;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -24,6 +22,26 @@ h1,
 h2 {
     font-size: 1em;
     font-weight: 500;
+}
+
+body {
+    position: relative;
+}
+
+#settingsContainer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    display: none;
+    align-items: center;
+    justify-items: center;
+}
+
+#settings {
+    width: 16px;
+    height: 16px;
 }
 
 .appContainer {
@@ -45,8 +63,6 @@ h2 {
     -ms-grid-rows: 16px auto;
     grid-template-rows: 16px auto;
     grid-row-gap: 12px;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     position: relative;
 }
@@ -59,8 +75,6 @@ h2 {
     right: 0;
     display: -ms-grid;
     display: grid;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     justify-items: center;
     cursor: pointer;
@@ -69,8 +83,6 @@ h2 {
 .edit img {
     width: 16px;
     height: 16px;
-    -webkit-transition: all 0.1s;
-    -o-transition: all 0.1s;
     transition: all 0.1s;
     opacity: .5;
 }
@@ -133,11 +145,8 @@ h2 {
     display: grid;
     grid-auto-flow: row;
     grid-row-gap: 20px;
-    -ms-flex-line-pack: center;
     align-content: center;
     justify-items: center;
-    -webkit-transition: left ease-in-out 0.3s;
-    -o-transition: left ease-in-out 0.3s;
     transition: left ease-in-out 0.3s;
 }
 
@@ -145,7 +154,7 @@ h2 {
     width: 16px;
     height: 16px;
     position: fixed;
-    top: 10px;
+    top: 16px;
     right: -100vw;
     transition: right ease-in-out 0.3s;
 }
@@ -160,7 +169,6 @@ button {
     width: calc(100% - 32px);
     max-width: 500px;
     height: 40px;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
