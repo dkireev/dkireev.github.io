@@ -26,12 +26,6 @@
                 <div class="edit" onclick="openPopup()">
                     <img src="edit.png" alt="">
                 </div>
-                <div id="popup">
-                    <img id="closePopup" src="close.png" onclick="closePopup()" alt="">
-                    <p id="popupCurrentGoal"></p>
-                    <input type="number" id="number">
-                    <button id="submitButton" type="submit" onclick="updateGoalFunction(document.getElementById('number').value)"></button>
-                </div>
             </div>
             <div class="infoContainer cashflowContainer">
                 <h2 id="cashflowText"></h2>
@@ -39,9 +33,15 @@
             </div>
             <div class="infoContainer growContainer">
                 <h2 id="gainsEveryText"></h2>
-                <p><span id="grow"></span> min</p>
+                <p><span id="grow"></span> <span id="minutesText"></span></p>
             </div>
         </div>
+    </div>
+    <div class="popup" id="popupGoal">
+        <img id="closePopup" src="close.png" onclick="closePopup()" alt="">
+        <p id="popupCurrentGoal"></p>
+        <input type="number" id="number">
+        <button id="submitButton" type="submit" onclick="updateGoalFunction(document.getElementById('number').value)"></button>
     </div>
     <script async src="script.js"></script>
 </body>

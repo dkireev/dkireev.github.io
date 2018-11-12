@@ -18,7 +18,6 @@ function languageSelect() {
 
             } else {
                 localStorage.setItem("language", "en");
-                setTimeout(function() { location.reload(); }, 500);
             }
         }
     }
@@ -39,22 +38,23 @@ function languageSelect() {
     document.getElementById("gainsEveryText").innerHTML = gainsEveryText;
     document.getElementById("submitButton").innerHTML = saveText;
     document.getElementById("number").placeholder = enterGoalText;
+    document.getElementById("minutesText").innerHTML = minutesText;
 }
 
 function openPopup() {
-    document.getElementById("popup").style.left = 0;
+    document.getElementById("popupGoal").style.left = 0;
     document.getElementById("closePopup").style.right = '16px';
 }
 
 function closePopup() {
-    document.getElementById("popup").style.left = '100vw';
+    document.getElementById("popupGoal").style.left = '100vw';
     document.getElementById("closePopup").style.right = '-100vw';
 }
 
 function updateGoalFunction(value) {
     if (value) {
         localStorage.setItem("nextGoal", value);
-        document.getElementById("popup").style.left = "100vw";
+        document.getElementById("popupGoal").style.left = "100vw";
         setTimeout(function() { location.reload(); }, 500);
     }
 }

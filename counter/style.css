@@ -133,7 +133,7 @@ body {
     grid-row-gap: 12px;
 }
 
-#popup {
+.popup {
     position: fixed;
     background: rgba(0, 0, 0, .9);
     top: 0;
