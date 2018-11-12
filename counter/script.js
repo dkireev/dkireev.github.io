@@ -18,6 +18,7 @@ function languageSelect() {
 
             } else {
                 localStorage.setItem("language", "en");
+                setTimeout(function() { location.reload(); }, 500);
             }
         }
     }

@@ -1,3 +1,9 @@
+:root {
+    --white: #fff;
+    --black: #1a1a1a;
+    --gray: #808080;
+}
+
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -5,7 +11,7 @@ body {
     font-size: 16px;
     font-weight: 300;
     min-height: 100vh;
-    color: #fff;
+    color: var(--white);
     display: -ms-grid;
     display: grid;
     align-items: center;
@@ -99,20 +105,12 @@ body {
     opacity: 1;
 }
 
-.capitalContainer {
-    background-color: #85bb65;
+.capitalContainer, .goalContainer {
+    background-color: #40495b;
 }
 
-.cashflowContainer {
-    background-color: #bb6585;
-}
-
-.goalContainer {
-    background-color: #bb8065;
-}
-
-.growContainer {
-    background-color: #65a6bb;
+.cashflowContainer, .growContainer {
+    background-color: #5f818f;
 }
 
 #capitalInteger {
@@ -135,7 +133,8 @@ body {
 
 .popup {
     position: fixed;
-    background: rgba(0, 0, 0, .9);
+    background-color: var(--white);
+    color: var(--black);
     top: 0;
     left: 100vw;
     width: 100%;
@@ -164,7 +163,6 @@ button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    border: none;
     outline: none;
     width: calc(100% - 32px);
     max-width: 500px;
@@ -177,18 +175,35 @@ button {
 
 input {
     padding: 0 16px;
-
+    border: 1px solid var(--gray);
     text-align: center;
+}
+input:focus {
+    border-color: var(--black);
+}
+
+:-moz-placeholder {
+  color: var(--gray);
+}
+::-webkit-input-placeholder {
+  color: var(--gray);
+}
+::-moz-placeholder {
+  color: var(--gray);
+}
+:-ms-input-placeholder {
+  color: var(--gray);
 }
 
 button {
     text-transform: uppercase;
     font-weight: 500;
     background-color: #85bb65;
-    color: #fff;
+    color: var(--white);
     margin-top: 20px;
     letter-spacing: 1px;
     cursor: pointer;
+    border: none;
 }
 
 input[type=number]::-webkit-inner-spin-button,
