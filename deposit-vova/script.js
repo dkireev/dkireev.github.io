@@ -182,6 +182,7 @@ function counter() {
         );
         document.getElementById("completionDecimal").innerHTML =
             ". " + goalCompletionDecimal + " %";
+        document.getElementById("progressBar").style.width = goalCompletion + "%";
 
         capitalGrow = Math.round(millisecondsInMonth / (Math.floor(cashflow) * 1000));
         document.getElementById("grow").innerHTML =
