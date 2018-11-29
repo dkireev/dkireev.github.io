@@ -121,9 +121,7 @@ function counter() {
         "interestInMonth": "0.0107"
     }];
 
-    if (!localStorage.getItem("deposit")) {
-        localStorage.setItem("deposit", JSON.stringify(deposit));
-    }
+    localStorage.setItem("deposit", JSON.stringify(deposit));
 
     const nextGoal = parseInt(localStorage.getItem("nextGoal"));
 
