@@ -118,22 +118,22 @@ function counter() {
     const deposit = [{
             "startDate": "Nov 29, 2018",
             "startAmount": "64959.97",
-            "interestInMonth": "0.0098"
+            "interestInMonth": "0.009255"
         },
         {
             "startDate": "Nov 4, 2018",
             "startAmount": "39094.46",
-            "interestInMonth": "0.0103"
+            "interestInMonth": "0.00976"
         },
         {
             "startDate": "Nov 26, 2018",
             "startAmount": "7453.60",
-            "interestInMonth": "0.0103"
+            "interestInMonth": "0.00976"
         },
         {
             "startDate": "Nov 2, 2018",
             "startAmount": "3053.75",
-            "interestInMonth": "0.0103"
+            "interestInMonth": "0.00976"
         }
     ];
 

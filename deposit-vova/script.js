@@ -118,7 +118,7 @@ function counter() {
     const deposit = [{
         "startDate": "Nov 8, 2018",
         "startAmount": "85064",
-        "interestInMonth": "0.0107"
+        "interestInMonth": "0.01009"
     }];
 
     localStorage.setItem("deposit", JSON.stringify(deposit));
