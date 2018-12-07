@@ -134,6 +134,11 @@ function counter() {
             "startDate": "Dec 4, 2018",
             "startAmount": "3328.99",
             "interestInMonth": "0.00976"
+        },
+        {
+            "startDate": "Dec 7, 2018",
+            "startAmount": "2226.26",
+            "interestInMonth": "0.00976"
         }
     ];
 
