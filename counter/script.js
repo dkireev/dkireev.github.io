@@ -64,6 +64,7 @@ function counter() {
     languageSelect();
 
     const millisecondsInMonth = 60 * 60 * 24 * 30.4375 * 1000;
+    const tax = 18 + 1.5;
     let startDate = [];
     let startAmount = [];
     let interestInMonth = [];
@@ -118,27 +119,27 @@ function counter() {
     const deposit = [{
             "startDate": "Nov 29, 2018",
             "startAmount": "64959.97",
-            "interestInMonth": "0.009255"
+            "interestInMonth": "13.75"
         },
         {
             "startDate": "Dec 4, 2018",
             "startAmount": "47239.43",
-            "interestInMonth": "0.00976"
+            "interestInMonth": "14.5"
         },
         {
             "startDate": "Nov 26, 2018",
             "startAmount": "7453.60",
-            "interestInMonth": "0.00976"
+            "interestInMonth": "14.5"
         },
         {
             "startDate": "Dec 4, 2018",
             "startAmount": "3328.99",
-            "interestInMonth": "0.00976"
+            "interestInMonth": "14.5"
         },
         {
             "startDate": "Dec 7, 2018",
             "startAmount": "2226.26",
-            "interestInMonth": "0.00976"
+            "interestInMonth": "14.5"
         }
     ];
 
@@ -149,7 +150,7 @@ function counter() {
     for (var i = 0; i < JSON.parse(localStorage.getItem("deposit")).length; i++) {
         startDate[i] = setStartDate(i);
         startAmount[i] = setStartAmount(i);
-        interestInMonth[i] = setInterestInMonth(i);
+        interestInMonth[i] = (setInterestInMonth(i) * (100 - tax) / 100 / 12 / 100).toFixed(6);
     }
 
     if (localStorage.getItem("nextGoal")) {
