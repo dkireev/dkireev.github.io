@@ -18,7 +18,7 @@
 
 <body onload="counter()">
     <div id="settingsContainer">
-        <img id="settings" src="settings.png" alt="">
+        <img id="settings" src="../counter/settings.png" alt="">
     </div>
     <div class="appContainer">
         <div class="infoContainer capitalContainer">
@@ -30,7 +30,7 @@
                 <h2 id="goalCompletionText"></h2>
                 <p><span id="completionInteger"></span><span id="completionDecimal"></span></p>
                 <div class="edit" onclick="openPopup()">
-                    <img src="edit.png" alt="">
+                    <img src="../counter/edit.png" alt="">
                 </div>
                 <div class="progressContainer">
                     <div id="progressBar"></div>
@@ -47,7 +47,7 @@
         </div>
     </div>
     <div class="popup" id="popupGoal">
-        <img id="closePopup" src="close.png" onclick="closePopup()" alt="">
+        <img id="closePopup" src="../counter/close.png" onclick="closePopup()" alt="">
         <p id="popupCurrentGoal"></p>
         <input type="number" id="number">
         <button id="submitButton" type="submit" onclick="updateGoalFunction(document.getElementById('number').value)"></button>
