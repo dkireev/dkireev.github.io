@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" type="image/png" href="../counter/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../counter/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../counter/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../counter/favicon-16x16.png">
+    <link rel="manifest" href="../counter/manifest.json">
+    <link rel="mask-icon" href="../counter/safari-pinned-tab.svg" color="#40495b">
+    <meta name="msapplication-TileColor" content="#40495b">
+    <meta name="theme-color" content="#40495b">
     <title>Counter 2.7</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
     <link rel="stylesheet" href="../counter/style.css">
@@ -12,7 +18,7 @@
 
 <body onload="counter()">
     <div id="settingsContainer">
-        <img id="settings" src="../counter/settings.png" alt="">
+        <img id="settings" src="settings.png" alt="">
     </div>
     <div class="appContainer">
         <div class="infoContainer capitalContainer">
@@ -24,7 +30,7 @@
                 <h2 id="goalCompletionText"></h2>
                 <p><span id="completionInteger"></span><span id="completionDecimal"></span></p>
                 <div class="edit" onclick="openPopup()">
-                    <img src="../counter/edit.png" alt="">
+                    <img src="edit.png" alt="">
                 </div>
                 <div class="progressContainer">
                     <div id="progressBar"></div>
@@ -41,7 +47,7 @@
         </div>
     </div>
     <div class="popup" id="popupGoal">
-        <img id="closePopup" src="../counter/close.png" onclick="closePopup()" alt="">
+        <img id="closePopup" src="close.png" onclick="closePopup()" alt="">
         <p id="popupCurrentGoal"></p>
         <input type="number" id="number">
         <button id="submitButton" type="submit" onclick="updateGoalFunction(document.getElementById('number').value)"></button>
