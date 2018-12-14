@@ -7,7 +7,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../counter/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../counter/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../counter/favicon-16x16.png">
-    <link rel="manifest" href="../counter/manifest.json">
+    <link rel="manifest" href="manifest.json">
     <link rel="mask-icon" href="../counter/safari-pinned-tab.svg" color="#40495b">
     <meta name="msapplication-TileColor" content="#40495b">
     <meta name="theme-color" content="#40495b">
@@ -49,8 +49,10 @@
     <div class="popup" id="popupGoal">
         <img id="closePopup" src="../counter/close.png" onclick="closePopup()" alt="">
         <p id="popupCurrentGoal"></p>
-        <input type="number" id="number">
-        <button id="submitButton" type="submit" onclick="updateGoalFunction(document.getElementById('number').value)"></button>
+        <form>
+            <input type="number" aria-label="Number" id="number">
+            <button id="submitButton" type="submit" onclick="updateGoalFunction(document.getElementById('number').value)"></button>
+        </form>
     </div>
     <script async src="script.js"></script>
 </body>
