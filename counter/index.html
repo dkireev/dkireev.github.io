@@ -53,8 +53,11 @@
     <div class="popup" id="popupGoal">
         <img id="closePopup" src="close.png" onclick="closePopup()" alt="">
         <p id="popupCurrentGoal"></p>
-        <input type="number" id="number">
-        <button id="submitButton" type="submit" onclick="updateGoalFunction(document.getElementById('number').value)"></button>
+        <form>
+            <label for="number"></label>
+            <input type="number" name="number" id="number">
+            <button id="submitButton" type="submit" onclick="updateGoalFunction(document.getElementById('number').value)"></button>
+        </form>
     </div>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
     <script async src="script.js"></script>

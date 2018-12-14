@@ -190,12 +190,21 @@ body {
     transition: right ease-in-out 0.3s;
 }
 
+form {
+    width: calc(100% - 32px);
+    max-width: 500px;
+}
+
+label {
+    display: none;
+}
+
 input,
 button {
     outline: none;
-    width: calc(100% - 32px);
-    max-width: 500px;
+    display: block;
     height: 40px;
+    width: 100%;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     transition: all ease-in-out 0.2s;
