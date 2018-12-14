@@ -54,8 +54,7 @@
         <img id="closePopup" src="close.png" onclick="closePopup()" alt="">
         <p id="popupCurrentGoal"></p>
         <form>
-            <label for="number">Enter new goal</label>
-            <input type="number" name="number" id="number">
+            <input type="number" aria-label="Number" id="number">
             <button id="submitButton" type="submit" onclick="updateGoalFunction(document.getElementById('number').value)"></button>
         </form>
     </div>
