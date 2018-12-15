@@ -67,7 +67,7 @@ function updateGoalFunction(value) {
     }
 }
 
-function counter() {
+window.addEventListener('load', function counter() {
     languageSelect();
 
     const millisecondsInMonth = 60 * 60 * 24 * 30.4375 * 1000;
@@ -215,4 +215,4 @@ function counter() {
         document.getElementById("grow").innerHTML =
             spaceAdder(Math.round(capitalGrow / 60));
     }, 1000);
-}
+});
