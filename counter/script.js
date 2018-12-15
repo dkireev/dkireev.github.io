@@ -1,3 +1,15 @@
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+    .then(function(result) {
+        console.log('Service Worker Registered. Scope: ' + result.scope);
+    }, function(error) {
+      console.log("Service Worker registration failed: " + error);
+    });
+} else {
+    console.log('Service Workers not Supported');
+}
+
+
 let capitalText = "Capital";
 let goalCompletionText = "Goal completion";
 let cashflowText = "Cashflow";
