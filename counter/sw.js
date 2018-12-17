@@ -35,3 +35,12 @@ self.addEventListener('activate', function(event) {
     );
     return self.clients.claim();
 });
+
+self.addEventListener('fetch', function(event) {
+    console.log('Fetch event occured ' + event.request.url);
+    event.respondWith(
+        caches.match(event.request).then(function(response) {
+          return response || fetch(event.request);
+        })
+    );
+});
