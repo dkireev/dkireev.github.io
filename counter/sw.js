@@ -17,9 +17,9 @@ self.addEventListener('install', function(event) {
     caches.open(cacheName).then(function(cache) {
       console.log('Caching files');
       return chache.addAll(cachedFiles);
-    }).then(finction() {
+    }).then(function() {
       return self.skipWaiting();
-    }).catch(finction(error) {
+    }).catch(function(error) {
       console.log("Cache failed", error);
     })
   );
