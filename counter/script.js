@@ -17,7 +17,6 @@ let currentGoalText = "Current goal is ";
 
 function languageSelect() {
     if (!localStorage.getItem("language")) {
-        document.getElementById("settingsContainer").style.display = "grid";
         document.getElementById("settingsContainer").onclick = function() {
             if (confirm('Переключиться на русский язык?')) {
                 localStorage.setItem("language", "ru");
