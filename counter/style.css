@@ -53,10 +53,12 @@ body {
 }
 
 #settingsContainer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     width: 32px;
     height: 32px;
-    display: -ms-grid;
-    display: grid;
+    display: none;
     align-items: center;
     justify-items: center;
 }
