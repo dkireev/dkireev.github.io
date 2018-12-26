@@ -7,13 +7,14 @@ if ('serviceWorker' in navigator) {
 
 let capitalText = "Capital";
 let goalCompletionText = "Goal completion";
-let cashflowText = "Cashflow";
+let cashflowText = "Monthly Cashflow";
 let gainsEveryText = "1 &#8372; gains every";
 let minutesText = "min";
 let goalNotSetText = "Goal isn't set yet";
 let enterGoalText = "Enter new goal";
 let saveText = "Save";
 let currentGoalText = "Current goal is ";
+let headerTitleText = "Capital Counter";
 
 function languageSelect() {
     if (!localStorage.getItem("language")) {
@@ -39,6 +40,7 @@ function languageSelect() {
         enterGoalText = "Введите новую цель";
         saveText = "Сохранить";
         currentGoalText = "Текущая цель: ";
+        headerTitleText = "Калькулятор капитала";
     }
     document.getElementById("capitalText").innerHTML = capitalText;
     document.getElementById("goalCompletionText").innerHTML = goalCompletionText;
@@ -47,6 +49,7 @@ function languageSelect() {
     document.getElementById("submitButton").innerHTML = saveText;
     document.getElementById("number").placeholder = enterGoalText;
     document.getElementById("minutesText").innerHTML = minutesText;
+    document.getElementById("headerTitle").innerHTML = headerTitleText;
 }
 
 function openPopup() {

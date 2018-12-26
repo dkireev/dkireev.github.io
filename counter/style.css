@@ -20,6 +20,10 @@ body {
     align-items: center;
 }
 
+div, input, select  {
+    box-sizing: border-box;
+}
+
 p,
 h1,
 h2 {
@@ -37,10 +41,23 @@ body {
     position: relative;
 }
 
+.header {
+    background-color: var(--color-dark);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 48px;
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 300;
+    padding: 0 8px 0 16px;
+}
+
 #settingsContainer {
-    position: absolute;
-    top: 10px;
-    right: 10px;
     width: 32px;
     height: 32px;
     display: none;

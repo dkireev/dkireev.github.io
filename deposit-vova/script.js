@@ -1,12 +1,20 @@
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('sw.js');
+    });
+}
+
+
 let capitalText = "Capital";
 let goalCompletionText = "Goal completion";
-let cashflowText = "Cashflow";
+let cashflowText = "Monthly Cashflow";
 let gainsEveryText = "1 &#8372; gains every";
 let minutesText = "min";
 let goalNotSetText = "Goal isn't set yet";
 let enterGoalText = "Enter new goal";
 let saveText = "Save";
 let currentGoalText = "Current goal is ";
+let headerTitleText = "Capital Counter";
 
 function languageSelect() {
     if (!localStorage.getItem("language")) {
@@ -32,6 +40,7 @@ function languageSelect() {
         enterGoalText = "Введите новую цель";
         saveText = "Сохранить";
         currentGoalText = "Текущая цель: ";
+        headerTitleText = "Калькулятор капитала";
     }
     document.getElementById("capitalText").innerHTML = capitalText;
     document.getElementById("goalCompletionText").innerHTML = goalCompletionText;
@@ -40,6 +49,7 @@ function languageSelect() {
     document.getElementById("submitButton").innerHTML = saveText;
     document.getElementById("number").placeholder = enterGoalText;
     document.getElementById("minutesText").innerHTML = minutesText;
+    document.getElementById("headerTitle").innerHTML = headerTitleText;
 }
 
 function openPopup() {
@@ -60,7 +70,7 @@ function updateGoalFunction(value) {
     }
 }
 
-function counter() {
+window.addEventListener('load', function counter() {
     languageSelect();
 
     const millisecondsInMonth = 60 * 60 * 24 * 30.4375 * 1000;
@@ -117,10 +127,11 @@ function counter() {
         )
     }
     const deposit = [{
-        "startDate": "Nov 8, 2018",
-        "startAmount": "85064",
-        "interestInMonth": "15"
-    }];
+            "startDate": "Nov 8, 2018",
+            "startAmount": "85064",
+            "interestInMonth": "15"
+        }
+    ];
 
     localStorage.setItem("deposit", JSON.stringify(deposit));
 
@@ -187,4 +198,4 @@ function counter() {
         document.getElementById("grow").innerHTML =
             spaceAdder(Math.round(capitalGrow / 60));
     }, 1000);
-}
+});
