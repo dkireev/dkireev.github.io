@@ -37,21 +37,6 @@ body {
     position: relative;
 }
 
-.header {
-    background-color: var(--color-dark);
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 32px;
-    width: 100%;
-    display: -ms-grid;
-    display: grid;
-    grid-auto-flow: column;
-    align-items: center;
-    font-weight: 500;
-    padding: 0 16px;
-}
-
 #settingsContainer {
     position: absolute;
     top: 10px;
