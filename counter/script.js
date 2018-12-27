@@ -137,13 +137,13 @@ window.addEventListener('load', function counter() {
             "interestInMonth": "14.5"
         },
         {
-            "startDate": "Dec 24, 2018",
-            "startAmount": "7523.17",
+            "startDate": "Dec 27, 2018",
+            "startAmount": "15008.57",
             "interestInMonth": "15"
         },
         {
-            "startDate": "Dec 4, 2018",
-            "startAmount": "3328.99",
+            "startDate": "Dec 27, 2018",
+            "startAmount": "4091.04",
             "interestInMonth": "14.5"
         },
         {
