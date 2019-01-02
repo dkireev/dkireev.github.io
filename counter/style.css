@@ -77,7 +77,7 @@ body {
     -ms-grid-rows: 1fr 2fr;
     grid-template-rows: 1fr 2fr;
     grid-row-gap: 8px;
-    padding: 16px;
+    padding: 64px 16px 16px 16px;
 }
 
 .infoContainer {
