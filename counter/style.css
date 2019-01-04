@@ -1,10 +1,10 @@
 :root {
     --white: #fff;
-    --gray-light: #e6e6e6;
-    --gray: #808080;
-    --black: #1a1a1a;
-    --color-dark: #40495b;
-    --color-light: #3b4e75;
+    --gray-light: #eee;
+    --gray: #9e9e9e;
+    --black: #212121;
+    --color-dark: #1b5e20;
+    --color-light: #4caf50;
 }
 
 body {
@@ -39,6 +39,10 @@ h2 {
 
 body {
     position: relative;
+}
+
+#installPrompt {
+    display: none;
 }
 
 .header {

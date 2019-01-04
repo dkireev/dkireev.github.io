@@ -28,6 +28,13 @@
         </div>
     </div>
     <div class="appContainer">
+        <section id="installPrompt">
+            <h1>Install App</h1>
+            <img src="android-chrome-192x192.png" alt="">
+            <p>Add our App to your home screen?</p>
+            <a href="javascript:void(0)" onclick="hidePrompt()">No, Thanks</a>
+            <button onclick="installApp()">Yes, please</button>
+        </section>
         <div class="infoContainer capitalContainer">
             <h1 id="capitalText"></h1>
             <p><span id="capitalInteger"></span><span id="capitalDecimal"></span></p>
@@ -58,7 +65,8 @@
         <p id="popupCurrentGoal"></p>
         <form>
             <input type="number" aria-label="Number" id="number">
-            <button id="submitButton" type="submit" onclick="updateGoalFunction(document.getElementById('number').value)"></button>
+            <button id="submitButton" type="submit"
+                onclick="updateGoalFunction(document.getElementById('number').value)"></button>
         </form>
     </div>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">

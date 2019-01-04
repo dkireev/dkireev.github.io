@@ -4,6 +4,31 @@ if ('serviceWorker' in navigator) {
     });
 }
 
+let installEvt;
+window.addEventListener('beforeinstallprompt', function(evt) {
+    installEvt = evt;
+    evt.preventDefault();
+    document.getElementById('installPrompt').style.display = 'block';
+});
+
+function hidePrompt() {
+    document.getElementById('installPrompt').style.display = 'none';
+}
+
+function installApp() {
+    hidePrompt();
+    installEvt.prompt();
+    installEvt.userChoice.then(function() {
+        if(result.outcome === 'accepted') {
+
+        }
+    });
+}
+
+window.addEventListener('appinstalled', function(evt) {
+
+})
+
 
 let capitalText = "Capital";
 let goalCompletionText = "Goal completion";
