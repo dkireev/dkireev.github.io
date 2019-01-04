@@ -4,7 +4,7 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-let installEvt;
+/*let installEvt;
 window.addEventListener('beforeinstallprompt', function(evt) {
     installEvt = evt;
     evt.preventDefault();
@@ -23,11 +23,7 @@ function installApp() {
 
         }
     });
-}
-
-window.addEventListener('appinstalled', function(evt) {
-
-})
+}*/
 
 
 let capitalText = "Capital";
