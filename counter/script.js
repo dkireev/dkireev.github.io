@@ -158,7 +158,7 @@ window.addEventListener('load', function counter() {
             "interestInMonth": "15"
         },
         {
-            "startDate": "Jan 21, 2018",
+            "startDate": "Jan 21, 2019",
             "startAmount": "16046.34",
             "interestInMonth": "15"
         },
@@ -168,7 +168,7 @@ window.addEventListener('load', function counter() {
             "interestInMonth": "14.5"
         },
         {
-            "startDate": "Jan 8, 2018",
+            "startDate": "Jan 8, 2019",
             "startAmount": "5439.59",
             "interestInMonth": "14.5"
         }
