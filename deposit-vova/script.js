@@ -77,7 +77,7 @@ window.addEventListener('load', function counter() {
     const tax = 18 + 1.5;
     let startDate = [];
     let startAmount = [];
-    let interestInMonth = [];
+    let interestRate = [];
     let currentAmount = [];
     let cashflowArray = [];
     let cashflow = 0;
@@ -120,16 +120,16 @@ window.addEventListener('load', function counter() {
         )
     }
 
-    function setInterestInMonth(i) {
+    function setInterestRate(i) {
         let a = JSON.parse(sessionStorage.getItem("deposit"));
         return (
-            parseFloat(a[i].interestInMonth)
+            parseFloat(a[i].interestRate)
         )
     }
     const deposit = [{
             "startDate": "Jan 9, 2019",
             "startAmount": "96186.31",
-            "interestInMonth": "15"
+            "interestRate": "15"
         }
     ];
 
@@ -144,7 +144,7 @@ window.addEventListener('load', function counter() {
     for (var i = 0; i < JSON.parse(sessionStorage.getItem("deposit")).length; i++) {
         startDate[i] = setStartDate(i);
         startAmount[i] = setStartAmount(i);
-        interestInMonth[i] = (setInterestInMonth(i) * (100 - tax) / 100 / 12 / 100).toFixed(6);
+        interestRate[i] = (setInterestRate(i) * (100 - tax) / 100 / 12 / 100).toFixed(6);
     }
 
     if (localStorage.getItem("nextGoal")) {
@@ -163,9 +163,9 @@ window.addEventListener('load', function counter() {
         let cashflowSum = 0;
 
         for (var i = 0; i < JSON.parse(sessionStorage.getItem("deposit")).length; i++) {
-            currentAmount[i] = startAmount[i] + startAmount[i] * interestInMonth[i] /
+            currentAmount[i] = startAmount[i] + startAmount[i] * interestRate[i] /
                 millisecondsInMonth * (currentTime - startDate[i]);
-            cashflowArray[i] = currentAmount[i] * interestInMonth[i];
+            cashflowArray[i] = currentAmount[i] * interestRate[i];
             currentAmountSum += currentAmount[i];
             cashflowSum += cashflowArray[i];
         }
