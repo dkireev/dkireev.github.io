@@ -46,15 +46,15 @@ body {
     grid-auto-flow: column;
     justify-content: space-between;
     align-items: center;
-    padding: 0 8px 0 16px;
+    padding: 0 16px;
 }
-.header img {
+.menuImage {
     width: 22px;
     height: auto;
 }
 .appContainer {
     height: calc(100vh - 48px);
-    padding: 16px 8px;
+    padding: 32px 16px;
     background-color: var(--white);
     display: -ms-grid;
     display: grid;
