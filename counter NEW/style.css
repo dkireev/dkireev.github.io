@@ -54,15 +54,36 @@ body {
 }
 .appContainer {
     height: calc(100vh - 48px);
-    padding: 32px 16px;
+    padding: 32px 0;
     background-color: var(--white);
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 2fr 1fr 1fr;
-        grid-template-rows: 2fr 1fr 1fr;
+    -ms-grid-rows: 3fr 1fr 1fr;
+        grid-template-rows: 3fr 1fr 1fr;
     grid-row-gap: 8px;
+    width: 100vw;
+    overflow: hidden;
 }
 .goalContainer {
-    background-color: var(--white);
-    box-shadow: 0 5px 20px rgba(0,0,0,.1)
+    width: calc(100vw - 32px);
+    margin: 0 16px;
+    background-color: var(--gray);
+    border-radius: 3px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.1);
+}
+.cachflowContainer {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 8px;
+    overflow: hidden;
+    padding: 0 16px;
+    position: relative;
+    left: calc(-300vw + 72px);
+    width: fit-content;
+}
+.cachflowItem {
+    width: calc(100vw - 32px);
+    background-color: var(--gray);
+    border-radius: 3px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.1);
 }
