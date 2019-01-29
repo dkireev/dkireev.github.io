@@ -128,21 +128,21 @@ window.addEventListener('load', function counter() {
     }
 
     function setStartDate(i) {
-        let a = JSON.parse(sessionStorage.getItem("deposit"));
+        let a = JSON.parse(localStorage.getItem("deposit"));
         return (
             Date.parse(a[i].startDate)
         )
     }
 
     function setStartAmount(i) {
-        let a = JSON.parse(sessionStorage.getItem("deposit"));
+        let a = JSON.parse(localStorage.getItem("deposit"));
         return (
             parseFloat(a[i].startAmount)
         )
     }
 
     function setInterestRate(i) {
-        let a = JSON.parse(sessionStorage.getItem("deposit"));
+        let a = JSON.parse(localStorage.getItem("deposit"));
         return (
             parseFloat(a[i].interestRate)
         )
@@ -174,15 +174,13 @@ window.addEventListener('load', function counter() {
         }
     ];
 
-    if (localStorage.getItem("deposit")) {
-        localStorage.removeItem("deposit");
+    if (localStorage.getItem("deposit") !== JSON.stringify(deposit)) {
+        localStorage.setItem("deposit", JSON.stringify(deposit));
     }
-
-    sessionStorage.setItem("deposit", JSON.stringify(deposit));
 
     const nextGoal = parseInt(localStorage.getItem("nextGoal"));
 
-    for (var i = 0; i < JSON.parse(sessionStorage.getItem("deposit")).length; i++) {
+    for (var i = 0; i < JSON.parse(localStorage.getItem("deposit")).length; i++) {
         startDate[i] = setStartDate(i);
         startAmount[i] = setStartAmount(i);
         interestRate[i] = (setInterestRate(i) * (100 - tax) / 100 / 12 / 100).toFixed(6);
@@ -203,7 +201,7 @@ window.addEventListener('load', function counter() {
         let currentAmountSum = 0;
         let cashflowSum = 0;
 
-        for (var i = 0; i < JSON.parse(sessionStorage.getItem("deposit")).length; i++) {
+        for (var i = 0; i < JSON.parse(localStorage.getItem("deposit")).length; i++) {
             currentAmount[i] = startAmount[i] + startAmount[i] * interestRate[i] /
                 millisecondsInMonth * (currentTime - startDate[i]);
             cashflowArray[i] = currentAmount[i] * interestRate[i];
