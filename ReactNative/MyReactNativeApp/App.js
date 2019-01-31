@@ -5,7 +5,9 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Booom!</Text>
+        <View style={styles.header}>
+          <Text>Personal goals</Text>
+        </View>
       </View>
     );
   }
@@ -16,6 +18,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
   },
+  header: {
+    height: 48,
+    backgroundColor: 'green',
+  }
 });
