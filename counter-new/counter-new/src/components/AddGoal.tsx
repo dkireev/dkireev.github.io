@@ -13,6 +13,7 @@ const AddGoalContainer = styled('div')`
     display: grid;
     align-items: center;
     justify-items: center;
+    box-shadow: 0 5px 5px rgba(0,0,0,.15);
 `;
 
 export const AddGoal = () => {
