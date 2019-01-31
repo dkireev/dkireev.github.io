@@ -2,7 +2,7 @@
   "name": "counter-new",
   "version": "0.1.0",
   "private": true,
-  "hamoepage": "/build",
+  "homepage": "/build",
   "dependencies": {
     "@types/react": "^16.7.22",
     "@types/styled-components": "^4.1.6",
