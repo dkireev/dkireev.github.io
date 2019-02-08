@@ -169,7 +169,7 @@ window.addEventListener('load', function counter() {
         },
         {
             "startDate": "Feb 8, 2019",
-            "startAmount": "5492.80",
+            "startAmount": "7504.67",
             "interestRate": "14.5"
         }
     ];
