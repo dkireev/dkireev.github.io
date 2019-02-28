@@ -148,8 +148,8 @@ window.addEventListener('load', function counter() {
         )
     }
     const deposit = [{
-            "startDate": "Jan 29, 2019",
-            "startAmount": "66166.82",
+            "startDate": "Feb 28, 2019",
+            "startAmount": "66768.59",
             "interestRate": "13.75"
         },
         {
