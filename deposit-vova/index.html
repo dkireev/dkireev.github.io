@@ -5,29 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Personal Capital Counter">
-    <link rel="apple-touch-icon" sizes="180x180" href="../counter/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../counter/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../counter/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="manifest.json">
-    <link rel="mask-icon" href="../counter/safari-pinned-tab.svg" color="#1b5e20">
-    <link rel="apple-touch-startup-image" href="../counter/apple-touch-icon.png">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#1b5e20">
+    <link rel="apple-touch-startup-image" href="apple-touch-icon.png">
     <meta name="msapplication-TileColor" content="#1b5e20">
     <meta name="theme-color" content="#1b5e20">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <title>Counter 2.7</title>
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:300,500" as="style">
-    <link rel="stylesheet" href="../counter/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="header">
         <p id="headerTitle"></p>
         <div id="settingsContainer">
-            <img id="settings" src="../counter/settings.png" alt="">
+            <img id="settings" src="settings.png" alt="">
         </div>
     </div>
     <div class="appContainer">
+        <section id="installPrompt">
+            <h1>Install App</h1>
+            <img src="android-chrome-192x192.png" alt="">
+            <p>Add our App to your home screen?</p>
+            <a href="javascript:void(0)" onclick="hidePrompt()">No, Thanks</a>
+            <button onclick="installApp()">Yes, please</button>
+        </section>
         <div class="infoContainer capitalContainer">
             <h1 id="capitalText"></h1>
             <p><span id="capitalInteger"></span><span id="capitalDecimal"></span></p>
@@ -37,7 +44,7 @@
                 <h2 id="goalCompletionText"></h2>
                 <p><span id="completionInteger"></span><span id="completionDecimal"></span></p>
                 <div class="edit" onclick="openPopup()">
-                    <img src="../counter/edit.png" alt="">
+                    <img src="edit.png" alt="">
                 </div>
                 <div class="progressContainer">
                     <div id="progressBar"></div>
@@ -54,11 +61,12 @@
         </div>
     </div>
     <div class="popup" id="popupGoal">
-        <img id="closePopup" src="../counter/close.png" onclick="closePopup()" alt="">
+        <img id="closePopup" src="close.png" onclick="closePopup()" alt="">
         <p id="popupCurrentGoal"></p>
         <form>
             <input type="number" aria-label="Number" id="number">
-            <button id="submitButton" type="submit" onclick="updateGoalFunction(document.getElementById('number').value)"></button>
+            <button id="submitButton" type="submit"
+                onclick="updateGoalFunction(document.getElementById('number').value)"></button>
         </form>
     </div>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">

@@ -4,6 +4,28 @@ if ('serviceWorker' in navigator) {
     });
 }
 
+/*let installEvt;
+window.addEventListener('beforeinstallprompt', function(evt) {
+    installEvt = evt;
+    evt.preventDefault();
+    document.getElementById('installPrompt').style.display = 'block';
+});
+
+function hidePrompt() {
+    document.getElementById('installPrompt').style.display = 'none';
+}
+
+function installApp() {
+    hidePrompt();
+    installEvt.prompt();
+    installEvt.userChoice.then(function() {
+        if(result.outcome === 'accepted') {
+
+        }
+    });
+}*/
+
+
 let capitalText = "Capital";
 let goalCompletionText = "Goal completion";
 let cashflowText = "Monthly Cashflow";
@@ -129,7 +151,7 @@ window.addEventListener('load', function counter() {
             "startDate": "Feb 27, 2019",
             "startAmount": "101154.59",
             "interestRate": "15"
-        }
+        },
     ];
 
     if (localStorage.getItem("deposit") !== JSON.stringify(deposit)) {
@@ -200,4 +222,3 @@ window.addEventListener('load', function counter() {
             spaceAdder(Math.round(capitalGrow / 60));
     }, 1000);
 });
-

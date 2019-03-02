@@ -5,10 +5,10 @@ var cachedFiles = [
     'index.html',
     'manifest.json',
     'script.js',
-    '../counter/style.css',
-    '../counter/settings.png',
-    '../counter/edit.png',
-    '../counter/close.png'
+    'style.css',
+    'settings.png',
+    'edit.png',
+    'close.png'
 ];
 
 self.addEventListener('install', function(event) {
