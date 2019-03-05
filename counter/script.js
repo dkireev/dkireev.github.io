@@ -153,8 +153,8 @@ window.addEventListener('load', function counter() {
             "interestRate": "14.25"
         },
         {
-            "startDate": "Mar 2, 2019",
-            "startAmount": "76354.33",
+            "startDate": "Mar 5, 2019",
+            "startAmount": "76724.02",
             "interestRate": "15"
         },
         {
@@ -163,8 +163,8 @@ window.addEventListener('load', function counter() {
             "interestRate": "15"
         },
         {
-            "startDate": "Feb 8, 2019",
-            "startAmount": "7504.67",
+            "startDate": "Mar 5, 2019",
+            "startAmount": "9730.93",
             "interestRate": "14.5"
         }
     ];
