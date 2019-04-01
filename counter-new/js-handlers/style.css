@@ -1,0 +1,32 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+button {
+  width: 100px;
+  height: 32px;
+}
+#overlay {
+  background: rgba(0,0,0,.2);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+}
+#popup {
+  background: white;
+  width: 600px;
+  height: 400px;
+  padding: 16px;
+  display: none;
+  position: relative;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+#popup input {
+  width: 100%;
+  height: 32px;
+}
