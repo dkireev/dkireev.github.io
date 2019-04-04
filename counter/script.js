@@ -148,13 +148,13 @@ window.addEventListener('load', function counter() {
         )
     }
     const deposit = [{
-            "startDate": "Mar 2, 2019",
-            "startAmount": "66774.66",
+            "startDate": "Apr 2, 2019",
+            "startAmount": "67404.25",
             "interestRate": "14.25"
         },
         {
-            "startDate": "Apr 1, 2019",
-            "startAmount": "85174.44",
+            "startDate": "Apr 4, 2019",
+            "startAmount": "85935.60",
             "interestRate": "15"
         },
         {
@@ -163,8 +163,8 @@ window.addEventListener('load', function counter() {
             "interestRate": "15"
         },
         {
-            "startDate": "Mar 8, 2019",
-            "startAmount": "9798.89",
+            "startDate": "Apr 4, 2019",
+            "startAmount": "12025.15",
             "interestRate": "14.5"
         }
     ];
