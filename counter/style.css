@@ -179,7 +179,7 @@ body {
 #progressBar {
     width: 0;
     height: 100%;
-    background-color: var(--color-light);
+    background-color: var(--color-dark);
     transition: width ease-in-out 1s;
 }
 
