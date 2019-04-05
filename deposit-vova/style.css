@@ -1,319 +1,327 @@
 :root {
-    --white: #fff;
-    --gray-light: #eee;
-    --gray: #9e9e9e;
-    --black: #212121;
-    --color-dark: #1b5e20;
-    --color-light: #4caf50;
+  --white: #fff;
+  --gray-light: #eee;
+  --gray: #9e9e9e;
+  --black: #212121;
+  --color-dark: #1b5e20;
+  --color-light: #4caf50;
 }
 
 body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    font-size: 16px;
-    font-weight: 300;
-    min-height: 100vh;
-    color: var(--white);
-    display: -ms-grid;
-    display: grid;
-    align-items: center;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  font-weight: 300;
+  min-height: 100vh;
+  color: var(--white);
+  display: -ms-grid;
+  display: grid;
+  align-items: center;
 }
 
-div, input, select  {
-    box-sizing: border-box;
+div,
+input,
+select {
+  box-sizing: border-box;
 }
 
 p,
 h1,
 h2 {
-    margin: 0;
-    line-height: 1;
+  margin: 0;
+  line-height: 1;
 }
 
 h1,
 h2 {
-    font-size: 16px;
-    font-weight: 300;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 body {
-    position: relative;
+  position: relative;
 }
 
 #installPrompt {
-    display: none;
+  display: none;
 }
 
 .header {
-    background-color: var(--color-dark);
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 48px;
-    width: 100%;
-    display: -ms-grid;
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 300;
-    padding: 0 8px 0 16px;
+  background-color: var(--color-dark);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 48px;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 300;
+  padding: 0 8px 0 16px;
 }
 
 #settingsContainer {
-    width: 32px;
-    height: 32px;
-    display: none;
-    align-items: center;
-    justify-items: center;
+  width: 32px;
+  height: 32px;
+  display: none;
+  align-items: center;
+  justify-items: center;
 }
 
 #settings {
-    width: 16px;
-    height: 16px;
+  width: 16px;
+  height: 16px;
 }
 
 .appContainer {
-    height: 80vh;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-rows: 1fr 2fr;
-    grid-template-rows: 1fr 2fr;
-    grid-row-gap: 8px;
-    padding: 64px 16px 16px 16px;
+  height: 80vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 2fr;
+  grid-template-rows: 1fr 2fr;
+  grid-row-gap: 8px;
+  padding: 64px 16px 16px 16px;
 }
 
 .infoContainer {
-    text-align: center;
-    padding: 16px;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-rows: 16px auto;
-    grid-template-rows: 16px auto;
-    grid-row-gap: 8px;
-    align-items: center;
-    position: relative;
+  text-align: center;
+  padding: 16px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 16px auto;
+  grid-template-rows: 16px auto;
+  grid-row-gap: 8px;
+  align-items: center;
+  position: relative;
 }
+
 .infoContainer::after {
-    content: "";
-    width: 96%;
-    height: 80%;
-    position: absolute;
-    left: 2%;
-    bottom: 0;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.25);
-    z-index: -1;
+  content: "";
+  width: 96%;
+  height: 80%;
+  position: absolute;
+  left: 2%;
+  bottom: 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  z-index: -1;
 }
 
 .edit {
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    top: 0;
-    right: 0;
-    display: -ms-grid;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    cursor: pointer;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 0;
+  right: 0;
+  display: -ms-grid;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
 }
 
 .edit img {
-    width: 16px;
-    height: 16px;
-    transition: all 0.1s;
-    opacity: .5;
+  width: 16px;
+  height: 16px;
+  transition: all 0.1s;
+  opacity: 0.5;
 }
 
 .edit:hover img {
-    width: 18px;
-    height: 18px;
-    opacity: 1;
+  width: 18px;
+  height: 18px;
+  opacity: 1;
 }
 
 .edit:active img {
-    width: 14px;
-    height: 14px;
-    opacity: 1;
+  width: 14px;
+  height: 14px;
+  opacity: 1;
 }
 
 .capitalContainer,
 .goalContainer {
-    background-color: var(--color-dark);
+  background-color: var(--color-dark);
 }
 
 .cashflowContainer,
 .growContainer {
-    background-color: var(--color-light);
+  background-color: var(--color-light);
 }
 
 #capitalInteger {
-    font-size: 48px;
+  font-size: 48px;
 }
 
 #cashflowInteger,
 #completionInteger,
 #grow {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .detailsContainer {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-rows: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-row-gap: 8px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-row-gap: 8px;
 }
 
 .progressContainer {
-    background-color: var(--gray-light);
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 4px;
+  background-color: var(--gray-light);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
 }
 
 #progressBar {
-    width: 0;
-    height: 100%;
-    background-color: var(--color-light);
-    transition: width ease-in-out 1s;
+  width: 0;
+  height: 100%;
+  background-color: var(--color-light);
+  transition: width ease-in-out 1s;
 }
 
 .popup {
-    position: fixed;
-    background-color: var(--white);
-    color: var(--color-dark);
-    font-size: 16px;
-    top: 0;
-    left: 100vw;
-    width: 100%;
-    height: 100vh;
-    z-index: 100;
-    display: -ms-grid;
-    display: grid;
-    grid-auto-flow: row;
-    grid-row-gap: 20px;
-    align-content: center;
-    justify-items: center;
-    transition: left ease-in-out 0.3s;
+  position: fixed;
+  background-color: var(--white);
+  color: var(--color-dark);
+  font-size: 16px;
+  top: 0;
+  left: 100vw;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: row;
+  grid-row-gap: 20px;
+  align-content: center;
+  justify-items: center;
+  transition: left ease-in-out 0.3s;
 }
 
 #closePopup {
-    width: 16px;
-    height: 16px;
-    position: fixed;
-    top: 16px;
-    right: -100vw;
-    transition: right ease-in-out 0.3s;
+  width: 16px;
+  height: 16px;
+  position: fixed;
+  top: 16px;
+  right: -100vw;
+  transition: right ease-in-out 0.3s;
 }
 
 form {
-    width: calc(100% - 32px);
-    max-width: 500px;
+  width: calc(100% - 32px);
+  max-width: 500px;
 }
 
 label {
-    display: none;
+  display: none;
 }
 
 input,
 button {
-    outline: none;
-    display: block;
-    height: 40px;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    transition: all ease-in-out 0.2s;
+  outline: none;
+  display: block;
+  height: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  transition: all ease-in-out 0.2s;
 }
 
 input {
-    padding: 0 16px;
-    border: 1px solid var(--color-light);
-    text-align: center;
-    font-size: 16px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border-radius: 4px;
-    color: var(--color-dark);
+  padding: 0 16px;
+  border: 1px solid var(--color-light);
+  text-align: center;
+  font-size: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 4px;
+  color: var(--color-dark);
 }
 
 input:focus {
-    border-color: var(--color-dark);
+  border-color: var(--color-dark);
 }
 
 :-moz-placeholder {
-    color: var(--color-light);
-    font-size: 14px;
+  color: var(--color-light);
+  font-size: 14px;
 }
 
 ::-webkit-input-placeholder {
-    color: var(--color-light);
-    font-size: 14px;
+  color: var(--color-light);
+  font-size: 14px;
 }
 
 ::-moz-placeholder {
-    color: var(--color-light);
-    font-size: 14px;
+  color: var(--color-light);
+  font-size: 14px;
 }
 
 :-ms-input-placeholder {
-    color: var(--color-light);
-    font-size: 14px;
+  color: var(--color-light);
+  font-size: 14px;
 }
 
 button {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 500;
-    background-color: var(--color-dark);
-    color: var(--white);
-    margin-top: 20px;
-    letter-spacing: 1px;
-    cursor: pointer;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.25);
-}
-button:hover {
-    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.5);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: var(--color-dark);
+  color: var(--white);
+  margin-top: 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0;
+button:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 @media (orientation: landscape) {
-    .detailsContainer {
-        -ms-grid-rows: none;
-        grid-template-rows: none;
-        -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: 8px;
-    }
+  .detailsContainer {
+    -ms-grid-rows: none;
+    grid-template-rows: none;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 8px;
+  }
 
-    .appContainer {
-        height: calc(100vh - 2em);
-        -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
+  #progressBar {
+    background-color: var(--color-dark);
+  }
 
-    .goalContainer {
-        background-color: var(--color-light);
-    }
+  .appContainer {
+    height: calc(100vh - 2em);
+    -ms-grid-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 
-    .goalContainer,
-    .cashflowContainer,
-    .growContainer {
-        padding-top: 32px;
-    }
+  .goalContainer {
+    background-color: var(--color-light);
+  }
+
+  .goalContainer,
+  .cashflowContainer,
+  .growContainer {
+    padding-top: 32px;
+  }
 }
