@@ -153,7 +153,8 @@ window.addEventListener('load', function counter() {
         )
     }
 
-    if (sessionStorage.getItem("deposit") || (sessionStorage.getItem("deposit") !== JSON.stringify(deposit))) {
+    if (sessionStorage.getItem("deposit") ||
+        (sessionStorage.getItem("deposit") !== JSON.stringify(deposit))) {
         sessionStorage.setItem("deposit", JSON.stringify(deposit));
     }
 
