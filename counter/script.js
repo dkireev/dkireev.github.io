@@ -37,26 +37,26 @@ let saveText = "Save";
 let currentGoalText = "Current goal is ";
 let headerTitleText = "Capital Counter";
 
-if (localStorage) {
-    localStorage.clear();
-    console.log("lacalStorage cleared");
+if (localStorage.getItem("deposit")) {
+    localStorage.removeItem("deposit");
+    console.log("lacalStorage 'deposit' cleared");
 }
 
 function languageSelect() {
-    if (!sessionStorage.getItem("language")) {
+    if (!localStorage.getItem("language")) {
         document.getElementById("settingsContainer").style.display = "grid";
         document.getElementById("settingsContainer").onclick = function() {
             if (confirm('Переключиться на русский язык?')) {
-                sessionStorage.setItem("language", "ru");
+                localStorage.setItem("language", "ru");
                 setTimeout(function() { location.reload(); }, 500);
 
             } else {
-                sessionStorage.setItem("language", "en");
+                localStorage.setItem("language", "en");
                 setTimeout(function() { location.reload(); }, 500);
             }
         }
     }
-    if (sessionStorage.getItem("language") === "ru") {
+    if (localStorage.getItem("language") === "ru") {
         capitalText = "Капитал";
         goalCompletionText = "Достижение цели";
         cashflowText = "Месячный доход";
@@ -90,7 +90,7 @@ function closePopup() {
 
 function updateGoalFunction(value) {
     if (value) {
-        sessionStorage.setItem("nextGoal", value);
+        localStorage.setItem("nextGoal", value);
         document.getElementById("popupGoal").style.left = "100vw";
         setTimeout(function() { location.reload(); }, 500);
     }
@@ -153,11 +153,11 @@ window.addEventListener('load', function counter() {
         )
     }
 
-    if (sessionStorage.getItem("deposit") !== JSON.stringify(deposit)) {
+    if (sessionStorage.getItem("deposit") || (sessionStorage.getItem("deposit") !== JSON.stringify(deposit))) {
         sessionStorage.setItem("deposit", JSON.stringify(deposit));
     }
 
-    const nextGoal = parseInt(sessionStorage.getItem("nextGoal"));
+    const nextGoal = parseInt(localStorage.getItem("nextGoal"));
 
     for (var i = 0; i < JSON.parse(sessionStorage.getItem("deposit")).length; i++) {
         startDate[i] = setStartDate(i);
@@ -165,10 +165,10 @@ window.addEventListener('load', function counter() {
         interestRate[i] = (setInterestRate(i) * (100 - tax) / 100 / 12 / 100).toFixed(6);
     }
 
-    if (sessionStorage.getItem("nextGoal")) {
+    if (localStorage.getItem("nextGoal")) {
         document.getElementById("popupCurrentGoal").innerHTML =
             currentGoalText +
-            spaceAdder(sessionStorage.getItem("nextGoal")) +
+            spaceAdder(localStorage.getItem("nextGoal")) +
             " &#8372;";
     } else {
         document.getElementById("popupCurrentGoal").innerHTML =
