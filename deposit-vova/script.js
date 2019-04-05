@@ -43,19 +43,16 @@ if (localStorage.getItem("deposit")) {
 
 function languageSelect() {
   if (!localStorage.getItem("language")) {
-    document.getElementById("settingsContainer").style.display = "grid";
-    document.getElementById("settingsContainer").onclick = function() {
+    document.querySelector("#settingsContainer").style.display = "grid";
+    document.querySelector("#settingsContainer").onclick = function() {
       if (confirm("Переключиться на русский язык?")) {
         localStorage.setItem("language", "ru");
-        setTimeout(function() {
-          location.reload();
-        }, 500);
       } else {
         localStorage.setItem("language", "en");
-        setTimeout(function() {
-          location.reload();
-        }, 500);
       }
+      setTimeout(function() {
+        location.reload();
+      }, 500);
     };
   }
   if (localStorage.getItem("language") === "ru") {
@@ -70,30 +67,30 @@ function languageSelect() {
     currentGoalText = "Текущая цель: ";
     headerTitleText = "Калькулятор капитала";
   }
-  document.getElementById("capitalText").innerHTML = capitalText;
-  document.getElementById("goalCompletionText").innerHTML = goalCompletionText;
-  document.getElementById("cashflowText").innerHTML = cashflowText;
-  document.getElementById("gainsEveryText").innerHTML = gainsEveryText;
-  document.getElementById("submitButton").innerHTML = saveText;
-  document.getElementById("number").placeholder = enterGoalText;
-  document.getElementById("minutesText").innerHTML = minutesText;
-  document.getElementById("headerTitle").innerHTML = headerTitleText;
+  document.querySelector("#capitalText").innerHTML = capitalText;
+  document.querySelector("#goalCompletionText").innerHTML = goalCompletionText;
+  document.querySelector("#cashflowText").innerHTML = cashflowText;
+  document.querySelector("#gainsEveryText").innerHTML = gainsEveryText;
+  document.querySelector("#submitButton").innerHTML = saveText;
+  document.querySelector("#number").placeholder = enterGoalText;
+  document.querySelector("#minutesText").innerHTML = minutesText;
+  document.querySelector("#headerTitle").innerHTML = headerTitleText;
 }
 
 function openPopup() {
-  document.getElementById("popupGoal").style.left = 0;
-  document.getElementById("closePopup").style.right = "16px";
+  document.querySelector("#popupGoal").style.left = 0;
+  document.querySelector("#closePopup").style.right = "16px";
 }
 
 function closePopup() {
-  document.getElementById("popupGoal").style.left = "100vw";
-  document.getElementById("closePopup").style.right = "-100vw";
+  document.querySelector("#popupGoal").style.left = "100vw";
+  document.querySelector("#closePopup").style.right = "-100vw";
 }
 
 function updateGoalFunction(value) {
   if (value) {
     localStorage.setItem("nextGoal", value);
-    document.getElementById("popupGoal").style.left = "100vw";
+    document.querySelector("#popupGoal").style.left = "100vw";
     setTimeout(function() {
       location.reload();
     }, 500);
@@ -103,8 +100,11 @@ function updateGoalFunction(value) {
 window.addEventListener("load", function counter() {
   languageSelect();
 
-  const millisecondsInMonth = 60 * 60 * 24 * 30.4375 * 1000;
-  const tax = 18 + 1.5;
+  const MILLISECONDS_IN_MONTH = 60 * 60 * 24 * 30.4375 * 1000;
+  const TAX_RATE = 18 + 1.5;
+  const DEPOSIT_PARSE = JSON.parse(sessionStorage.getItem("deposit"));
+  const POPUP_CURRENT_GOAL = document.querySelector("#popupCurrentGoal");
+
   let startDate = [];
   let startAmount = [];
   let interestRate = [];
@@ -137,18 +137,15 @@ window.addEventListener("load", function counter() {
   }
 
   function setStartDate(i) {
-    let a = JSON.parse(sessionStorage.getItem("deposit"));
-    return Date.parse(a[i].startDate);
+    return Date.parse(DEPOSIT_PARSE[i].startDate);
   }
 
   function setStartAmount(i) {
-    let a = JSON.parse(sessionStorage.getItem("deposit"));
-    return parseFloat(a[i].startAmount);
+    return parseFloat(DEPOSIT_PARSE[i].startAmount);
   }
 
   function setInterestRate(i) {
-    let a = JSON.parse(sessionStorage.getItem("deposit"));
-    return parseFloat(a[i].interestRate);
+    return parseFloat(DEPOSIT_PARSE[i].interestRate);
   }
 
   if (
@@ -160,15 +157,11 @@ window.addEventListener("load", function counter() {
 
   const nextGoal = parseInt(localStorage.getItem("nextGoal"));
 
-  for (
-    var i = 0;
-    i < JSON.parse(sessionStorage.getItem("deposit")).length;
-    i++
-  ) {
+  for (var i = 0; i < DEPOSIT_PARSE.length; i++) {
     startDate[i] = setStartDate(i);
     startAmount[i] = setStartAmount(i);
     interestRate[i] = (
-      (setInterestRate(i) * (100 - tax)) /
+      (setInterestRate(i) * (100 - TAX_RATE)) /
       100 /
       12 /
       100
@@ -176,12 +169,12 @@ window.addEventListener("load", function counter() {
   }
 
   if (localStorage.getItem("nextGoal")) {
-    document.getElementById("popupCurrentGoal").innerHTML =
+    POPUP_CURRENT_GOAL.innerHTML =
       currentGoalText +
       spaceAdder(localStorage.getItem("nextGoal")) +
       " &#8372;";
   } else {
-    document.getElementById("popupCurrentGoal").innerHTML = goalNotSetText;
+    POPUP_CURRENT_GOAL.innerHTML = goalNotSetText;
   }
 
   setInterval(function() {
@@ -189,14 +182,10 @@ window.addEventListener("load", function counter() {
     let currentAmountSum = 0;
     let cashflowSum = 0;
 
-    for (
-      var i = 0;
-      i < JSON.parse(sessionStorage.getItem("deposit")).length;
-      i++
-    ) {
+    for (var i = 0; i < DEPOSIT_PARSE.length; i++) {
       currentAmount[i] =
         startAmount[i] +
-        ((startAmount[i] * interestRate[i]) / millisecondsInMonth) *
+        ((startAmount[i] * interestRate[i]) / MILLISECONDS_IN_MONTH) *
           (currentTime - startDate[i]);
       cashflowArray[i] = currentAmount[i] * interestRate[i];
       currentAmountSum += currentAmount[i];
@@ -207,34 +196,34 @@ window.addEventListener("load", function counter() {
 
     capitalInteger = Math.floor(capital.toFixed(2));
     capitalDecimal = decimalExtractor(capital);
-    document.getElementById("capitalInteger").innerHTML = spaceAdder(
+    document.querySelector("#capitalInteger").innerHTML = spaceAdder(
       capitalInteger
     );
-    document.getElementById("capitalDecimal").innerHTML =
+    document.querySelector("#capitalDecimal").innerHTML =
       ". " + capitalDecimal + " &#8372;";
 
     cashflowInteger = Math.floor(cashflow.toFixed(2));
     cashflowDecimal = decimalExtractor(cashflow);
-    document.getElementById("cashflowInteger").innerHTML = spaceAdder(
+    document.querySelector("#cashflowInteger").innerHTML = spaceAdder(
       cashflowInteger
     );
-    document.getElementById("cashflowDecimal").innerHTML =
+    document.querySelector("#cashflowDecimal").innerHTML =
       ". " + cashflowDecimal + " &#8372;";
 
     goalCompletion = (parseInt(capital) * 100) / nextGoal;
     goalCompletionInteger = Math.floor(goalCompletion.toFixed(2));
     goalCompletionDecimal = decimalExtractor(goalCompletion);
-    document.getElementById("completionInteger").innerHTML = spaceAdder(
+    document.querySelector("#completionInteger").innerHTML = spaceAdder(
       goalCompletionInteger
     );
-    document.getElementById("completionDecimal").innerHTML =
+    document.querySelector("#completionDecimal").innerHTML =
       ". " + goalCompletionDecimal + " %";
-    document.getElementById("progressBar").style.width = goalCompletion + "%";
+    document.querySelector("#progressBar").style.width = goalCompletion + "%";
 
     capitalGrow = Math.round(
-      millisecondsInMonth / (Math.floor(cashflow) * 1000)
+      MILLISECONDS_IN_MONTH / (Math.floor(cashflow) * 1000)
     );
-    document.getElementById("grow").innerHTML = spaceAdder(
+    document.querySelector("#grow").innerHTML = spaceAdder(
       Math.round(capitalGrow / 60)
     );
   }, 1000);
