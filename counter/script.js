@@ -1,3 +1,5 @@
+import Deposits from 'deposits.js';
+
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
       navigator.serviceWorker.register('sw.js');
@@ -37,21 +39,26 @@ let saveText = "Save";
 let currentGoalText = "Current goal is ";
 let headerTitleText = "Capital Counter";
 
+if (localStorage) {
+    localStorage.clear();
+    console.log("lacalStorage cleared");
+}
+
 function languageSelect() {
-    if (!localStorage.getItem("language")) {
+    if (!sessionStorage.getItem("language")) {
         document.getElementById("settingsContainer").style.display = "grid";
         document.getElementById("settingsContainer").onclick = function() {
             if (confirm('Переключиться на русский язык?')) {
-                localStorage.setItem("language", "ru");
+                sessionStorage.setItem("language", "ru");
                 setTimeout(function() { location.reload(); }, 500);
 
             } else {
-                localStorage.setItem("language", "en");
+                sessionStorage.setItem("language", "en");
                 setTimeout(function() { location.reload(); }, 500);
             }
         }
     }
-    if (localStorage.getItem("language") === "ru") {
+    if (sessionStorage.getItem("language") === "ru") {
         capitalText = "Капитал";
         goalCompletionText = "Достижение цели";
         cashflowText = "Месячный доход";
@@ -85,7 +92,7 @@ function closePopup() {
 
 function updateGoalFunction(value) {
     if (value) {
-        localStorage.setItem("nextGoal", value);
+        sessionStorage.setItem("nextGoal", value);
         document.getElementById("popupGoal").style.left = "100vw";
         setTimeout(function() { location.reload(); }, 500);
     }
@@ -128,63 +135,42 @@ window.addEventListener('load', function counter() {
     }
 
     function setStartDate(i) {
-        let a = JSON.parse(localStorage.getItem("deposit"));
+        let a = JSON.parse(sessionStorage.getItem("deposit"));
         return (
             Date.parse(a[i].startDate)
         )
     }
 
     function setStartAmount(i) {
-        let a = JSON.parse(localStorage.getItem("deposit"));
+        let a = JSON.parse(sessionStorage.getItem("deposit"));
         return (
             parseFloat(a[i].startAmount)
         )
     }
 
     function setInterestRate(i) {
-        let a = JSON.parse(localStorage.getItem("deposit"));
+        let a = JSON.parse(sessionStorage.getItem("deposit"));
         return (
             parseFloat(a[i].interestRate)
         )
     }
-    const deposit = [{
-            "startDate": "Apr 2, 2019",
-            "startAmount": "67404.25",
-            "interestRate": "14.25"
-        },
-        {
-            "startDate": "Apr 4, 2019",
-            "startAmount": "85935.60",
-            "interestRate": "15"
-        },
-        {
-            "startDate": "Mar 26, 2019",
-            "startAmount": "18886.04",
-            "interestRate": "15"
-        },
-        {
-            "startDate": "Apr 4, 2019",
-            "startAmount": "12025.15",
-            "interestRate": "14.5"
-        }
-    ];
 
-    if (localStorage.getItem("deposit") !== JSON.stringify(deposit)) {
-        localStorage.setItem("deposit", JSON.stringify(deposit));
+    if (sessionStorage.getItem("deposit") !== JSON.stringify(deposit)) {
+        sessionStorage.setItem("deposit", JSON.stringify(deposit));
     }
 
-    const nextGoal = parseInt(localStorage.getItem("nextGoal"));
+    const nextGoal = parseInt(sessionStorage.getItem("nextGoal"));
 
-    for (var i = 0; i < JSON.parse(localStorage.getItem("deposit")).length; i++) {
+    for (var i = 0; i < JSON.parse(sessionStorage.getItem("deposit")).length; i++) {
         startDate[i] = setStartDate(i);
         startAmount[i] = setStartAmount(i);
         interestRate[i] = (setInterestRate(i) * (100 - tax) / 100 / 12 / 100).toFixed(6);
     }
 
-    if (localStorage.getItem("nextGoal")) {
+    if (sessionStorage.getItem("nextGoal")) {
         document.getElementById("popupCurrentGoal").innerHTML =
             currentGoalText +
-            spaceAdder(localStorage.getItem("nextGoal")) +
+            spaceAdder(sessionStorage.getItem("nextGoal")) +
             " &#8372;";
     } else {
         document.getElementById("popupCurrentGoal").innerHTML =
@@ -196,7 +182,7 @@ window.addEventListener('load', function counter() {
         let currentAmountSum = 0;
         let cashflowSum = 0;
 
-        for (var i = 0; i < JSON.parse(localStorage.getItem("deposit")).length; i++) {
+        for (var i = 0; i < JSON.parse(sessionStorage.getItem("deposit")).length; i++) {
             currentAmount[i] = startAmount[i] + startAmount[i] * interestRate[i] /
                 millisecondsInMonth * (currentTime - startDate[i]);
             cashflowArray[i] = currentAmount[i] * interestRate[i];

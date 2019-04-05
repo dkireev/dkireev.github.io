@@ -5,6 +5,7 @@ const POPUP_ELEMENT = document.querySelector('#popup');
 const NAME_ELEMENT = document.querySelector('#name');
 const VALUE_ELEMENT = document.querySelector('#value');
 const SAVE_GOAL_BUTTON = document.querySelector('#saveGoal');
+const RESET_ALL_BUTTON = document.querySelector('#resetAll');
 
 // Global Variables
 let GOALS;
@@ -43,3 +44,4 @@ SAVE_GOAL_BUTTON.addEventListener("click", function() {
         console.log("Error: Please fill in name of your Goal");
     }
 }, false);
+
