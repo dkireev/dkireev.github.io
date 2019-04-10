@@ -1,95 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="Personal Capital Counter" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link rel="manifest" href="manifest.json" />
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#1b5e20" />
-    <link rel="apple-touch-startup-image" href="apple-touch-icon.png" />
-    <meta name="msapplication-TileColor" content="#1b5e20" />
-    <meta name="theme-color" content="#1b5e20" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <title>Counter 2.8</title>
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,500"
-      as="style"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <div class="header">
-      <p id="headerTitle"></p>
-      <div id="settingsContainer">
-        <img id="settings" src="settings.png" alt="" />
-      </div>
-    </div>
-    <div class="appContainer">
-      <section id="installPrompt">
-        <h1>Install App</h1>
-        <img src="android-chrome-192x192.png" alt="" />
-        <p>Add our App to your home screen?</p>
-        <a href="javascript:void(0)" onclick="hidePrompt()">No, Thanks</a>
-        <button onclick="installApp()">Yes, please</button>
-      </section>
-      <div class="infoContainer capitalContainer">
-        <h1 id="capitalText"></h1>
-        <p>
-          <span id="capitalInteger"></span><span id="capitalDecimal"></span>
-        </p>
-      </div>
-      <div class="detailsContainer">
-        <div class="infoContainer goalContainer">
-          <h2 id="goalCompletionText"></h2>
-          <p>
-            <span id="completionInteger"></span
-            ><span id="completionDecimal"></span>
-          </p>
-          <div class="edit" onclick="openPopup()">
-            <img src="edit.png" alt="" />
-          </div>
-          <div class="progressContainer">
-            <div id="progressBar"></div>
-          </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Personal Capital Counter">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#1b5e20">
+    <link rel="apple-touch-startup-image" href="apple-touch-icon.png">
+    <meta name="msapplication-TileColor" content="#1b5e20">
+    <meta name="theme-color" content="#1b5e20">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Counter 3.1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,500">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <p id="headerTitle"></p>
+        <div id="menuContainer" class="imageWrapper">
+            <img id="menu" src="menu.svg" alt="">
         </div>
-        <div class="infoContainer cashflowContainer">
-          <h2 id="cashflowText"></h2>
-          <p>
-            <span id="cashflowInteger"></span><span id="cashflowDecimal"></span>
-          </p>
+    </header>
+    <section>
+        <div class="goalContainer">
+            <div class="cardDescription">
+                <h1 id="goalTitle"></h1>
+                <p id="goalDescription"></p>
+            </div>
+            <p><span id="capitalInteger"></span><span id="capitalDecimal"></span></p>
         </div>
-        <div class="infoContainer growContainer">
-          <h2 id="gainsEveryText"></h2>
-          <p><span id="grow"></span> <span id="minutesText"></span></p>
+        <div class="detailsContainer">
+            <div class="detailContainer goalCompletionContainer">
+                <div class="cardDescription">
+                    <h2 id="goalCompletionTitle"></h2>
+                </div>
+                <p><span id="completionInteger" class="detailInteger"></span><span id="completionDecimal"></span></p>
+                <div class="imageWrapper edit" onclick="openPopup()">
+                    <img src="edit.svg" alt="">
+                </div>
+                <div class="progressContainer">
+                    <div id="progressBar"></div>
+                </div>
+            </div>
+            <div class="monthlyCashflowContainer">
+                <div class="monthlyCashflowInnerContainer" id="monthlyCashflowInnerContainer">
+                    <div class="monthlyCashflowItem">
+                        <div class="cardDescription">
+                            <h2 id="dailyCashflowTitle"></h2>
+                        </div>
+                        <p><span id="dailyCashflowInteger" class="detailInteger"></span><span id="dailyCashflowDecimal"></span></p>
+                    </div>
+                    <div class="monthlyCashflowItem">
+                        <div class="cardDescription">
+                            <h2 id="monthlyCashflowTitle"></h2>
+                        </div>
+                        <p><span id="monthlyCashflowInteger" class="detailInteger"></span><span id="monthlyCashflowDecimal"></span></p>
+                    </div>
+                    <div class="monthlyCashflowItem">
+                        <div class="cardDescription">
+                            <h2 id="annualCashflowTitle"></h2>
+                        </div>
+                        <p><span id="annualCashflowInteger" class="detailInteger"></span><span id="annualCashflowDecimal"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="detailContainer growContainer">
+                <div class="cardDescription">
+                    <h2 id="gainsEveryTitle"></h2>
+                </div>
+                <p><span id="grow" class="detailInteger"></span> <span id="minutesText"></span></p>
+            </div>
         </div>
-      </div>
-    </div>
+    </section>
     <div class="popup" id="popupGoal">
-      <img id="closePopup" src="close.png" onclick="closePopup()" alt="" />
-      <p id="popupCurrentGoal"></p>
-      <form>
-        <input type="number" aria-label="Number" id="number" />
-        <button
-          id="submitButton"
-          type="submit"
-          onclick="updateGoalFunction(document.getElementById('number').value)"
-        ></button>
-      </form>
+        <div class="popupInner">
+            <div class="imageWrapper close">
+                <img id="closePopup" src="close.svg" onclick="closePopup()" alt="">
+            </div>
+            <p id="popupCurrentGoal"></p>
+            <form>
+                <input type="number" aria-label="Number" id="number">
+                <button id="submitButton" type="submit" onclick="updateGoalFunction(document.getElementById('number').value)"></button>
+            </form>
+        </div>
     </div>
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,500"
-      rel="stylesheet"
-    />
     <script src="deposits.js"></script>
-    <script async src="script.js"></script>
-  </body>
+    <script src="locales.js"></script>
+    <script src="script.js"></script>
+</body>
+
 </html>
