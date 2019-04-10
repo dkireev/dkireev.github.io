@@ -1,7 +1,7 @@
 html {
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     color: var(--black);
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
@@ -12,6 +12,11 @@ html {
 *:after,
 *:before {
     box-sizing: inherit;
+}
+
+body {
+    width: 100vw;
+    overflow: hidden;
 }
 
 p,
@@ -35,31 +40,29 @@ h6 {
     --accent: #8bc34a;
 }
 
-h1, h2 {
-  text-transform: uppercase;
-  letter-spacing: 1px;
+h1,
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
 }
 
 h1 {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 h2 {
-  font-size: 12px;
+    font-size: 12px;
 }
 
 #capitalInteger {
-  font-size: 50px;
-  font-weight: 400;
+    font-size: 50px;
+    font-weight: 300;
 }
 
 header {
     background-color: var(--primary-dark);
     color: var(--white);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 12px;
-    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -86,14 +89,15 @@ section {
 }
 
 .cardDescription {
-  position: absolute;
-  left: 20px;
-  top: 10px;
-  font-size: 14px;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    font-size: 14px;
 }
 
-.cardDescription p, h2 {
-  opacity: 0.75;
+.cardDescription p,
+h2 {
+    opacity: 0.75;
 }
 
 .goalContainer {
@@ -109,9 +113,9 @@ section {
 }
 
 .edit {
-  position: absolute;
-  right: 5px;
-  top: 5px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
 }
 
 .detailsContainer {
@@ -139,19 +143,20 @@ section {
 }
 
 .detailInteger {
-  font-size: 32px;
+    font-size: 32px;
 }
 
 .monthlyCashflowContainer {
     width: 100vw;
     position: relative;
 }
+
 .monthlyCashflowInnerContainer {
-  position: absolute;
-  display: flex;
-  top: 0;
-  bottom: 0;
-  transition: left ease-in-out 200ms;
+    position: absolute;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    transition: left ease-in-out 200ms;
 }
 
 .monthlyCashflowItem {
@@ -165,17 +170,73 @@ section {
     padding: 32px 20px 16px;
     border-radius: 4px;
 }
+
 .monthlyCashflowItem:first-of-type {
-  margin: 0 5px 0 0;
+    margin: 0 5px 0 0;
 }
+
 .monthlyCashflowItem:last-of-type {
-  margin: 0 0 0 5px;
+    margin: 0 0 0 5px;
 }
+
 .popup {
-  height: calc(100vh - 50px);
-  width: 100vw;
-  position: absolute;
-  top: 50px;
-  left: 100vw;
-  display: none;
+    height: calc(100vh - 50px);
+    background-color: var(--white);
+    width: 100vw;
+    position: fixed;
+    top: 50px;
+    left: 100vw;
+    transition: left ease-in-out 200ms;
+}
+
+.popupInner {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.popupInner form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.popupInner form input {
+  border: 1px solid var(--gray-light);
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 25px;
+  outline: none;
+  font-weight: 300;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.popupInner form button {
+  background-color: var(--primary-dark);
+  border-radius: 4px;
+  padding: 10px;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+#popupCurrentGoal {
+    font-size: 20px;
 }
