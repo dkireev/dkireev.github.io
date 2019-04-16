@@ -251,6 +251,8 @@ h2 {
 .popupInner form button {
   background-color: var(--primary-dark);
   border-radius: 4px;
+  border: none;
+  outline: none;
   padding: 10px;
   color: var(--white);
   text-transform: uppercase;
