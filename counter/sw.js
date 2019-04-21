@@ -6,9 +6,9 @@ var cachedFiles = [
     'manifest.json',
     'script.js',
     'style.css',
-    'settings.png',
-    'edit.png',
-    'close.png'
+    'menu.svg',
+    'edit.svg',
+    'close.svg'
 ];
 
 self.addEventListener('install', function(event) {
