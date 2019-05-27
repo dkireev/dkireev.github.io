@@ -1,0 +1,294 @@
+/* Common styles */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* Header styles */
+
+header {
+    max-width: 1172px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+header .logo {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Top Banner styles */
+
+.top-banner {
+    background-image: linear-gradient(#623598, #8B66B6);
+}
+
+.top-banner-inner {
+    max-width: 1172px;
+    margin: 0 auto;
+    padding: 32px 16px;
+    color: #fff;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.top-banner-text {
+    text-align: center;
+}
+
+.top-banner-text h1 {
+    font-size: 32px;
+    font-weight: 300;
+    margin: 0 0 24px;
+}
+
+.top-banner-text span {
+    font-weight: 600;
+    display: block;
+    line-height: 24px;
+}
+
+.top-banner-text p {
+    font-weight: 300;
+    margin: 0;
+    max-width: 640px;
+    line-height: 24px;
+}
+
+.top-banner-inner img {
+    width: 48px;
+    height: auto;
+    margin-bottom: 16px;
+}
+
+/* You can section styles */
+
+.you-can {
+    display: grid;
+    padding: 32px 16px;
+    max-width: 1172px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.you-can h2 {
+    font-size: 24px;
+    font-weight: 300;
+    margin: 0 0 24px;
+    text-align: center;
+}
+
+.you-can h2 span {
+    font-weight: 600;
+}
+
+.you-can-option {
+    line-height: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 24px 16px;
+    margin-bottom: 32px;
+}
+
+.you-can-option img {
+    height: 50px;
+    margin-bottom: 16px;
+}
+
+.you-can-option h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 8px;
+    text-align: center;
+}
+
+.you-can-option p {
+    font-weight: 300;
+    margin: 0;
+    text-align: center;
+}
+
+/* Bottom banner styles */
+
+.bottom-banner {
+    background-image: linear-gradient(#623598, #8b66b6);
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 200px;
+}
+
+.bottom-banner-inner {
+    max-width: 1172px;
+    margin: 0 auto;
+    padding: 32px 16px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bottom-banner-text {
+    max-width: 815px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    text-shadow: 0 1px 1px #8b66b6;
+}
+
+.bottom-banner-inner h2 {
+    font-size: 24px;
+    font-weight: 300;
+    margin: 0 0 24px;
+    text-align: center;
+}
+
+.bottom-banner-inner h2 span {
+    font-weight: 600;
+}
+
+.bottom-banner-inner p {
+    font-weight: 300;
+    line-height: 24px;
+    margin: 0;
+    text-align: center;
+}
+
+.bottom-banner-inner p span {
+    font-weight: 600;
+}
+
+.bottom-banner-desktop-background {
+    display: none;
+}
+
+.bottom-banner-mobile-background {
+    position: absolute;
+    bottom: -100px;
+    right: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 411px) {
+    .bottom-banner-mobile-background {
+         bottom: -250px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .top-banner-inner {
+        flex-direction: row;
+        max-width: 1172px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    .top-banner-text {
+        text-align: left;
+        margin-right: 32px;
+    }
+
+    .top-banner-text h1 {
+        font-size: 48px;
+    }
+
+    .top-banner-inner img {
+        width: 231px;
+        margin-bottom: 0;
+    }
+
+    .you-can {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 16px;
+    }
+
+    .you-can h2 {
+        grid-column: 1/-1;
+        font-size: 40px;
+        margin: 0 0 40px;
+    }
+
+    .you-can-option {
+        box-shadow: none;
+    }
+
+    .bottom-banner {
+        padding-bottom: 0;
+    }
+
+    .bottom-banner-inner {
+        height: 350px;
+    }
+
+    .bottom-banner-text {
+        width: 80%;
+        margin: 0;
+    }
+
+    .bottom-banner-inner h2 {
+        text-align: left;
+    }
+
+    .bottom-banner-inner p {
+        text-align: left;
+    }
+
+    .bottom-banner-mobile-background {
+        display: none;
+    }
+
+    .bottom-banner-desktop-background {
+        display: block;
+        position: absolute;
+        left: -2%;
+        top: 0;
+        height: 350px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .you-can {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .you-can-option img {
+        height: 64px;
+    }
+
+    .you-can-option h3 {
+        font-size: 20px;
+    }
+
+    .bottom-banner-desktop-background {
+        left: initial;
+        right: 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .bottom-banner-desktop-background {
+        right: 16px;
+    }
+}
