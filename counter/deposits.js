@@ -5,13 +5,13 @@ const deposit = [
     interestRate: "14.25"
   },
   {
-    startDate: "Dec 9, 2019",
-    startAmount: "168999.46",
+    startDate: "Jan 10, 2020",
+    startAmount: "170962.16",
     interestRate: "17"
   },
   {
-    startDate: "Dec 10, 2019",
-    startAmount: "31189.98",
+    startDate: "Jan 11, 2020",
+    startAmount: "31552.05",
     interestRate: "17"
   },
   {
