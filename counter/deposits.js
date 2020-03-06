@@ -1,8 +1,8 @@
 const deposit = [
   {
-    startDate: "Jan 1, 2020",
-    startAmount: "82840.69",
-    interestRate: "14.25"
+    startDate: "Mar 4, 2020",
+    startAmount: "92155.16",
+    interestRate: "14.2"
   },
   {
     startDate: "Feb 10, 2020",
@@ -10,18 +10,18 @@ const deposit = [
     interestRate: "17"
   },
   {
-    startDate: "Jan 11, 2020",
-    startAmount: "31552.05",
+    startDate: "Feb 11, 2020",
+    startAmount: "31917.64",
     interestRate: "17"
   },
   {
-    startDate: "Feb 3, 2020",
-    startAmount: "29939.96",
+    startDate: "Mar 3, 2020",
+    startAmount: "30242.82",
     interestRate: "16"
   },
   {
-    startDate: "Feb 5, 2020",
-    startAmount: "10043.28",
+    startDate: "Feb 21, 2020",
+    startAmount: "10120.85",
     interestRate: "13.75"
   }
 ];
