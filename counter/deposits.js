@@ -1,4 +1,4 @@
-const deposit = [
+const deposits = [
   {
     startDate: "Mar 4, 2020",
     startAmount: "92155.16",
