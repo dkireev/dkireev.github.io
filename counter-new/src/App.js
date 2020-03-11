@@ -1,16 +1,25 @@
 import React from "react";
 import "./App.css";
 import useExchange from "./data/useExchange";
-import CryptoExchange from "./data/CryptoExchange";
-import SecuritiesExchange from "./data/SecuritiesExchange";
+import AssetsVolume from "./data/AssetsVolume";
+import { goal, securities, deposits, crypto } from "./data/data";
 
 const App = () => {
   const rates = useExchange();
-  const total = CryptoExchange() + SecuritiesExchange();
+  const total =
+    AssetsVolume(crypto) + AssetsVolume(securities) + AssetsVolume(deposits);
   const totalUAH = total * rates.UAH;
-  console.log(rates);
-
-  return <div className="App">Total: {totalUAH.toFixed(2)} UAH</div>;
+  return (
+    <div className="App">
+      Total: {total.toFixed(2)} USD
+      <br />
+      <br />
+      Total: {totalUAH.toFixed(2)} UAH
+      <br />
+      <br />
+      Goal completion: {((total * 100) / goal.amount).toFixed(2)}%
+    </div>
+  );
 };
 
 export default React.memo(App);

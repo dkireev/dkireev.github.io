@@ -3,10 +3,12 @@ export const goal = {
   amount: 1000000
 };
 
-export const crypto = {
-  currency: "BTC",
-  amount: 0.02127568
-};
+export const crypto = [
+  {
+    currency: "BTC",
+    amount: 0.02127568
+  }
+];
 
 export const securities = [
   {
@@ -27,15 +29,15 @@ export const deposits = [
     interest: 14.2
   },
   {
-    start: "Feb 10, 2020",
+    start: "Mar 10, 2020",
     currency: "UAH",
-    amount: 172943.07,
+    amount: 174817.6,
     interest: 17
   },
   {
-    start: "Feb 11, 2020",
+    start: "Mar 11, 2020",
     currency: "UAH",
-    amount: 31917.64,
+    amount: 32263.59,
     interest: 17
   },
   {
