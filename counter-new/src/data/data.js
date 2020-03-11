@@ -1,6 +1,7 @@
 export const goal = {
   currency: "USD",
-  amount: 1000000
+  amount: 1000000,
+  date: "Dec 31, 2020"
 };
 
 export const crypto = [
@@ -13,7 +14,7 @@ export const crypto = [
 export const securities = [
   {
     currency: "EUR",
-    amount: 350.78
+    amount: 337.71
   },
   {
     currency: "EUR",

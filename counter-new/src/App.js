@@ -11,13 +11,15 @@ const App = () => {
   const totalUAH = total * rates.UAH;
   return (
     <div className="App">
-      Total: {total.toFixed(2)} USD
+      {isNaN(total) ? "Loading..." : `Total: ${total.toFixed(2)} USD`}
       <br />
       <br />
-      Total: {totalUAH.toFixed(2)} UAH
+      {isNaN(totalUAH) ? "Loading..." : `Total: ${totalUAH.toFixed(2)} UAH`}
       <br />
       <br />
-      Goal completion: {((total * 100) / goal.amount).toFixed(2)}%
+      {Date.parse(goal.date) > Date.now()
+        ? "Goal is active"
+        : "Goal is outdated"}
     </div>
   );
 };
