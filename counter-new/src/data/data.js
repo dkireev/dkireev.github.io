@@ -7,17 +7,17 @@ export const assets = {
   crypto: [
     {
       currency: "BTC",
-      amount: 0.02127568
+      amount: 0.02168609
     }
   ],
   securities: [
     {
       currency: "EUR",
-      amount: 324.95
+      amount: 306.95
     },
     {
       currency: "EUR",
-      amount: 124.12
+      amount: 119.88
     }
   ],
   deposits: [
