@@ -24,7 +24,7 @@ export const assets = {
     {
       start: "Apr 4, 2020",
       currency: "UAH",
-      amount: 93376.67,
+      amount: 97598.40,
       interest: 14.2,
       tax: 19.5
     },
