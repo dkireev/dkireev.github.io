@@ -13,11 +13,11 @@ export const assets = {
   securities: [
     {
       currency: "EUR",
-      amount: 390.38,
+      amount: 437.31,
     },
     {
       currency: "EUR",
-      amount: 254.3,
+      amount: 261.62,
     },
   ],
   deposits: [
