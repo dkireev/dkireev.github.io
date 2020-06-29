@@ -13,11 +13,14 @@ const App = () => {
       return acc + item;
     }, 0);
   const totalUAH = total * rates.UAH;
+  const totalEUR = total * rates.EUR;
   const interest = depositsInterest();
 
   return (
     <div className="App">
       {isNaN(total) ? "Loading..." : `${totalUAH.toFixed(2)} UAH`}
+      <br />
+      {isNaN(total) ? "Loading..." : `${totalEUR.toFixed(2)} EUR`}
       <br />
       <br />
       {interest.toFixed(2)} UAH
