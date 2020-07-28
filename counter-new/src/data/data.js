@@ -11,21 +11,21 @@ export const assets = {
     },
     {
       currency: "BTC",
-      amount: 0.06165113,
+      amount: 0.08493113,
     },
   ],
   securities: [
     {
       currency: "EUR",
-      amount: 615.06,
+      amount: 654.85,
     },
     {
       currency: "EUR",
-      amount: 611.62,
+      amount: 616.01,
     },
     {
       currency: "EUR",
-      amount: 98.26,
+      amount: 294.05,
     },
   ],
   deposits: [
