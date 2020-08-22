@@ -11,21 +11,21 @@ export const assets = {
     },
     {
       currency: "BTC",
-      amount: 0.09485113,
+      amount: 0.11394113,
     },
   ],
   securities: [
     {
       currency: "EUR",
-      amount: 668.32,
+      amount: 736.15,
     },
     {
       currency: "EUR",
-      amount: 627.09,
+      amount: 802.78,
     },
     {
       currency: "EUR",
-      amount: 393.33,
+      amount: 688.75,
     },
   ],
   deposits: [
@@ -37,16 +37,16 @@ export const assets = {
       tax: 19.5,
     },
     {
-      start: "Jul 10, 2020",
+      start: "Aug 10, 2020",
       currency: "UAH",
-      amount: 182926.62,
+      amount: 185046.19,
       interest: 17,
       tax: 19.5,
     },
     {
-      start: "Jul 11, 2020",
+      start: "Aug 11, 2020",
       currency: "UAH",
-      amount: 33760.16,
+      amount: 34151.34,
       interest: 17,
       tax: 19.5,
     },
@@ -58,9 +58,9 @@ export const assets = {
       tax: 19.5,
     },
     {
-      start: "Jul 21, 2020",
+      start: "Aug 21, 2020",
       currency: "UAH",
-      amount: 10591.41,
+      amount: 10690.67,
       interest: 13.75,
       tax: 19.5,
     },
